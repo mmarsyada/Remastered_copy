@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_cryo_lance_compressor= object_tangible_loot_dungeon_rem_custom_shared_cryo_lance_compressor:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_cryo_lance_compressor, "object/tangible/loot/dungeon/rem_custom/cryo_lance_compressor.iff")

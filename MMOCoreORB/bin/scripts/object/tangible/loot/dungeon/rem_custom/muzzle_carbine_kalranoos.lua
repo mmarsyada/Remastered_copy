@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_muzzle_carbine_kalranoos = object_tangible_loot_dungeon_rem_custom_shared_muzzle_carbine_kalranoos:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_muzzle_carbine_kalranoos, "object/tangible/loot/dungeon/rem_custom/muzzle_carbine_kalranoos.iff")

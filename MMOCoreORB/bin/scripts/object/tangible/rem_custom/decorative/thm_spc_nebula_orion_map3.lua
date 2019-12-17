@@ -1,0 +1,4 @@
+object_tangible_rem_custom_decorative_thm_spc_nebula_orion_map3 = object_tangible_rem_custom_decorative_shared_thm_spc_nebula_orion_map3:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_thm_spc_nebula_orion_map3, "object/tangible/rem_custom/decorative/thm_spc_nebula_orion_map3.iff")

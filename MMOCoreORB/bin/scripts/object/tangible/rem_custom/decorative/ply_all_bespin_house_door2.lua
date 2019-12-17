@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_ply_all_bespin_house_door2 = object_tangible_rem_custom_decorative_shared_ply_all_bespin_house_door2:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_ply_all_bespin_house_door2, "object/tangible/rem_custom/decorative/ply_all_bespin_house_door2.iff")

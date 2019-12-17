@@ -1,0 +1,6 @@
+object_tangible_rem_custom_statted_projectile_feed_mechanism_enhancement_bantha = object_tangible_rem_custom_statted_shared_projectile_feed_mechanism_enhancement_bantha:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_statted_projectile_feed_mechanism_enhancement_bantha, "object/tangible/rem_custom/statted/projectile_feed_mechanism_enhancement_bantha.iff")
+

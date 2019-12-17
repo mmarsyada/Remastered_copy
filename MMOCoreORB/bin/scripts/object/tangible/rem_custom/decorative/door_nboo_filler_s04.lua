@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_door_nboo_filler_s04 = object_tangible_rem_custom_decorative_shared_door_nboo_filler_s04:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_door_nboo_filler_s04, "object/tangible/rem_custom/decorative/door_nboo_filler_s04.iff")

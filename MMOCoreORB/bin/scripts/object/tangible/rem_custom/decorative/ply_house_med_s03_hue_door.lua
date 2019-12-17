@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_ply_house_med_s03_hue_door = object_tangible_rem_custom_decorative_shared_ply_house_med_s03_hue_door:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_ply_house_med_s03_hue_door, "object/tangible/rem_custom/decorative/ply_house_med_s03_hue_door.iff")

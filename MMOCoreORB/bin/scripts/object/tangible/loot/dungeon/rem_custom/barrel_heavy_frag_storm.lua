@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_barrel_heavy_frag_storm= object_tangible_loot_dungeon_rem_custom_shared_barrel_heavy_frag_storm:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_barrel_heavy_frag_storm, "object/tangible/loot/dungeon/rem_custom/barrel_heavy_frag_storm.iff")

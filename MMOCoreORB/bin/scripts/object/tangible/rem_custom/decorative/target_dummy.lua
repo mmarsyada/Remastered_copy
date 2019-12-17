@@ -1,0 +1,6 @@
+object_tangible_rem_custom_decorative_target_dummy = object_tangible_rem_custom_decorative_shared_target_dummy:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_target_dummy, "object/tangible/rem_custom/decorative/target_dummy.iff")
+

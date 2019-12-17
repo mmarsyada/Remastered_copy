@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_unlocked_briefcase = object_tangible_rem_custom_decorative_shared_unlocked_briefcase:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_unlocked_briefcase, "object/tangible/rem_custom/decorative/unlocked_briefcase.iff")

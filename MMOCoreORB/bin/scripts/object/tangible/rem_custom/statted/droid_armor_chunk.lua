@@ -1,0 +1,5 @@
+object_tangible_rem_custom_statted_droid_armor_chunk = object_tangible_rem_custom_statted_shared_droid_armor_chunk:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_statted_droid_armor_chunk, "object/tangible/rem_custom/statted/droid_armor_chunk.iff")

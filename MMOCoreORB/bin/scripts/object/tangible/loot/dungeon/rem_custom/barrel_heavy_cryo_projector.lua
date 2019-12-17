@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_barrel_heavy_cryo_projector = object_tangible_loot_dungeon_rem_custom_shared_barrel_heavy_cryo_projector:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_barrel_heavy_cryo_projector, "object/tangible/loot/dungeon/rem_custom/barrel_heavy_cryo_projector.iff")

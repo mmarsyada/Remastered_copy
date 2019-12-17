@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_thm_npe_hangar_start_door = object_tangible_rem_custom_decorative_shared_thm_npe_hangar_start_door:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_thm_npe_hangar_start_door, "object/tangible/rem_custom/decorative/thm_npe_hangar_start_door.iff")

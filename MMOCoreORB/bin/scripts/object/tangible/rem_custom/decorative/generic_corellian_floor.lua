@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_generic_corellian_floor = object_tangible_rem_custom_decorative_shared_generic_corellian_floor:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_generic_corellian_floor, "object/tangible/rem_custom/decorative/generic_corellian_floor.iff")

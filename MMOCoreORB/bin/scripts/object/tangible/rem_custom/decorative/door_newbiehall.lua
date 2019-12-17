@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_door_newbiehall = object_tangible_rem_custom_decorative_shared_door_newbiehall:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_door_newbiehall, "object/tangible/rem_custom/decorative/door_newbiehall.iff")

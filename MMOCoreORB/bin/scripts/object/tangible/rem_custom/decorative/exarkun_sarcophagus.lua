@@ -1,0 +1,3 @@
+object_tangible_rem_custom_decorative_exarkun_sarcophagus = object_tangible_rem_custom_decorative_shared_exarkun_sarcophagus:new {
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_exarkun_sarcophagus, "object/tangible/rem_custom/decorative/exarkun_sarcophagus.iff")

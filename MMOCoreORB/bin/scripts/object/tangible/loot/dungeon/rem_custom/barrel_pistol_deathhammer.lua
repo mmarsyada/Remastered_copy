@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_barrel_pistol_deathhammer = object_tangible_loot_dungeon_rem_custom_shared_barrel_pistol_deathhammer:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_barrel_pistol_deathhammer, "object/tangible/loot/dungeon/rem_custom/barrel_pistol_deathhammer.iff")

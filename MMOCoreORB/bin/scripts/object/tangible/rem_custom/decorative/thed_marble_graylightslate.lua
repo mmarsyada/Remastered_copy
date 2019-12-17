@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_thed_marble_graylightslate = object_tangible_rem_custom_decorative_shared_thed_marble_graylightslate:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_thed_marble_graylightslate, "object/tangible/rem_custom/decorative/thed_marble_graylightslate.iff")

@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_coil_rifle_disruptor = object_tangible_loot_dungeon_rem_custom_shared_coil_rifle_disruptor:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_coil_rifle_disruptor, "object/tangible/loot/dungeon/rem_custom/coil_rifle_disruptor.iff")

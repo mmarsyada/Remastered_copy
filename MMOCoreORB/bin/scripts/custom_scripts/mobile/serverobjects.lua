@@ -1,0 +1,7 @@
+--includeFile("glowing.lua")
+includeFile("../custom_scripts/mobile/dungeon/dathomir_bunker/serverobjects.lua")
+includeFile("../custom_scripts/mobile/dungeon/tatooine_cave/serverobjects.lua")
+includeFile("../custom_scripts/mobile/dungeon/lok_bunker/serverobjects.lua")
+--includeFile("../custom_scripts/screenplays/worldboss/shapeShifter.lua")
+-- includeFile("../custom_scripts/screenplays/events/jantaInvasion.lua")
+-- includeFile("../custom_scripts/screenplays/events/jawaInvasion.lua")

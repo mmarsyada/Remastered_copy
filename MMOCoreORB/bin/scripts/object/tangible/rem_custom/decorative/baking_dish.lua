@@ -1,0 +1,6 @@
+object_tangible_rem_custom_decorative_baking_dish = object_tangible_rem_custom_decorative_shared_baking_dish:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_baking_dish, "object/tangible/rem_custom/decorative/baking_dish.iff")
+

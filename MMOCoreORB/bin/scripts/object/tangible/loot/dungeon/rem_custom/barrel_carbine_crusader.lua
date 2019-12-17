@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_barrel_carbine_crusader = object_tangible_loot_dungeon_rem_custom_shared_barrel_carbine_crusader:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_barrel_carbine_crusader, "object/tangible/loot/dungeon/rem_custom/barrel_carbine_crusader.iff")

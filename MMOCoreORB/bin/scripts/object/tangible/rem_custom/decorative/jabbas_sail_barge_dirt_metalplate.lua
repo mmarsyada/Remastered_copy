@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_jabbas_sail_barge_dirt_metalplate = object_tangible_rem_custom_decorative_shared_jabbas_sail_barge_dirt_metalplate:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_jabbas_sail_barge_dirt_metalplate, "object/tangible/rem_custom/decorative/jabbas_sail_barge_dirt_metalplate.iff")

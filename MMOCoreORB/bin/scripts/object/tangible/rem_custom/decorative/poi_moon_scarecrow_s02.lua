@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_poi_moon_scarecrow_s02 = object_tangible_rem_custom_decorative_shared_poi_moon_scarecrow_s02:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_poi_moon_scarecrow_s02, "object/tangible/rem_custom/decorative/poi_moon_scarecrow_s02.iff")

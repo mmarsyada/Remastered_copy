@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_phantom_blade_generator= object_tangible_loot_dungeon_rem_custom_shared_phantom_blade_generator:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_phantom_blade_generator, "object/tangible/loot/dungeon/rem_custom/phantom_blade_generator.iff")

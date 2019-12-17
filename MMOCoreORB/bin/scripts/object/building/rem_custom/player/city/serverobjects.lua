@@ -1,0 +1,8 @@
+includeFile("building/rem_custom/player/city/barn_no_planet_restriction.lua")
+includeFile("building/rem_custom/player/city/city_imperial_fountain.lua")
+includeFile("building/rem_custom/player/city/city_imperial_statue.lua")
+includeFile("building/rem_custom/player/city/city_rebel_fountain.lua")
+includeFile("building/rem_custom/player/city/city_rebel_statue.lua")
+includeFile("building/rem_custom/player/city/diner_no_planet_restriction.lua")
+includeFile("building/rem_custom/player/city/garden_imperial_01.lua")
+includeFile("building/rem_custom/player/city/garden_rebel_01.lua")

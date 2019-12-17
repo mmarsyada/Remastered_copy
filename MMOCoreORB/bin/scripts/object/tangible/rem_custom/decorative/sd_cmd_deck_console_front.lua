@@ -1,0 +1,4 @@
+object_tangible_rem_custom_decorative_sd_cmd_deck_console_front = object_tangible_rem_custom_decorative_shared_sd_cmd_deck_console_front:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_sd_cmd_deck_console_front, "object/tangible/rem_custom/decorative/sd_cmd_deck_console_front.iff")

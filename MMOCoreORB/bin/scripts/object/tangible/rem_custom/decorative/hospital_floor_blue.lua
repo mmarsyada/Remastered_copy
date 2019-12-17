@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_hospital_floor_blue = object_tangible_rem_custom_decorative_shared_hospital_floor_blue:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_hospital_floor_blue, "object/tangible/rem_custom/decorative/hospital_floor_blue.iff")

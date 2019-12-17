@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_thm_kash_cave_myyydril_bars = object_tangible_rem_custom_decorative_shared_thm_kash_cave_myyydril_bars:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_thm_kash_cave_myyydril_bars, "object/tangible/rem_custom/decorative/thm_kash_cave_myyydril_bars.iff")

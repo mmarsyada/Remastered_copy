@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_trigger_carbine_charric = object_tangible_loot_dungeon_rem_custom_shared_trigger_carbine_charric:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_trigger_carbine_charric, "object/tangible/loot/dungeon/rem_custom/trigger_carbine_charric.iff")

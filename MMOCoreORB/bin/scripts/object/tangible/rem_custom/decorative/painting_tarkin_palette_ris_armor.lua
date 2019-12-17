@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_painting_tarkin_palette_ris_armor = object_tangible_rem_custom_decorative_shared_painting_tarkin_palette_ris_armor:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_painting_tarkin_palette_ris_armor, "object/tangible/rem_custom/decorative/painting_tarkin_palette_ris_armor.iff")

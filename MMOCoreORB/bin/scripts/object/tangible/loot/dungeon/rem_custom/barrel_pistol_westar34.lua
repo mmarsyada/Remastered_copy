@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_barrel_pistol_westar34 = object_tangible_loot_dungeon_rem_custom_shared_barrel_pistol_westar34:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_barrel_pistol_westar34, "object/tangible/loot/dungeon/rem_custom/barrel_pistol_westar34.iff")

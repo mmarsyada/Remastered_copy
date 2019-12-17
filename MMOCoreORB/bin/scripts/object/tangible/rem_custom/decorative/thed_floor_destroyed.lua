@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_thed_floor_destroyed = object_tangible_rem_custom_decorative_shared_thed_floor_destroyed:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_thed_floor_destroyed, "object/tangible/rem_custom/decorative/thed_floor_destroyed.iff")

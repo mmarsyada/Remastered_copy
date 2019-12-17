@@ -1,0 +1,4 @@
+object_tangible_rem_custom_decorative_atat_house_metal_grate = object_tangible_rem_custom_decorative_shared_atat_house_metal_grate:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_atat_house_metal_grate, "object/tangible/rem_custom/decorative/atat_house_metal_grate.iff")

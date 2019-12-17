@@ -1,0 +1,4 @@
+object_tangible_rem_custom_decorative_rebl_metal_paneling_b = object_tangible_rem_custom_decorative_shared_rebl_metal_paneling_b:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_rebl_metal_paneling_b, "object/tangible/rem_custom/decorative/rebl_metal_paneling_b.iff")

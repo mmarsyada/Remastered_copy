@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_barrel_rifle_alliance_gauss = object_tangible_loot_dungeon_rem_custom_shared_barrel_rifle_alliance_gauss:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_barrel_rifle_alliance_gauss, "object/tangible/loot/dungeon/rem_custom/barrel_rifle_alliance_gauss.iff")

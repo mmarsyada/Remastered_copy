@@ -1,0 +1,5 @@
+object_tangible_rem_custom_statted_transthermal_padding = object_tangible_rem_custom_statted_shared_transthermal_padding:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_statted_transthermal_padding, "object/tangible/rem_custom/statted/transthermal_padding.iff")

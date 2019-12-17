@@ -1,0 +1,6 @@
+object_tangible_rem_custom_decorative_cyborg_repair = object_tangible_rem_custom_decorative_shared_cyborg_repair:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_cyborg_repair, "object/tangible/rem_custom/decorative/cyborg_repair.iff")
+

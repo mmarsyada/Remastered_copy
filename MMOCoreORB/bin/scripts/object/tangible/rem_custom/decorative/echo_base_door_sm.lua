@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_echo_base_door_sm = object_tangible_rem_custom_decorative_shared_echo_base_door_sm:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_echo_base_door_sm, "object/tangible/rem_custom/decorative/echo_base_door_sm.iff")

@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_electric_polearm_power_supply= object_tangible_loot_dungeon_rem_custom_shared_electric_polearm_power_supply:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_electric_polearm_power_supply, "object/tangible/loot/dungeon/rem_custom/electric_polearm_power_supply.iff")

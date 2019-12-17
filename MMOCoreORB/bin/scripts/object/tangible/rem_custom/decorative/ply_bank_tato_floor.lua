@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_ply_bank_tato_floor = object_tangible_rem_custom_decorative_shared_ply_bank_tato_floor:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_ply_bank_tato_floor, "object/tangible/rem_custom/decorative/ply_bank_tato_floor.iff")

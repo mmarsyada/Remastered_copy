@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_newbie_ceiling_c_black = object_tangible_rem_custom_decorative_shared_newbie_ceiling_c_black:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_newbie_ceiling_c_black, "object/tangible/rem_custom/decorative/newbie_ceiling_c_black.iff")

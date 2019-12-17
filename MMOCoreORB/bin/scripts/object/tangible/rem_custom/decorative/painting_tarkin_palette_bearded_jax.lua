@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_painting_tarkin_palette_bearded_jax = object_tangible_rem_custom_decorative_shared_painting_tarkin_palette_bearded_jax:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_painting_tarkin_palette_bearded_jax, "object/tangible/rem_custom/decorative/painting_tarkin_palette_bearded_jax.iff")

@@ -1,0 +1,4 @@
+object_tangible_rem_custom_decorative_thm_spc_npe_hangarwall01 = object_tangible_rem_custom_decorative_shared_thm_spc_npe_hangarwall01:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_thm_spc_npe_hangarwall01, "object/tangible/rem_custom/decorative/thm_spc_npe_hangarwall01.iff")

@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_coil_pistol_ion_stunner = object_tangible_loot_dungeon_rem_custom_shared_coil_pistol_ion_stunner:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_coil_pistol_ion_stunner, "object/tangible/loot/dungeon/rem_custom/coil_pistol_ion_stunner.iff")

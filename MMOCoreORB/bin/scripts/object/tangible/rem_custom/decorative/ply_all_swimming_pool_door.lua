@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_ply_all_swimming_pool_door = object_tangible_rem_custom_decorative_shared_ply_all_swimming_pool_door:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_ply_all_swimming_pool_door, "object/tangible/rem_custom/decorative/ply_all_swimming_pool_door.iff")

@@ -1,0 +1,5 @@
+object_tangible_rem_custom_decorative_painting_tarkin_palette_white = object_tangible_rem_custom_decorative_shared_painting_tarkin_palette_white:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_painting_tarkin_palette_white, "object/tangible/rem_custom/decorative/painting_tarkin_palette_white.iff")

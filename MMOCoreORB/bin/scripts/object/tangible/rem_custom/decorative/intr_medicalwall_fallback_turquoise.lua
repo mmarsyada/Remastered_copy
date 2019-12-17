@@ -1,0 +1,4 @@
+object_tangible_rem_custom_decorative_intr_medicalwall_fallback_turquoise = object_tangible_rem_custom_decorative_shared_intr_medicalwall_fallback_turquoise:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_rem_custom_decorative_intr_medicalwall_fallback_turquoise, "object/tangible/rem_custom/decorative/intr_medicalwall_fallback_turquoise.iff")

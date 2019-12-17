@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_bolt_rifle_crossbow_ewok = object_tangible_loot_dungeon_rem_custom_shared_bolt_rifle_crossbow_ewok:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_bolt_rifle_crossbow_ewok, "object/tangible/loot/dungeon/rem_custom/bolt_rifle_crossbow_ewok.iff")

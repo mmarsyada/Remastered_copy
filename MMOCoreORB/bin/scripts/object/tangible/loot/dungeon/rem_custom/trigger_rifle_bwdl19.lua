@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_trigger_rifle_bwdl19 = object_tangible_loot_dungeon_rem_custom_shared_trigger_rifle_bwdl19:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_trigger_rifle_bwdl19, "object/tangible/loot/dungeon/rem_custom/trigger_rifle_bwdl19.iff")

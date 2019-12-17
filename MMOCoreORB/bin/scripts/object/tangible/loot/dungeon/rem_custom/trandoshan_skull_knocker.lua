@@ -1,0 +1,5 @@
+object_tangible_loot_dungeon_rem_custom_trandoshan_skull_knocker= object_tangible_loot_dungeon_rem_custom_shared_trandoshan_skull_knocker:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_loot_dungeon_rem_custom_trandoshan_skull_knocker, "object/tangible/loot/dungeon/rem_custom/trandoshan_skull_knocker.iff")
