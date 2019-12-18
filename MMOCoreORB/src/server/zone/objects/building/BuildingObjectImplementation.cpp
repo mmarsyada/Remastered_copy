@@ -36,6 +36,9 @@
 #include "server/zone/objects/building/components/GCWBaseContainerComponent.h"
 #include "server/zone/objects/building/components/EnclaveContainerComponent.h"
 
+// Remastered
+#include "server/zone/custom/managers/CustomTefManager.h"
+
 void BuildingObjectImplementation::initializeTransientMembers() {
 	StructureObjectImplementation::initializeTransientMembers();
 
@@ -885,7 +888,7 @@ void BuildingObjectImplementation::onExit(CreatureObject* player, uint64 parenti
 
 uint32 BuildingObjectImplementation::getMaximumNumberOfPlayerItems() {
 	if (isCivicStructure() )
-		return 250;
+		return 500;
 
 	SharedStructureObjectTemplate* ssot = dynamic_cast<SharedStructureObjectTemplate*> (templateObject.get());
 
@@ -901,7 +904,7 @@ uint32 BuildingObjectImplementation::getMaximumNumberOfPlayerItems() {
 
 	auto maxItems = MAXPLAYERITEMS;
 
-	return Math::min(maxItems, lots * 100);
+	return Math::min(maxItems, lots * 500);
 }
 
 int BuildingObjectImplementation::notifyObjectInsertedToChild(SceneObject* object, SceneObject* child, SceneObject* oldParent) {
@@ -1143,12 +1146,12 @@ void BuildingObjectImplementation::payAccessFee(CreatureObject* player) {
 		}
 	}
 
-	if (player->getCashCredits() < accessFee) {
+	if (player->getTotalCredits() < accessFee) {
 		player->sendSystemMessage("@player/player_utility:not_enough_money");
 		return;
 	}
 
-	player->subtractCashCredits(accessFee);
+	player->subtractTotalCredits(accessFee);
 
 	ManagedReference<CreatureObject*> owner = getOwnerCreatureObject();
 

@@ -2,3 +2,5 @@
 /autogen/
 core3*
 lib*
+/CMakeFiles/
+/CMakeFiles/*
