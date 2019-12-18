@@ -600,12 +600,6 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	chatManager->sendMail("system", "@newbie_tutorial/newbie_mail:welcome_subject", "@newbie_tutorial/newbie_mail:welcome_body", playerCreature->getFirstName());
 
-	//Join General chat room
-	ghost->addChatRoom(chatManager->getGeneralRoom()->getRoomID());
-
-	//Join PVP chat room
-	ghost->addChatRoom(chatManager->getPvpRoom()->getRoomID());
-
 	//Join auction chat room
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
 
