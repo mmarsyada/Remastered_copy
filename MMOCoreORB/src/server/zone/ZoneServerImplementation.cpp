@@ -41,6 +41,11 @@
 #include "ZoneLoadManagersTask.h"
 #include "ShutdownTask.h"
 
+// Remastered
+#include "server/zone/custom/managers/CustomFeeManager.h"
+#include "server/zone/custom/managers/CustomTefManager.h"
+#include "server/zone/custom/managers/CustomPvpManager.h"
+
 ZoneServerImplementation::ZoneServerImplementation(ConfigManager* config) :
 		ManagedServiceImplementation(), Logger("ZoneServer") {
 
@@ -268,6 +273,10 @@ void ZoneServerImplementation::startManagers() {
 
 	frsManager = new FrsManager(_this.getReferenceUnsafeStaticCast());
 	frsManager->initialize();
+
+	CustomFeeManager::instance()->initialize();
+	CustomTefManager::instance()->initialize();
+	CustomPvpManager::instance()->initialize();
 }
 
 void ZoneServerImplementation::start(int p, int mconn) {

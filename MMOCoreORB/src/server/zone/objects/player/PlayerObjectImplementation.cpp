@@ -78,6 +78,9 @@
 #include "server/login/SessionAPIClient.h"
 #endif // WITH_SESSION_API
 
+// Remastered
+#include "server/zone/custom/managers/CustomTefManager.h"
+
 void PlayerObjectImplementation::initializeTransientMembers() {
 	playerLogLevel = ConfigManager::instance()->getPlayerLogLevel();
 
@@ -1371,6 +1374,11 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	MissionManager* missionManager = zoneServer->getMissionManager();
 
+	if (CustomTefManager::instance()->enabled() && CustomTefManager::instance()->isPermaOvert(playerCreature)) {
+		playerCreature->setFactionStatus(FactionStatus::OVERT);
+	}
+
+	// Check for FRS Jedi without overt skill check
 	if (missionManager != nullptr && playerCreature->hasSkill("force_title_jedi_rank_02")) {
 		uint64 id = playerCreature->getObjectID();
 
@@ -2341,6 +2349,10 @@ void PlayerObjectImplementation::updateLastPvpCombatActionTimestamp(bool updateG
 	}
 
 	if (updateGcwAction) {
+		if (!alreadyHasTef && CustomTefManager::instance()->enabled()) {
+			CustomTefManager::instance()->notifyGcwTef(parent);
+		}
+
 		lastGcwPvpCombatActionTimestamp.updateToCurrentTime();
 		lastGcwPvpCombatActionTimestamp.addMiliTime(FactionManager::TEFTIMER);
 	}
@@ -2389,6 +2401,9 @@ void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeGcwTefNow,
 
 		if (removeBhTefNow) {
 			lastBhPvpCombatActionTimestamp.updateToCurrentTime();
+			if (CustomTefManager::instance()->enabled()) {
+				parent->removeGroupTef();
+			}
 			parent->notifyObservers(ObserverEventType::BHTEFCHANGED);
 		}
 

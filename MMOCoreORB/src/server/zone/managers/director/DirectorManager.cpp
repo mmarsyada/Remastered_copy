@@ -419,6 +419,7 @@ void DirectorManager::initializeLuaEngine(Lua* luaEngine) {
 	luaEngine->registerFunction("spawnTheaterObject", spawnTheaterObject);
 	luaEngine->registerFunction("getSchematicItemName", getSchematicItemName);
 	luaEngine->registerFunction("getBadgeListByType", getBadgeListByType);
+	lua_register(luaEngine->getLuaState(), "broadcastGalaxy", broadcastGalaxy);
 
 	//Navigation Mesh Management
 	luaEngine->registerFunction("createNavMesh", createNavMesh);
