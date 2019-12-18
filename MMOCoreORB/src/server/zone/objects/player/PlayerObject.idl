@@ -1734,6 +1734,9 @@ class PlayerObject extends IntangibleObject {
 	public native boolean hasPvpTef();
 
 	@read
+	public native boolean hasPvpTefOnly();
+
+	@read
 	public native boolean hasBhTef();
 
 	public native void schedulePvpTefRemovalTask(boolean removeGcwTefNow, boolean removeBhTefNow);
