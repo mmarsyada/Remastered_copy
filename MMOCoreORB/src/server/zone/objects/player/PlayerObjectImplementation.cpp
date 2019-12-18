@@ -2365,7 +2365,7 @@ bool PlayerObjectImplementation::hasPvpTef() const {
 	return !lastGcwPvpCombatActionTimestamp.isPast() || hasBhTef();
 }
 
-bool PlayerObjectImplementation::hasPvpTefOnly() {
+bool PlayerObjectImplementation::hasPvpTefOnly() const {
 	return !lastGcwPvpCombatActionTimestamp.isPast();
 }
 
