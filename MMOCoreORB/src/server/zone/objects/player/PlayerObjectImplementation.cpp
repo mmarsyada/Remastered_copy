@@ -78,9 +78,6 @@
 #include "server/login/SessionAPIClient.h"
 #endif // WITH_SESSION_API
 
-// Remastered
-#include "server/zone/custom/managers/CustomTefManager.h"
-
 void PlayerObjectImplementation::initializeTransientMembers() {
 	playerLogLevel = ConfigManager::instance()->getPlayerLogLevel();
 
@@ -323,16 +320,21 @@ void PlayerObjectImplementation::unload() {
 }
 
 int PlayerObjectImplementation::calculateBhReward() {
-        int minReward = 75000; // Minimum reward for a player bounty
-	int maxReward = 1250000; // Maximum reward for a player bounty
+	int minReward = 25000; // Minimum reward for a player bounty
+
+	if (getJediState() >= 4) // Minimum if player is knight
+		minReward = 50000;
 
 	int skillPoints = getSpentJediSkillPoints();
-	int reward = skillPoints * 3000;
+	int reward = skillPoints * 1000;
+
+	int frsRank = getFrsData()->getRank();
+
+	if (frsRank > 0)
+		reward += frsRank * 100000; // +100k per frs rank
 
 	if (reward < minReward)
 		reward = minReward;
-	else if (reward > maxReward)
-		reward = maxReward;
 
 	return reward;
 }
@@ -430,41 +432,12 @@ void PlayerObjectImplementation::notifySceneReady() {
 		}
 	}
 
-	//Join the faction chat rooms
-	switch (creature->getFaction())
-	{
-		case Factions::FACTIONIMPERIAL:
-			{
-				ManagedReference<ChatRoom*> chat = FactionManager::instance()->getImperialChat();
-				chat->sendTo(creature);
-				chatManager->handleChatEnterRoomById(creature, chat->getRoomID(), -1, true);
-
-				chat = FactionManager::instance()->getPvpNotificationChat();
-				chat->sendTo(creature);
-				chatManager->handleChatEnterRoomById(creature, chat->getRoomID(), -1, true);
-			}
-			break;
-		case Factions::FACTIONREBEL:
-			{
-				ManagedReference<ChatRoom*> chat = FactionManager::instance()->getRebelChat();
-				chat->sendTo(creature);
-				chatManager->handleChatEnterRoomById(creature, chat->getRoomID(), -1, true);
-
-				chat = FactionManager::instance()->getPvpNotificationChat();
-				chat->sendTo(creature);
-				chatManager->handleChatEnterRoomById(creature, chat->getRoomID(), -1, true);
-			}
-			break;
-		default:
-			break;
-	}
-
 	//Re-join chat rooms player was a member of before disconnecting.
 	for (int i = chatRooms.size() - 1; i >= 0; i--) {
 		ChatRoom* room = chatManager->getChatRoom(chatRooms.get(i));
 		if (room != nullptr) {
 			int roomType = room->getChatRoomType();
-			if (roomType == ChatRoom::PLANET || roomType == ChatRoom::GUILD || roomType == ChatRoom::PVP)
+			if (roomType == ChatRoom::PLANET || roomType == ChatRoom::GUILD)
 				continue; //Planet and Guild are handled above.
 
 			room->sendTo(creature);
@@ -1324,8 +1297,6 @@ void PlayerObjectImplementation::notifyOnline() {
 	CreatureObject* playerCreature = parent->asCreatureObject();
 	if (playerCreature == nullptr)
 		return;
-	//removeExperience("gcw_rebel_currency", false);
-	//removeExperience("gcw_imperial_currency", false);
 
 	miliSecsSession = 0;
 
@@ -1400,11 +1371,6 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	MissionManager* missionManager = zoneServer->getMissionManager();
 
-	if (CustomTefManager::instance()->enabled() && CustomTefManager::instance()->isPermaOvert(playerCreature)) {
-		playerCreature->setFactionStatus(FactionStatus::OVERT);
-	}
-
-	// Check for FRS Jedi without overt skill check
 	if (missionManager != nullptr && playerCreature->hasSkill("force_title_jedi_rank_02")) {
 		uint64 id = playerCreature->getObjectID();
 
@@ -2326,7 +2292,7 @@ void PlayerObjectImplementation::doForceRegen() {
 		Reference<ForceMeditateTask*> medTask = creature->getPendingTask("forcemeditate").castTo<ForceMeditateTask*>();
 
 		if (medTask != nullptr)
-			modifier = 6;
+			modifier = 3;
 	}
 
 	uint32 forceTick = tick * modifier;
@@ -2375,10 +2341,6 @@ void PlayerObjectImplementation::updateLastPvpCombatActionTimestamp(bool updateG
 	}
 
 	if (updateGcwAction) {
-		if (!alreadyHasTef && CustomTefManager::instance()->enabled()) {
-			CustomTefManager::instance()->notifyGcwTef(parent);
-		}
-
 		lastGcwPvpCombatActionTimestamp.updateToCurrentTime();
 		lastGcwPvpCombatActionTimestamp.addMiliTime(FactionManager::TEFTIMER);
 	}
@@ -2403,10 +2365,6 @@ bool PlayerObjectImplementation::hasPvpTef() const {
 	return !lastGcwPvpCombatActionTimestamp.isPast() || hasBhTef();
 }
 
-bool PlayerObjectImplementation::hasPvpTefOnly() const {
-	return !lastGcwPvpCombatActionTimestamp.isPast();
-}
-
 bool PlayerObjectImplementation::hasBhTef() const {
 	return !lastBhPvpCombatActionTimestamp.isPast();
 }
@@ -2427,9 +2385,6 @@ void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeGcwTefNow,
 
 		if (removeBhTefNow) {
 			lastBhPvpCombatActionTimestamp.updateToCurrentTime();
-			if (CustomTefManager::instance()->enabled()) {
-				parent->removeGroupTef();
-			}
 			parent->notifyObservers(ObserverEventType::BHTEFCHANGED);
 		}
 
