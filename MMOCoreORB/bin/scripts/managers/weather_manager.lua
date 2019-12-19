@@ -124,7 +124,7 @@ tatooine = {
 
 	hasDamagingSandstorms = 0,
 
-	sandstormDamage = 70, -- 40 = Annoying, 100 = deadly
+	sandstormDamage = 90, -- 40 = Annoying, 100 = deadly
 }
 
 
