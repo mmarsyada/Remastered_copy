@@ -581,3 +581,10 @@ object_intangible_vehicle_shared_mustafar_panning_droid = SharedIntangibleObject
 	clientTemplateFileName = "object/intangible/vehicle/shared_mustafar_panning_droid.iff"
 }
 ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_mustafar_panning_droid, "object/intangible/vehicle/shared_mustafar_panning_droid.iff")
+
+-- Flare S Swoop
+object_intangible_vehicle_shared_flare_s_swoop_crafted_pcd = SharedIntangibleObjectTemplate:new {
+	clientTemplateFileName = "object/intangible/vehicle/shared_flare_s_swoop_crafted_pcd.iff"
+}
+ObjectTemplates:addClientTemplate(object_intangible_vehicle_shared_flare_s_swoop_crafted_pcd, "object/intangible/vehicle/shared_flare_s_swoop_crafted_pcd.iff")
+
