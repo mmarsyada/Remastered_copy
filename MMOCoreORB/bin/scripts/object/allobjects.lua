@@ -337,6 +337,7 @@ includeFile("static/worldbuilding/organic/objects.lua")
 
 -- Custom
 includeFile("tangible/loot/rem_custom/objects.lua")
+includeFile("tangible/wearables/nano/objects.lua")
 
 includeFile("tangible/bank/objects.lua")
 includeFile("tangible/base/objects.lua")

@@ -40,7 +40,13 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
---Boots Vest
+--Nano Gloves
+object_tangible_wearables_gloves_shared_gloves_nano = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/gloves/shared_gloves_nano.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_gloves_shared_gloves_nano, "object/tangible/wearables/gloves/shared_gloves_nano.iff")
+
+--Nano Boots
 object_tangible_wearables_boots_shared_boots_nano = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/wearables/boots/shared_boots_nano.iff"
 }
