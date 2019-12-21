@@ -40,8 +40,6 @@
 --gives permission to release a modified version without this exception; 
 --this exception also makes it possible to release a modified version 
 
-
-
 --Children folder includes
 includeFile("tangible/wearables/apron/serverobjects.lua")
 includeFile("tangible/wearables/armor/serverobjects.lua")
@@ -75,5 +73,7 @@ includeFile("tangible/wearables/underwear/serverobjects.lua")
 includeFile("tangible/wearables/utility/serverobjects.lua")
 includeFile("tangible/wearables/vest/serverobjects.lua")
 includeFile("tangible/wearables/wookiee/serverobjects.lua")
+includeFile("tangible/wearables/nano/serverobjects.lua")
+
 
 -- Server Objects

@@ -45,10 +45,10 @@
 --Children folder includes
 
 -- Server Objects
-includeFile("custom_content/tangible/wearables/nano/pants_nano.lua")
-includeFile("custom_content/tangible/wearables/nano/belt_nano.lua")
-includeFile("custom_content/tangible/wearables/nano/boots_nano.lua")
-includeFile("custom_content/tangible/wearables/nano/gloves_nano.lua")
-includeFile("custom_content/tangible/wearables/nano/hat_covert.lua")
-includeFile("custom_content/tangible/wearables/nano/vest_nano.lua")
+includeFile("tangible/wearables/nano/pants_nano.lua")
+includeFile("tangible/wearables/nano/belt_nano.lua")
+includeFile("tangible/wearables/nano/boots_nano.lua")
+includeFile("tangible/wearables/nano/gloves_nano.lua")
+includeFile("tangible/wearables/nano/hat_covert.lua")
+includeFile("tangible/wearables/nano/vest_nano.lua")
 
