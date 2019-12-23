@@ -8,7 +8,8 @@
 
 RemBuffTerminal = ScreenPlay:new {
 	numberOfActs = 1,
-	healingFee = 0, -- Optional fee (in Credits) for healing wounds and battle fatigue
+	LearnMasterPoliFee = 25000,
+	LanguageFee = 10000,
 	buffPets = 0, -- 0 = No, 1 = Yes. Will buff all the player's active pets Health/Action/Mind with the same boost as the player.
 	buffPetSecondaryStats = 0, -- 0 = No, 1 = Yes. Will also buff the pet's secondary stats.
 	buffs = {
@@ -95,7 +96,6 @@ end
 
 
 -- UI Window Functions
-
 function RemBuffTerminal:openWindow(pCreatureObject, pUsingObject)
 	local sui = SuiListBox.new("RemBuffTerminal", "defaultCallback")
 
@@ -128,14 +128,16 @@ function RemBuffTerminal:openWindow(pCreatureObject, pUsingObject)
 
 	sui.add("Remove My Buffs and Empty My Stomach", "")
 	sui.add("Remove Buffs from My Active Pets", "")
+	sui.add("Learn Master Politician (25,000cr)", "")
+        sui.add("Learn All Languages (10,000cr)", "")
 	
-	local healMessage = "Heal My Wounds and Battle Fatigue"
+	--[[local healMessage = "Heal My Wounds and Battle Fatigue"
 	
 	if (self.healingFee > 0) then
 		healMessage = healMessage .. " (" .. tostring(self.healingFee) .. "cr)"
 	end
 	
-	sui.add(healMessage, "")
+	sui.add(healMessage, "")]]--
 
 	for i = 1, #self.buffs, 1 do
 		sui.add("Apply " .. self.buffs[i][1] .. " (" .. tostring(self.buffs[i][2]) .. "cr/" .. tostring(self.buffs[i][3]) .. "h)", "")
@@ -163,15 +165,16 @@ function RemBuffTerminal:defaultCallback(pPlayer, pSui, eventIndex, args)
 	elseif (selectedOption == 2) then
 		self:removePetBuffs(pPlayer)
 	elseif (selectedOption == 3) then
-		self:healWounds(pPlayer)
-	elseif (selectedOption > 3) then
-		self:applyBuff(pPlayer, selectedOption - 3) -- The -3 is to compensate for the first four entries in the menu
+		self:grantPolitician(pPlayer)
+	elseif (selectedOption == 4) then
+		self:learnLanguages(pPlayer)
+	elseif (selectedOption > 4) then
+		self:applyBuff(pPlayer, selectedOption - 4) -- The -4 is to compensate for the first four entries in the menu
 	end
 end
 
 
 -- Buff Functions
-
 function RemBuffTerminal:removePlayerBuffs(pPlayer)
 	CreatureObject(pPlayer):removeBuffs()
 	CreatureObject(pPlayer):emptyStomach()
@@ -193,15 +196,15 @@ function RemBuffTerminal:removePetBuffs(pPlayer)
 	end
 end
 
-function RemBuffTerminal:healWounds(pPlayer)
-	local price = self.healingFee
+function RemBuffTerminal:grantPolitician(pPlayer)
+	local price = self.LearnMasterPoliFee
 
-	if (price > 0) then
+	if (price > 0)then
 		local playerCash = CreatureObject(pPlayer):getCashCredits()
 		local playerBank = CreatureObject(pPlayer):getBankCredits()
 
 		if (playerCash + playerBank < price) then
-			CreatureObject(pPlayer):sendSystemMessage("Insufficient Funds: You require " .. tostring(self.healingFee) .. " credits in cash to use the healing service.")
+			CreatureObject(pPlayer):sendSystemMessage("Insufficient Funds: You lack the 25,000 learn Master Politician.")
 			return
 		end
 		
@@ -211,15 +214,60 @@ function RemBuffTerminal:healWounds(pPlayer)
 			local diff = price - playerCash
 			CreatureObject(pPlayer):subtractCashCredits(playerCash)
 			CreatureObject(pPlayer):setBankCredits(playerBank-diff)
-		end		
+		end	
 	end
 
-	for i = 0, 8 do
-		CreatureObject(pPlayer):setWounds(i, 0)
-	end
+	CreatureObject(pPlayer):addSkill("social_politician_master")
 	
-	CreatureObject(pPlayer):setShockWounds(0)
-	CreatureObject(pPlayer):sendSystemMessage("Your wounds have been healed and your mind is at ease.")
+	CreatureObject(pPlayer):sendSystemMessage("You have been granted Master Politician.")
+end
+
+function RemBuffTerminal:learnLanguages(pPlayer)
+
+	local price = self.LanguageFee
+
+	if (price > 0)then
+		local playerCash = CreatureObject(pPlayer):getCashCredits()
+		local playerBank = CreatureObject(pPlayer):getBankCredits()
+
+		if (playerCash + playerBank < price) then
+			CreatureObject(pPlayer):sendSystemMessage("Insufficient Funds: You lack the 10,000 in credits to learn all Languages.")
+			return
+		end
+		
+		if (playerCash > price) then
+			CreatureObject(pPlayer):subtractCashCredits(price)
+		else
+			local diff = price - playerCash
+			CreatureObject(pPlayer):subtractCashCredits(playerCash)
+			CreatureObject(pPlayer):setBankCredits(playerBank-diff)
+		end	
+	end
+
+        CreatureObject(pPlayer):addSkill("social_language_basic_speak")
+	CreatureObject(pPlayer):addSkill("social_language_basic_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_rodian_speak")
+	CreatureObject(pPlayer):addSkill("social_language_rodian_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_trandoshan_speak")
+	CreatureObject(pPlayer):addSkill("social_language_trandoshan_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_moncalamari_speak")
+	CreatureObject(pPlayer):addSkill("social_language_moncalamari_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_wookiee_speak")
+	CreatureObject(pPlayer):addSkill("social_language_wookiee_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_bothan_speak")
+	CreatureObject(pPlayer):addSkill("social_language_bothan_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_twilek_speak")
+	CreatureObject(pPlayer):addSkill("social_language_twilek_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_zabrak_speak")
+	CreatureObject(pPlayer):addSkill("social_language_zabrak_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_lekku_speak")
+	CreatureObject(pPlayer):addSkill("social_language_lekku_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_ithorian_speak")
+	CreatureObject(pPlayer):addSkill("social_language_ithorian_comprehend")
+	CreatureObject(pPlayer):addSkill("social_language_sullustan_speak")
+	CreatureObject(pPlayer):addSkill("social_language_sullustan_comprehend")
+	
+	CreatureObject(pPlayer):sendSystemMessage("You have learned all Launguages.")
 end
 
 function RemBuffTerminal:applyBuff(pPlayer, buffSelected)
@@ -231,7 +279,7 @@ function RemBuffTerminal:applyBuff(pPlayer, buffSelected)
 		local playerBank = CreatureObject(pPlayer):getBankCredits()
 
 		if (playerCash + playerBank < price) then
-			CreatureObject(pPlayer):sendSystemMessage("Insufficient Funds: You require " .. tostring(self.healingFee) .. " credits in cash to use the healing service.")
+			CreatureObject(pPlayer):sendSystemMessage("Insufficient Funds: You lack enough credits to use this healing service.")
 			return
 		end
 		
@@ -289,7 +337,6 @@ end
 
 
 -- Radial Menu Functions
-
 RemBuffTerminalMenuComponent = { }
 
 function RemBuffTerminalMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
