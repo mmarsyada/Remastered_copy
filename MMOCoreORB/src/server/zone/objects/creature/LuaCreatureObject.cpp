@@ -694,6 +694,7 @@ int LuaCreatureObject::getFactionRank(lua_State* L) {
 	return 1;
 }
 
+
 int LuaCreatureObject::getCashCredits(lua_State* L) {
 	lua_pushinteger(L, realObject->getCashCredits());
 
@@ -1196,11 +1197,6 @@ int LuaCreatureObject::getActivePet(lua_State* L) {
  	return 1;	
 }
 
-/*
-* Tarkin's Revenge
-* Returns the player's "food" filling
-* lua: CreatureObject(pPlayer):getFoodFilling()
-*/
  int LuaCreatureObject::getFoodFilling(lua_State* L) {
 	
 	if (!realObject->isPlayerCreature())
@@ -1215,11 +1211,6 @@ int LuaCreatureObject::getActivePet(lua_State* L) {
 	return 1;
 }
 
-/*
-* Tarkin's Revenge
-* Returns the player's "drink" filling
-* lua: CreatureObject(pPlayer):getDrinkFilling()
-*/
  int LuaCreatureObject::getDrinkFilling(lua_State* L) {
 	
 	if (!realObject->isPlayerCreature())
@@ -1234,11 +1225,6 @@ int LuaCreatureObject::getActivePet(lua_State* L) {
 	return 1;
 }
 
-/*
-* Tarkin's Revenge
-* Sets the player's "food" filling
-* lua: CreatureObject(pPlayer):setFoodFilling(amount)
-*/
  int LuaCreatureObject::setFoodFilling(lua_State* L) {
 	
 	if (!realObject->isPlayerCreature())
@@ -1253,11 +1239,6 @@ int LuaCreatureObject::getActivePet(lua_State* L) {
 	return 1;
 }
 
-/*
-* Tarkin's Revenge
-* Sets the player's "drink" filling
-* lua: CreatureObject(pPlayer):setDrinkFilling(amount)
-*/
  int LuaCreatureObject::setDrinkFilling(lua_State* L) {
 	
 	if (!realObject->isPlayerCreature())
@@ -1272,11 +1253,6 @@ int LuaCreatureObject::getActivePet(lua_State* L) {
 	return 1;
 }
 
-/*
-* Tarkin's Revenge
-* Get the creatureObject of the group leader
-* lua: CreatureObject(pPlayer):getGroupLeader()
-*/
 int LuaCreatureObject::getGroupLeader(lua_State* L) {
 	Locker locker(realObject);
 	
