@@ -20,9 +20,9 @@ FortTuskenScreenPlay = ScreenPlay:new {
 				{group = "tusken_common", chance = 2850000},
 				{group = "rifles", chance = 2100000},
 				{group = "pistols", chance = 2100000},
-				{group = "nge_house_sand_crawler", chance = 500000},
-				{group = "clothing_attachments", chance = 300000},
-				{group = "armor_attachments", chance = 300000},
+				{group = "nge_house_sand_crawler", chance = 50000},
+				{group = "clothing_attachments", chance = 150000},
+				{group = "armor_attachments", chance = 150000},
 				{group = "rem_named_crystals", chance = 50000}
 			},
 			lootChance = 10000000
