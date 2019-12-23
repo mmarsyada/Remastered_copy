@@ -46,6 +46,7 @@
 includeFile("installation/generators/base/serverobjects.lua")
 
 -- Server Objects
+includeFile("installation/generators/power_generator_fusion_style_elite.lua")
 includeFile("installation/generators/power_generator_fusion_style_1.lua")
 includeFile("installation/generators/power_generator_photo_bio_style_1.lua")
 includeFile("installation/generators/power_generator_solar_style_1.lua")
