@@ -2551,11 +2551,11 @@ includeFile("items/rem_custom/vehicle_schems/koro2_schem.lua")
 includeFile("items/rem_custom/vehicle_schems/sith_schem.lua")
 
 -- Elite Creature Subs
-includeFile("items/rem_custom/creature/krayt_dragon_tissue_elite.lua")
-includeFile("items/rem_custom/creature/acklay_bones_elite.lua")
-includeFile("items/rem_custom/creature/janta_blood_elite.lua")
-includeFile("items/rem_custom/creature/nightsister_vibro_unit_elite.lua")
-includeFile("items/rem_custom/creature/gorax_bone_shards_elite.lua")
+includeFile("items/creature/krayt_dragon_tissue_elite.lua")
+includeFile("items/geonosian_lab/acklay_bones_elite.lua")
+includeFile("items/npc/janta_blood_elite.lua")
+includeFile("items/npc/nightsister_vibro_unit_elite.lua")
+includeFile("items/npc/gorax_bone_shards_elite.lua")
 
 --Buildings
 includeFile("items/rem_custom/building_schems/schemCloud.lua")

@@ -6,8 +6,8 @@ acklay_bones_elite = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/component/weapon/acklay_bone_reinforcement_core.iff",
 	craftingValues = {
-		{"mindamage",150,225,0},
-		{"maxdamage",150,225,0},
+		{"mindamage",150,250,0},
+		{"maxdamage",150,250,0},
 		{"useCount",1,1,0},
 		{"attackspeed",-0.9,-1.5,0,0},
 		{"woundchance",0,0,0,0},
