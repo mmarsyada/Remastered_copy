@@ -1,7 +1,7 @@
 acklay = Creature:new {
 	objectName = "@mob/creature_names:geonosian_acklay_bunker_boss",
 	customName = "Acklay",
-	socialGroup = "kliknik",
+	socialGroup = "geonosian_creature",
 	faction = "",
 	level = 157,
 	chanceHit = 92.5,
@@ -33,14 +33,14 @@ acklay = Creature:new {
 			groups = {
 				{group = "acklay", chance = 10000000}
 			},
-			lootChance = 8000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 4000000
+			lootChance = 2000000
 		},
 	},
 	weapons = {"creature_spit_large_yellow"},

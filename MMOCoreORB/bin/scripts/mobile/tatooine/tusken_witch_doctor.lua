@@ -3,14 +3,14 @@ tusken_witch_doctor = Creature:new {
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
 	level = 202,
-	chanceHit = 9,
-	damageMin = 522,
-	damageMax = 750,
+	chanceHit = 16,
+	damageMin = 1145,
+	damageMax = 2000,
 	baseXp = 19201,
-	baseHAM = 150000,
-	baseHAMmax = 150000,
-	armor = 2,
-	resists = {55,80,35,80,0,30,45,70,-1},
+	baseHAM = 160000,
+	baseHAMmax = 195000,
+	armor = 3,
+	resists = {65,95,35,100,0,30,45,80,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ tusken_witch_doctor = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}			
 			},
-			lootChance = 4000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ tusken_witch_doctor = Creature:new {
 				{group = "nge_house_sand_crawler", chance = 2750000},
 				{group = "rem_named_crystals", chance = 500000}
 			},
-			lootChance = 2500000
+			lootChance = 500000
 		}
 	},
 	weapons = {"tusken_weapons"},

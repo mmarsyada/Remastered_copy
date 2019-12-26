@@ -40,7 +40,7 @@ kliknik_dark_worker = Creature:new {
 			groups = {
 				{group = "kliknik_trophy", chance = 10000000}
 			},
-			lootChance = 25000
+			lootChance = 5000
 		},
 	},
 	weapons = {},

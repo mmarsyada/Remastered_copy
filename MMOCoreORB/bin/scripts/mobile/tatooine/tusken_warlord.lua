@@ -41,7 +41,7 @@ tusken_warlord = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}
 			},
-			lootChance = 3000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -49,7 +49,7 @@ tusken_warlord = Creature:new {
 				{group = "power_crystals", chance = 4000000},
 				{group = "nge_house_sand_crawler", chance = 2000000}
 			},
-			lootChance = 3000000
+			lootChance = 500000
 		}
 	},
 	weapons = {"tusken_weapons"},
