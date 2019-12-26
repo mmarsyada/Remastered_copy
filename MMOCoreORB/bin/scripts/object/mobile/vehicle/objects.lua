@@ -1098,4 +1098,9 @@ object_mobile_vehicle_shared_ghost_speederbike_flash = SharedCreatureObjectTempl
 }
 ObjectTemplates:addClientTemplate(object_mobile_vehicle_shared_ghost_speederbike_flash, "object/mobile/vehicle/shared_ghost_speederbike_flash.iff")
 
+--********************************************
 
+object_mobile_vehicle_shared_flare_s_swoop_crafted = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/vehicle/shared_flare_s_swoop_crafted.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_vehicle_shared_flare_s_swoop_crafted, "object/mobile/vehicle/shared_flare_s_swoop_crafted.iff")
