@@ -56,7 +56,7 @@ includeFile("mobile/vehicle/speederbike_base.lua")
 includeFile("mobile/vehicle/speederbike_flash.lua")
 includeFile("mobile/vehicle/speederbike_swoop.lua")
 includeFile("mobile/vehicle/vehicle_base.lua")
-
+includeFile("mobile/vehicle/flare_s_swoop_crafted.lua")
 includeFile("mobile/vehicle/mustafar_panning_droid.lua")
 
 --NGE/CU Vehicles
