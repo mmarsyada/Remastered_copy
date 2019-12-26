@@ -40,7 +40,7 @@ tusken_carnage_champion = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}			
 			},
-			lootChance = 4000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ tusken_carnage_champion = Creature:new {
 				{group = "nge_house_sand_crawler", chance = 2750000},
 				{group = "rem_named_crystals", chance = 500000}
 			},
-			lootChance = 2500000
+			lootChance = 500000
 		}
 	},
 	weapons = {"tusken_weapons"},

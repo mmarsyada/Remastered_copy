@@ -2,15 +2,15 @@ krayt_dragon_grand = Creature:new {
 	objectName = "@mob/creature_names:krayt_dragon_grand",
 	socialGroup = "krayt",
 	faction = "",
-	level = 306,
-	chanceHit = 25,
-	damageMin = 1816,
-	damageMax = 2928,
-	baseXp = 28049,
-	baseHAM = 390000,
-	baseHAMmax = 481000,
-	armor = 2,
-	resists = {150,150,150,150,110,150,150,150,-1},
+	level = 336,
+	chanceHit = 30,
+	damageMin = 2270,
+	damageMax = 4250,
+	baseXp = 28549,
+	baseHAM = 410000,
+	baseHAMmax = 501000,
+	armor = 3,
+	resists = {195,195,195,195,165,195,195,195,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 1500,
 	hideType = "hide_bristley",
@@ -51,7 +51,7 @@ krayt_dragon_grand = Creature:new {
 			groups = {
 				{group = "krayt_trophy", chance = 10000000}
 			},
-			lootChance = 25000
+			lootChance = 15000
 		},
 	},
 	weapons = {},

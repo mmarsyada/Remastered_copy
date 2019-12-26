@@ -39,7 +39,7 @@ kliknik_queen_harvester = Creature:new {
 			groups = {
 				{group = "kliknik_trophy", chance = 10000000}
 			},
-			lootChance = 25000
+			lootChance = 5000
 		},
 	},
 	weapons = {"creature_spit_small_yellow"},

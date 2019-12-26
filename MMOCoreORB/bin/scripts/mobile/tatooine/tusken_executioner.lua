@@ -4,13 +4,13 @@ tusken_executioner = Creature:new {
 	faction = "tusken_raider",
 	level = 263,
 	chanceHit = 23.5,
-	damageMin = 622,
-	damageMax = 1100,
+	damageMin = 1645,
+	damageMax = 3000,
 	baseXp = 25167,
 	baseHAM = 261000,
 	baseHAMmax = 320000,
 	armor = 3,
-	resists = {85,80,35,90,20,30,45,80,-1},
+	resists = {85,80,35,100,20,30,45,80,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ tusken_executioner = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}			
 			},
-			lootChance = 4000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ tusken_executioner = Creature:new {
 				{group = "nge_house_sand_crawler", chance = 2750000},
 				{group = "rem_named_crystals", chance = 500000}
 			},
-			lootChance = 2500000
+			lootChance = 500000
 		}
 	},
 	weapons = {"tusken_weapons"},

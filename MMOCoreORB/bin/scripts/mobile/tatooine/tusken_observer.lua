@@ -3,14 +3,14 @@ tusken_observer = Creature:new {
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
 	level = 227,
-	chanceHit = 11.75,
-	damageMin = 522,
-	damageMax = 700,
+	chanceHit = 19.75,
+	damageMin = 1270,
+	damageMax = 2250,
 	baseXp = 21630,
-	baseHAM = 150000,
-	baseHAMmax = 150000,
-	armor = 2,
-	resists = {75,75,35,80,10,30,35,70,-1},
+	baseHAM = 208000,
+	baseHAMmax = 254000,
+	armor = 3,
+	resists = {185,185,135,200,10,130,145,180,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ tusken_observer = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}			
 			},
-			lootChance = 4000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ tusken_observer = Creature:new {
 				{group = "nge_house_sand_crawler", chance = 2750000},
 				{group = "rem_named_crystals", chance = 500000}
 			},
-			lootChance = 2500000
+			lootChance = 500000
 		}
 	},
 	weapons = {"tusken_weapons"},

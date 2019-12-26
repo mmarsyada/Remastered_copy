@@ -39,7 +39,7 @@ kliknik_dark_queen = Creature:new {
 			groups = {
 				{group = "kliknik_trophy", chance = 10000000}
 			},
-			lootChance = 25000
+			lootChance = 5000
 		},
 	},
 	weapons = {"creature_spit_small_yellow"},

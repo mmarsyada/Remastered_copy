@@ -3,14 +3,14 @@ krayt_dragon_adolescent = Creature:new {
 	socialGroup = "krayt",
 	faction = "",
 	level = 336,
-	chanceHit = 12.0,
-	damageMin = 931,
-	damageMax = 1500,
-	baseXp = 26356,
-	baseHAM = 150000,
-	baseHAMmax = 201000,
-	armor = 2,
-	resists = {170,170,30,30,120,30,30,30,-1},
+	chanceHit = 30,
+	damageMin = 2270,
+	damageMax = 4250,
+	baseXp = 28549,
+	baseHAM = 410000,
+	baseHAMmax = 501000,
+	armor = 3,
+	resists = {195,195,195,195,165,195,195,195,-1},
 	meatType = "meat_carnivore",
 	meatAmount = 1000,
 	hideType = "hide_bristley",
@@ -51,7 +51,7 @@ krayt_dragon_adolescent = Creature:new {
 			groups = {
 				{group = "krayt_trophy", chance = 10000000}
 			},
-			lootChance = 25000
+			lootChance = 10000
 		},
 	},
 	weapons = {},

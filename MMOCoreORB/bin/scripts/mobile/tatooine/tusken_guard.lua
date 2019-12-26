@@ -41,7 +41,7 @@ tusken_guard = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}
 			},
-			lootChance = 3000000
+			lootChance = 1000000
 		},
 		{
 			groups = {

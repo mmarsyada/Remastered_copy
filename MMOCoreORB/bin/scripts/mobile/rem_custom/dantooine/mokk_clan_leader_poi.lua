@@ -50,7 +50,7 @@ mokk_clan_leader_poi = Creature:new {
 			groups = {
 				{group = "mokk_cave_rare", chance = 10000000}
 			},
-			lootChance = 1800000
+			lootChance = 200000
 		},
 	},
 	weapons = {"mokk_weapons"},
