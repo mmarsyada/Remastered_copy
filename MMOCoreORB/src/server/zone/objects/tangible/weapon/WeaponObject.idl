@@ -466,6 +466,26 @@ class WeaponObject extends TangibleObject {
 	}
 
 	@read
+	public boolean isCarboniteRifle() {
+		return weaponTemplate.isDerivedFrom("object/weapon/ranged/heavy/heavy_carbonite_rifle.iff");
+	}
+
+	@read
+	public boolean isLavaCannon() {
+		return weaponTemplate.isDerivedFrom("object/weapon/ranged/heavy/som_lava_cannon.iff");
+	}
+
+	@read
+	public boolean isReaperCannon() {
+		return weaponTemplate.isDerivedFrom("object/weapon/ranged/heavy/heavy_pvp.iff");
+	}
+
+	@read
+	public boolean isRepublicFlamer() {
+		return weaponTemplate.isDerivedFrom("object/weapon/ranged/heavy/som_republic_flamer.iff");
+	}
+
+	@read
 	public boolean isHeavyAcidRifle() {
 		return weaponTemplate.isDerivedFrom("object/weapon/ranged/rifle/rifle_acid_beam.iff");
 	}
