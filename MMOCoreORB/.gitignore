@@ -28,6 +28,7 @@ build_temp
 html
 latex
 log
+nbproject
 src/Makefile
 src/server/chat/Makefile
 src/server/conf/Makefile
