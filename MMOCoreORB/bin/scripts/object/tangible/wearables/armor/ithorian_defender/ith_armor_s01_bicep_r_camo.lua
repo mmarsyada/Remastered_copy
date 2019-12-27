@@ -43,8 +43,8 @@
 
 object_tangible_wearables_armor_ithorian_defender_ith_armor_s01_bicep_r = object_tangible_wearables_armor_ithorian_defender_shared_ith_armor_s01_bicep_r:new {
 	templateType = ARMOROBJECT,
-	objectMenuComponent = "CustomWearableObjectMenuComponent",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",
 				"object/mobile/vendor/ithorian_female.iff",

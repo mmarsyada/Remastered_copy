@@ -42,6 +42,7 @@
 
 
 object_tangible_wearables_backpack_padawan_pouch= object_tangible_wearables_backpack_shared_padawan_pouch:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

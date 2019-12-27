@@ -1,5 +1,6 @@
 object_tangible_wearables_backpack_nym_themepark_backpack = object_tangible_wearables_backpack_shared_nym_themepark_backpack:new {
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

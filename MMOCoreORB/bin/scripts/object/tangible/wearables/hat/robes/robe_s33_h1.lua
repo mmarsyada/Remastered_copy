@@ -1,4 +1,5 @@
 object_tangible_wearables_robe_robe_s33_h1 = object_tangible_wearables_robe_shared_robe_s33_h1:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

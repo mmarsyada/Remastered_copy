@@ -3,6 +3,7 @@ object_tangible_wearables_armor_rebel_spec_force_armor_rebel_spec_force_leggings
 
 	faction = "Rebel",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { 
 				"object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",

@@ -1,6 +1,7 @@
 object_tangible_wearables_armor_snowtrooper_armor_snowtrooper_belt = object_tangible_wearables_armor_snowtrooper_shared_armor_snowtrooper_belt:new {
 	templateType = CLOTHINGOBJECT,
 	faction = "Imperial",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

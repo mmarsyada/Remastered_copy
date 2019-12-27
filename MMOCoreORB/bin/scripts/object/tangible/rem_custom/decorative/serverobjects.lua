@@ -219,23 +219,6 @@ includeFile("tangible/rem_custom/decorative/kinshi_lunch_money.lua")
 includeFile("tangible/rem_custom/decorative/skolten_key.lua")
 includeFile("tangible/rem_custom/decorative/tatwi_marble.lua")
 
---Wedding Scavenger Hunt Items
-includeFile("tangible/rem_custom/decorative/wed_scav_item_1.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_2.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_3.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_4.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_5.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_6.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_7.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_8.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_9.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_item_10.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_flag.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_sign.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_reward_painting.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_reward_rug.lua")
-includeFile("tangible/rem_custom/decorative/wed_scav_reward_camp.lua")
-
 --Palette Posters
 includeFile("tangible/rem_custom/decorative/painting_tarkin_palette_cloth.lua")
 includeFile("tangible/rem_custom/decorative/painting_tarkin_palette_metal.lua")

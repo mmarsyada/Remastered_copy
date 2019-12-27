@@ -46,7 +46,7 @@ object_tangible_wearables_armor_tantel_armor_tantel_skreej_bicep_r = object_tang
 
 	faction = "",
 
-	objectMenuComponent = "CustomWearableObjectMenuComponent",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",

@@ -3,6 +3,7 @@ object_tangible_wearables_armor_snowtrooper_armor_snowtrooper_helmet = object_ta
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/zabrak_male.iff",

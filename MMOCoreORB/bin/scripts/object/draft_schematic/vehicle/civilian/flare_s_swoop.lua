@@ -2,7 +2,7 @@ object_draft_schematic_vehicle_civilian_flare_s_swoop = object_draft_schematic_v
 
 	templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "Flare S Swoop",
+	customObjectName = "Advanced Flare S Swoop",
 
 	craftingToolTab = 16, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 20,

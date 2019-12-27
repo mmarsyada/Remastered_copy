@@ -44,10 +44,10 @@
 object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_leggings = object_tangible_wearables_armor_stormtrooper_shared_armor_stormtrooper_leggings:new {
 	templateType = ARMOROBJECT,
 
-	objectMenuComponent = "ArmorObjectMenuComponent",
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

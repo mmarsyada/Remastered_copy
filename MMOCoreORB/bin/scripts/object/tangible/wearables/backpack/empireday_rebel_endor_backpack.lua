@@ -2,6 +2,7 @@ object_tangible_wearables_backpack_empireday_rebel_endor_backpack = object_tangi
 
 	faction = "Rebel",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

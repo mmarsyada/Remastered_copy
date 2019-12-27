@@ -3,6 +3,7 @@ object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_bracer_l_g
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",
 				"object/creature/player/wookiee_male.iff",

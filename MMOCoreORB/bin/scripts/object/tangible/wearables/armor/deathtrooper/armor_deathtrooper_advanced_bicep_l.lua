@@ -44,7 +44,7 @@
 object_tangible_wearables_armor_deathtrooper_armor_deathtrooper_advanced_bicep_l = object_tangible_wearables_armor_deathtrooper_shared_armor_deathtrooper_advanced_bicep_l:new {
 	templateType = ARMOROBJECT,
 
-	objectMenuComponent = "CustomWearableObjectMenuComponent",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",

@@ -1,5 +1,6 @@
 
 object_tangible_wearables_robe_robe_jedi_padawan_generic = object_tangible_wearables_robe_shared_robe_jedi_padawan_generic:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",

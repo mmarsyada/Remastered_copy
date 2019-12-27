@@ -2,6 +2,7 @@ object_tangible_wearables_backpack_backpack_rebel_snow_soldier = object_tangible
 
 	faction = "Rebel",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

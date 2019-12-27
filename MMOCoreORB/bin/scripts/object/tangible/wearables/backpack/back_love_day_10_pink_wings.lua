@@ -42,6 +42,7 @@
 
 
 object_tangible_wearables_backpack_back_love_day_10_pink_wings = object_tangible_wearables_backpack_shared_back_love_day_10_pink_wings:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

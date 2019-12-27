@@ -1,6 +1,7 @@
 object_tangible_wearables_armor_rebel_spec_force_armor_rebel_spec_force_belt_gcw = object_tangible_wearables_armor_rebel_spec_force_shared_armor_rebel_spec_force_belt_gcw:new {
 	templateType = CLOTHINGOBJECT,
 	faction = "Rebel",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { 
 				"object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",

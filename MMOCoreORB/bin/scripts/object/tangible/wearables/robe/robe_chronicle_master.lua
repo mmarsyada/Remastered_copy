@@ -1,5 +1,6 @@
 
 object_tangible_wearables_robe_robe_chronicle_master = object_tangible_wearables_robe_shared_robe_chronicle_master:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
