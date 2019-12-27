@@ -1,5 +1,6 @@
 object_tangible_wearables_backpack_backpack_s09 = object_tangible_wearables_backpack_shared_backpack_s09:new {
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

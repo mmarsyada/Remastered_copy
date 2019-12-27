@@ -1,5 +1,6 @@
 
 object_tangible_wearables_robe_exar_cultist_hood_down_f = object_tangible_wearables_robe_shared_exar_cultist_hood_down_f:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",

@@ -42,6 +42,7 @@
 
 
 object_tangible_wearables_bikini_bikini_s03 = object_tangible_wearables_bikini_shared_bikini_s03:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_female.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/moncal_female.iff",

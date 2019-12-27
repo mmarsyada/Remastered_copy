@@ -44,10 +44,10 @@
 object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_rebel_s01_helmet = object_tangible_wearables_armor_clone_trooper_shared_armor_clone_trooper_rebel_s01_helmet:new {
 	templateType = ARMOROBJECT,
 
-	--objectMenuComponent = {"cpp", "CustomWearableObjectMenuComponent"},
 
 	faction = "Rebel",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",

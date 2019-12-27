@@ -2,6 +2,7 @@ object_tangible_wearables_backpack_backpack_s08 = object_tangible_wearables_back
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

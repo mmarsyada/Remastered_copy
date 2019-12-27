@@ -43,8 +43,8 @@
 
 object_tangible_wearables_boots_singing_mountain_clan_boots = object_tangible_wearables_boots_shared_singing_mountain_clan_boots:new {
 
-	objectMenuComponent = "ArmorObjectMenuComponent",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_female.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/moncal_female.iff",

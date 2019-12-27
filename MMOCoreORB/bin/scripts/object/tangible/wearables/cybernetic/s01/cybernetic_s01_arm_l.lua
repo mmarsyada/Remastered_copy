@@ -42,7 +42,7 @@
 
 
 object_tangible_wearables_cybernetic_s01_cybernetic_s01_arm_l = object_tangible_wearables_cybernetic_s01_shared_cybernetic_s01_arm_l:new {
-	objectMenuComponent = "CustomWearableObjectMenuComponent",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",

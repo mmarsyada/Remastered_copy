@@ -3,6 +3,7 @@ object_tangible_wearables_armor_scout_trooper_armor_scout_trooper_helmet_gcw = o
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/zabrak_male.iff",

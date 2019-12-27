@@ -3,6 +3,7 @@ object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_helmet_camo = ob
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/zabrak_male.iff",

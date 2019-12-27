@@ -1,4 +1,5 @@
 object_tangible_wearables_bracelet_primitive_bracelet = object_tangible_wearables_bracelet_shared_primitive_bracelet:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
     playerRaces = {
 			"object/creature/player/bothan_male.iff",
 			"object/creature/player/human_male.iff",

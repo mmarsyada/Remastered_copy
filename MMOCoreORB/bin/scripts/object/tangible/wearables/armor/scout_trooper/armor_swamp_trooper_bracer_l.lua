@@ -1,10 +1,10 @@
 object_tangible_wearables_armor_scout_trooper_armor_swamp_trooper_bracer_l = object_tangible_wearables_armor_scout_trooper_shared_armor_swamp_trooper_bracer_l:new {
 	templateType = ARMOROBJECT,
 
-	objectMenuComponent = "ArmorObjectMenuComponent",
 
 	faction = "Imperial",
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

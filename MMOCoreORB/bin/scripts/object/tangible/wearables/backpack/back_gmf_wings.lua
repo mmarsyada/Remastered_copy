@@ -1,4 +1,5 @@
 object_tangible_wearables_backpack_back_gmf_wings = object_tangible_wearables_backpack_shared_back_gmf_wings:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

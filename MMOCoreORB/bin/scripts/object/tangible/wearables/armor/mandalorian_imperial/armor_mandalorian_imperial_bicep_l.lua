@@ -1,6 +1,7 @@
 object_tangible_wearables_armor_mandalorian_imperial_armor_mandalorian_imperial_bicep_l = object_tangible_wearables_armor_mandalorian_imperial_shared_armor_mandalorian_imperial_bicep_l:new {
 	templateType = ARMOROBJECT,
 
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

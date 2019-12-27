@@ -42,6 +42,7 @@
 
 
 object_tangible_wearables_pants_pants_nano = object_tangible_wearables_pants_shared_pants_nano:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

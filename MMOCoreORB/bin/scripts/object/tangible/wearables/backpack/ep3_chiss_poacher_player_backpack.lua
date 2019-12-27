@@ -42,6 +42,7 @@
 
 
 object_tangible_wearables_backpack_ep3_chiss_poacher_player_backpack = object_tangible_wearables_backpack_shared_ep3_chiss_poacher_player_backpack:new {
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",

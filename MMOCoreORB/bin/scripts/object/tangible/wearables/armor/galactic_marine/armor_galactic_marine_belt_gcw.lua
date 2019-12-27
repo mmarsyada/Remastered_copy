@@ -1,6 +1,7 @@
 object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_belt_gcw = object_tangible_wearables_armor_galactic_marine_shared_armor_galactic_marine_belt_gcw:new {
 	templateType = CLOTHINGOBJECT,
 	faction = "Imperial",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",
 				"object/creature/player/wookiee_male.iff",

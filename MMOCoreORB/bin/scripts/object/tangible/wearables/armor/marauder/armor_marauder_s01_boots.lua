@@ -46,7 +46,7 @@ object_tangible_wearables_armor_marauder_armor_marauder_s01_boots = object_tangi
 
 	faction = "",
 
-	objectMenuComponent = "CustomWearableObjectMenuComponent",
+        objectMenuComponent = "CustomWearableObjectMenuComponent",
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
