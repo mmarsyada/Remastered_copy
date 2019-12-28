@@ -12,7 +12,7 @@ factionRewardType = {
 
 rebelRewardData = {
 	weaponsArmorList = {
-		"armor_marine_backpack", "armor_marine_bicep_l", "armor_marine_bicep_r", "armor_marine_boots", "armor_marine_chest_plate", "armor_marine_helmet",  "armor_marine_leggings", "armor_marine_bracer_l", "armor_marine_bracer_r", "armor_marine_gloves", "armor_marine_chest_rebel", "rebel_marine_bicep_l_gcw", "rebel_marine_bicep_r_gcw", "rebel_marine_boots_gcw", "rebel_marine_chest_gcw", "rebel_marine_helmet_gcw", "rebel_marine_leggings_gcw", "rebel_marine_bracer_l_gcw", "rebel_marine_bracer_r_gcw",  "rebel_marine_gloves_gcw", "rebel_marine_utility_belt_gcw", "armor_rebel_assault_bicep_l", "armor_rebel_assault_bicep_r", "armor_rebel_assault_boots", "armor_rebel_assault_chest", "armor_rebel_assault_helmet", "armor_rebel_assault_leggings", "armor_rebel_assault_bracer_l", "armor_rebel_assault_bracer_r", "armor_rebel_assault_gloves", "armor_rebel_assault_belt", "armor_rebel_assault_bicep_l_gcw", "armor_rebel_assault_bicep_r_gcw", "armor_rebel_assault_boots_gcw", "armor_rebel_assault_chest_gcw", "armor_rebel_assault_helmet_gcw", "armor_rebel_assault_leggings_gcw", "armor_rebel_assault_bracer_l_gcw", "armor_rebel_assault_bracer_r_gcw", "armor_rebel_assault_gloves_gcw", "armor_rebel_assault_belt_gcw", "armor_rebel_assault_bicep_l_camo", "armor_rebel_assault_bicep_r_camo", "armor_rebel_assault_boots_camo", "armor_rebel_assault_chest_camo", "armor_rebel_assault_helmet_camo", "armor_rebel_assault_leggings_camo", "armor_rebel_assault_bracer_l_camo", "armor_rebel_assault_bracer_r_camo", "armor_rebel_assault_gloves_camo", "armor_rebel_assault_belt_camo", "armor_rebel_battle_bicep_l", "armor_rebel_battle_bicep_r", "armor_rebel_battle_boots", "armor_rebel_battle_chest", "armor_rebel_battle_helmet", "armor_rebel_battle_leggings", "armor_rebel_battle_bracer_l", "armor_rebel_battle_bracer_r", "armor_rebel_battle_gloves", "armor_rebel_battle_belt", "armor_rebel_battle_bicep_l_gcw", "armor_rebel_battle_bicep_r_gcw", "armor_rebel_battle_boots_gcw", "armor_rebel_battle_chest_gcw", "armor_rebel_battle_helmet_gcw", "armor_rebel_battle_leggings_gcw", "armor_rebel_battle_bracer_l_gcw", "armor_rebel_battle_bracer_r_gcw", "armor_rebel_battle_gloves_gcw", "armor_rebel_battle_belt_gcw", "armor_rebel_spec_force_bicep_l", "armor_rebel_spec_force_bicep_r", "armor_rebel_spec_force_boots", "armor_rebel_spec_force_chest", "armor_rebel_spec_force_helmet", "armor_rebel_spec_force_leggings", "armor_rebel_spec_force_bracer_l", "armor_rebel_spec_force_bracer_r", "armor_rebel_spec_force_gloves", "armor_rebel_spec_force_belt", "armor_rebel_spec_force_bicep_l_gcw", "armor_rebel_spec_force_bicep_r_gcw", "armor_rebel_spec_force_boots_gcw", "armor_rebel_spec_force_chest_gcw", "armor_rebel_spec_force_helmet_gcw", "armor_rebel_spec_force_leggings_gcw", "armor_rebel_spec_force_bracer_l_gcw", "armor_rebel_spec_force_bracer_r_gcw", "armor_rebel_spec_force_gloves_gcw", "armor_rebel_spec_force_belt_gcw", "armor_rebel_spec_ops_bicep_l", "armor_rebel_spec_ops_bicep_r", "armor_rebel_spec_ops_boots", "armor_rebel_spec_ops_chest", "armor_rebel_spec_ops_helmet", "armor_rebel_spec_ops_leggings", "armor_rebel_spec_ops_bracer_l", "armor_rebel_spec_ops_bracer_r", "armor_rebel_spec_ops_gloves", "armor_rebel_spec_ops_belt", "backpack_rebel_snow_soldier", "armor_rebel_snow_bicep_l", "armor_rebel_snow_bicep_r", "armor_rebel_snow_boots", "armor_rebel_snow_chest", "armor_rebel_snow_helmet", "armor_rebel_snow_leggings", "armor_rebel_snow_bracer_l", "armor_rebel_snow_bracer_r", "armor_rebel_snow_gloves", "armor_rebel_snow_belt", "armor_rebel_endor_helmet", "backpack_s07", "rebel_endor_backpack", "pistol_cm_deadbolt_schematic", "rifle_cm_reaper_schematic", "carbine_laser", "pistol_scout_blaster", "lance_staff_metal", "rocket_launcher", "mine_drx", "mine_xg",
+		"armor_marine_backpack", "armor_marine_bicep_l", "armor_marine_bicep_r", "armor_marine_boots", "armor_marine_chest_plate", "armor_marine_helmet",  "armor_marine_leggings", "armor_marine_bracer_l", "armor_marine_bracer_r", "armor_marine_gloves", "armor_marine_chest_rebel", "rebel_marine_bicep_l_gcw", "rebel_marine_bicep_r_gcw", "rebel_marine_boots_gcw", "rebel_marine_chest_gcw", "rebel_marine_helmet_gcw", "rebel_marine_leggings_gcw", "rebel_marine_bracer_l_gcw", "rebel_marine_bracer_r_gcw",  "rebel_marine_gloves_gcw", "rebel_marine_utility_belt_gcw", "armor_rebel_assault_bicep_l", "armor_rebel_assault_bicep_r", "armor_rebel_assault_boots", "armor_rebel_assault_chest", "armor_rebel_assault_helmet", "armor_rebel_assault_leggings", "armor_rebel_assault_bracer_l", "armor_rebel_assault_bracer_r", "armor_rebel_assault_gloves", "armor_rebel_assault_belt", "armor_rebel_assault_bicep_l_gcw", "armor_rebel_assault_bicep_r_gcw", "armor_rebel_assault_boots_gcw", "armor_rebel_assault_chest_gcw", "armor_rebel_assault_helmet_gcw", "armor_rebel_assault_leggings_gcw", "armor_rebel_assault_bracer_l_gcw", "armor_rebel_assault_bracer_r_gcw", "armor_rebel_assault_gloves_gcw", "armor_rebel_assault_belt_gcw", "armor_rebel_assault_bicep_l_camo", "armor_rebel_assault_bicep_r_camo", "armor_rebel_assault_boots_camo", "armor_rebel_assault_chest_camo", "armor_rebel_assault_helmet_camo", "armor_rebel_assault_leggings_camo", "armor_rebel_assault_bracer_l_camo", "armor_rebel_assault_bracer_r_camo", "armor_rebel_assault_gloves_camo", "armor_rebel_assault_belt_camo", "armor_rebel_battle_bicep_l", "armor_rebel_battle_bicep_r", "armor_rebel_battle_boots", "armor_rebel_battle_chest", "armor_rebel_battle_helmet", "armor_rebel_battle_leggings", "armor_rebel_battle_bracer_l", "armor_rebel_battle_bracer_r", "armor_rebel_battle_gloves", "armor_rebel_battle_belt", "armor_rebel_battle_bicep_l_gcw", "armor_rebel_battle_bicep_r_gcw", "armor_rebel_battle_boots_gcw", "armor_rebel_battle_chest_gcw", "armor_rebel_battle_helmet_gcw", "armor_rebel_battle_leggings_gcw", "armor_rebel_battle_bracer_l_gcw", "armor_rebel_battle_bracer_r_gcw", "armor_rebel_battle_gloves_gcw", "armor_rebel_battle_belt_gcw", "armor_rebel_spec_force_bicep_l", "armor_rebel_spec_force_bicep_r", "armor_rebel_spec_force_boots", "armor_rebel_spec_force_chest", "armor_rebel_spec_force_helmet", "armor_rebel_spec_force_leggings", "armor_rebel_spec_force_bracer_l", "armor_rebel_spec_force_bracer_r", "armor_rebel_spec_force_gloves", "armor_rebel_spec_force_belt", "armor_rebel_spec_force_bicep_l_gcw", "armor_rebel_spec_force_bicep_r_gcw", "armor_rebel_spec_force_boots_gcw", "armor_rebel_spec_force_chest_gcw", "armor_rebel_spec_force_helmet_gcw", "armor_rebel_spec_force_leggings_gcw", "armor_rebel_spec_force_bracer_l_gcw", "armor_rebel_spec_force_bracer_r_gcw", "armor_rebel_spec_force_gloves_gcw", "armor_rebel_spec_force_belt_gcw", "armor_rebel_spec_ops_bicep_l", "armor_rebel_spec_ops_bicep_r", "armor_rebel_spec_ops_boots", "armor_rebel_spec_ops_chest", "armor_rebel_spec_ops_helmet", "armor_rebel_spec_ops_leggings", "armor_rebel_spec_ops_bracer_l", "armor_rebel_spec_ops_bracer_r", "armor_rebel_spec_ops_gloves", "armor_rebel_spec_ops_belt", "backpack_rebel_snow_soldier", "armor_rebel_snow_bicep_l", "armor_rebel_snow_bicep_r", "armor_rebel_snow_boots", "armor_rebel_snow_chest", "armor_rebel_snow_helmet", "armor_rebel_snow_leggings", "armor_rebel_snow_bracer_l", "armor_rebel_snow_bracer_r", "armor_rebel_snow_gloves", "armor_rebel_snow_belt", "armor_rebel_endor_helmet", "backpack_s07", "rebel_endor_backpack", "pistol_cm_deadbolt_schematic", "rifle_cm_reaper_schematic", "carbine_laser", "pistol_scout_blaster", "lance_staff_metal", "rocket_launcher", "mine_drx", "mine_xg","reb_cape"
 	},
 
 weaponsArmor = {
@@ -140,12 +140,13 @@ weaponsArmor = {
 		lance_staff_metal = { index=121, type=factionRewardType.weapon, display="@weapon_name:lance_staff_metal", item="object/weapon/melee/polearm/lance_staff_metal.iff", cost=1000},
 		mine_drx = { type=factionRewardType.weapon, display="@weapon_name:mine_drx", item="object/weapon/mine/wp_mine_drx55.iff", cost=350},
 		mine_xg = { type=factionRewardType.weapon, display="@weapon_name:mine_xg", item="object/weapon/mine/wp_mine_xg.iff", cost=350},
+		reb_cape  = { type=factionRewardType.armor, display="@static_item_n:item_gcw_rebel_cape_01", item="object/tangible/wearables/cape/cape_rebel_01.iff", cost=1500},
 	},
 
 	installationsList = {
 		"hq_s01_pvp_rebel", "hq_s01_rebel", "hq_s02_pvp_rebel", "hq_s02_rebel", "hq_s03_pvp_rebel", "hq_s03_rebel", "hq_s04_pvp_rebel", "hq_s04_rebel", --"hq_s05_pvp_rebel",
-		"turret_block_lg", "turret_block_med", "turret_block_sm", "turret_dish_sm", "turret_dish_lg", "turret_tower_sm", "turret_tower_med", "turret_tower_lg",
-		"minefield_1x1",
+		"turret_block_lg", "turret_block_med", "turret_block_sm", "turret_dish_sm", "turret_dish_lg", "turret_tower_sm", "turret_tower_med", "turret_tower_lg","covert_detector_32m",
+		"minefield_1x1"
 	},
 
 	installations = {
@@ -171,7 +172,7 @@ weaponsArmor = {
 	},
 
 	furnitureList = {
-		"tech_armoire", "tech_bookcase", "frn_cabinet", "tech_chair", "tech_chest", "frn_coffee_table", "frn_couch", "frn_end_table"
+		"tech_armoire", "tech_bookcase", "frn_cabinet", "tech_chair", "tech_chest", "frn_coffee_table", "frn_couch", "frn_end_table", "frn_vet_rug_rebel", "reb_battle_banner"
 	},
 
 	furniture = {
@@ -183,6 +184,8 @@ weaponsArmor = {
 		frn_coffee_table = { type=factionRewardType.furniture, display="@frn_n:frn_coffee_table", item="object/tangible/furniture/technical/coffee_table_s01.iff", cost=1200},
 		frn_couch = { type=factionRewardType.furniture, display="@frn_n:frn_couch", item="object/tangible/furniture/technical/couch_s01.iff", cost=1200},
 		frn_end_table = { type=factionRewardType.furniture, display="@frn_n:frn_end_table", item="object/tangible/furniture/technical/end_table_s01.iff", cost=1000},
+		frn_vet_rug_rebel = { type=factionRewardType.furniture, display="@frn_n:vet_rug_rebel", item="object/tangible/veteran_reward/frn_vet_rug_rebel.iff", cost=5000},
+		reb_battle_banner = { type=factionRewardType.furniture, display="@item_n:rebel_battle_banner_n", item="object/tangible/gcw/pvp_rank_rewards/pvp_rebel_battle_banner.iff", cost=7500},
 	},
 
 	hirelingList = {
@@ -364,7 +367,7 @@ imperialRewardData = {
 	},
 
 	uniformList = {
-		"boots_s14", "hat_imp_s01", "jacket_s03", "pants_s15",
+		"boots_s14", "hat_imp_s01", "jacket_s03", "pants_s15", "imp_cape"
 	},
 
 	uniforms = {
@@ -372,14 +375,15 @@ imperialRewardData = {
 		hat_imp_s01 = { type=factionRewardType.uniform, display="@wearables_name:hat_imp_s01", item="object/tangible/wearables/hat/hat_imp_s01.iff", cost=140 },
 		jacket_s03 = { type=factionRewardType.uniform, display="@wearables_name:jacket_s03", item="object/tangible/wearables/jacket/jacket_s03.iff", cost=140 },
 		pants_s15  = { type=factionRewardType.uniform, display="@wearables_name:pants_s15", item="object/tangible/wearables/pants/pants_s15.iff", cost=140 },
+		imp_cape  = { type=factionRewardType.uniform, display="@static_item_n:item_gcw_imperial_cape_01", item="object/tangible/wearables/cape/cape_imperial_01.iff", cost=1500},
 	},
 
 	installationsList = {
 		"hq_s01_pvp_imperial", "hq_s01_imperial", "hq_s02_pvp_imperial", "hq_s02_imperial", "hq_s03_pvp_imperial", "hq_s03_imperial", "hq_s04_pvp_imperial", "hq_s04_imperial",
 		--"hq_s05_pvp_imperial",
 		"turret_block_lg", "turret_block_med", "turret_block_sm", "turret_dish_sm", "turret_dish_lg", "turret_tower_sm", "turret_tower_med", "turret_tower_lg",
-		--"covert_detector_32m",
-		"minefield_1x1",
+		"covert_detector_32m",
+		"minefield_1x1"
 	},
 
 	installations = {
@@ -406,7 +410,7 @@ imperialRewardData = {
 
 	furnitureList = {
 		"data_terminal_s1", "data_terminal_s2", "data_terminal_s3", "data_terminal_s4", "frn_table", "tech_armoire", "tech_bookcase", "frn_cabinet", "tech_chair",
-		"tech_chest", "frn_coffee_table", "frn_couch", "frn_end_table"
+		"tech_chest", "frn_coffee_table", "frn_couch", "frn_end_table", "frn_vet_rug_imperial", "imp_battle_banner"
 	},
 
 	furniture = {
@@ -423,6 +427,8 @@ imperialRewardData = {
 		frn_coffee_table = { type=factionRewardType.furniture, display="@frn_n:frn_coffee_table", item="object/tangible/furniture/technical/coffee_table_s01.iff", cost=700},
 		frn_couch = { type=factionRewardType.furniture, display="@frn_n:frn_couch", item="object/tangible/furniture/technical/couch_s01.iff", cost=1050},
 		frn_end_table = { type=factionRewardType.furniture, display="@frn_n:frn_end_table", item="object/tangible/furniture/technical/end_table_s01.iff", cost=700},
+		frn_vet_rug_imperial = { type=factionRewardType.furniture, display="@frn_n:vet_rug_imperial", item="object/tangible/veteran_reward/frn_vet_rug_imperial.iff", cost=5000},
+		imp_battle_banner = { type=factionRewardType.furniture, display="@item_n:imperial_battle_banner_n", item="object/tangible/gcw/pvp_rank_rewards/pvp_imperial_battle_banner.iff", cost=7500},
 	},
 
 	hirelingList = {
@@ -448,7 +454,7 @@ imperialRewardData = {
 		stormtrooper_rifleman = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper_rifleman", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper_rifleman", cost=420},
 		stormtrooper_sniper = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper_sniper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper_sniper", cost=420},
 		swamp_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:swamp_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="swamp_trooper", cost=420},
-		at_st = { type=factionRewardType.hireling, display="@mob/creature_names:at_st", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="at_st", cost=9450},
+		at_st = { type=factionRewardType.hireling, display="@mob/creature_names:at_st", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="at_st", cost=9000},
 	},
 
 	vehicleList = {

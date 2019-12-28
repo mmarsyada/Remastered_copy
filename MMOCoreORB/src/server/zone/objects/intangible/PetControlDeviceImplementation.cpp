@@ -1234,10 +1234,10 @@ void PetControlDeviceImplementation::setVitality(int vit) {
 
 		float hamPenaltyModifier = 0;
 		if (vitality <= 75 && vitality > 50) {
-			hamPenaltyModifier = 0.55f;
+			hamPenaltyModifier = 0.75f;
 		}
 		else if (vitality <= 50 && vitality > 25) {
-			hamPenaltyModifier = 0.75f;
+			hamPenaltyModifier = 0.85f;
 		}
 		else if (vitality <= 25) {
 			hamPenaltyModifier = 0.95f;
