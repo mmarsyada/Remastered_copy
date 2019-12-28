@@ -4,12 +4,14 @@ object_building_player_bespin_house = object_building_player_shared_bespin_house
 	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine"},
 	publicStructure = 0,
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_buff_mind", 100},
+		{"private_medical_rating", 125},
+		{"private_buff_mind", 125},
 		{"private_med_battle_fatigue", 15},
 		{"private_safe_logout", 1}
 	},
 	childObjects = {
+			{templateFile = "object/tangible/terminal/terminal_bank.iff", x = -4.23739, z = 88.8804, y = -1.80391, ow = 0.819152, ox = 0, oz = 0, oy = 0.573576, cellid = 2, containmentType = -1},
+			{templateFile = "object/tangible/terminal/terminal_mission.iff", x = 4.27712, z = 88.8805, y = 1.78337, ow = -0.573577, ox = 0, oz = 0, oy = 0.819152, cellid = 2, containmentType = -1},
 			{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = 2.08274, z= 88.8888, y = -5.94208, ox = 0, oy = 0.991445, oz = 0, ow = 0.130526, cellid = 2, containmentType = -1},
 			{templateFile = "object/tangible/terminal/terminal_elevator_up.iff", x = 0.680352, z = 0.631912, y = 1.11112, ow = -0.258819, ox = 0, oy = 0.965926, oz = 0, cellid = 1, containmentType = -1},
 			{templateFile = "object/tangible/terminal/terminal_elevator_down.iff", x = 0.680352, z = 88.8368, y = 1.11112, ow = -0.130526, ox = 0, oy = 0.991445, oz = 0, cellid = 1, containmentType = -1},

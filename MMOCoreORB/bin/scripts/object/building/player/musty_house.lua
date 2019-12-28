@@ -1,5 +1,5 @@
 object_building_player_musty_house = object_building_player_shared_musty_house:new {
-	lotSize = 5,
+	lotSize = 4,
 	baseMaintenanceRate = 50,
 	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine"},
 	publicStructure = 0,
@@ -7,12 +7,14 @@ object_building_player_musty_house = object_building_player_shared_musty_house:n
 	length = 1,
 	width = 1,
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_buff_mind", 100},
+		{"private_medical_rating", 125},
+		{"private_buff_mind", 125},
 		{"private_med_battle_fatigue", 15},
 		{"private_safe_logout", 1}
 	},
 	childObjects = {
+		{templateFile = "object/tangible/terminal/terminal_bank.iff", x = -2.83054, z = 0.469543, y = 9.45055, ow = -4.37114e-08, ox = 0, oz = 0, oy = -1, cellid = 1, containmentType = -1},
+		{templateFile = "object/tangible/terminal/terminal_mission.iff", x = -4.05691, z = 0.469543, y = 8.82943, ow = -0.382683, ox = 0, oz = 0, oy = -0.923879, cellid = 1, containmentType = -1},
 		{templateFile = "object/tangible/terminal/terminal_elevator_up.iff", x = 0, z = -33, y = -1.29, ow = 0, ox = 0, oy = 0, oz = 0, cellid = 10, containmentType = -1},
 		{templateFile = "object/tangible/terminal/terminal_elevator_down.iff", x = 0, z = -26.27, y = -1.29, ow = 0, ox = 0, oy = 0, oz = 0, cellid = 10, containmentType = -1}, --floor2 down
 		{templateFile = "object/tangible/terminal/terminal_elevator_up.iff", x = 0, z = -25.92, y = -1.29, ow = 0, ox = 0, oy = 0, oz = 0, cellid = 10, containmentType = -1}, --Floor2 Up
