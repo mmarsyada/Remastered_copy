@@ -52,6 +52,7 @@ includeFile("mobile/som/serverobjects.lua")
 includeFile("mobile/beast_master/serverobjects.lua")
 includeFile("mobile/ep3/serverobjects.lua")
 
+includeFile("mobile/atxt.lua")
 includeFile("mobile/ig88_feeder_slicer_01.lua")
 includeFile("mobile/dressed_dark_jedi_master_female_chiss_01.lua")
 includeFile("mobile/dressed_dark_jedi_master_female_chiss_02.lua")
