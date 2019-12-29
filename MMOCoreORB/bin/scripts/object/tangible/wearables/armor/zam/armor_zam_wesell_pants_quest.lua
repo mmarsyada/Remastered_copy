@@ -110,7 +110,7 @@ object_tangible_wearables_armor_zam_armor_zam_wesell_pants_quest = object_tangib
 	heat = 15,
 	cold = 15,
 	acid = 15,
-	lightSaber = 0
+        lightSaber = 0,
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_armor_zam_armor_zam_wesell_pants_quest, "object/tangible/wearables/armor/zam/armor_zam_wesell_pants_quest.iff")

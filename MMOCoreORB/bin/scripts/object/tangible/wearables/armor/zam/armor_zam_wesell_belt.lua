@@ -98,7 +98,7 @@ object_tangible_wearables_armor_zam_armor_zam_wesell_belt = object_tangible_wear
 				"object/mobile/vendor/zabrak_male.iff" },
 
 	-- Damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
+        vulnerability = STUN + LIGHTSABER,
 
 	-- These are default Blue Frog stats
 	healthEncumbrance = 1,
@@ -116,17 +116,18 @@ object_tangible_wearables_armor_zam_armor_zam_wesell_belt = object_tangible_wear
 	heat = 15,
 	cold = 15,
 	acid = 15,
-	lightSaber = 0,
+        lightSaber = 0,
 
-	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalProperties = {"XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX"},
-	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null", "null"},
-	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
-	experimentalMin = {0, 0, 0, 1000, 0, 1000, 0, 0, 0, 1, 0, 0, 0},
-	experimentalMax = {0, 0, 0, 1000, 0, 1000, 0, 0, 0, 1, 0, 0, 0},
-	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
-	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
+        numberExperimentalProperties = {1, 1, 1},
+        experimentalProperties = {"XX", "XX", "XX"},
+        experimentalWeights = {1, 1, 1},
+        experimentalGroupTitles = {"null", "null", "null"},
+        experimentalSubGroupTitles = {"null", "null", "sockets"},
+        experimentalMin = {0, 0, 0},
+        experimentalMax = {0, 0, 0},
+        experimentalPrecision = {0, 0, 0},
+        experimentalCombineType = {0, 0, 4},
+
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_armor_zam_armor_zam_wesell_belt, "object/tangible/wearables/armor/zam/armor_zam_wesell_belt.iff")

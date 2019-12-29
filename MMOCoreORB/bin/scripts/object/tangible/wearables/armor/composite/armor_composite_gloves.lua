@@ -87,9 +87,9 @@ object_tangible_wearables_armor_composite_armor_composite_gloves = object_tangib
 				"object/mobile/vendor/zabrak_male.iff" },
 
 	-- Damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
+        vulnerability = STUN + LIGHTSABER,
 
-	specialResists = ELECTRICITY,
+        specialResists = ELECTRICITY,
 
 	-- These are default Blue Frog stats
 	healthEncumbrance = 80,
@@ -109,7 +109,7 @@ object_tangible_wearables_armor_composite_armor_composite_gloves = object_tangib
 	heat = 65,
 	cold = 65,
 	acid = 65,
-	lightSaber = 0,
+        lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "OQ", "SR", "OQ", "UT", "MA", "OQ", "MA", "OQ", "MA", "OQ", "XX", "XX", "OQ", "SR", "XX"},

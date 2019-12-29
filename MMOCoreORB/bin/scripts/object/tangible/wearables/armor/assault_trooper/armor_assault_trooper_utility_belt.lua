@@ -48,15 +48,6 @@ object_tangible_wearables_armor_assault_trooper_armor_assault_trooper_utility_be
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
 	
-	numberExperimentalProperties = {1, 1, 1},
-	experimentalProperties = {"XX", "XX", "XX"},
-	experimentalWeights = {1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "null"},
-	experimentalSubGroupTitles = {"null", "null", "sockets"},
-	experimentalMin = {0, 0, 0},
-	experimentalMax = {0, 0, 0},
-	experimentalPrecision = {0, 0, 0},
-	experimentalCombineType = {0, 0, 4}
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_armor_assault_trooper_armor_assault_trooper_utility_belt, "object/tangible/wearables/armor/assault_trooper/armor_assault_trooper_utility_belt.iff")
