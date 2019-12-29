@@ -102,7 +102,7 @@ object_tangible_wearables_armor_infiltrator_armor_infiltrator_s01_belt = object_
 				"object/creature/player/zabrak_female.iff" },
 	
 	-- The damage types in WeaponObject
-	vulnerability = LIGHTSABER,
+        vulnerability = STUN + LIGHTSABER,
 
 	-- These are default Blue Frog stats
 	healthEncumbrance = 1,
@@ -120,7 +120,17 @@ object_tangible_wearables_armor_infiltrator_armor_infiltrator_s01_belt = object_
 	heat = 15,
 	cold = 15,
 	acid = 15,
-	lightSaber = 0
+        lightSaber = 0,
+
+        numberExperimentalProperties = {1, 1, 1},
+        experimentalProperties = {"XX", "XX", "XX"},
+        experimentalWeights = {1, 1, 1},
+        experimentalGroupTitles = {"null", "null", "null"},
+        experimentalSubGroupTitles = {"null", "null", "sockets"},
+        experimentalMin = {0, 0, 0},
+        experimentalMax = {0, 0, 0},
+        experimentalPrecision = {0, 0, 0},
+        experimentalCombineType = {0, 0, 4},
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_armor_infiltrator_armor_infiltrator_s01_belt, "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_belt.iff")

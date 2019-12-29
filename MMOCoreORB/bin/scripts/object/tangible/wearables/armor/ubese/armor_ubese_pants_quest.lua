@@ -110,7 +110,7 @@ object_tangible_wearables_armor_ubese_armor_ubese_pants_quest = object_tangible_
 	heat = 15,
 	cold = 15,
 	acid = 15,
-	lightSaber = 0
+        lightSaber = 0,
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_armor_ubese_armor_ubese_pants_quest, "object/tangible/wearables/armor/ubese/armor_ubese_pants_quest.iff")
