@@ -3,9 +3,9 @@ includeFile("../custom_scripts/loot/groups/dathomir_bunker/tfa_paintings.lua")
 includeFile("../custom_scripts/loot/groups/dathomir_bunker/weapon_components.lua")
 
 --Janta Cave 
-includeFile("../custom_scripts/loot/groups/schematics/janta_rare.lua")
-includeFile("../custom_scripts/loot/groups/components/janta_kath_hound.lua")
-includeFile("../custom_scripts/loot/groups/schematics/janta_furniture_schems.lua")
+--includeFile("../custom_scripts/loot/groups/schematics/janta_rare.lua")
+--includeFile("../custom_scripts/loot/groups/components/janta_kath_hound.lua")
+--includeFile("../custom_scripts/loot/groups/schematics/janta_furniture_schems.lua")
 
 --includeFile("../custom_scripts/loot/groups/sm_exotic_houses.lua")
 includeFile("../custom_scripts/loot/groups/components/weapon_components_elite.lua")

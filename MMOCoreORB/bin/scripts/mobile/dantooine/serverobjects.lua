@@ -107,7 +107,7 @@ includeFile("dantooine/yras_shen_jen.lua")
 includeFile("dantooine/ytzosh.lua")
 
 --Rem Custom
-includeFile("dantooine/rem_custom/serverobjects.lua")
+--includeFile("dantooine/rem_custom/serverobjects.lua")
 
 includeFile("dantooine/gualaar.lua")
 includeFile("dantooine/walluga.lua")

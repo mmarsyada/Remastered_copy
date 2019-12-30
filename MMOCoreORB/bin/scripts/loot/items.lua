@@ -2749,10 +2749,10 @@ includeFile("items/rem_custom/named_crystals/remastered/force_crystal_saviors_gr
 includeFile("items/rem_custom/named_crystals/remastered/force_crystal_must_haze.lua")
 
 --Furniture
-includeFile("items/rem_custom/furniture/schemGlassShelves.lua")
-includeFile("items/rem_custom/furniture/schemLargeRugs.lua")
+--includeFile("items/rem_custom/furniture/schemGlassShelves.lua")
+--includeFile("items/rem_custom/furniture/schemLargeRugs.lua")
 --includeFile("items/rem_custom/furniture/schemSordTrophy.lua")
-includeFile("items/rem_custom/furniture/schemTatoTable.lua")
+--includeFile("items/rem_custom/furniture/schemTatoTable.lua")
 includeFile("items/rem_custom/furniture/schemVetDisplayStand.lua")
 includeFile("items/rem_custom/furniture/schemWookCenterPiece.lua")
 includeFile("items/rem_custom/furniture/schemWookChair.lua")

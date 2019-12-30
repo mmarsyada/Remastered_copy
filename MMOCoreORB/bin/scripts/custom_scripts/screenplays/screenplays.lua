@@ -2,7 +2,7 @@
 includeFile("../custom_scripts/screenplays/dungeon/dath_bunker/dath_bunker.lua")
 includeFile("../custom_scripts/screenplays/dungeon/tatt_bunker/tatt_bunker.lua")
 includeFile("../custom_scripts/screenplays/dungeon/lok_bunker/lok_bunker.lua")
-includeFile("../custom_scripts/screenplays/dungeon/janta_cave/janta_cave.lua")
+--includeFile("../custom_scripts/screenplays/dungeon/janta_cave/janta_cave.lua")
 includeFile("../custom_scripts/screenplays/tools/mission_direction_choice.lua")
 includeFile("../custom_scripts/screenplays/tools/mission_level_choice.lua")
 --includeFile("../custom_scripts/screenplays/events/jantaInvasion.lua")

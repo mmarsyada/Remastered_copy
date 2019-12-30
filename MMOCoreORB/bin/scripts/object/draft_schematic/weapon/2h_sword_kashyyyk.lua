@@ -23,7 +23,7 @@ object_draft_schematic_weapon_2h_sword_kashyyyk = object_draft_schematic_weapon_
    ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_item_ingredients_n", "craft_weapon_ingredients_n"},
    ingredientTitleNames = {"sword_core_jacket", "cutting_edge", "grip_unit", "kashyyyk_blade", "jacketed_sword_core"},
    ingredientSlotType = {0, 0, 0, 1, 1},
-   resourceTypes = {"iron_kammris", "copper_polysteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_kashyyyk_blade.iff",  "object/tangible/component/weapon/shared_sword_core.iff"},
+   resourceTypes = {"iron_kammris", "copper_polysteel", "petrochem_inert_polymer", "object/tangible/loot/dungeon/rem_custom/shared_kashyyyk_blade.iff",  "object/tangible/component/weapon/shared_sword_core.iff"},
    resourceQuantities = {120, 85, 60, 1, 1},
    contribution = {100, 100, 100, 100, 100},
 

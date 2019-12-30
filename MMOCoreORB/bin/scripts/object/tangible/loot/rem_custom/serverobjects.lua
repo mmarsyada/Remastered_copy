@@ -2,9 +2,9 @@
 --includeFile("tangible/loot/rem_custom/back_packs/serverobjects.lua")
 
 --Furniture
-includeFile("tangible/loot/rem_custom/furniture/glass_shelf_schem.lua")
-includeFile("tangible/loot/rem_custom/furniture/large_rugs_schem.lua")
-includeFile("tangible/loot/rem_custom/furniture/tato_table_schem.lua")
+--includeFile("tangible/loot/rem_custom/furniture/glass_shelf_schem.lua")
+--includeFile("tangible/loot/rem_custom/furniture/large_rugs_schem.lua")
+--includeFile("tangible/loot/rem_custom/furniture/tato_table_schem.lua")
 --includeFile("tangible/loot/rem_custom/furniture/sordaan_trophy_schem.lua")
 includeFile("tangible/loot/rem_custom/furniture/vet_display_stand_schem.lua")
 includeFile("tangible/loot/rem_custom/furniture/wookie_center_piece_schem.lua")

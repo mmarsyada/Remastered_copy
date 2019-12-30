@@ -2008,11 +2008,40 @@ object_tangible_furniture_decorative_shared_event_lifeday07_painting_01 = Shared
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_event_lifeday07_painting_01, "object/tangible/furniture/decorative/shared_event_lifeday07_painting_01.iff")
 
+-- NS Small Wall
 object_tangible_furniture_decorative_shared_wod_sm_wall = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_wall.iff"
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_wall, "object/tangible/furniture/decorative/shared_wod_sm_wall.iff")
+
+--NS Trilithon
+object_tangible_furniture_decorative_shared_wod_trilithon = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_trilithon.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_trilithon, "object/tangible/furniture/decorative/shared_wod_trilithon.iff")
+
+--NS Gate
+object_tangible_furniture_decorative_shared_wod_ns_gate = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_gate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_gate, "object/tangible/furniture/decorative/shared_wod_ns_gate.iff")
+
+--Floating Stones
+object_tangible_furniture_decorative_shared_wod_floating_stones = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_floating_stones.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_floating_stones, "object/tangible/furniture/decorative/shared_wod_floating_stones.iff")
+
+--NS Wall
+object_tangible_furniture_decorative_shared_wod_ns_wall = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_wall.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_wall, "object/tangible/furniture/decorative/shared_wod_ns_wall.iff")
 
 --Decorative Whip Belt
 object_tangible_furniture_decorative_shared_decorative_whip_belt = SharedTangibleObjectTemplate:new {
@@ -2034,13 +2063,6 @@ object_tangible_furniture_decorative_shared_event_wookiee_shield = SharedTangibl
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_event_wookiee_shield, "object/tangible/furniture/decorative/shared_event_wookiee_shield.iff")
-
---Floating Stones
-object_tangible_furniture_decorative_shared_wod_floating_stones = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_floating_stones.iff"
-}
-
-ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_floating_stones, "object/tangible/furniture/decorative/shared_wod_floating_stones.iff")
 
 --Chewbacca Toy
 object_tangible_furniture_decorative_shared_event_chewbacca_toy = SharedTangibleObjectTemplate:new {
