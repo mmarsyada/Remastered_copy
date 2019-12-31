@@ -4,7 +4,7 @@ object_tangible_loot_loot_schematic_geonosian_speeder_schematic = object_tangibl
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_artisan_master",
 	targetDraftSchematic = "object/draft_schematic/vehicle/civilian/geonosian_speeder.iff",
-	targetUseCount = 5,
+	targetUseCount = 1,
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_geonosian_speeder_schematic, "object/tangible/loot/loot_schematic/geonosian_speeder_schematic.iff")

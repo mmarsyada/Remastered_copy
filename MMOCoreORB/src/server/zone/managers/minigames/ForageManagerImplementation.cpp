@@ -382,7 +382,7 @@ bool ForageManagerImplementation::forageGiveResource(CreatureObject* player, flo
 
 			} else { //If there is only one left, we give them that one even if density is 0.
 				resource = resources.get(key);
-				quantity += (density * (player->getSkillMod("medical_foraging")*.01)); //mindsoft added for med foraging
+				quantity += (density * (player->getSkillMod("medical_foraging")*.01));
 				break;
 			}
 		}

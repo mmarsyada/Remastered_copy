@@ -279,8 +279,8 @@ float ArmorObjectImplementation::getTypeValue(int type, float value) const {
 		}
 	}
 
-	if(newValue > 90)
-		newValue = 90; //hardcap unconditionally
+	if(newValue > 85)
+		newValue = 85; //hardcap unconditionally
 		
 	return newValue;
 }

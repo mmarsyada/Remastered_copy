@@ -8,6 +8,7 @@
 #ifndef DELTABASICVARIABLE_H_
 #define DELTABASICVARIABLE_H_
 
+
 template<typename K>
 class DeltaBasicVariable {
 protected:

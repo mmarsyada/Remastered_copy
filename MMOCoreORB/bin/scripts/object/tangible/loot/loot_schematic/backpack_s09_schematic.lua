@@ -5,7 +5,7 @@ object_tangible_loot_loot_schematic_backpack_s09_schematic = object_tangible_loo
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
 	targetDraftSchematic = "object/draft_schematic/clothing/clothing_backpack_s09.iff",
-	targetUseCount = 5
+	targetUseCount = 1
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_backpack_s09_schematic, "object/tangible/loot/loot_schematic/backpack_s09_schematic.iff")

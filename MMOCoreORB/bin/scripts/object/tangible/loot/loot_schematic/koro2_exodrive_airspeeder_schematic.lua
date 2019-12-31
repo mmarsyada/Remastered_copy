@@ -4,7 +4,7 @@ object_tangible_loot_loot_schematic_koro2_exodrive_airspeeder_schematic = object
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_artisan_master",
 	targetDraftSchematic = "object/draft_schematic/vehicle/civilian/koro2_exodrive_airspeeder.iff",
-	targetUseCount = 5,
+	targetUseCount = 1,
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_koro2_exodrive_airspeeder_schematic, "object/tangible/loot/loot_schematic/koro2_exodrive_airspeeder_schematic.iff")

@@ -76,7 +76,7 @@ public:
 				int sampleRoll = System::random(100);
 				sampleRoll += System::random(player->getSkillMod("luck") + player->getSkillMod("force_luck"));
 				// max samples 1/2 of real creatures
-				int maxSamples = (int) ceil((float)skillMod/25.0*0.75);
+				int maxSamples = (int) ceil((float)skillMod/25.f)/2.f;
 				deed->incrementSampleCount();
 				if ((30 + rollMod) < sampleRoll || cl > 200) {
 					// failure but we increment the count

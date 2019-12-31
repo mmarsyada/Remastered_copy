@@ -33,14 +33,14 @@ tusken_king = Creature:new {
 				{group = "bone_armor", chance = 2500000},
 				{group = "chitin_armor", chance = 2500000}
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000}			
 			},
-			lootChance = 1000000
+			lootChance = 500000
 		},
 		{
 			groups = {

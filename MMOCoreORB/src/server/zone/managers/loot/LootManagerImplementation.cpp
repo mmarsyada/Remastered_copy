@@ -314,8 +314,7 @@ TangibleObject* LootManagerImplementation::createLootObject(const LootItemTempla
 
 	float excMod = 1.0;
 
-	//float adjustment = floor((float)(((level > 50) ? level : 50) - 50) / 10.f + 0.5);
-	float adjustment = floor((float)(((level > 50) ? level : 50) * (level) * (level) / 250000.f));
+	float adjustment = floor((float)(((level > 50) ? level : 50) - 50) / 10.f + 0.5);
 
 	if (System::random(legendaryChance) >= legendaryChance - adjustment) {
 		UnicodeString newName = prototype->getDisplayedName() + " (Legendary)";

@@ -74,7 +74,7 @@ SprayShotCommand = {
 		{},
 		{ "stun_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		60,
+		30,
 		0,
 		10
 	  )
