@@ -4,7 +4,7 @@ object_tangible_loot_loot_schematic_landspeeder_xp38_schematic = object_tangible
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_artisan_master",
 	targetDraftSchematic = "object/draft_schematic/vehicle/civilian/landspeeder_xp38.iff",
-	targetUseCount = 5,
+	targetUseCount = 1,
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_landspeeder_xp38_schematic, "object/tangible/loot/loot_schematic/landspeeder_xp38_schematic.iff")

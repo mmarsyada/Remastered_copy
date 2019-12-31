@@ -4,7 +4,7 @@ object_tangible_loot_loot_schematic_speeder_stap_schematic = object_tangible_loo
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_artisan_master",
 	targetDraftSchematic = "object/draft_schematic/vehicle/civilian/speeder_stap.iff",
-	targetUseCount = 5,
+	targetUseCount = 1,
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_speeder_stap_schematic, "object/tangible/loot/loot_schematic/speeder_stap_schematic.iff")

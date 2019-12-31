@@ -3143,6 +3143,7 @@ void PlayerManagerImplementation::startListen(CreatureObject* creature, uint64 e
     //watchID =  entid;
 }
 
+
 SceneObject* PlayerManagerImplementation::getInRangeStructureWithAdminRights(CreatureObject* creature, uint64 targetID) {
     ZoneServer* zoneServer = server;
 

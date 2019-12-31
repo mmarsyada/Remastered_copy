@@ -47,7 +47,7 @@ object_tangible_loot_loot_schematic_corellian_flagpole_schematic = object_tangib
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_field_01",
 	targetDraftSchematic = "object/draft_schematic/furniture/furniture_corellia_flagpole.iff",
-	targetUseCount = 5,
+	targetUseCount = 1,
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_corellian_flagpole_schematic, "object/tangible/loot/loot_schematic/corellian_flagpole_schematic.iff")

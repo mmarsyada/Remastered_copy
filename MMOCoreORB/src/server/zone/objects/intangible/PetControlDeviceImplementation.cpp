@@ -551,7 +551,7 @@ bool PetControlDeviceImplementation::growPet(CreatureObject* player, bool force,
 	Time currentTime;
 	uint32 timeDelta = currentTime.getTime() - lastGrowth.getTime();
 	//int stagesToGrow = timeDelta / 43200; // 12 hour
-	int stagesToGrow = timeDelta / 1200; // 10 minutes
+	int stagesToGrow = timeDelta / 4800; // 10 minutes
 
 	if (adult)
 		stagesToGrow = 10;
@@ -1233,14 +1233,14 @@ void PetControlDeviceImplementation::setVitality(int vit) {
 			return;
 
 		float hamPenaltyModifier = 0;
-		if (vitality <= 75 && vitality > 50) {
-			hamPenaltyModifier = 0.75f;
-		}
-		else if (vitality <= 50 && vitality > 25) {
+		if (vitality <= 85 && vitality > 50) {
 			hamPenaltyModifier = 0.85f;
 		}
+		else if (vitality <= 50 && vitality > 25) {
+			hamPenaltyModifier = 0.90f;
+		}
 		else if (vitality <= 25) {
-			hamPenaltyModifier = 0.95f;
+			hamPenaltyModifier = 0.99f;
 		}
 
 		Reference<PetControlDevice*> petControlDevice = _this.getReferenceUnsafeStaticCast();

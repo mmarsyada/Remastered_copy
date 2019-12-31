@@ -47,7 +47,7 @@ object_tangible_loot_loot_schematic_geonosian_sword_core_schematic = object_tang
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_weaponsmith_master",
 	targetDraftSchematic = "object/draft_schematic/weapon/component/sword_core_geo.iff",
-	targetUseCount = 5
+	targetUseCount = 1
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_geonosian_sword_core_schematic, "object/tangible/loot/loot_schematic/geonosian_sword_core_schematic.iff")

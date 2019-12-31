@@ -5,7 +5,7 @@ object_tangible_loot_loot_schematic_ep3_chiss_poacher_backpack_schematic = objec
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
 	targetDraftSchematic = "object/draft_schematic/clothing/ep3_chiss_poacher_backpack.iff",
-	targetUseCount = 5
+	targetUseCount = 1
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_ep3_chiss_poacher_backpack_schematic, "object/tangible/loot/loot_schematic/ep3_chiss_poacher_backpack_schematic.iff")
