@@ -7,8 +7,8 @@ boss_blazehound = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {108,22,91,91,33,122,10,54,52},
 	meatType = "",
@@ -114,7 +114,13 @@ boss_blazehound = Creature:new {
 	conversationTemplate = "",
 	attacks = {
 		{"creatureareadisease",""},
-		{"mildpoison",""}
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+                {"creatureareaattack",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+		{"creatureareaknockdown","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_blazehound, "boss_blazehound")

@@ -7,8 +7,8 @@ boss_mornscream = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {77,91,156,81,136,49,11,62,64},
 	meatType = "",
@@ -92,8 +92,12 @@ boss_mornscream = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"creatureareaknockdown",""},
-		{"mediumpoison",""}
+		{"creatureareadisease",""},
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+                {"creatureareaattack",""},
+		{"creatureareaknockdown","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_mornscream, "boss_mornscream")

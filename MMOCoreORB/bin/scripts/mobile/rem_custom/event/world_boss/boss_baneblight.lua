@@ -7,8 +7,8 @@ boss_baneblight = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {128,193,121,86,128,114,193,55,161},
 	meatType = "",
@@ -94,6 +94,12 @@ boss_baneblight = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
+		{"creatureareadisease",""},
+		{"creatureareapoison",""},
+                {"creatureareaattack",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+		{"creatureareaknockdown","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_baneblight, "boss_baneblight")

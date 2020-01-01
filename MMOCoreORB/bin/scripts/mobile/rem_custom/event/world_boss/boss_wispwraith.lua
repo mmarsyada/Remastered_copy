@@ -7,8 +7,8 @@ boss_wispwraith = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {137,154,52,5,163,54,111,83,160},
 	meatType = "",
@@ -92,8 +92,11 @@ boss_wispwraith = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"dizzyattack",""},
-		{"",""}
+		{"creatureareableeding",""},
+		{"strongpoison",""},
+		{"creatureareacombo","stateAccuracyBonus=25"},
+		{"creatureareaknockdown","stateAccuracyBonus=25"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_wispwraith, "boss_wispwraith")

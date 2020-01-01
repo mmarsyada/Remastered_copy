@@ -7,8 +7,8 @@ boss_thornling = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {24,4,106,76,22,118,99,42,43},
 	meatType = "",
@@ -92,8 +92,12 @@ boss_thornling = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"milddisease",""},
-		{"intimidationattack",""}
+		{"creatureareadisease",""},
+		{"creatureareableeding",""},
+		{"strongpoison",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+		{"creatureareaknockdown","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_thornling, "boss_thornling")

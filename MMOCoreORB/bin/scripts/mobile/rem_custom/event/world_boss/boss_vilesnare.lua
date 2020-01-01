@@ -7,8 +7,8 @@ boss_vilesnare = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {77,113,156,56,53,11,118,53,176},
 	meatType = "",
@@ -93,8 +93,12 @@ boss_vilesnare = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"knockdownattack",""},
-		{"creatureareableeding",""}
+		{"creatureareadisease",""},
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_vilesnare, "boss_vilesnare")

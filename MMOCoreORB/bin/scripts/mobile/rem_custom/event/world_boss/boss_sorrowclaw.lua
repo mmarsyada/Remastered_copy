@@ -7,8 +7,8 @@ boss_sorrowclaw = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {38,41,17,7,158,77,125,112,97},
 	meatType = "",
@@ -92,8 +92,12 @@ boss_sorrowclaw = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"intimidationattack",""},
-		{"",""}
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+                {"creatureareaattack",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_sorrowclaw, "boss_sorrowclaw")
