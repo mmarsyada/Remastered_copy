@@ -7,8 +7,8 @@ boss_netherfang = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {18,173,29,168,176,112,189,90,161},
 	meatType = "",
@@ -92,8 +92,12 @@ boss_netherfang = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"",""},
-		{"mediumpoison",""}
+		{"creatureareadisease",""},
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+                {"creatureareaattack",""},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_netherfang, "boss_netherfang")

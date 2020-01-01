@@ -7,8 +7,8 @@ boss_dawnstrike = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {132,192,46,56,36,46,157,54,115},
 	meatType = "",
@@ -114,8 +114,14 @@ boss_dawnstrike = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"",""},
-		{"intimidationattack",""}
+		{"creatureareadisease",""},
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+                {"creatureareaattack",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+		{"creatureareaknockdown","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_dawnstrike, "boss_dawnstrike")

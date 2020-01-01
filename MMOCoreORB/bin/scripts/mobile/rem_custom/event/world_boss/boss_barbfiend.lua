@@ -7,8 +7,8 @@ boss_barbfiend = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {5,77,177,185,18,37,131,114,180},
 	meatType = "",
@@ -92,8 +92,11 @@ boss_barbfiend = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"",""},
-		{"stunattack",""}
+		{"strongpoison",""},
+                {"creatureareaattack",""},
+		{"creatureareacombo","stateAccuracyBonus=25"},
+		{"creatureareaknockdown","stateAccuracyBonus=25"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_barbfiend, "boss_barbfiend")

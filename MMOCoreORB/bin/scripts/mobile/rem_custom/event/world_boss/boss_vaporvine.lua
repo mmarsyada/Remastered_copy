@@ -7,8 +7,8 @@ boss_vaporvine = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {184,100,53,198,13,6,169,156,32},
 	meatType = "",
@@ -92,6 +92,12 @@ boss_vaporvine = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+		{"creatureareacombo","stateAccuracyBonus=100"},
+		{"creatureareaknockdown","stateAccuracyBonus=100"},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_vaporvine, "boss_vaporvine")

@@ -7,8 +7,8 @@ boss_mistbug = Creature:new {
 	damageMin = 1180,
 	damageMax = 2250,
 	baseXp = 28549,
-	baseHAM = 410000,
-	baseHAMmax = 501000,
+	baseHAM = 710000,
+	baseHAMmax = 1105000,
 	armor = 2,
 	resists = {60,13,73,26,4,92,60,8,110},
 	meatType = "",
@@ -92,8 +92,12 @@ boss_mistbug = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"dizzyattack",""},
-		{"",""}
+		{"creatureareadisease",""},
+		{"creatureareableeding",""},
+		{"creatureareapoison",""},
+		{"strongpoison",""},
+                {"creatureareaattack",""},
+                {"intimidationattack",""}
 	}
 }
 CreatureTemplates:addCreatureTemplate(boss_mistbug, "boss_mistbug")
