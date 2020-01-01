@@ -116,17 +116,10 @@ class EnhancePack extends PharmaceuticalObject {
 	public int handleObjectMenuSelect(CreatureObject player, byte selectedID) {     
 		if (!isASubChildOf(player))
 			return 0;
-
-        if (player.isInCombat()) {
-        	player.sendSystemMessage("You cannot use Buff Packs while Buffed or In Combat."); 
-			return 0;
-        
-        }
       
-        if (player.isInCombat() || 
-            player.hasBuff(BuffCRC.MEDICAL_ENHANCE_HEALTH) || 
-            player.hasBuff(BuffCRC.MEDICAL_ENHANCE_ACTION) || 
-            player.hasBuff(BuffCRC.PERFORMANCE_ENHANCE_DANCE_MIND) ) {
+               if (player.isInCombat() || 
+            	   player.hasBuff(BuffCRC.MEDICAL_ENHANCE_HEALTH) || 
+            	   player.hasBuff(BuffCRC.MEDICAL_ENHANCE_ACTION)) {
 
 			player.sendSystemMessage("You cannot use Buff Packs while Buffed or In Combat."); 
 			return 0;
