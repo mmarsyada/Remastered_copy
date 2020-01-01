@@ -103,7 +103,7 @@ void EntertainingSessionImplementation::doEntertainerPatronEffects() {
 			try {
 				//**VERIFY THE PATRON IS NOT ON THE DENY SERVICE LIST
 
-				if (creo->isInRange(patron, 10.0f)) {
+				if (creo->isInRange(patron, 20.0f)) {
 					healWounds(patron, woundHeal*(flourishCount+1), shockHeal*(flourishCount+1));
 					increaseEntertainerBuff(patron);
 
@@ -593,9 +593,9 @@ void EntertainingSessionImplementation::doFlourish(int flourishNumber, bool gran
 
 	float baseActionDrain = performance->getActionPointsPerLoop() - (int)(entertainer->getHAM(CreatureAttribute::QUICKNESS)/35.f);
 
-	float flourishActionDrain = baseActionDrain / 2.0;
+	float flourishActionDrain = baseActionDrain / 5.0;
 
-	int actionDrain = (int)round((flourishActionDrain * 10 + 0.5) / 10.0); // Round to nearest dec for actual int cost
+	int actionDrain = (int)round((flourishActionDrain * 10 + 0.5) / 20.0); // Round to nearest dec for actual int cost
 
 	if (entertainer->getHAM(CreatureAttribute::ACTION) <= actionDrain) {
 		entertainer->sendSystemMessage("@performance:flourish_too_tired");
