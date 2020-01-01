@@ -107,7 +107,16 @@ includeFile("dantooine/yras_shen_jen.lua")
 includeFile("dantooine/ytzosh.lua")
 
 --Rem Custom
---includeFile("dantooine/rem_custom/serverobjects.lua")
+includeFile("dantooine/rem_custom/janta_clan_leader_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_harvester_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_herbalist_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_horned_kath_hound_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_loreweaver_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_primalist_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_rockshaper_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_shaman_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_soothsayer_stronghold.lua")
+includeFile("dantooine/rem_custom/janta_warrior_stronghold.lua")
 
 includeFile("dantooine/gualaar.lua")
 includeFile("dantooine/walluga.lua")
