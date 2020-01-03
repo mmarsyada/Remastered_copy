@@ -19,6 +19,8 @@ void ArmorObjectImplementation::initializeTransientMembers() {
 void ArmorObjectImplementation::loadTemplateData(SharedObjectTemplate* templateData) {
 	WearableObjectImplementation::loadTemplateData(templateData);
 
+	info("inside load template data for armor");
+
 	if (!templateData->isArmorObjectTemplate())
 		return;
 
@@ -38,6 +40,7 @@ void ArmorObjectImplementation::loadTemplateData(SharedObjectTemplate* templateD
 	energy = armorTemplate->getEnergy();
 	electricity = armorTemplate->getElectricity();
 	stun = armorTemplate->getStun();
+
 	blast = armorTemplate->getBlast();
 	heat = armorTemplate->getHeat();
 	cold = armorTemplate->getCold();
@@ -67,6 +70,15 @@ void ArmorObjectImplementation::notifyLoadFromDatabase() {
 
 	if (rating != LIGHT && templateObject->getClientTemplateFileName().contains("armor_bounty_hunter_"))
 		rating = LIGHT;
+
+	if (stun > 50)
+		stun = 0;
+	else if (stun > 40)
+		     stun = 40;
+
+	if (lightSaber > 20)
+		lightSaber = 20;
+
 }
 
 void ArmorObjectImplementation::fillAttributeList(AttributeListMessage* alm, CreatureObject* object) {
@@ -473,8 +485,11 @@ void ArmorObjectImplementation::setProtectionValue(int type, float value) {
 		setEnergy(value);
 	if (type & SharedWeaponObjectTemplate::BLAST)
 		setBlast(value);
-	if (type & SharedWeaponObjectTemplate::STUN)
+	if (type & SharedWeaponObjectTemplate::STUN){
+		info("Setting Stun Value -> " + String::valueOf(value));
 		setStun(value);
+	}
+
 	if (type & SharedWeaponObjectTemplate::LIGHTSABER)
 		setLightSaber(value);
 	if (type & SharedWeaponObjectTemplate::HEAT)
