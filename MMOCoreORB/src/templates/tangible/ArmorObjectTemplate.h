@@ -80,13 +80,8 @@ public:
 		kinetic = templateData->getFloatField("kinetic");
 		energy = templateData->getFloatField("energy");
 		electricity = templateData->getFloatField("electricity");
-                int stunTmp = templateData->getFloatField("stun");
-                
-                if (stunTmp > 40)
-                     stunTmp = 30;
-                
-		stun = stunTmp;
-                
+		stun = templateData->getFloatField("stun");
+
 		blast = templateData->getFloatField("blast");
 		heat = templateData->getFloatField("heat");
 		cold = templateData->getFloatField("cold");
