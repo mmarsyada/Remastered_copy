@@ -149,7 +149,7 @@ bool CombatManager::attemptPeace(CreatureObject* attacker) const {
 	}
 
 	if (defenderList->size() != 0) {
-		//info("defenderList not empty, trying to set Peace State");
+		debug("defenderList not empty, trying to set Peace State");
 
 		attacker->setState(CreatureState::PEACE);
 
@@ -196,7 +196,7 @@ void CombatManager::forcePeace(CreatureObject* attacker) const {
 }
 
 int CombatManager::doCombatAction(CreatureObject* attacker, WeaponObject* weapon, TangibleObject* defenderObject, const CreatureAttackData& data) const {
-	//info("entering doCombat action with data ", true);
+	debug("entering doCombat action with data");
 
 	if (data.getCommand() == nullptr)
 		return -3;
@@ -204,17 +204,17 @@ int CombatManager::doCombatAction(CreatureObject* attacker, WeaponObject* weapon
 	if (!startCombat(attacker, defenderObject, true, data.getHitIncapTarget()))
 		return -1;
 
-	//info("past start combat", true);
+	debug("past start combat");
 
 	if (attacker->hasAttackDelay() || !attacker->checkPostureChangeDelay())
 		return -3;
 
-	//info("past delay", true);
+	debug("past delay");
 
 	if (!applySpecialAttackCost(attacker, weapon, data))
 		return -2;
 
-	//info("past special attack cost", true);
+	debug("past special attack cost");
 
 	int damage = 0;
 	bool shouldGcwTef = false, shouldBhTef = false;
@@ -582,7 +582,8 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 			pool = getPoolForDot(dotType, poolsToDamage);
 		}
 
-		//info("entering addDotState with CRC:" + String::valueOf(dotCRC), true);
+		debug() << "entering addDotState with dotType:" << dotType;
+
 		float damMod = attacker->isAiAgent() ? cast<AiAgent*>(attacker)->getSpecialDamageMult() : 1.f;
 		defender->addDotState(attacker, dotType, data.getCommand()->getNameCRC(),
 				effect.isDotDamageofHit() ? damageToApply * effect.getPrimaryPercent() / 100.0f
@@ -816,7 +817,7 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 		targetDefense += defender->getSkillMod("private_" + mod);
 	}
 
-	//info("Base target defense is " + String::valueOf(targetDefense), true);
+	debug() << "Base target defense is " << targetDefense;
 
 	// defense hardcap
 	if (targetDefense > 125)
@@ -838,7 +839,7 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 	targetDefense += defender->getSkillMod("dodge_attack");
 	targetDefense += defender->getSkillMod("private_dodge_attack");
 
-	//info("Target defense after state affects and cap is " +  String::valueOf(targetDefense), true);
+	debug() << "Target defense after state affects and cap is " << targetDefense;
 
 	return targetDefense;
 }
@@ -910,12 +911,9 @@ float CombatManager::hitChanceEquation(float attackerAccuracy, float attackerRol
 
 	accTotal += attackerAccuracy - targetDefense;
 
-	/*StringBuffer msg;
-	msg << "HitChance\n";
-	msg << "\tTarget Defense " << targetDefense << "\n";
-	msg << "\tTarget Defense Bonus" << defenseBonus << "\n";
-
-	info(msg.toString());*/
+	debug() << "HitChance\n"
+		<< "\tTarget Defense " << targetDefense << "\n"
+		<< "\tAccTotal " << accTotal << "\n";
 
 	return accTotal;
 }
@@ -931,7 +929,7 @@ int CombatManager::calculateDamageRange(TangibleObject* attacker, CreatureObject
 		maxDamage = 10;
 	}
 
-	//info("attacker base damage is " + String::valueOf(minDamage) + "-"+ String::valueOf(maxDamage), true);
+	debug() << "attacker base damage is " << minDamage << "-" << maxDamage;
 
 	PlayerObject* defenderGhost = defender->getPlayerObject();
 
@@ -962,7 +960,7 @@ int CombatManager::calculateDamageRange(TangibleObject* attacker, CreatureObject
 
 	float range = maxDamage - minDamage;
 
-	//info("attacker weapon damage mod is " + String::valueOf(maxDamage), true);
+	debug() << "attacker weapon damage mod is " << maxDamage;
 
 	return range < 0 ? 0 : (int)range;
 }
@@ -1357,7 +1355,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	if (!data.isForceAttack() && weapon->getAttackType() == SharedWeaponObjectTemplate::MELEEATTACK)
 		damage *= 1.25;
 
-	//info("damage to be dealt is " + String::valueOf(damage), true);
+	debug() << "damage to be dealt is " << damage;
 
 	ManagedReference<LairObserver*> lairObserver = nullptr;
 	SortedVector<ManagedReference<Observer*> > observers = defender->getObservers(ObserverEventType::OBJECTDESTRUCTION);
@@ -1574,7 +1572,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 
 	if (damage < 1) damage = 1;
 
-	//info("damage to be dealt is " + String::valueOf(damage), true);
+	debug() << "damage to be dealt is " << damage;
 
 	return damage;
 }
@@ -1601,7 +1599,7 @@ float CombatManager::calculateDamage(TangibleObject* attacker, WeaponObject* wea
 
 int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* targetCreature, WeaponObject* weapon, const CreatureAttackData& data, int damage, int accuracyBonus) const {
 	int hitChance = 0;
-
+	int attackType = weapon->getAttackType();
 	CreatureObject* creoAttacker = nullptr;
 
 	if (attacker->isCreatureObject()) {
@@ -1623,8 +1621,8 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 		}
 	}
 
-	//info("Calculating hit chance for " + attacker->getDisplayedName(), true);
-	//info("Attacker accuracy bonus is " + String::valueOf(accuracyBonus), true);
+	debug() << "Calculating hit chance for " << attacker->getObjectID()
+		<< " Attacker accuracy bonus is " << accuracyBonus;
 	float weaponAccuracy = 0.0f;
 	// Get the weapon mods for range and add the mods for stance
 
@@ -1634,10 +1632,10 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 	if (creoAttacker != nullptr && weapon->getAttackType() == SharedWeaponObjectTemplate::RANGEDATTACK)
 		weaponAccuracy += creoAttacker->getSkillMod("private_aim");
 
-	//info("Attacker weapon accuracy is " + String::valueOf(weaponAccuracy), true);
+	debug() << "Attacker weapon accuracy is " << weaponAccuracy;
 
 	int attackerAccuracy = getAttackerAccuracyModifier(attacker, targetCreature, weapon);
-	//info("Base attacker accuracy is " + String::valueOf(attackerAccuracy), true);
+	debug() << "Base attacker accuracy is " << attackerAccuracy;
 
 	// need to also add in general attack accuracy (mostly gotten from posture and states)
 
@@ -1650,33 +1648,33 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 	if (targetCreature->isCreature() && creoAttacker != nullptr)
 		bonusAccuracy += creoAttacker->getSkillMod("creature_hit_bonus");
 
-	//info("Attacker total bonus is " + String::valueOf(bonusAccuracy), true);
+	debug() << "Attacker total bonus is " << bonusAccuracy;
 
 	int postureAccuracy = 0;
 
 	if (creoAttacker != nullptr)
 		postureAccuracy = calculatePostureModifier(creoAttacker, weapon);
 
-	//info("Attacker posture accuracy is " + String::valueOf(postureAccuracy), true);
+	debug() << "Attacker posture accuracy is " << postureAccuracy;
 
 	int targetDefense = getDefenderDefenseModifier(targetCreature, weapon, attacker);
-	//info("Defender defense is " + String::valueOf(targetDefense), true);
+	debug() << "Defender defense is " << targetDefense;
 
 	int postureDefense = calculateTargetPostureModifier(weapon, targetCreature);
 
-	//info("Defender posture defense is " + String::valueOf(postureDefense), true);
+	debug() << "Defender posture defense is " << postureDefense;
 	float attackerRoll = (float)System::random(249) + 1.f;
 	float defenderRoll = (float)System::random(150) + 25.f;
 
 	// TODO (dannuic): add the trapmods in here somewhere (defense down trapmods)
 	float accTotal = hitChanceEquation(attackerAccuracy + weaponAccuracy + accuracyBonus + postureAccuracy + bonusAccuracy, attackerRoll, targetDefense + postureDefense, defenderRoll);
 
-	//info("Final hit chance is " + String::valueOf(accTotal), true);
+	debug() << "Final hit chance is " << accTotal;
 
 	if (System::random(100) > accTotal) // miss, just return MISS
 		return MISS;
 
-	//info("Attack hit successfully", true);
+	debug() << "Attack hit successfully";
 
 	// now we have a successful hit, so calculate secondary defenses if there is a damage component
 	if (damage > 0) {
@@ -1704,7 +1702,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 
 		targetDefense = getDefenderSecondaryDefenseModifier(targetCreature);
 
-		//info("Secondary defenses are " + String::valueOf(targetDefense), true);
+		debug() << "Secondary defenses are " << targetDefense;
 
 		if (targetDefense <= 0)
 			return HIT; // no secondary defenses
@@ -1716,14 +1714,14 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 		//TODO: dodge and counterattack might get a  +25 bonus (even when triggered via DA), research this
 
 		int cobMod = targetCreature->getSkillMod("private_center_of_being");
-		//info("Center of Being mod is " + String::valueOf(cobMod), true);
+		debug() << "Center of Being mod is " << cobMod;
 
 		targetDefense += cobMod;
-		//info("Final modified secondary defense is " + String::valueOf(targetDefense), true);
+		debug() << "Final modified secondary defense is " << targetDefense;
 
 		if (targetDefense > 50 + attackerAccuracy + weaponAccuracy + accuracyBonus + postureAccuracy + bonusAccuracy + attackerRoll) { // successful secondary defense, return type of defense
 
-			//info("Secondaries defenses prevailed", true);
+			debug() << "Secondaries defenses prevailed";
 			// defense acuity returns random: case 0 BLOCK, case 1 DODGE or default COUNTER
 			if (targetWeapon == nullptr || def == "unarmed_passive_defense") {
 				int randRoll = System::random(2);
@@ -2383,7 +2381,7 @@ void CombatManager::requestDuel(CreatureObject* player, CreatureObject* targetPl
 		return;
 	}
 
-	player->info("requesting duel with " + String::valueOf(targetPlayer->getObjectID()));
+	player->debug() << "requesting duel with " << targetPlayer->getObjectID();
 
 	ghost->addToDuelList(targetPlayer);
 
@@ -2459,7 +2457,7 @@ void CombatManager::requestEndDuel(CreatureObject* player, CreatureObject* targe
 		return;
 	}
 
-	player->info("ending duel with " + String::valueOf(targetPlayer->getObjectID()));
+	player->debug() << "ending duel with " << targetPlayer->getObjectID();
 
 	ghost->removeFromDuelList(targetPlayer);
 	player->removeDefender(targetPlayer);
@@ -2525,7 +2523,7 @@ void CombatManager::freeDuelList(CreatureObject* player, bool spam) const {
 	if (ghost == nullptr || ghost->isDuelListEmpty())
 		return;
 
-	player->info("freeing duel list");
+	player->debug("freeing duel list");
 
 	while (ghost->getDuelListSize() != 0) {
 		ManagedReference<CreatureObject*> targetPlayer = ghost->getDuelListObject(0);
@@ -2623,7 +2621,7 @@ void CombatManager::declineDuel(CreatureObject* player, CreatureObject* targetPl
 		stringId2.setTT(player->getObjectID());
 		targetPlayer->sendSystemMessage(stringId2);
 
-		player->info("declined duel with " + String::valueOf(targetPlayer->getObjectID()));
+		player->debug() << "declined duel with " << targetPlayer->getObjectID();
 	}
 }
 
