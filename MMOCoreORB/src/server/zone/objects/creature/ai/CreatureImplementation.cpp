@@ -150,7 +150,7 @@ void CreatureImplementation::fillAttributeList(AttributeListMessage* alm, Creatu
 		if (skillname == "creatureareaattack")
 			skillname = "creatureareaattack";
 		else if (skillname.isEmpty())
-			skillname = "creatureareaattack";
+			skillname = attackMap->getCommand(0);
 
 		StringBuffer skillMsg;
 		skillMsg << "@combat_effects:" << skillname;
@@ -164,9 +164,9 @@ void CreatureImplementation::fillAttributeList(AttributeListMessage* alm, Creatu
 			skillname = attackMap->getCommand(1);
 
 		if (skillname == "creatureareaattack")
-			skillname = "unknown_attack";
+			skillname = "creatureareaattack";
 		else if (skillname.isEmpty())
-			skillname = "none";
+			skillname = attackMap->getCommand(0);
 
 		StringBuffer skillMsg;
 		skillMsg << "@combat_effects:" << skillname;

@@ -81,7 +81,6 @@ public:
 		energy = templateData->getFloatField("energy");
 		electricity = templateData->getFloatField("electricity");
 		stun = templateData->getFloatField("stun");
-
 		blast = templateData->getFloatField("blast");
 		heat = templateData->getFloatField("heat");
 		cold = templateData->getFloatField("cold");

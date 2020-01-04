@@ -1021,6 +1021,8 @@ int CombatManager::getSpeedModifier(CreatureObject* attacker, WeaponObject* weap
 	return speedMods;
 }
 
+
+
 int CombatManager::getArmorObjectReduction(ArmorObject* armor, int damageType) const {
 	float resist = 0;
 
@@ -2048,9 +2050,6 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 	else
 		xpType = weapon->getXpType();
 
-	if (attacker->isPet() && defender->isPlayerCreature())
-		 damage *= .5;
-
 	bool healthDamaged = (!!(poolsToDamage & HEALTH) && data.getHealthDamageMultiplier() > 0.0f);
 	bool actionDamaged = (!!(poolsToDamage & ACTION) && data.getActionDamageMultiplier() > 0.0f);
 	bool mindDamaged   = (!!(poolsToDamage & MIND)   && data.getMindDamageMultiplier()   > 0.0f);
@@ -2217,9 +2216,6 @@ int CombatManager::applyDamage(CreatureObject* attacker, WeaponObject* weapon, T
 
 		damage *= (1.f - (armorReduction / 100.f));
 	}
-
-	if (attacker->isPet() && defender->isPlayerCreature())
-		 damage *= .5;
 
 	defender->inflictDamage(attacker, 0, damage, true, xpType, true, true);
 
@@ -2963,7 +2959,6 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 	if (*shouldGcwTef && *shouldBhTef)
 		return;
 
-
 	ManagedReference<CreatureObject*> attackingCreature = attacker->isPet() ? attacker->getLinkedCreature() : attacker;
 	ManagedReference<CreatureObject*> targetCreature = defender->isPet() || defender->isVehicleObject() ? defender->getLinkedCreature() : defender;
 
@@ -2975,7 +2970,7 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 
 	if (attackingCreature != nullptr && targetCreature != nullptr && attackingCreature->isPlayerCreature() && targetCreature->isPlayerCreature() && !areInDuel(attackingCreature, targetCreature)) {
 
-		if (!(*shouldGcwTef) && (attackingCreature->getFaction() != targetCreature->getFaction()) && attackingCreature->getFaction() != 0 && targetCreature->getFaction() != 0)
+		if (!(*shouldGcwTef) && (attackingCreature->getFaction() != targetCreature->getFaction()) && (attackingCreature->getFactionStatus() == FactionStatus::OVERT) && (targetCreature->getFactionStatus() == FactionStatus::OVERT))
 			*shouldGcwTef = true;
 
 		if (!(*shouldBhTef) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->hasBountyMissionFor(attackingCreature)))

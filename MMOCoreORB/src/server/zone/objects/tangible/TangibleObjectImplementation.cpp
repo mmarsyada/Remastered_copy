@@ -35,8 +35,6 @@
 #include "server/zone/managers/gcw/GCWManager.h"
 #include "templates/faction/Factions.h"
 #include "server/zone/objects/player/FactionStatus.h"
-#include "engine/engine.h"
-
 
 void TangibleObjectImplementation::initializeTransientMembers() {
 	SceneObjectImplementation::initializeTransientMembers();

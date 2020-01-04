@@ -284,34 +284,7 @@ void PetDeedImplementation::updateCraftingValues(CraftingValues* values, bool fi
 				setSpecialResist(SharedWeaponObjectTemplate::LIGHTSABER);
 			if (component->isSpecialResist(SharedWeaponObjectTemplate::STUN))
 				setSpecialResist(SharedWeaponObjectTemplate::STUN);
-
-
-			int avgHam = (component->getHealth() + component->getAction() + component->getMind()) / 3;
-			int statLevel = (DnaManager::instance()->levelForScore(DnaManager::HAM_LEVEL, avgHam) + 1) * 6;
-			int damageLevel = DnaManager::instance()->levelForScore(DnaManager::DPS_LEVEL, ((component->getMaxDamage() + component->getMinDamage()) / 2.0f) / component->getSpeed()) * 10;
-			int hitLevel = (DnaManager::instance()->levelForScore(DnaManager::HIT_LEVEL, component->getHit()) + 1) * 1;
-			int defenseLevel = hitLevel;
-			int regenerationLevel =  (DnaManager::instance()->levelForScore(DnaManager::REG_LEVEL, avgHam / 10) + 1)* 2;
-			int armorLevel = DnaManager::instance()->levelForScore(DnaManager::ARM_LEVEL, (component->getArmor() * 500) + (( component->getEffectiveArmor()) * 10.0)  );
-			int armorBase = DnaManager::instance()->valueForLevel(DnaManager::ARM_LEVEL, armorLevel);
-			int baseLevel = (((statLevel) + (damageLevel) + (regenerationLevel) + (hitLevel)) / 19.0) + 0.5;
-			int armorLevel2 = Genetics::calculateArmorValue(component, armorLevel, baseLevel, armorBase) * 2;
-
-/*
-			info("Avg Ham: " + String::valueOf(avgHam));
-			info("Stat Level: " + String::valueOf(statLevel));
-			info("Damage Level: " + String::valueOf(damageLevel));
-			info("hitLevel: " + String::valueOf(hitLevel));
-			info("Defense Level: " + String::valueOf(defenseLevel));
-			info("Regen Level: " + String::valueOf(regenerationLevel));
-			info("Armor Level: " + String::valueOf(armorLevel));
-			info("ArmorBase: " + String::valueOf(armorBase));
-			info("Base Level: " + String::valueOf(baseLevel));
-			info("Armor Level 2: " + String::valueOf(armorLevel2));
-*/
 			level = Genetics::calculatePetLevel(component);
-
-			//info("Level:" + String::valueOf(level));
 		}
 	}
 	CreatureTemplateManager* creatureTemplateManager = CreatureTemplateManager::instance();
@@ -342,7 +315,7 @@ void PetDeedImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuRespo
 
 int PetDeedImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {
 	if (selectedID == 21) {
-		if(generated || !player->hasSkill("outdoors_bio_engineer_novice") || !isASubChildOf(player))
+		if (generated || !player->hasSkill("outdoors_bio_engineer_novice") || !isASubChildOf(player))
 			return 1;
 
 		if (player->isRidingMount()) {

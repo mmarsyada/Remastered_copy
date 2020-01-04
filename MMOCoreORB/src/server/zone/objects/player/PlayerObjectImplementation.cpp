@@ -250,7 +250,7 @@ void PlayerObjectImplementation::unloadSpawnedChildren() {
 }
 
 void PlayerObjectImplementation::unload() {
-	info("unloading player");
+	debug("unloading player");
 
 	ManagedReference<CreatureObject*> creature = dynamic_cast<CreatureObject*>(parent.get().get());
 
@@ -314,11 +314,11 @@ void PlayerObjectImplementation::unload() {
 		GroupManager::instance()->leaveGroup(group, creature);
 
 	/*StringBuffer msg;
-	msg << "remaining play ref count: " << _this.getReferenceUnsafeStaticCast()->getReferenceCount();
+	msg << "remaining play ref count: " << asPlayerObject()->getReferenceCount();
 	msg << " - remaining creo ref count: " << creature->getReferenceCount();
 	info(msg.toString(), true);
 
-	_this.getReferenceUnsafeStaticCast()->printReferenceHolders();
+	asPlayerObject()->printReferenceHolders();
 	creature->printReferenceHolders();*/
 }
 
@@ -343,12 +343,12 @@ int PlayerObjectImplementation::calculateBhReward() {
 }
 
 void PlayerObjectImplementation::sendBaselinesTo(SceneObject* player) {
-	// debug("sendBaselinesTo(" + String::valueOf(player->getObjectID()) + ")");
+	debug() << "sendBaselinesTo(" << player->getObjectID() << ")";
 
-	BaseMessage* play3 = new PlayerObjectMessage3(_this.getReferenceUnsafeStaticCast());
+	BaseMessage* play3 = new PlayerObjectMessage3(asPlayerObject());
 	player->sendMessage(play3);
 
-	BaseMessage* play6 = new PlayerObjectMessage6(_this.getReferenceUnsafeStaticCast());
+	BaseMessage* play6 = new PlayerObjectMessage6(asPlayerObject());
 	player->sendMessage(play6);
 
 	if (player == parent.get().get()) {
@@ -473,13 +473,13 @@ void PlayerObjectImplementation::sendFriendLists() {
 
 	auto parent = getParent().get();
 
-	ChatOnGetFriendsList* flist = new ChatOnGetFriendsList(_this.getReferenceUnsafeStaticCast());
+	ChatOnGetFriendsList* flist = new ChatOnGetFriendsList(asPlayerObject());
 	parent->sendMessage(flist);
 
-	ChatOnGetIgnoreList* ilist = new ChatOnGetIgnoreList(_this.getReferenceUnsafeStaticCast());
+	ChatOnGetIgnoreList* ilist = new ChatOnGetIgnoreList(asPlayerObject());
 	parent->sendMessage(ilist);
 
-	DeltaMessage* delta = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+	DeltaMessage* delta = new PlayerObjectDeltaMessage9(asPlayerObject());
 	friendList.insertToDeltaMessage(delta);
 	ignoreList.insertToDeltaMessage(delta);
 	delta->close();
@@ -504,7 +504,7 @@ bool PlayerObjectImplementation::setCharacterBit(uint32 bit, bool notifyClient) 
 		characterBitmask |= bit;
 
 		if (notifyClient) {
-			PlayerObjectDeltaMessage3* delta = new PlayerObjectDeltaMessage3(_this.getReferenceUnsafeStaticCast());
+			PlayerObjectDeltaMessage3* delta = new PlayerObjectDeltaMessage3(asPlayerObject());
 			delta->updateCharacterBitmask(characterBitmask);
 			delta->close();
 
@@ -540,7 +540,7 @@ bool PlayerObjectImplementation::clearCharacterBit(uint32 bit, bool notifyClient
 		characterBitmask &= ~bit;
 
 		if (notifyClient) {
-			PlayerObjectDeltaMessage3* delta = new PlayerObjectDeltaMessage3(_this.getReferenceUnsafeStaticCast());
+			PlayerObjectDeltaMessage3* delta = new PlayerObjectDeltaMessage3(asPlayerObject());
 			delta->updateCharacterBitmask(characterBitmask);
 			delta->close();
 
@@ -559,7 +559,7 @@ void PlayerObjectImplementation::sendBadgesResponseTo(CreatureObject* player) {
 
 void PlayerObjectImplementation::awardBadge(uint32 badge) {
 	PlayerManager* playerManager = getZoneServer()->getPlayerManager();
-	playerManager->awardBadge(_this.getReferenceUnsafeStaticCast(), badge);
+	playerManager->awardBadge(asPlayerObject(), badge);
 }
 
 int PlayerObjectImplementation::addExperience(const String& xpType, int xp, bool notifyClient) {
@@ -568,15 +568,13 @@ int PlayerObjectImplementation::addExperience(const String& xpType, int xp, bool
 
 	int valueToAdd = xp;
 
-	Locker locker(_this.getReferenceUnsafeStaticCast());
+	Locker locker(asPlayerObject());
 
 	if (xp > 0)
 		sessionStatsActivityXP += xp; // Count all xp as we're looking for activity not caps etc.
 
 	if (experienceList.contains(xpType)) {
 		xp += experienceList.get(xpType);
-
-
 
 		if (xp <= 0 && xpType != "jedi_general") {
 			removeExperience(xpType, notifyClient);
@@ -771,7 +769,7 @@ WaypointObject* PlayerObjectImplementation::addWaypoint(const String& planet, fl
 
 void PlayerObjectImplementation::addAbility(Ability* ability, bool notifyClient) {
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(asPlayerObject());
 		msg->startUpdate(0);
 		abilityList.add(ability, msg, 1);
 		msg->close();
@@ -786,7 +784,7 @@ void PlayerObjectImplementation::addAbilities(Vector<Ability*>& abilities, bool 
 		return;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(asPlayerObject());
 		msg->startUpdate(0);
 
 		abilityList.add(abilities.get(0), msg, abilities.size());
@@ -810,7 +808,7 @@ void PlayerObjectImplementation::removeAbility(Ability* ability, bool notifyClie
 		return;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(asPlayerObject());
 		msg->startUpdate(0);
 		abilityList.remove(index, msg, 1);
 		msg->close();
@@ -825,7 +823,7 @@ void PlayerObjectImplementation::removeAbilities(Vector<Ability*>& abilities, bo
 		return;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(asPlayerObject());
 		msg->startUpdate(0);
 
 		abilityList.remove(abilityList.find(abilities.get(0)), msg, abilities.size());
@@ -855,11 +853,11 @@ bool PlayerObjectImplementation::addSchematics(Vector<ManagedReference<DraftSche
 			schematicsToSend.add(schematics.get(i));
 	}
 
-	if(schematicsToSend.size() == 0)
+	if (schematicsToSend.size() == 0)
 		return false;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(asPlayerObject());
 		msg->startUpdate(4);
 
 		schematicList.add(schematicsToSend.get(0), msg, schematicsToSend.size());
@@ -885,7 +883,7 @@ bool PlayerObjectImplementation::addRewardedSchematic(DraftSchematic* schematic,
 
 	schematics.add(schematic);
 
-	CreatureObject* parent = cast<CreatureObject*>(_this.getReferenceUnsafeStaticCast()->getParent().get().get());
+	CreatureObject* parent = cast<CreatureObject*>(asPlayerObject()->getParent().get().get());
 
 	if (parent == nullptr)
 		return false;
@@ -895,16 +893,18 @@ bool PlayerObjectImplementation::addRewardedSchematic(DraftSchematic* schematic,
 		return false;
 	}
 
-	if(!schematicList.addRewardedSchematic(schematic, type, quantity))
+	if (!schematicList.addRewardedSchematic(schematic, type, quantity))
 		return true;
 
-	if(addSchematics(schematics, notifyClient)) {
-		if(notifyClient) {
+	if (addSchematics(schematics, notifyClient)) {
+		if (notifyClient) {
 			schematic->sendDraftSlotsTo(parent);
 			schematic->sendResourceWeightsTo(parent);
 		}
+
 		return true;
 	}
+
 	return false;
 }
 
@@ -932,12 +932,11 @@ void PlayerObjectImplementation::decreaseSchematicUseCount(DraftSchematic* schem
 }
 
 void PlayerObjectImplementation::removeSchematics(Vector<ManagedReference<DraftSchematic* > >& schematics, bool notifyClient) {
-
 	if (schematics.size() == 0)
 		return;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* msg = new PlayerObjectDeltaMessage9(asPlayerObject());
 		msg->startUpdate(4);
 
 		schematicList.removeAll(msg);
@@ -967,10 +966,10 @@ void PlayerObjectImplementation::removeSchematics(Vector<ManagedReference<DraftS
 
 	for(int i = 0; i < playerSkillBoxList->size(); ++i) {
 		Skill* skillBox = playerSkillBoxList->get(i);
-		skillManager->awardDraftSchematics(skillBox, _this.getReferenceUnsafeStaticCast(), true);
+		skillManager->awardDraftSchematics(skillBox, asPlayerObject(), true);
 	}
 
-	schematicList.addRewardedSchematics(_this.getReferenceUnsafeStaticCast());
+	schematicList.addRewardedSchematics(asPlayerObject());
 }
 
 void PlayerObjectImplementation::doDigest(int fillingReduction) {
@@ -1000,7 +999,7 @@ void PlayerObjectImplementation::doDigest(int fillingReduction) {
 Vector<ManagedReference<DraftSchematic* > > PlayerObjectImplementation::filterSchematicList(
 		CreatureObject* player, Vector<uint32>* enabledTabs, int complexityLevel) {
 
-	Locker _locker(_this.getReferenceUnsafeStaticCast());
+	Locker _locker(asPlayerObject());
 
 	return schematicList.filterSchematicList(player, enabledTabs, complexityLevel);
 }
@@ -1051,7 +1050,7 @@ void PlayerObjectImplementation::addFriend(const String& name, bool notifyClient
 
 		friendList.add(nameLower);
 
-		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(asPlayerObject());
 		friendList.insertToDeltaMessage(delta);
 		delta->close();
 
@@ -1114,7 +1113,7 @@ void PlayerObjectImplementation::removeFriend(const String& name, bool notifyCli
 
 		friendList.removePlayer(nameLower);
 
-		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(asPlayerObject());
 		friendList.insertToDeltaMessage(delta);
 		delta->close();
 
@@ -1215,7 +1214,7 @@ void PlayerObjectImplementation::addIgnore(const String& name, bool notifyClient
 
 		ignoreList.add(nameLower);
 
-		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(asPlayerObject());
 		ignoreList.insertToDeltaMessage(delta);
 		delta->close();
 
@@ -1253,7 +1252,7 @@ void PlayerObjectImplementation::removeIgnore(const String& name, bool notifyCli
 
 		ignoreList.removePlayer(nameLower);
 
-		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(asPlayerObject());
 		ignoreList.insertToDeltaMessage(delta);
 		delta->close();
 
@@ -1284,7 +1283,7 @@ void PlayerObjectImplementation::setTitle(const String& characterTitle, bool not
 	title = characterTitle;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage3* dplay3 = new PlayerObjectDeltaMessage3(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage3* dplay3 = new PlayerObjectDeltaMessage3(asPlayerObject());
 		dplay3->setCurrentTitle(title);
 		dplay3->close();
 		broadcastMessage(dplay3, true); //update the zone.
@@ -1604,7 +1603,7 @@ void PlayerObjectImplementation::setLanguageID(byte language, bool notifyClient)
 	languageID = language;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* dplay9 = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* dplay9 = new PlayerObjectDeltaMessage9(asPlayerObject());
 		dplay9->setLanguageID(languageID);
 		dplay9->close();
 		getParent().get()->sendMessage(dplay9);
@@ -1626,7 +1625,7 @@ void PlayerObjectImplementation::setFoodFilling(int newValue, bool notifyClient)
 	foodFilling = newValue;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* dplay9 = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* dplay9 = new PlayerObjectDeltaMessage9(asPlayerObject());
 		dplay9->updateFoodFilling(newValue);
 		dplay9->close();
 		getParent().get()->sendMessage(dplay9);
@@ -1640,7 +1639,7 @@ void PlayerObjectImplementation::setDrinkFilling(int newValue, bool notifyClient
 	drinkFilling = newValue;
 
 	if (notifyClient) {
-		PlayerObjectDeltaMessage9* dplay9 = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+		PlayerObjectDeltaMessage9* dplay9 = new PlayerObjectDeltaMessage9(asPlayerObject());
 		dplay9->updateDrinkFilling(drinkFilling);
 		dplay9->close();
 		getParent().get()->sendMessage(dplay9);
@@ -1799,7 +1798,7 @@ void PlayerObjectImplementation::logout(bool doLock) {
 
 			info("creating disconnect event: isInSafeArea=" + String::valueOf(isInSafeArea), true);
 
-			disconnectEvent = new PlayerDisconnectEvent(_this.getReferenceUnsafeStaticCast(), isInSafeArea);
+			disconnectEvent = new PlayerDisconnectEvent(asPlayerObject(), isInSafeArea);
 
 			if (isLoggingOut()) {
 				disconnectEvent->schedule(10);
@@ -1893,7 +1892,7 @@ void PlayerObjectImplementation::doRecovery(int latency) {
 		}
 
 		if (!getZoneServer()->isServerLoading() && cooldownTimerMap->isPast("weatherEvent")) {
-			if(creature->getZone() != nullptr && creature->getZone()->getPlanetManager() != nullptr) {
+			if (creature->getZone() != nullptr && creature->getZone()->getPlanetManager() != nullptr) {
 				ManagedReference<WeatherManager*> weatherManager = creature->getZone()->getPlanetManager()->getWeatherManager();
 
 				if (weatherManager != nullptr)
@@ -2016,7 +2015,7 @@ void PlayerObjectImplementation::checkForNewSpawns() {
 
 void PlayerObjectImplementation::activateRecovery() {
 	if (recoveryEvent == nullptr) {
-		recoveryEvent = new PlayerRecoveryEvent(_this.getReferenceUnsafeStaticCast());
+		recoveryEvent = new PlayerRecoveryEvent(asPlayerObject());
 	}
 
 	if (!recoveryEvent->isScheduled()) {
@@ -2036,7 +2035,7 @@ void PlayerObjectImplementation::activateForcePowerRegen() {
 		return;
 
 	if (forceRegenerationEvent == nullptr) {
-		forceRegenerationEvent = new ForceRegenerationEvent(_this.getReferenceUnsafeStaticCast());
+		forceRegenerationEvent = new ForceRegenerationEvent(asPlayerObject());
 	}
 
 	if (!forceRegenerationEvent->isScheduled()) {
@@ -2126,13 +2125,10 @@ void PlayerObjectImplementation::reload(ZoneClientSession* client) {
 
 	creature->setMovementCounter(0);
 
-	//notifiedSentObjects.removeAll();
-
 	if (creature->isRidingMount() && creature->getParent() == nullptr) {
 		creature->clearState(CreatureState::RIDINGMOUNT);
 	}
 
-	//creature->insertToZone(creature->getZone());
 	creature->getZone()->transferObject(creature, -1, true);
 }
 
@@ -2232,12 +2228,12 @@ void PlayerObjectImplementation::activateMissions() {
 }
 
 void PlayerObjectImplementation::setForcePowerMax(int newValue, bool notifyClient) {
-	if(newValue == getForcePowerMax())
+	if (newValue == getForcePowerMax())
 		return;
 
 	forcePowerMax = newValue;
 
-	if(forcePower > forcePowerMax)
+	if (forcePower > forcePowerMax)
 		setForcePower(forcePowerMax, true);
 
 	if (forcePower < forcePowerMax) {
@@ -2255,8 +2251,7 @@ void PlayerObjectImplementation::setForcePowerMax(int newValue, bool notifyClien
 }
 
 void PlayerObjectImplementation::setForcePower(int fp, bool notifyClient) {
-
-	if(fp == getForcePower())
+	if (fp == getForcePower())
 		return;
 
 	// Set forcepower back to 0 incase player goes below
@@ -2266,7 +2261,6 @@ void PlayerObjectImplementation::setForcePower(int fp, bool notifyClient) {
 	// Set force back to max incase player goes over
 	if (fp > getForcePowerMax())
 		fp = getForcePowerMax();
-
 
 	// Activate regeneration.
 	if (fp < getForcePowerMax()) {
@@ -2582,12 +2576,12 @@ void PlayerObjectImplementation::deleteAllWaypoints() {
 }
 
 int PlayerObjectImplementation::getLotsRemaining() {
-	Locker locker(_this.getReferenceUnsafeStaticCast());
+	Locker locker(asPlayerObject());
 
 	int lotsRemaining = maximumLots;
 
 	for (int i = 0; i < ownedStructures.size(); ++i) {
-		unsigned long oid = ownedStructures.get(i);
+		auto oid = ownedStructures.get(i);
 
 		Reference<StructureObject*> structure = getZoneServer()->getObject(oid).castTo<StructureObject*>();
 
@@ -2627,7 +2621,7 @@ void PlayerObjectImplementation::setJediState(int state, bool notifyClient) {
 	if (!notifyClient)
 		return;
 
-	PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(_this.getReferenceUnsafeStaticCast());
+	PlayerObjectDeltaMessage9* delta = new PlayerObjectDeltaMessage9(asPlayerObject());
 	delta->setJediState(state);
 	delta->close();
 
@@ -2648,7 +2642,7 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 	const SkillList* skillList = player->getSkillList();
 
 	for(int i = 0; i < skillList->size(); ++i) {
-		Skill* jediSkill = skillList->get(i);
+		const Skill* jediSkill = skillList->get(i);
 
 		if (jediSkill->getSkillName().indexOf("force_discipline") != -1)
 			jediSkillPoints += jediSkill->getSkillPointsRequired();
@@ -2807,7 +2801,7 @@ int PlayerObjectImplementation::getCharacterAgeInDays() {
 
 	PlayerManager* playerManager = creature->getZoneServer()->getPlayerManager();
 
-	if(account == nullptr) {
+	if (account == nullptr) {
 		return 0;
 	}
 
@@ -2869,7 +2863,7 @@ void PlayerObjectImplementation::doFieldFactionChange(int newStatus) {
 	ManagedReference<SuiInputBox*> inputbox = new SuiInputBox(parent, SuiWindowType::FIELD_FACTION_CHANGE);
 	inputbox->setCallback(new FieldFactionChangeSuiCallback(server->getZoneServer(), newStatus));
 	inputbox->setPromptTitle("@gcw:gcw_status_change"); // GCW STATUS CHANGE CONFIRMATION
-	inputbox->setUsingObject(_this.getReferenceUnsafeStaticCast());
+	inputbox->setUsingObject(asPlayerObject());
 	inputbox->setCancelButton(true, "@cancel");
 
 	if (newStatus == FactionStatus::COVERT) {

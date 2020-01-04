@@ -209,8 +209,10 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 
 				if (activePetTemplate == nullptr || callingPetTemplate == nullptr || activePetTemplate->getTemplateName() != "at_st" || activePetTemplate->getTemplateName() != "at_xt")
 					continue;
-				//if (++currentlySpawned >= maxPets || (activePetTemplate->getTemplateName() == "at_st" && callingPetTemplate->getTemplateName() == "at_st")) {
-				if (++currentlySpawned >= maxPets) {
+
+				if (++currentlySpawned >= maxPets || 
+                                    (activePetTemplate->getTemplateName() == "at_st" && callingPetTemplate->getTemplateName() == "at_st")  ||
+                                    (activePetTemplate->getTemplateName() == "at_xt" && callingPetTemplate->getTemplateName() == "at_xt")) {
 					player->sendSystemMessage("@pet/pet_menu:at_max"); // You already have the maximum number of pets of this type that you can call.
 					return;
 				}

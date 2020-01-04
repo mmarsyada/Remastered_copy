@@ -2070,6 +2070,12 @@ void AiAgentImplementation::doMovement() {
 
 	//info("Performing action ID: " + currentBehaviorID, true);
 	// activate AI
+
+	// Remastered fix crash
+	if (!behaviors.contains(currentBehaviorID)) {
+		return;
+	}
+
 	Behavior* current = behaviors.get(currentBehaviorID);
 	if (current != nullptr)
 		current->doAction(true);
