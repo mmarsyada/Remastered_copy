@@ -220,7 +220,7 @@ TEST_F(LuaMobileTest, LuaMobileTemplatesTest) {
 		if (!controlDeviceTemplate.isEmpty()) {
 			SharedObjectTemplate* controlDeviceTemplateData = templateManager->getTemplate(controlDeviceTemplate.hashCode());
 			EXPECT_TRUE( controlDeviceTemplateData != nullptr ) << "Control device template " << controlDeviceTemplate.toCharArray() << " from " << templateName << " does not exist.";
-			EXPECT_TRUE( controlDeviceTemplate.beginsWith("object/intangible/pet/") ) << "Control device template " << controlDeviceTemplate.toCharArray() << " from " << templateName << " is not a pet/droid control device template.";
+			EXPECT_TRUE( controlDeviceTemplate.beginsWith("object/intangible/pet/") || controlDeviceTemplate.beginsWith("object/intangible/beast/")  ) << "Control device template " << controlDeviceTemplate.toCharArray() << " from " << templateName << " is not a pet/droid control device template.";
 		}
 
 		// Verify that faction is valid
