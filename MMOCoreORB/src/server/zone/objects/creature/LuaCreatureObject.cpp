@@ -694,7 +694,6 @@ int LuaCreatureObject::getFactionRank(lua_State* L) {
 	return 1;
 }
 
-
 int LuaCreatureObject::getCashCredits(lua_State* L) {
 	lua_pushinteger(L, realObject->getCashCredits());
 

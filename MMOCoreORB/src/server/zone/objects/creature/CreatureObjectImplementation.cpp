@@ -2894,7 +2894,7 @@ void CreatureObjectImplementation::stopEntertaining() {
 }
 
 void CreatureObjectImplementation::sendMessage(BasePacket* msg) {
-	ManagedReference<ZoneClientSession*> ownerClient = owner.get();
+	auto ownerClient = owner.get();
 
 	if (ownerClient == nullptr) {
 #ifdef LOCKFREE_BCLIENT_BUFFERS
@@ -3895,7 +3895,7 @@ void CreatureObjectImplementation::setHue(int hueIndex) {
 	AssetCustomizationManagerTemplate::instance()->getCustomizationVariables(appearanceFilename.hashCode(), variables, false);
 
 	for (int i = 0; i < variables.size(); ++i) {
-		String varName = variables.elementAt(i).getKey();
+		const auto& varName = variables.elementAt(i).getKey();
 		CustomizationVariable* customizationVariable = variables.elementAt(i).getValue().get();
 
 		if (customizationVariable == nullptr)
@@ -3906,8 +3906,8 @@ void CreatureObjectImplementation::setHue(int hueIndex) {
 		if (palette == nullptr)
 			continue;
 
-		String paletteFileName = palette->getPaletteFileName();
-		PaletteTemplate* paletteTemplate = TemplateManager::instance()->getPaletteTemplate(paletteFileName);
+		const auto& paletteFileName = palette->getPaletteFileName();
+		UniqueReference<PaletteTemplate*> paletteTemplate(TemplateManager::instance()->getPaletteTemplate(paletteFileName));
 
 		if (paletteTemplate == nullptr)
 			continue;
@@ -3922,13 +3922,14 @@ void CreatureObjectImplementation::setHue(int hueIndex) {
 			tempHue = maxIndex - 1;
 
 		setCustomizationVariable(varName, tempHue, true);
-
-		delete paletteTemplate;
 	}
 
 	hueValue = hueIndex;
 }
 
+void CreatureObjectImplementation::setClient(ZoneClientSession* cli) {
+	owner = cli;
+}
 void CreatureObjectImplementation::addGroupTef(uint32 tefId) {
 	if (tefId == INVALID_TEF_ID) {
 		return;

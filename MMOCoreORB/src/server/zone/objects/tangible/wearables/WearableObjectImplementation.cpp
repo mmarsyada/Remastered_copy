@@ -158,7 +158,7 @@ void WearableObjectImplementation::generateSockets(CraftingValues* craftingValue
 
 	int random = (System::random(500)) - 100; // -100 to 400 90% chance of 4 sockets w/ master, +25 assembly tapes, & +20 force assembly, 69% chance of 4 sockets with master only, 13.8% at novice   
 
-	float roll = skill + random;
+	float roll = System::random(skill + luck + random);
 
 	int generatedCount = int(float(MAXSOCKETS * roll) / float(MAXSOCKETS * 100));
 

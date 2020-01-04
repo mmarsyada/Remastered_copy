@@ -168,7 +168,7 @@ class ArmorObject extends WearableObject {
 	@read
 	public native float getStun();
 
-	public void setStun(float value) {	
+	public void setStun(float value) {
 		stun = value;
 	}
 
