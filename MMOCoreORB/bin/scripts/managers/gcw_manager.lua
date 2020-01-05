@@ -5,7 +5,7 @@ gcwCheckTimer = 3600
 vulnerabilityDuration = 10800
 
 -- Amount of time in seconds between base vulnerabilities.
-vulnerabilityFrequency = 39600
+vulnerabilityFrequency = 172800
 
 powerSwitchCount = 7
 

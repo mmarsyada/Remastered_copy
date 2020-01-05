@@ -11,7 +11,7 @@ enum class JediCouncil : int {
 	Dark = FrsManager::COUNCIL_DARK,
 	None = -1,
 };
-
+/*
 static auto grantJediMaster(const JediCouncil council, CreatureObject& player) -> bool {
 	ZoneServer* zServ = player.getZoneServer();
 	PlayerManager* pMan = zServ->getPlayerManager();
@@ -19,7 +19,7 @@ static auto grantJediMaster(const JediCouncil council, CreatureObject& player) -
 
 	return true;
 }
-
+*/
 static auto grantJediFrs(const JediCouncil council, CreatureObject& player) -> bool {
 	ZoneServer* zServ = player.getZoneServer();
 	PlayerManager* pMan = zServ->getPlayerManager();
@@ -89,7 +89,7 @@ CustomGrantManager::CustomGrantManager() {
 	setGlobalLogging(true);
 	setLogging(true);
 }
-
+/*
 auto CustomGrantManager::grantOverride(CreatureObject& player, const String& argument) const -> bool {
 	StringTokenizer tokenizer{argument};
 
@@ -139,3 +139,4 @@ auto CustomGrantManager::grantOverride(CreatureObject& player, const String& arg
 
 	return false;
 }
+*/

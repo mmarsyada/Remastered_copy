@@ -228,6 +228,7 @@ void MissionObjectiveImplementation::awardReward() {
 		player->addBankCredits(dividedReward, true);
 	}
 
+
 	StatisticsManager::instance()->completeMission(mission->getTypeCRC(), mission->getRewardCredits());
 
 }

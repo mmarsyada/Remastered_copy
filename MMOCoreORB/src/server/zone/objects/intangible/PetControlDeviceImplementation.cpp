@@ -1235,14 +1235,14 @@ void PetControlDeviceImplementation::setVitality(int vit) {
 			return;
 
 		float hamPenaltyModifier = 0;
-		if (vitality <= 85 && vitality > 50) {
-			hamPenaltyModifier = 0.85f;
+		if (vitality <= 75 && vitality > 50) {
+			hamPenaltyModifier = 0.25f;
 		}
 		else if (vitality <= 50 && vitality > 25) {
-			hamPenaltyModifier = 0.90f;
+			hamPenaltyModifier = 0.5f;
 		}
 		else if (vitality <= 25) {
-			hamPenaltyModifier = 0.99f;
+			hamPenaltyModifier = 0.75f;
 		}
 
 		Reference<PetControlDevice*> petControlDevice = _this.getReferenceUnsafeStaticCast();

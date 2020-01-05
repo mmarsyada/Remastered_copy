@@ -586,6 +586,4 @@ class PlayerManager extends Observer implements Logger {
 	}
 
 	public native void stopOnlinePlayerLogTask();
-	
-	public native void grantJediMaster(CreatureObject player, int councilType);
 }
