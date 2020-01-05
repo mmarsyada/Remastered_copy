@@ -126,10 +126,9 @@ public:
 			badgeTotal++;
 		}
 	}
-/*
-	void unsetBadge(const Badge* badge) {
+
+	void unsetBadge(Badge* badge) {
 		if (badge == nullptr) return;
-                
 		Locker locker(this);
 
 		const int badgeIndex = badge->getIndex();
@@ -152,7 +151,7 @@ public:
 		}
 
 	}
-*/
+
 	bool hasBadge(int badgeindex) const {
 		int bitmaskNumber = badgeindex >> 5;
 

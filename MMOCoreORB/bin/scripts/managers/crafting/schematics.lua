@@ -2003,7 +2003,7 @@ schematics = {
 
 	--Weapons
 	{path="object/draft_schematic/weapon/1h_sword_xris_elite.iff"},
-	{path="object/draft_schematic/weapon/junti_mace_elite.iff.iff"},
+	{path="object/draft_schematic/weapon/junti_mace_elite.iff"},
 
 	{path="object/draft_schematic/weapon/pistol_intimidator_elite.iff"},
 	{path="object/draft_schematic/weapon/pistol_ion_relic_elite.iff"},

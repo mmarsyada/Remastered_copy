@@ -602,7 +602,7 @@ void PetManagerImplementation::killPet(TangibleObject* attacker, AiAgent* pet, b
 
 			if (pet->getCooldownTimerMap() != nullptr && pet->getCooldownTimerMap()->isPast("vitalityLossCooldown")) {
 
-				petControlDevice->setVitality(petControlDevice->getVitality() - 10);
+				petControlDevice->setVitality(petControlDevice->getVitality() - 50);
 				pet->getCooldownTimerMap()->updateToCurrentAndAddMili("vitalityLossCooldown", 300000);
 			}
 		}

@@ -90,7 +90,7 @@ ZoneServerImplementation::ZoneServerImplementation(ConfigManager* config) :
 	serverState = OFFLINE;
 	deleteNavAreas = false;
 
-	setLogging(true);
+	setLogLevel(Logger::INFO);
 }
 
 void ZoneServerImplementation::initializeTransientMembers() {
@@ -324,7 +324,8 @@ void ZoneServerImplementation::shutdown() {
 
 		if (zone != nullptr) {
 			zone->stopManagers();
-			//info("zone references " + String::valueOf(zone->getReferenceCount()), true);
+
+			debug() << "zone references " << zone->getReferenceCount();
 		}
 	}
 
@@ -451,9 +452,9 @@ ZoneClientSession* ZoneServerImplementation::createConnection(Socket* sock, Sock
 	//client->deploy("ZoneClientSession " + addr.getFullIPAddress());
 	//client->deploy();
 
-	String address = session->getAddress();
+	const auto& address = session->getAddress();
 
-	//info("client connected from \'" + address + "\'");
+	debug() << "client connected from \'" << address << "\'";
 
 	return client;
 }

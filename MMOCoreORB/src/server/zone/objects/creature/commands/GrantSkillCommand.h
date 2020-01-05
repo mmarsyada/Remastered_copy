@@ -34,9 +34,9 @@ public:
 
 		Locker clocker(targetCreature, creature);
 
-		if (CustomGrantManager::instance()->grantOverride(*targetCreature, arguments.toString())) {
+		/*if (CustomGrantManager::instance()->grantOverride(*targetCreature, arguments.toString())) {
 			return SUCCESS;
-		}
+		}*/
 
 		SkillManager* skillManager = SkillManager::instance();
 		skillManager->surrenderSkill(arguments.toString(), targetCreature, true);
