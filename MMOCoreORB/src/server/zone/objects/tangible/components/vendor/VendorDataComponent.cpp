@@ -17,13 +17,14 @@
 #include "server/zone/managers/player/PlayerManager.h"
 #include "server/zone/packets/object/SpatialChat.h"
 #include "server/zone/objects/tangible/tasks/VendorReturnToPositionTask.h"
+#include "server/zone/objects/building/BuildingObject.h"
 
 VendorDataComponent::VendorDataComponent() : AuctionTerminalDataComponent(), adBarkingMutex() {
 	ownerId = 0;
 	auctionMan = nullptr;
 	initialized = false;
 	vendorSearchEnabled = false;
-	disabled = false;
+	disabled = true;
 	registered = false;
 	maintAmount = 0;
 	awardUsageXP = 0;
