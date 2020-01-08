@@ -32,28 +32,28 @@ death_watch_black_sun_henchman = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "pistols", chance = 1000000},
-				{group = "rifles", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "blacksun_rare", chance = 2000000},
-				{group = "loot_kit_parts", chance = 5000000}
+				{group = "pistols", chance = 1500000},
+				{group = "rifles", chance = 1500000},
+				{group = "carbines", chance = 1500000},
+				{group = "loot_kit_parts", chance = 5500000}
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 4000000
+			lootChance = 1000000
 		},	
 		{
 			groups = {
-				{group = "jetpack_parts", chance = 1000000},				
-				{group = "bounty_hunter_schemes", chance = 8000000},
+				{group = "jetpack_parts", chance = 1000000},
+				{group = "blacksun_rare", chance = 1000000},				
+				{group = "bounty_hunter_schemes", chance = 7000000},
 				{group = "jetpack_base", chance = 1000000}
 			},
-			lootChance = 2000000
+			lootChance = 150000
 		},
 	},
 	weapons = {"pirate_weapons_heavy"},

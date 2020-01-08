@@ -35,7 +35,7 @@ death_watch_bloodguard = Creature:new {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 4000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -47,7 +47,7 @@ death_watch_bloodguard = Creature:new {
 		{
 			groups = {
 				{group = "mandalorian_schemes", chance = 10000000}			},
-			lootChance = 1000000
+			lootChance = 100000
 		},
 	},
 	weapons = {"pirate_weapons_heavy"},

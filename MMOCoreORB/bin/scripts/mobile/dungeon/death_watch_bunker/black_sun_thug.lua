@@ -36,14 +36,14 @@ black_sun_thug = Creature:new {
 				{group = "rifles", chance = 3333333},
 				{group = "carbines", chance = 3333334},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 5000000
+			lootChance = 1000000
 		},	
 		{
 			groups = {
@@ -51,7 +51,7 @@ black_sun_thug = Creature:new {
 				{group = "bounty_hunter_schemes", chance = 8000000},
 				{group = "jetpack_base", chance = 1000000}
 			},
-			lootChance = 2500000
+			lootChance = 150000
 		},	},
 	weapons = {"pirate_weapons_heavy"},
 	conversationTemplate = "",
