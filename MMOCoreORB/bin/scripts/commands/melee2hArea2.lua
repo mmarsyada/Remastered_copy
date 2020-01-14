@@ -50,17 +50,7 @@ Melee2hArea2Command = {
 	mindCostMultiplier = 1.0,
         accuracyBonus = 10,
 
-	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
-		{},
-		100, 
-		0, 
-		0 
-	  )
-	},
+	stateEffects = {},
 
 	areaRange = 16,
 	areaAction = true,

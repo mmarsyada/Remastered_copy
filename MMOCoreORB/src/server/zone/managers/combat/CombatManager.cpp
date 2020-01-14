@@ -1217,7 +1217,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 			if (forceDefense > 0)
 				feedbackDmg *= 1.f / (1.f + ((float)forceDefense / 100.f));
 
-			float splitDmg = feedbackDmg / 3;
+			float splitDmg = feedbackDmg / 6;
 
 			attacker->inflictDamage(defender, CreatureAttribute::HEALTH, splitDmg, true, true, true);
 			attacker->inflictDamage(defender, CreatureAttribute::ACTION, splitDmg, true, true, true);
@@ -1231,8 +1231,8 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		if (defender->getSkillMod("force_absorb") > 0 && defender->isPlayerCreature()) {
 			ManagedReference<PlayerObject*> playerObject = defender->getPlayerObject();
 			if (playerObject != nullptr) {
-				playerObject->setForcePower(playerObject->getForcePower() + (damage * 0.5));
-				sendMitigationCombatSpam(defender, nullptr, (int)damage * 0.5, FORCEABSORB);
+				playerObject->setForcePower(playerObject->getForcePower() + (damage * 0.35));
+				sendMitigationCombatSpam(defender, nullptr, (int)damage * 0.25, FORCEABSORB);
 				defender->playEffect("clienteffect/pl_force_absorb_hit.cef", "");
 			}
 		}

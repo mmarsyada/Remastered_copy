@@ -44,10 +44,12 @@
 ForceLightningCone2Command = {
 	name = "forcelightningcone2",
 
-    minDamage = 1200,
-    maxDamage = 2000,
-	speed = 4.0,
-	forceCost = 250,
+  minDamage = 550,
+  maxDamage = 750,
+  --damageMultiplier = 3.0,
+	speed = 3,
+	forceCost = 45,
+	--forceCostMultiplier = 3.0,
 	accuracySkillMod = "forcelightning_accuracy",
 	coneAngle = 60,
 	coneAction = true,
@@ -64,6 +66,21 @@ ForceLightningCone2Command = {
 			10
 		)
 	},
+	
+		dotEffects = {
+	  DotEffect( 
+		ONFIRE, 
+		{ "resistance_fire", "fire_resist" },
+	HEALTH,
+	true,
+	35,
+	75,
+	75, 
+	75,
+	12,
+	2
+	  )
+	},
 
 	animation = "force_lightning_1_arc_particle_level_3",
 	animType = GENERATE_INTENSITY,
@@ -71,14 +88,18 @@ ForceLightningCone2Command = {
 	combatSpam = "forcelightningcone2",
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
+	
+	-- weaponType = ONEHANDJEDIWEAPON,UNARMEDWEAPON,
 
 	forceAttack = true,
-	damageType = ELECTRICITY_DAMAGE,
+	damageType = LIGHTSABER_DAMAGE,
 
 	frsLightMinDamageModifier = 4,
 	frsLightMaxDamageModifier = 8,
 	frsDarkMinDamageModifier = 4,
 	frsDarkMaxDamageModifier = 8,
+	
+	
 
 	range = 32
 }
