@@ -471,6 +471,11 @@ class WeaponObject extends TangibleObject {
 	}
 
 	@read
+	public boolean isHeavyCR1BlastCannon() {
+		return weaponTemplate.isDerivedFrom("object/weapon/ranged/heavy/heavy_cr1_blast_cannon.iff");
+	}
+
+	@read
 	public boolean isLavaCannon() {
 		return weaponTemplate.isDerivedFrom("object/weapon/ranged/heavy/som_lava_cannon.iff");
 	}
