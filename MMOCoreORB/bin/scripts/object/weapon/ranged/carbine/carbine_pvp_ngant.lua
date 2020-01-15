@@ -37,7 +37,7 @@ object_weapon_ranged_carbine_carbine_pvp_ngant = object_weapon_ranged_carbine_sh
 	xpType = "combat_rangedspecialize_carbine",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_pistol_launcher" },
+	certificationsRequired = { "cert_carbine_dxr6" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "carbine_accuracy" },
 

@@ -243,6 +243,7 @@
 #include "server/zone/objects/creature/commands/ForceLightningCone2Command.h"
 #include "server/zone/objects/creature/commands/ForceLightningSingle1Command.h"
 #include "server/zone/objects/creature/commands/ForceLightningSingle2Command.h"
+#include "server/zone/objects/creature/commands/ForceLightningStormCommand.h"
 #include "server/zone/objects/creature/commands/ForceMeditateCommand.h"
 #include "server/zone/objects/creature/commands/ForceOfWillCommand.h"
 #include "server/zone/objects/creature/commands/ForceProtectionCommand.h"
@@ -644,6 +645,7 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<ForceLightningCone2Command>(String("forceLightningCone2").toLowerCase());
 	commandFactory.registerCommand<ForceLightningSingle1Command>(String("forceLightningSingle1").toLowerCase());
 	commandFactory.registerCommand<ForceLightningSingle2Command>(String("forceLightningSingle2").toLowerCase());
+	commandFactory.registerCommand<ForceLightningStormCommand>(String("forceLightningStorm").toLowerCase());
 	commandFactory.registerCommand<ForceMeditateCommand>(String("forceMeditate").toLowerCase());
 	commandFactory.registerCommand<ForceOfWillCommand>(String("forceOfWill").toLowerCase());
 	commandFactory.registerCommand<ForceProtectionCommand>(String("forceProtection").toLowerCase());

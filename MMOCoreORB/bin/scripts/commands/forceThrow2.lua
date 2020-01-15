@@ -47,7 +47,7 @@ ForceThrow2Command = {
 	minDamage = 1250,
 	maxDamage = 1500,
 	speed = 4.0,
-	forceCost = 56,
+	forceCost = 30,
 	visMod = 25,
 	accuracySkillMod = "forcethrow_accuracy",
 
@@ -61,6 +61,17 @@ ForceThrow2Command = {
 			0,
 			10
 		)
+	},
+		stateEffects = {
+	  StateEffect( 
+		POSTUREDOWN_EFFECT, 
+		{ "postureDownRecovery" }, 
+		{ "posture_change_down_defense" }, 
+		{},
+		100, 
+		0, 
+		0 
+	  )
 	},
 
 	animation = "force_throw_1_particle_level_1",

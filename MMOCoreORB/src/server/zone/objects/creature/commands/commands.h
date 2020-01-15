@@ -226,6 +226,7 @@
 #include "ForceLightningCone2Command.h"
 #include "ForceLightningSingle1Command.h"
 #include "ForceLightningSingle2Command.h"
+#include "ForceLightningStormCommand.h"
 #include "ForceMeditateCommand.h"
 #include "ForceOfWillCommand.h"
 #include "ForceProtectionCommand.h"
