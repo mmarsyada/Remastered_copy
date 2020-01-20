@@ -314,10 +314,15 @@ void ChatManagerImplementation::initiateRooms() {
 	guildRoom = createRoom("guild", systemRoom);
 	guildRoom->setPrivate();
 
-	Reference<ChatRoom*> generalRoom = createRoom("Chat", galaxyRoom);
+	pvpRoom = createRoom("PvP", galaxyRoom);
+	pvpRoom->setCanEnter(true);
+	pvpRoom->setAllowSubrooms(true);
+	pvpRoom->setTitle("PvP-based chat room");
+
+	generalRoom = createRoom("General", galaxyRoom);
 	generalRoom->setCanEnter(true);
 	generalRoom->setAllowSubrooms(true);
-	generalRoom->setTitle("public chat for this server, can create rooms here");
+	generalRoom->setTitle("Remastered General Chat");
 
 	auctionRoom = createRoom("Auction", galaxyRoom);
 	auctionRoom->setCanEnter(true);
@@ -960,7 +965,7 @@ void ChatManagerImplementation::broadcastGalaxy(const String& message, const Str
 }
 
 void ChatManagerImplementation::broadcastGalaxy(CreatureObject* player, const String& message) {
-	String firstName = "SKYNET";
+	String firstName = "REMASTERED";
 
 	if (player != nullptr)
 		firstName = player->getFirstName();
