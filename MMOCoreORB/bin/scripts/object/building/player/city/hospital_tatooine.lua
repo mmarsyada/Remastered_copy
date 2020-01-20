@@ -52,9 +52,9 @@ object_building_player_city_hospital_tatooine = object_building_player_city_shar
 --	abilityRequired = "place_hospital",
 	zoneComponent = "StructureZoneComponent",
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_med_wound_health", 100},
-		{"private_med_wound_action", 100},
+		{"private_medical_rating", 115},
+		{"private_med_wound_health", 150},
+		{"private_med_wound_action", 150},
 		{"private_safe_logout", 1},
 	},
 	childObjects = {
