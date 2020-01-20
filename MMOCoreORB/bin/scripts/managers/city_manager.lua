@@ -70,7 +70,7 @@ NewCityGracePeriod = 1440
 OldCityGracePeriod = 4320
 
 --Whether or not to allow the use of the command, /cityWarn to give players a TEF while in the city limits.
-EnableCityWarn = false
+EnableCityWarn = true
 
 --The number of citizens required to achieve each city rank. (Outpost, Village, Township, City, Metropolis)
 CitizensPerRank = {1, 2, 4, 6, 8}
@@ -85,7 +85,7 @@ TrainersPerRank = 7
 MissionTerminalsPerRank = 3
 
 -- Amount to discount city maintenance  float.  1 = 100%, .75 =75%, .5=50% etc
-maintenanceDiscount = 1.0
+maintenanceDiscount = 0.5
 
 --[[
 	CITIES ALLOWED PER PLANET

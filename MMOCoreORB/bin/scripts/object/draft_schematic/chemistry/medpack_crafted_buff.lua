@@ -67,7 +67,7 @@ object_draft_schematic_chemistry_medpack_crafted_buff = object_draft_schematic_c
 	ingredientTitleNames = {"organic_element", "inorganic_element", "delivery_medium", "drug_duration_compound", "drug_strength_compound"},
 	ingredientSlotType = {0, 0, 1, 1, 1},
 	resourceTypes = {"meat_avian", "gas_reactive", "object/tangible/component/chemistry/shared_solid_delivery_shell.iff", "object/tangible/component/chemistry/shared_release_mechanism_duration.iff", "object/tangible/component/chemistry/shared_biologic_effect_controller.iff"},
-	resourceQuantities = {168, 168, 6, 10, 8},
+	resourceQuantities = {168, 168, 6, 10, 4},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/medicine/crafted/medpack_crafted_buff.iff",
