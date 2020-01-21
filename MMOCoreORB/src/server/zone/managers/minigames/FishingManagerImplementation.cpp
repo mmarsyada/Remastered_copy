@@ -380,10 +380,10 @@ void FishingManagerImplementation::success(CreatureObject* player, int fish, Sce
 
 	Zone* zone = player->getZone();
 
-	if (fish > 93){ // NON-FISH ITEM WAS CAUGHT!
+	if (fish > 97){ // NON-FISH ITEM WAS CAUGHT! //Lowered chance of getting a non-fish item from 6% to 2% of all successes (you're more likely to get a fish)
 		int chance = System::random(99)/*+(luck/10)*/;
 
-		if (chance > 94) { // RARE ITEM WAS CAUGHT!
+		if (chance > 92) { // RARE ITEM WAS CAUGHT!
 			int i = rareLoot.size();
 
 			String loot = rareLoot.get(System::random(i - 1));
@@ -412,6 +412,39 @@ void FishingManagerImplementation::success(CreatureObject* player, int fish, Sce
 
 			return;
 		} else {
+			//This was my best idea to get the planet-specific fish to show up on only their appropriate planets
+			if (fish > 6) {	
+				String planet = zone->getZoneName();
+				int reroll = System::random(9);
+				if (planet == "dathomir" || planet == "endor" || planet == "naboo"  || planet == "yavin4" ) {
+					if (planet == "dathomir") {
+						if (reroll == 9)
+							fish = 7;
+						else
+							fish = System::random(6);
+					} else if (planet == "yavin4") {
+						if (reroll == 9)
+							fish = 15;
+						else
+							fish = System::random(6);
+					} else if (planet == "endor") {
+						if (reroll == 9) {
+							int newfish = System::random(1);
+							fish = newfish + 8;
+						} else
+							fish = System::random(6);
+					} else {
+						if (reroll == 9) {
+							int newfish = System::random(4);
+							fish = newfish + 10;
+						} else
+							fish = System::random(6);
+					}
+				} else {
+					fish = System::random(6);
+				}
+			}
+		
 			String lootFish = "object/tangible/fishing/fish/" + fishType.get(fish) + ".iff";
 			ManagedReference<FishObject*> lootFishObject = player->getZoneServer()->createObject(lootFish.hashCode(), 2).castTo<FishObject*>();
 
@@ -430,21 +463,30 @@ void FishingManagerImplementation::success(CreatureObject* player, int fish, Sce
 						quality += (int)ceil((float)pole->getQuality() / 25);
 				}
 				int factor = 1;
+				int harvest = 50;
 
-				if (player->hasSkill("outdoors_ranger_tracking_04"))
+				if (player->hasSkill("outdoors_ranger_tracking_04")) {
 					factor = 8;
-				else if (player->hasSkill("outdoors_ranger_tracking_03"))
+					harvest = 300;
+				} else if (player->hasSkill("outdoors_ranger_tracking_03")) {
 					factor = 7;
-				else if (player->hasSkill("outdoors_ranger_tracking_02"))
+					harvest = 200;
+				} else if (player->hasSkill("outdoors_ranger_tracking_02")) {
 					factor = 6;
-				else if (player->hasSkill("outdoors_ranger_tracking_01"))
+					harvest = 150;
+				} else if (player->hasSkill("outdoors_ranger_tracking_01")) {
 					factor = 5;
-				else if (player->hasSkill("outdoors_scout_camp_04"))
+					harvest = 100;
+				} else if (player->hasSkill("outdoors_scout_camp_04")) {
 					factor = 4;
-				else if (player->hasSkill("outdoors_scout_camp_03"))
+					harvest = 90;
+				} else if (player->hasSkill("outdoors_scout_camp_03")) {
 					factor = 3;
-				else if (player->hasSkill("outdoors_scout_camp_02"))
+					harvest = 80;
+				} else if (player->hasSkill("outdoors_scout_camp_02")) {
 					factor = 2;
+					harvest = 70;
+				}
 
 				float length = fishLength.get(fish)*factor;
 
@@ -464,8 +506,8 @@ void FishingManagerImplementation::success(CreatureObject* player, int fish, Sce
 
 				Locker playerLocker(player);
 				playerManager->awardExperience(player, "camp", xp, true);
-
-				lootFishObject->setCustomizationVariable("/private/index_color_1", color.get(zone->getZoneName()));
+				if (fish == 6)
+					lootFishObject->setCustomizationVariable("/private/index_color_1", color.get(zone->getZoneName()));
 
 				String baitString = "object/tangible/fishing/bait/bait_chum.iff";
 				ManagedReference<TangibleObject*> baitObject = zone->getZoneServer()->createObject(baitString.hashCode(), 2).castTo<TangibleObject*>();
@@ -484,7 +526,7 @@ void FishingManagerImplementation::success(CreatureObject* player, int fish, Sce
 
 				String resourceString = zone->getZoneName();
 				resourceString = "seafood_fish_" + resourceString;
-				int amount = System::random(50)+factor;
+				int amount = System::random(50)+harvest;
 				ManagedReference<ResourceManager*> resourceManager = zone->getZoneServer()->getResourceManager();
 				ManagedReference<SceneObject*> resource = cast<SceneObject*>(resourceManager->harvestResource(player, resourceString, amount));
 
@@ -638,7 +680,7 @@ int FishingManagerImplementation::getFish(CreatureObject* player) {
 						+ ((3 - bait->getFreshness()) * 3.0) // ACCOUNT FOR BAIT STATUS - freshness is 0 at init
 						//+ (luck / 100) // ACCOUNT FOR LUCK - no luck stat yet!?
 						+ (System::random(20))) // RANDOM BIAS
-						% 7; // MUX NUMBER TO FISH 0-6
+						% 16; // MUX NUMBER TO FISH 0-15
 	}
 
 	return chance;
@@ -1238,9 +1280,9 @@ FishingEvent* FishingManagerImplementation::createFishingEvent(CreatureObject* p
 	int timer = System::random(1000);
 
 	if (state >= CATCH)
-		player->addPendingTask("fishing", fishingEvent, timer + 4000);
+		player->addPendingTask("fishing", fishingEvent, timer + 2000);
 	else
-		player->addPendingTask("fishing", fishingEvent, timer + 6000);
+		player->addPendingTask("fishing", fishingEvent, timer + 3000);
 
 	return fishingEvent;
 }
