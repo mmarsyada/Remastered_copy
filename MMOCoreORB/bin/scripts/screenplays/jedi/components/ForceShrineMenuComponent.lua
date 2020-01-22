@@ -96,12 +96,12 @@ function ForceShrineMenuComponent:recoverRobe(pPlayer)
 		local councilType = JediTrials:getJediCouncil(pPlayer)
 
 		if (councilType == JediTrials.COUNCIL_LIGHT) then
-			robeTemplate = "object/tangible/wearables/robe/robe_jedi_light_s01.iff"
+			robeTemplate = "object/tangible/wearables/robe/robe_jedi_light_s01_crafted.iff"
 		else
-			robeTemplate = "object/tangible/wearables/robe/robe_jedi_dark_s01.iff"
+			robeTemplate = "object/tangible/wearables/robe/robe_jedi_dark_s01_crafted.iff"
 		end
 	else
-		robeTemplate = "object/tangible/wearables/robe/robe_jedi_padawan.iff"
+		robeTemplate = "object/tangible/wearables/robe/robe_jedi_padawan_crafted.iff"
 	end
 
 	giveItem(pInventory, robeTemplate, -1)
