@@ -1638,7 +1638,7 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
     slExperience.setNullValue(0);
 
 
-    float gcwBonus = 1.0f;
+    float gcwBonus = 0.2f;
     uint32 winningFaction = -1;
     int baseXp = 0;
     Zone* zone = lairZone;
