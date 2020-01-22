@@ -1781,7 +1781,7 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
                 //Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
                 if (xpType != "jedi_general")
                     combatXp += xpAmount;
-                else //this should make jedi xp be 1.0x since it's ignored by Global XP Modifiers at line 2064
+                else
                     xpAmount *= 1.0f;
 
                 //Award individual expType
