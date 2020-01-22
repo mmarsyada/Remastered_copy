@@ -1638,7 +1638,7 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
     slExperience.setNullValue(0);
 
 
-    float gcwBonus = 0.2f;
+    float gcwBonus = 1.0f;
     uint32 winningFaction = -1;
     int baseXp = 0;
     Zone* zone = lairZone;
@@ -1781,7 +1781,7 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
                 //Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
                 if (xpType != "jedi_general")
                     combatXp += xpAmount;
-                else //this should make jedi xp be 1.0x since it's ignored by Global XP Modifiers at line 2064
+                else
                     xpAmount *= 1.0f;
 
                 //Award individual expType
