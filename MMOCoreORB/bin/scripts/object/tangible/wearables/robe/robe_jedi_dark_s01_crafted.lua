@@ -65,8 +65,8 @@ object_tangible_wearables_robe_robe_jedi_dark_s01_crafted = object_tangible_wear
 				"object/creature/player/zabrak_male.iff"},
 				
 				skillMods = {
-				    {"jedi_force_power_max", 125},
-				    {"jedi_force_power_regen", 5}
+				   -- {"jedi_force_power_max", 125},
+				   -- {"jedi_force_power_regen", 5}
 				},
 
 				noTrade = 0,

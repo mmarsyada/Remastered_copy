@@ -56,8 +56,8 @@ object_tangible_wearables_robe_robe_jedi_padawan_generic = object_tangible_weara
 				"object/creature/player/zabrak_female.iff" },
 				
 				skillMods = {
-				    {"jedi_force_power_max", 100},
-				    {"jedi_force_power_regen", 5}
+				 --   {"jedi_force_power_max", 100},
+				 --   {"jedi_force_power_regen", 5}
 				},
 
 				noTrade = 1,
