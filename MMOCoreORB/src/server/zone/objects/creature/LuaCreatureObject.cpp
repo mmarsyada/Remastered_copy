@@ -694,7 +694,6 @@ int LuaCreatureObject::getFactionRank(lua_State* L) {
 	return 1;
 }
 
-
 int LuaCreatureObject::getCashCredits(lua_State* L) {
 	lua_pushinteger(L, realObject->getCashCredits());
 
@@ -1188,7 +1187,7 @@ int LuaCreatureObject::getActivePet(lua_State* L) {
 	ManagedReference<PlayerObject*> player = realObject->getPlayerObject();
 	ManagedReference<CreatureObject*> pet = player->getActivePet(petNumber);
 	
-	if (pet != NULL) {
+	if (pet) {
 		String petName = pet->getFirstName();
 		Logger::console.info("Pet Name: " + petName, true);
 	}
@@ -1268,7 +1267,7 @@ int LuaCreatureObject::getGroupLeader(lua_State* L) {
 	
 	Reference<CreatureObject*> leader = group->getLeader();
 	
-	if (leader == NULL) {
+	if (!leader) {
 		realObject->info("LuaCreatureObject::getGroupLeader leader is NULL.");
 		lua_pushnil(L);	
 	} else {

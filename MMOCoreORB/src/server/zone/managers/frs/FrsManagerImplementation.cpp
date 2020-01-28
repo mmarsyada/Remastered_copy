@@ -359,9 +359,9 @@ void FrsManagerImplementation::verifyRoomAccess(CreatureObject* player, int play
 			player->teleport(5079, 0, 305, 0);
 	} else if (playerRank < roomReq) {
 		if (buildingType == COUNCIL_LIGHT)
-			player->teleport(-0.1, -19.3, 39.9, 8525439);
+			player->teleport(-0.1f, -19.3f, 39.9f, 8525439);
 		else
-			player->teleport(0.1, -43.4, -32.2, 3435634);
+			player->teleport(0.1f, -43.4f, -32.2f, 3435634);
 	}
 }
 
@@ -640,7 +640,7 @@ void FrsManagerImplementation::handleSkillRevoked(CreatureObject* player, const 
 		return;
 
 	if (skillName.hashCode() == STRING_HASHCODE("force_title_jedi_rank_03")) {
-		VectorMap<uint, Reference<FrsRankingData*> > rankingData;
+		VectorMap<uint32, Reference<FrsRankingData*> > rankingData;
 
 		if (councilType == COUNCIL_LIGHT)
 			rankingData = lightRankingData;
@@ -676,7 +676,7 @@ void FrsManagerImplementation::handleSkillRevoked(CreatureObject* player, const 
 }
 
 int FrsManagerImplementation::getSkillRank(const String& skillName, int councilType) {
-	VectorMap<uint, Reference<FrsRankingData*> > rankingData;
+	VectorMap<uint32, Reference<FrsRankingData*> > rankingData;
 
 	if (councilType == COUNCIL_LIGHT)
 		rankingData = lightRankingData;
@@ -705,7 +705,7 @@ void FrsManagerImplementation::updatePlayerSkills(CreatureObject* player) {
 	FrsData* playerData = ghost->getFrsData();
 	int playerRank = playerData->getRank();
 	int councilType = playerData->getCouncilType();
-	VectorMap<uint, Reference<FrsRankingData*> > rankingData;
+	VectorMap<uint32, Reference<FrsRankingData*> > rankingData;
 
 	if (councilType == COUNCIL_LIGHT)
 		rankingData = lightRankingData;
@@ -809,16 +809,22 @@ void FrsManagerImplementation::adjustFrsExperience(CreatureObject* player, int a
 		return;
 
 	if (amount > 0) {
+          
+          	if (ghost->hasCappedExperience("force_rank_xp"))
+                {
+                	StringIdChatParameter message("base_player", "prose_hit_xp_cap"); //You have achieved your current limit for %TO experience.
+                	message.setTO("exp_n", "force_rank_xp");
+                	player->sendSystemMessage(message);
+                	return;
+                }
+          
 		ghost->addExperience("force_rank_xp", amount, true);
 
 		if (sendSystemMessage) {
-			CustomPvpManager::instance()->frsGainedMessage(*player, amount);
-			/*
 			StringIdChatParameter param("@force_rank:experience_granted"); // You have gained %DI Force Rank experience.
 			param.setDI(amount);
 
 			player->sendSystemMessage(param);
-			*/
 		}
 	} else {
 		FrsData* playerData = ghost->getFrsData();
@@ -1032,6 +1038,8 @@ int FrsManagerImplementation::calculatePvpExperienceChange(CreatureObject* attac
 	int xpChange = getBaseExperienceGain(playerGhost, opponentGhost, !isVictim);
 
 	if (xpChange != 0) {
+		xpChange = (int)((float)xpChange * contribution);
+
 		// Adjust xp value depending on pvp rating
 		// A lower rated victim will lose less experience, a higher rated victim will lose more experience
 		// A lower rated victor will gain more experience, a higher rated victor will gain less experience
@@ -1590,7 +1598,7 @@ bool FrsManagerImplementation::isEligibleForPromotion(CreatureObject* player, in
 
 	FrsData* playerData = ghost->getFrsData();
 	int councilType = playerData->getCouncilType();
-	VectorMap<uint, Reference<FrsRankingData*> > rankingData;
+	VectorMap<uint32, Reference<FrsRankingData*> > rankingData;
 
 	if (councilType == COUNCIL_LIGHT)
 		rankingData = lightRankingData;
@@ -1683,7 +1691,7 @@ int FrsManagerImplementation::getAvailableRankSlots(FrsRank* rankData) {
 	short councilType = rankData->getCouncilType();
 	int rank = rankData->getRank();
 
-	VectorMap<uint, Reference<FrsRankingData*> > rankingData;
+	VectorMap<uint32, Reference<FrsRankingData*> > rankingData;
 
 	if (councilType == COUNCIL_LIGHT)
 		rankingData = lightRankingData;
@@ -3584,7 +3592,7 @@ void FrsManagerImplementation::teleportPlayerToDarkArena(CreatureObject* player)
 	float randX = -12.f + System::random(24);
 	float randY = -85.f + System::random(24);
 
-	player->teleport(randX, -47.424, randY, ARENA_CELL);
+	player->teleport(randX, -47.424f, randY, ARENA_CELL);
 }
 
 void FrsManagerImplementation::sendArenaChallengeSUI(CreatureObject* player, SceneObject* terminal, short suiType, short enclaveType) {

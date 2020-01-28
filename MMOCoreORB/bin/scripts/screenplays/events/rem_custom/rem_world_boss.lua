@@ -16,11 +16,11 @@ RemWorldBossScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
 	
 	--Config Values
-	bossesToSpawn = 3, --Number of world bosses this screenplay will spawn 
+	bossesToSpawn = 5, --Number of world bosses this screenplay will spawn 
 	numReferencePoints = 28, --Number of locations declared in spawn_points_table.lua
 	secondsToDespawn = 86400, --Number of seconds before a boss will despawn if it has not been killed (24h = 86,400s)
 	secondsToRespawn = 259200, --Number of seconds before a boss will respawn after it has been killed (3d = 259,200s)
-	maxRadius = 2500, --Maximum distance in meters from a known reference point to spawn boss mobiles
+	maxRadius = 4000, --Maximum distance in meters from a known reference point to spawn boss mobiles
 	numBosses = 13, --Number of boss mobile templates to choose from, as declared below
 	
 	bossMobileTemplates =  {"boss_sorrowclaw", "boss_barbfiend", "boss_blazehound", "boss_emberflayer", "boss_mistbug", "boss_vilesnare", "boss_dawnstrike", "boss_wispwraith", "boss_netherfang", "boss_thornling", "boss_baneblight", "boss_mornscream", "boss_vaporvine"},

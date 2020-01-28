@@ -361,6 +361,10 @@ bool ForageManagerImplementation::forageGiveItems(CreatureObject* player, int fo
 			}
 		}
 
+		if(lootGroup.isEmpty())
+			lootGroup = "forage_live_creatures";
+
+
 		if(!lootManager->createLoot(inventory, lootGroup, level)) {
 			player->sendSystemMessage("Unable to create loot for lootgroup " + lootGroup);
 			return false;

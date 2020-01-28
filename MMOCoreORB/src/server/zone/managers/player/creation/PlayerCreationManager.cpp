@@ -31,8 +31,7 @@
 
 PlayerCreationManager::PlayerCreationManager() :
 		Logger("PlayerCreationManager") {
-
-	setLogging(true);
+	setLogging(false);
 	setGlobalLogging(false);
 
 	zoneServer = ServerCore::getZoneServer();
@@ -112,9 +111,7 @@ void PlayerCreationManager::loadRacialCreationData() {
 		}
 	}
 
-	info(
-			"Loaded " + String::valueOf(racialCreationData.size())
-					+ " playable species.");
+	info() << "Loaded " << racialCreationData.size() << " playable species.";
 }
 
 void PlayerCreationManager::loadProfessionDefaultsInfo() {
@@ -147,7 +144,7 @@ void PlayerCreationManager::loadProfessionDefaultsInfo() {
 		delete iffStream;
 
 		professionDefaultsInfo.put(name, pdi);
-		//info("Loading: " + pfdt.getSkillNameAt(i) + " Path: " + pfdt.getPathBySkillName(pfdt.getSkillNameAt(i)), true);
+		debug() << "Loading: " << pfdt.getSkillNameAt(i) << " Path: " << pfdt.getPathBySkillName(pfdt.getSkillNameAt(i));
 	}
 
 	//Now we want to load the profession mods.
@@ -179,9 +176,7 @@ void PlayerCreationManager::loadProfessionDefaultsInfo() {
 		}
 	}
 
-	info(
-			"Loaded " + String::valueOf(professionDefaultsInfo.size())
-					+ " creation professions.");
+	info() << "Loaded " << professionDefaultsInfo.size() << " creation professions.";
 }
 
 void PlayerCreationManager::loadDefaultCharacterItems() {
@@ -252,7 +247,7 @@ void PlayerCreationManager::loadHairStyleInfo() {
 
 		totalHairStyles += hsi->getTotalStyles();
 
-		//info("Loaded " + String::valueOf(hsi->getTotalStyles()) + " hair styles for template " + hsi->getPlayerTemplate());
+		debug() << "Loaded " << hsi->getTotalStyles() << " hair styles for template " << hsi->getPlayerTemplate();
 	}
 
 	iffStream->closeForm(version);
@@ -260,13 +255,11 @@ void PlayerCreationManager::loadHairStyleInfo() {
 
 	delete iffStream;
 
-	info(
-			"Loaded " + String::valueOf(totalHairStyles)
-					+ " total creation hair styles.");
+	info() << "Loaded " << totalHairStyles << " total creation hair styles.";
 }
 
 void PlayerCreationManager::loadLuaConfig() {
-	info("Loading configuration script.");
+	debug("Loading configuration script.");
 
 	Lua* lua = new Lua();
 	lua->init();
@@ -338,7 +331,7 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 	auto client = callback->getClient();
 
 	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 4) {
-		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 6 characters per galaxy.", 0x0);
+		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 4 characters per galaxy.", 0x0);
 		client->sendMessage(errMsg);
 
 		return false;
@@ -438,15 +431,15 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 				false);
 		addStartingItems(playerCreature, clientTemplate, false);
 		addRacialMods(playerCreature, fileName,
-				playerTemplate->getStartingSkills(),
-				playerTemplate->getStartingItems(), false);
+				&playerTemplate->getStartingSkills(),
+				&playerTemplate->getStartingItems(), false);
 	} else {
 		addProfessionStartingItems(playerCreature, profession, clientTemplate,
 				true);
 		addStartingItems(playerCreature, clientTemplate, true);
 		addRacialMods(playerCreature, fileName,
-				playerTemplate->getStartingSkills(),
-				playerTemplate->getStartingItems(), true);
+				&playerTemplate->getStartingSkills(),
+				&playerTemplate->getStartingItems(), true);
 	}
 
 	// Set starting cash and starting bank
@@ -470,41 +463,18 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 				int accountPermissionLevel = playerAccount->getAdminLevel();
 				String accountName = playerAccount->getUsername();
 
-				if(accountPermissionLevel > 0 && (accountPermissionLevel == 9 || accountPermissionLevel == 10 || accountPermissionLevel == 12 || accountPermissionLevel == 15)) {
+				if (accountPermissionLevel > 0 && (accountPermissionLevel == 9 || accountPermissionLevel == 10 || accountPermissionLevel == 12 || accountPermissionLevel == 15)) {
 					playerManager->updatePermissionLevel(playerCreature, accountPermissionLevel);
-
-					/*
-					Reference<ShipControlDevice*> shipControlDevice = zoneServer->createObject(STRING_HASHCODE("object/intangible/ship/sorosuub_space_yacht_pcd.iff"), 1).castTo<ShipControlDevice*>();
-					//ShipObject* ship = (ShipObject*) server->createObject(STRING_HASHCODE("object/ship/player/player_sorosuub_space_yacht.iff"), 1);
-					Reference<ShipObject*> ship = zoneServer->createObject(STRING_HASHCODE("object/ship/player/player_basic_tiefighter.iff"), 1).castTo<ShipObject*>();
-
-					shipControlDevice->setControlledObject(ship);
-
-					if (!shipControlDevice->transferObject(ship, 4))
-						info("Adding of ship to device failed");
-
-					ManagedReference<SceneObject*> datapad = playerCreature->getSlottedObject("datapad");
-
-					if (datapad != nullptr) {
-						if (!datapad->transferObject(shipControlDevice, -1)) {
-							shipControlDevice->destroyObjectFromDatabase(true);
-						}
-					} else {
-						shipControlDevice->destroyObjectFromDatabase(true);
-						error("could not get datapad from player");
-					}
-					*/
 				}
 
 				if (accountPermissionLevel < 9) {
 					try {
 						StringBuffer query;
-						//query << "SELECT UNIX_TIMESTAMP(creation_date) FROM characters c WHERE galaxy_id = " << zoneServer.get()->getGalaxyID() << " AND account_id = " << client->getAccountID() << " ORDER BY creation_date desc;";
 						uint32 galaxyId = zoneServer.get()->getGalaxyID();
 						uint32 accountId = client->getAccountID();
 						query << "(SELECT UNIX_TIMESTAMP(c.creation_date) as t FROM characters as c WHERE c.account_id = " << accountId << " AND c.galaxy_id = " << galaxyId << " ORDER BY c.creation_date DESC) UNION (SELECT UNIX_TIMESTAMP(d.creation_date) FROM deleted_characters as d WHERE d.account_id = " << accountId << " AND d.galaxy_id = " << galaxyId << " ORDER BY d.creation_date DESC) ORDER BY t DESC LIMIT 1";
 
-						Reference<ResultSet*> res = ServerDatabase::instance()->executeQuery(query);
+						UniqueReference<ResultSet*> res(ServerDatabase::instance()->executeQuery(query));
 
 						if (res != nullptr && res->next()) {
 							uint32 sec = res->getUnsignedInt(0);
@@ -518,9 +488,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 								playerCreature->destroyPlayerCreatureFromDatabase(true);
 								return false;
 							}
-							//timeVal.se
 						}
-					} catch (DatabaseException& e) {
+					} catch (const DatabaseException& e) {
 						error(e.getMessage());
 					}
 
@@ -588,7 +557,7 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 				<< raceFile.escapeString() << "')";
 
 		ServerDatabase::instance()->executeStatement(query);
-	} catch (DatabaseException& e) {
+	} catch (const DatabaseException& e) {
 		error(e.getMessage());
 	}
 
@@ -602,6 +571,9 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	//Join General chat room
 	ghost->addChatRoom(chatManager->getGeneralRoom()->getRoomID());
+
+	//Join PVP chat room
+	ghost->addChatRoom(chatManager->getPvpRoom()->getRoomID());
 
 	//Join auction chat room
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
@@ -949,23 +921,21 @@ void PlayerCreationManager::addStartingItemsInto(CreatureObject* creature,
 	}
 
 	//Add race specific items.
-	Vector < String > *startingItems = playerTemplate->getStartingItems();
+	const Vector <String>& startingItems = playerTemplate->getStartingItems();
 
-	if (startingItems != nullptr) {
-		for (int i = 0; i < startingItems->size(); ++i) {
-			ManagedReference<SceneObject*> item = zoneServer->createObject(
-					startingItems->get(i).hashCode(), 1);
+	for (int i = 0; i < startingItems.size(); ++i) {
+		ManagedReference<SceneObject*> item = zoneServer->createObject(
+				startingItems.get(i).hashCode(), 1);
 
-			if (item != nullptr && container != nullptr && !item->isWeaponObject()) {
-				if (!container->transferObject(item, -1, true)) {
-					item->destroyObjectFromDatabase(true);
-				}
-			} else if (item != nullptr) {
+		if (item != nullptr && container != nullptr && !item->isWeaponObject()) {
+			if (!container->transferObject(item, -1, true)) {
 				item->destroyObjectFromDatabase(true);
 			}
+		} else if (item != nullptr) {
+			item->destroyObjectFromDatabase(true);
 		}
-
 	}
+
 }
 
 void PlayerCreationManager::addStartingWeaponsInto(CreatureObject* creature,
@@ -984,6 +954,7 @@ void PlayerCreationManager::addStartingWeaponsInto(CreatureObject* creature,
 	}
 
 	PlayerObject* player = creature->getPlayerObject();
+
 	if (player == nullptr) {
 		instance()->info("addStartingWeaponsInto: playerObject nullptr");
 		return;
@@ -1035,29 +1006,27 @@ void PlayerCreationManager::addStartingWeaponsInto(CreatureObject* creature,
 
 
 	//Add race specific items.
-	Vector < String > *startingItems = playerTemplate->getStartingItems();
+	const Vector<String>& startingItems = playerTemplate->getStartingItems();
 
-	if (startingItems != nullptr) {
-		for (int i = 0; i < startingItems->size(); ++i) {
-			ManagedReference<SceneObject*> item = zoneServer->createObject(
-					startingItems->get(i).hashCode(), 1);
+	for (int i = 0; i < startingItems.size(); ++i) {
+		ManagedReference<SceneObject*> item = zoneServer->createObject(
+				startingItems.get(i).hashCode(), 1);
 
-			if (item != nullptr && container != nullptr && item->isWeaponObject()) {
-				if (container->transferObject(item, -1, true)) {
-					item->sendTo(creature, true);
-				} else {
-					item->destroyObjectFromDatabase(true);
-				}
-			} else if (item != nullptr) {
+		if (item != nullptr && container != nullptr && item->isWeaponObject()) {
+			if (container->transferObject(item, -1, true)) {
+				item->sendTo(creature, true);
+			} else {
 				item->destroyObjectFromDatabase(true);
 			}
+		} else if (item != nullptr) {
+			item->destroyObjectFromDatabase(true);
 		}
 	}
 }
 
 void PlayerCreationManager::addRacialMods(CreatureObject* creature,
-		const String& race, Vector<String>* startingSkills,
-		Vector<String>* startingItems, bool equipmentOnly) const {
+		const String& race, const Vector<String>* startingSkills,
+		const Vector<String>* startingItems, bool equipmentOnly) const {
 	Reference<RacialCreationData*> racialData = racialCreationData.get(race);
 
 	if (racialData == nullptr)

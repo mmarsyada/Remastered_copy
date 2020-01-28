@@ -31,7 +31,7 @@ int doQueueCommand(CreatureObject* creature, const uint64& target, const Unicode
 	Creature* targetCreature = cast<Creature*>(targetObject.get());
 
 
-	if (targetObject == NULL || !targetObject->isCreatureObject()) {
+	if (targetObject || !targetObject->isCreatureObject()) {
 		return INVALIDTARGET;
 	}
 
@@ -52,7 +52,7 @@ int doQueueCommand(CreatureObject* creature, const uint64& target, const Unicode
 		ManagedReference<CreatureObject*> creatureTarget = targetObject.castTo<CreatureObject*>();
 
 ////
-if (creatureTarget != NULL) {
+if (creatureTarget) {
 
     Locker clocker(creatureTarget, creature);
 
@@ -63,7 +63,7 @@ if (creatureTarget != NULL) {
     creature->doCombatAnimation(creatureTarget, STRING_HASHCODE("mind_trick_1"), 1, 0);
     creature->sendSystemMessage("@jedi_spam:mind_trick_success"); //"You successfully use your Force Power to trick your target
 
-		if (creatureTarget != NULL && creatureTarget->isPlayerCreature()) {
+		if (creatureTarget && creatureTarget->isPlayerCreature()) {
 			creatureTarget->clearQueueActions();
 			CombatManager::instance()->attemptPeace(creatureTarget);
 		}

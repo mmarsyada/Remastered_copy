@@ -7,8 +7,20 @@
 
 #include "FactionManager.h"
 #include "FactionMap.h"
+#include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/player/PlayerObject.h"
 #include "templates/manager/TemplateManager.h"
+#include "server/ServerCore.h"
+#include "server/db/ServerDatabase.h"
+#include "server/zone/packets/player/PlayMusicMessage.h"
+#include "server/chat/ChatManager.h"
+#include "server/chat/room/ChatRoom.h"
+#include "server/zone/objects/group/GroupObject.h"
+#include "server/zone/managers/player/PlayerManager.h"
+#include "server/zone/objects/player/FactionStatus.h"
+
+// Remastered
+#include "server/zone/custom/managers/CustomPvpManager.h"
 
 FactionManager::FactionManager() {
 	setLoggingName("FactionManager");
@@ -80,6 +92,38 @@ void FactionManager::loadLuaConfig() {
 
 	delete lua;
 	lua = nullptr;
+}
+
+void FactionManager::createGcwRooms(ChatManager* chatManager) {
+	ManagedReference<ChatRoom*> pvpRoom = chatManager->getPvpRoom();
+
+	// Imperial
+	{
+		imperialChat = chatManager->createRoom("Imperial", pvpRoom);
+		imperialChat->setPrivate();
+		imperialChat->setTitle("Imperial Communications");
+		imperialChat->setCanEnter(true);
+		imperialChat->setChatRoomType(ChatRoom::PVP);
+	}
+
+	// Rebel
+	{
+		rebelChat = chatManager->createRoom("Rebel", pvpRoom);
+		rebelChat->setPrivate();
+		rebelChat->setTitle("Rebel Communications");
+		rebelChat->setCanEnter(true);
+		rebelChat->setChatRoomType(ChatRoom::PVP);
+	}
+
+	// Kills
+	{
+		pvpNotificationChat = chatManager->createRoom("Summary", pvpRoom);
+		pvpNotificationChat->setPrivate();
+		pvpNotificationChat->setTitle("Summary");
+		pvpNotificationChat->setCanEnter(true);
+		pvpNotificationChat->setChatRoomType(ChatRoom::PVP);
+		pvpNotificationChat->setModerated(true);
+	}
 }
 
 FactionMap* FactionManager::getFactionMap() {
@@ -155,20 +199,44 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObject* destructedObject) {
 	if (killer->isPlayerCreature() && destructedObject->isPlayerCreature()) {
 		CreatureObject* killerCreature = cast<CreatureObject*>(killer);
+
+		const CustomPvpManager* const pvpManager = CustomPvpManager::instance();
+		pvpManager->broadcastPvpKill(*pvpNotificationChat,
+									 *killerCreature,
+									 *destructedObject);
+
+		// Faction gain
 		ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();
 
 		ManagedReference<PlayerObject*> killedGhost = destructedObject->getPlayerObject();
 
 		if (killer->isRebel() && destructedObject->isImperial()) {
 			ghost->increaseFactionStanding("rebel", 30);
+			PlayMusicMessage* pmm = new PlayMusicMessage("sound/mus_rebel_win.snd");
+			killer->sendMessage(pmm);
+			killer->playEffect("clienteffect/holoemote_rebel.cef", "head");
 			ghost->decreaseFactionStanding("imperial", 45);
-
 			killedGhost->decreaseFactionStanding("imperial", 45);
+
 		} else if (killer->isImperial() && destructedObject->isRebel()) {
 			ghost->increaseFactionStanding("imperial", 30);
+			PlayMusicMessage* pmm = new PlayMusicMessage("sound/mus_imperial_win.snd");
+			killer->sendMessage(pmm);
+			killer->playEffect("clienteffect/holoemote_imperial.cef", "head");
 			ghost->decreaseFactionStanding("rebel", 45);
-
 			killedGhost->decreaseFactionStanding("rebel", 45);
+
+		} else if (killer->isImperial() && destructedObject->isImperial()) {
+			killer->playEffect("clienteffect/holoemote_sparky.cef", "head");
+			PlayMusicMessage* pmm = new PlayMusicMessage("sound/music_combat_victory.snd");
+			killer->sendMessage(pmm);
+			ghost->decreaseFactionStanding("imperial", 100);
+
+		} else if (killer->isRebel() && destructedObject->isRebel()) {
+			killer->playEffect("clienteffect/holoemote_sparky.cef", "head");
+			PlayMusicMessage* pmm = new PlayMusicMessage("sound/music_combat_victory.snd");
+			killer->sendMessage(pmm);
+			ghost->decreaseFactionStanding("rebel", 100);
 		}
 	}
 }

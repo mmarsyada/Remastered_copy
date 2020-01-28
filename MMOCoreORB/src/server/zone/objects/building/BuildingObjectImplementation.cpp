@@ -36,9 +36,6 @@
 #include "server/zone/objects/building/components/GCWBaseContainerComponent.h"
 #include "server/zone/objects/building/components/EnclaveContainerComponent.h"
 
-// Remastered
-#include "server/zone/custom/managers/CustomTefManager.h"
-
 void BuildingObjectImplementation::initializeTransientMembers() {
 	StructureObjectImplementation::initializeTransientMembers();
 
@@ -149,10 +146,10 @@ void BuildingObjectImplementation::sendContainerObjectsTo(SceneObject* player, b
 }
 
 void BuildingObjectImplementation::sendTo(SceneObject* player, bool doClose, bool forceLoadContainer) {
-	//info("building sendto..", true);
+	debug("building sendto..");
 
 	if (!isStaticBuilding()) { // send Baselines etc..
-		//info("sending building object create");
+		debug("sending building object create");
 
 		SceneObjectImplementation::sendTo(player, doClose, forceLoadContainer);
 	} //else { // just send the objects that are in the building, without the cells because they are static in the client
@@ -340,7 +337,7 @@ void BuildingObjectImplementation::notifyRemoveFromZone() {
 
 void BuildingObjectImplementation::sendDestroyTo(SceneObject* player) {
 	if (!isStaticBuilding()) {
-		info("sending building object destroy");
+		debug("sending building object destroy");
 
 		SceneObjectImplementation::sendDestroyTo(player);
 	}
@@ -348,7 +345,7 @@ void BuildingObjectImplementation::sendDestroyTo(SceneObject* player) {
 
 void BuildingObjectImplementation::sendBaselinesTo(SceneObject* player) {
 	//send buios here
-	//info("sending building baselines",true);
+	debug("sending building baselines");
 
 	BaseMessage* buio3 = new TangibleObjectMessage3(asBuildingObject());
 	player->sendMessage(buio3);
@@ -404,7 +401,7 @@ bool BuildingObjectImplementation::isAllowedEntry(CreatureObject* player) {
 }
 
 void BuildingObjectImplementation::notifyObjectInsertedToZone(SceneObject* object) {
-	//info("BuildingObjectImplementation::notifyInsertToZone", true);
+	debug("BuildingObjectImplementation::notifyInsertToZone");
 
 	auto closeObjectsVector = getCloseObjects();
 	Vector<QuadTreeEntry*> closeObjects(closeObjectsVector->size(), 10);
@@ -888,7 +885,7 @@ void BuildingObjectImplementation::onExit(CreatureObject* player, uint64 parenti
 
 uint32 BuildingObjectImplementation::getMaximumNumberOfPlayerItems() {
 	if (isCivicStructure() )
-		return 500;
+		return 250;
 
 	SharedStructureObjectTemplate* ssot = dynamic_cast<SharedStructureObjectTemplate*> (templateObject.get());
 
@@ -904,7 +901,7 @@ uint32 BuildingObjectImplementation::getMaximumNumberOfPlayerItems() {
 
 	auto maxItems = MAXPLAYERITEMS;
 
-	return Math::min(maxItems, lots * 500);
+	return Math::min(maxItems, lots * 100);
 }
 
 int BuildingObjectImplementation::notifyObjectInsertedToChild(SceneObject* object, SceneObject* child, SceneObject* oldParent) {
@@ -1146,12 +1143,12 @@ void BuildingObjectImplementation::payAccessFee(CreatureObject* player) {
 		}
 	}
 
-	if (player->getTotalCredits() < accessFee) {
+	if (player->getCashCredits() < accessFee) {
 		player->sendSystemMessage("@player/player_utility:not_enough_money");
 		return;
 	}
 
-	player->subtractTotalCredits(accessFee);
+	player->subtractCashCredits(accessFee);
 
 	ManagedReference<CreatureObject*> owner = getOwnerCreatureObject();
 
@@ -1270,7 +1267,7 @@ void BuildingObjectImplementation::createChildObjects() {
 		GCWManager* gcwMan = thisZone->getGCWManager();
 
 		for (int i = 0; i < serverTemplate->getChildObjectsSize();i++) {
-			ChildObject* child = serverTemplate->getChildObject(i);
+			const ChildObject* child = serverTemplate->getChildObject(i);
 
 			if (child == nullptr)
 				continue;

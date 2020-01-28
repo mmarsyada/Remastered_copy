@@ -187,7 +187,6 @@ public:
 
 	bool hasState(uint64 state);
 	bool isUniqueState(uint64 state);
-	bool hasAggro(CreatureObject* target);
 
 	CreatureObject* getHighestDamagePlayer();
 	CreatureObject* getHighestDamageGroupLeader();
