@@ -183,6 +183,7 @@ void SceneObjectImplementation::createContainerComponent() {
 void SceneObjectImplementation::createObjectMenuComponent() {
 	setObjectMenuComponent(templateObject->getObjectMenuComponent());
 }
+
 void SceneObjectImplementation::createComponents() {
 	if (templateObject != nullptr) {
 		String zoneComponentClassName = templateObject->getZoneComponent();
@@ -236,7 +237,7 @@ BaseMessage* SceneObjectImplementation::link(uint64 objectID, uint32 containment
 }
 
 void SceneObjectImplementation::destroyObjectFromDatabase(bool destroyContainedObjects) {
-	info() << "deleting from database";
+	debug() << "deleting from database";
 
 	fatal(!isPlayerCreature()) << "attempting to delete a player creature from database";
 
@@ -493,10 +494,6 @@ void SceneObjectImplementation::sendContainerObjectsTo(SceneObject* player, bool
 void SceneObjectImplementation::sendDestroyTo(SceneObject* player) {
 	if (staticObject)
 		return;
-
-	/*StringBuffer msg;
-	msg << "sending destroy to " << player->getLoggingName();
-	info(msg.toString(), true);*/
 
 	BaseMessage* msg = new SceneObjectDestroyMessage(asSceneObject());
 	player->sendMessage(msg);
@@ -1175,16 +1172,6 @@ void SceneObjectImplementation::rotate(int degrees) {
 	direction.rotate(unity, degrees);
 }
 
-void SceneObjectImplementation::rotateXaxis(int degrees) {
-    Vector3 unity(1, 0, 0);
-	direction.rotate(unity, degrees);
-}
-
-void SceneObjectImplementation::rotateYaxis(int degrees) {
-	Vector3 unity(0, 0, 1);
-	direction.rotate(unity, degrees);
-}
-
 void SceneObjectImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
 	if (objectMenuComponent == nullptr) {
 		error("no object menu component set for " + templateObject->getTemplateFileName());
@@ -1303,7 +1290,7 @@ void SceneObjectImplementation::createChildObjects() {
 	bool client = isClientObject();
 
 	for (int i = 0; i < templateObject->getChildObjectsSize(); ++i) {
-		ChildObject* child = templateObject->getChildObject(i);
+		const auto child = templateObject->getChildObject(i);
 
 		if (child == nullptr)
 			continue;
@@ -1445,7 +1432,7 @@ void SceneObjectImplementation::faceObject(SceneObject* obj, bool notifyClient) 
 	float err = fabs(directionangle - direction.getRadians());
 
 	if (err < 0.05) {
-		//info("not updating " + String::valueOf(directionangle), true);
+		debug() << "not updating " << directionangle;
 		return;
 	}
 
@@ -1685,7 +1672,7 @@ Reference<SceneObject*> SceneObjectImplementation::getContainerObjectRecursive(u
 }
 
 const Vector<String>* SceneObjectImplementation::getArrangementDescriptor(int idx) const {
-	return &templateObject->getArrangementDescriptors()->get(idx);
+	return &templateObject->getArrangementDescriptors().get(idx);
 }
 
 bool SceneObjectImplementation::hasObjectInSlottedContainer(SceneObject* object) {
@@ -1772,7 +1759,7 @@ Reference<SceneObject*> SceneObjectImplementation::getCraftedComponentsSatchel()
 }
 
 int SceneObjectImplementation::getArrangementDescriptorSize() const {
-	return templateObject->getArrangementDescriptors()->size();
+	return templateObject->getArrangementDescriptors().size();
 }
 
 bool SceneObjectImplementation::isDataPad() const {
@@ -1928,15 +1915,40 @@ int SceneObjectImplementation::compareTo(SceneObject* obj) {
 	return asSceneObject()->compareTo(obj);
 }
 
-int SceneObjectImplementation::writeRecursiveJSON(JSONSerializationType& j, int maxDepth) {
+void SceneObjectImplementation::rotateXaxis(int degrees) {
+	Vector3 unity(1, 0, 0);
+	direction.rotate(unity, degrees);
+}
+ void SceneObjectImplementation::rotateYaxis(int degrees) {
+	Vector3 unity(0, 0, 1);
+	direction.rotate(unity, degrees);
+}
+
+int SceneObjectImplementation::writeRecursiveJSON(JSONSerializationType& j, int maxDepth, Vector<uint64>* oidPath) {
 	if (maxDepth <= 0)
 		return 0;
 
+	if (oidPath == nullptr)
+		oidPath = new Vector<uint64>();
 	int count = 0;
 
 	JSONSerializationType thisObject;
 	writeJSON(thisObject);
 	thisObject["_maxDepth"] = maxDepth;
+	thisObject["_depth"] = oidPath->size();
+	thisObject["_oid"] = getObjectID();
+	thisObject["_className"] = _className;
+
+	auto oidPathJSON = JSONSerializationType::array();
+
+	oidPath->add(getObjectID());
+
+	for (int i = 0;i < oidPath->size();i++) {
+		oidPathJSON.push_back(oidPath->get(i));
+	}
+
+	thisObject["_oidPath"] = oidPathJSON;
+
 	j[String::valueOf(getObjectID()).toCharArray()] = thisObject;
 
 	count++;
@@ -1947,7 +1959,7 @@ int SceneObjectImplementation::writeRecursiveJSON(JSONSerializationType& j, int 
 		if (obj != nullptr) {
 			ReadLocker locker(obj);
 
-			count += obj->writeRecursiveJSON(j, maxDepth - 1);
+			count += obj->writeRecursiveJSON(j, maxDepth - 1, oidPath);
 		}
 	}
 
@@ -1959,7 +1971,7 @@ int SceneObjectImplementation::writeRecursiveJSON(JSONSerializationType& j, int 
 		if (obj != nullptr) {
 			ReadLocker locker(obj);
 
-			count += obj->writeRecursiveJSON(j, maxDepth - 1);
+			count += obj->writeRecursiveJSON(j, maxDepth - 1, oidPath);
 		}
 	}
 
@@ -1969,8 +1981,14 @@ int SceneObjectImplementation::writeRecursiveJSON(JSONSerializationType& j, int 
 		if (obj != nullptr) {
 			ReadLocker locker(obj);
 
-			count += obj->writeRecursiveJSON(j, maxDepth - 1);
+			count += obj->writeRecursiveJSON(j, maxDepth - 1, oidPath);
 		}
+	}
+
+	oidPath->remove(oidPath->size() - 1);
+
+	if (oidPath->size() == 0) {
+		delete oidPath;
 	}
 
 	return count;
@@ -2013,15 +2031,21 @@ String SceneObjectImplementation::exportJSON(const String& exportNote, int maxDe
 
 	// Spread the files out across directories
 	fileNameBuf << "exports";
-	mkdir(fileNameBuf.toString().toCharArray(), 0770);
+	if (!File::doMkdir(fileNameBuf.toString().toCharArray(), 0770)) {
+		warning() << "could not create " << fileNameBuf << " directory";
+	}
 
-	fileNameBuf << "/" << String::hexvalueOf((int64)((oid & 0xFFFF000000000000) >> 48));
-	mkdir(fileNameBuf.toString().toCharArray(), 0770);
+	fileNameBuf << File::directorySeparator() << String::hexvalueOf((int64)((oid & 0xFFFF000000000000) >> 48));
+	if (!File::doMkdir(fileNameBuf.toString().toCharArray(), 0770)) {
+		warning() << "could not create " << fileNameBuf << " directory";
+	}
 
-	fileNameBuf << "/" << String::hexvalueOf((int64)((oid & 0x0000FFFFFF000000) >> 24));
-	mkdir(fileNameBuf.toString().toCharArray(), 0770);
+	fileNameBuf << File::directorySeparator() << String::hexvalueOf((int64)((oid & 0x0000FFFFFF000000) >> 24));
+	if (!File::doMkdir(fileNameBuf.toString().toCharArray(), 0770)) {
+		warning() << "could not create " << fileNameBuf << " directory";
+	}
 
-	fileNameBuf << "/" << String::valueOf(oid) << "-" << now.getMiliTime() << ".json";
+	fileNameBuf << File::directorySeparator() << oid << "-" << now.getMiliTime() << ".json";
 
 	String fileName = fileNameBuf.toString();
 

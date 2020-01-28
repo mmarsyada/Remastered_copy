@@ -28,7 +28,7 @@ public:
 
 		ManagedReference<SceneObject*> obj = creature->getRootParent();
 
-		if (obj == NULL || !obj->isBuildingObject()) {
+		if (obj == nullptr || !obj->isBuildingObject()) {
 			creature->sendSystemMessage("@player_structure:must_be_in_building"); //You must be in a building to do that.
 			return INVALIDTARGET;
 		}
@@ -49,23 +49,22 @@ public:
 
 		Reference<SharedBuildingObjectTemplate*> ssot = dynamic_cast<SharedBuildingObjectTemplate*>(building->getObjectTemplate());
 
-		if (ssot == NULL || ssot->isAlwaysPublic()) {
+		if (ssot == nullptr || ssot->isAlwaysPublic()) {
 			creature->sendSystemMessage("@player_structure:force_public"); //This structure is always public.
 			return GENERALERROR;
 		}
 
-
 //We now allow vendors in private structures but disable the search
-		for (int i = 1; i < building->getTotalCellNumber(); ++i) {
+		for (int i = 1; i <= building->getTotalCellNumber(); ++i) {
 			ManagedReference<CellObject*> cell = building->getCell(i);
 
-			if(cell == NULL)
+			if(cell == nullptr)
 				continue;
 
 			for(int j = 0; j < cell->getContainerObjectsSize(); ++j) {
 				ManagedReference<SceneObject*> obj = cell->getContainerObject(j);
 
-				if(obj != NULL && obj->isVendor()) {
+				if(obj && obj->isVendor()) {
 					DataObjectComponentReference* data = obj->getDataObjectComponent();
 					if(data == NULL || data->get() == NULL || !data->get()->isVendorData()) {
 						error("No vendor data found");
@@ -80,7 +79,6 @@ public:
 				}
 			}
 		}
-
 
 		if (building->togglePrivacy()) {
 			creature->sendSystemMessage("@player_structure:structure_now_public"); //This structure is now public

@@ -3,10 +3,6 @@
  *
  *  Created on: Jan 31, 2012
  *      Author: xyborn
- *
- *      oh my god why is this not working? wtf
- *      but serious
- *
  */
 
 #include "SkillModMap.h"

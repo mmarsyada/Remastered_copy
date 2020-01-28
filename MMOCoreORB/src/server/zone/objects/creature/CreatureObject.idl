@@ -6,7 +6,7 @@ package server.zone.objects.creature;
 
 import server.zone.objects.tangible.TangibleObject;
 import server.chat.StringIdChatParameter;
-import server.zone.objects.group.GroupObject;
+include server.zone.objects.group.GroupObject;
 import server.zone.objects.guild.GuildObject;
 import server.zone.objects.tangible.weapon.WeaponObject;
 import server.zone.objects.player.PlayerObject;
@@ -38,6 +38,7 @@ import system.thread.ReadWriteLock;
 import server.zone.objects.creature.credits.CreditObject;
 include engine.util.u3d.Vector3;
 include system.util.SortedVector;
+include system.lang.ref.WeakReference;
 include engine.log.Logger;
 include server.zone.CloseObjectsVector;
 include server.zone.QuadTreeEntry;
@@ -48,8 +49,9 @@ import system.util.SynchronizedVector;
 @mock
 @json
 class CreatureObject extends TangibleObject {
-	@weakReference
-	protected transient ZoneClientSession owner;
+	@rawTemplate(value = "ZoneClientSession*")
+	@dereferenced
+	protected transient WeakReference owner;
 
     	protected CreditObject creditObject;
 
@@ -1251,7 +1253,7 @@ class CreatureObject extends TangibleObject {
 	public boolean isOnline() {
 		PlayerObject ghost = getPlayerObject();
 
-		if (ghost == null)
+		if (!ghost)
 			return false;
 
 		return ghost.isOnline();
@@ -1259,22 +1261,22 @@ class CreatureObject extends TangibleObject {
 
 	@dirty
 	public boolean canTreatInjuries() {
-		return super.getPendingTask("injuryTreatment") == null;
+		return !super.getPendingTask("injuryTreatment");
 	}
 
 	@dirty
 	public boolean canTreatStates() {
-		return super.getPendingTask("stateTreatment") == null;
+		return !super.getPendingTask("stateTreatment");
 	}
 
 	@dirty
 	public boolean canTreatWounds() {
-		return super.getPendingTask("woundTreatment") == null;
+		return !super.getPendingTask("woundTreatment");
 	}
 
 	@dirty
 	public boolean canTreatConditions() {
-		return super.getPendingTask("conditionTreatment") == null;
+		return !super.getPendingTask("conditionTreatment");
 	}
 
 	@reference
@@ -1292,9 +1294,7 @@ class CreatureObject extends TangibleObject {
 	}
 
 	@preLocked
-	public void setClient(ZoneClientSession cli) {
-		owner = cli;
-	}
+	public native void setClient(ZoneClientSession cli);
 
 	@preLocked
 	public native void dismount();
@@ -1438,7 +1438,7 @@ class CreatureObject extends TangibleObject {
 
 	@read
 	public boolean hasDizzyEvent() {
-		return dizzyFallDownEvent != null;
+		return dizzyFallDownEvent;
 	}
 
 	@preLocked
@@ -1516,7 +1516,7 @@ class CreatureObject extends TangibleObject {
 
 	@read
 	public boolean isGrouped() {
-		return group != null;
+		return group;
 	}
 
 	@read
@@ -1603,7 +1603,7 @@ class CreatureObject extends TangibleObject {
 	public unsigned long getCreatureLinkID() {
 		CreatureObject strongRef = linkedCreature;
 
-		if (strongRef != null)
+		if (strongRef)
 			return strongRef.getObjectID();
 		else
 			return 0;
@@ -1742,7 +1742,7 @@ class CreatureObject extends TangibleObject {
 
 	@read
 	public unsigned long getWeaponID() {
-		if (weapon == null)
+		if (!weapon)
 			return 0;
 		else
 			return weapon.getObjectID();
@@ -1763,7 +1763,7 @@ class CreatureObject extends TangibleObject {
 	public int getGuildID() {
 		GuildObject strongRef = guild;
 
-		if (strongRef != null)
+		if (strongRef)
 			return strongRef.getGuildID();
 		else
 			return 0;
@@ -1773,7 +1773,7 @@ class CreatureObject extends TangibleObject {
 	public boolean isInGuild() {
 		GuildObject strongRef = guild;
 
-		return strongRef != null;
+		return strongRef;
 	}
 
 	@preLocked
@@ -1783,7 +1783,7 @@ class CreatureObject extends TangibleObject {
 
 	@read
 	public unsigned long getGroupID() {
-		if (group != null)
+		if (group)
 			return group.getObjectID();
 		else
 			return 0;
@@ -2258,7 +2258,7 @@ class CreatureObject extends TangibleObject {
 	}
 
 	/**
-	 * Remasted Code
+	 * Remaster Code
 	 */
 	// Group TEF
 	public native void addGroupTef(unsigned int tefId);

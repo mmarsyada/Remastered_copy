@@ -96,7 +96,7 @@ public:
 		j["badgeTotal"] = b.badgeTotal;
 	}
 
-	void setBadge(const uint badgeid) {
+	void setBadge(const uint32 badgeid) {
 		const Badge* badge = BadgeList::instance()->get(badgeid);
 		setBadge(badge);
 	}
@@ -126,10 +126,9 @@ public:
 			badgeTotal++;
 		}
 	}
-/*
-	void unsetBadge(const Badge* badge) {
+
+	void unsetBadge(Badge* badge) {
 		if (badge == nullptr) return;
-                
 		Locker locker(this);
 
 		const int badgeIndex = badge->getIndex();
@@ -152,7 +151,7 @@ public:
 		}
 
 	}
-*/
+
 	bool hasBadge(int badgeindex) const {
 		int bitmaskNumber = badgeindex >> 5;
 

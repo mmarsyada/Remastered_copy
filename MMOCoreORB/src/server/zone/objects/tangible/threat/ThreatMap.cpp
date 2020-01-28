@@ -402,20 +402,6 @@ CreatureObject* ThreatMap::getHighestThreatCreature() {
 	return this->currentThreat.get().get();
 }
 
-bool ThreatMap::hasAggro(CreatureObject* target) {
-	Locker locker(&lockMutex);
-
-	ManagedReference<TangibleObject*> strongSelf = self.get();
-	if (strongSelf == nullptr || strongSelf.get() == target)
-		return false;
-
-	int idx = find(target);
-	if (idx == -1)
-		return false;
-	else
-		return true;
-}
-
 void ThreatMap::addAggro(CreatureObject* target, int value, uint64 duration) {
 	Locker locker(&lockMutex);
 

@@ -19,8 +19,6 @@ void ArmorObjectImplementation::initializeTransientMembers() {
 void ArmorObjectImplementation::loadTemplateData(SharedObjectTemplate* templateData) {
 	WearableObjectImplementation::loadTemplateData(templateData);
 
-	info("inside load template data for armor");
-
 	if (!templateData->isArmorObjectTemplate())
 		return;
 
@@ -40,7 +38,6 @@ void ArmorObjectImplementation::loadTemplateData(SharedObjectTemplate* templateD
 	energy = armorTemplate->getEnergy();
 	electricity = armorTemplate->getElectricity();
 	stun = armorTemplate->getStun();
-
 	blast = armorTemplate->getBlast();
 	heat = armorTemplate->getHeat();
 	cold = armorTemplate->getCold();
@@ -485,11 +482,8 @@ void ArmorObjectImplementation::setProtectionValue(int type, float value) {
 		setEnergy(value);
 	if (type & SharedWeaponObjectTemplate::BLAST)
 		setBlast(value);
-	if (type & SharedWeaponObjectTemplate::STUN){
-		info("Setting Stun Value -> " + String::valueOf(value));
+	if (type & SharedWeaponObjectTemplate::STUN)
 		setStun(value);
-	}
-
 	if (type & SharedWeaponObjectTemplate::LIGHTSABER)
 		setLightSaber(value);
 	if (type & SharedWeaponObjectTemplate::HEAT)

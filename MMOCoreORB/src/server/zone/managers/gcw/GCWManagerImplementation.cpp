@@ -1787,7 +1787,8 @@ void GCWManagerImplementation::resetVulnerability(CreatureObject* creature, Buil
 
 	Locker clock(building, creature);
 
-	//info("Resetting vulnerability timer",true);
+	debug() << "Resetting vulnerability timer";
+
 	baseData->setLastResetTime(Time());
 
 	Time nextTime = Time();
@@ -2188,7 +2189,7 @@ void GCWManagerImplementation::performDonateMinefield(BuildingObject* building, 
 	TemplateManager* templateManager = TemplateManager::instance();
 	Reference<SharedObjectTemplate*> baseServerTemplate = building->getObjectTemplate();
 	Reference<SharedObjectTemplate*> minefieldTemplate = nullptr;
-	ChildObject* child = nullptr;
+	const ChildObject* child = nullptr;
 
 	int currentMinefieldIndex = 0;
 
@@ -2269,7 +2270,7 @@ void GCWManagerImplementation::performDonateTurret(BuildingObject* building, Cre
 	Reference<SharedObjectTemplate*> baseServerTemplate = building->getObjectTemplate();
 
 	Reference<SharedObjectTemplate*> turretTemplate = nullptr;
-	ChildObject* child = nullptr;
+	const ChildObject* child = nullptr;
 	int currentTurretIndex = 0;
 
 	Locker block(building,creature);
@@ -2340,7 +2341,7 @@ void GCWManagerImplementation::performDonateTurret(BuildingObject* building, Cre
 	}
 }
 
-uint64 GCWManagerImplementation::addChildInstallationFromDeed(BuildingObject* building, ChildObject* child, CreatureObject* creature, Deed* deed) {
+uint64 GCWManagerImplementation::addChildInstallationFromDeed(BuildingObject* building, const ChildObject* child, CreatureObject* creature, Deed* deed) {
 	Vector3 position = building->getPosition();
 
 	const Quaternion* direction = building->getDirection();
