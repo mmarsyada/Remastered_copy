@@ -317,6 +317,11 @@ int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* 
 		damage = doTargetCombatAction(attacker, weapon, defender, data, shouldGcwTef, shouldBhTef);
 	} else {
 		int poolsToDamage = calculatePoolsToDamage(data.getPoolsToDamage());
+		if (tano != NULL && attacker != NULL && attacker->isPlayerCreature() && tano->getFaction() != 0 && attacker->getFaction() != tano->getFaction()){
+			PlayerObject* ghost = attacker->getPlayerObject();
+			if (ghost != NULL)
+				ghost->updateLastPvpCombatActionTimestamp(true, false);
+		}
 
 		damage = applyDamage(attacker, weapon, tano, poolsToDamage, data);
 
@@ -1599,7 +1604,7 @@ float CombatManager::calculateDamage(TangibleObject* attacker, WeaponObject* wea
 
 int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* targetCreature, WeaponObject* weapon, const CreatureAttackData& data, int damage, int accuracyBonus) const {
 	int hitChance = 0;
-	int attackType = weapon->getAttackType();
+
 	CreatureObject* creoAttacker = nullptr;
 
 	if (attacker->isCreatureObject()) {
