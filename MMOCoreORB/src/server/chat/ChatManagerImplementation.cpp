@@ -311,7 +311,7 @@ void ChatManagerImplementation::initiateRooms() {
 	pvpRoom->setAllowSubrooms(true);
 	pvpRoom->setTitle("PvP-based chat room");
 
-	Reference<ChatRoom*> generalRoom = createRoom("General", galaxyRoom);
+	generalRoom = createRoom("General", galaxyRoom);
 	generalRoom->setCanEnter(true);
 	generalRoom->setAllowSubrooms(true);
 	generalRoom->setTitle("Remastered General Chat");
