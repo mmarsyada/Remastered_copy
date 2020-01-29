@@ -177,9 +177,9 @@ void VehicleControlDeviceImplementation::storeObject(CreatureObject* player, boo
 
 	/*if (!controlledObject->isInQuadTree())
 		return;*/
-
-	if (!force && (player->isInCombat() || player->isDead()))
-		return;
+	// commenting out, not allowing players to store in combat
+	/*if (!force && (player->isInCombat() || player->isDead()))
+		return;*/
 
 	if (player->isRidingMount() && player->getParent() == controlledObject) {
 
