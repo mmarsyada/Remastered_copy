@@ -544,7 +544,7 @@ TangibleObject* LootManagerImplementation::createLootAttachment(const LootItemTe
 	
 	ManagedReference<TangibleObject*> prototype = zoneServer->createObject(directTemplateObject.hashCode(), 2).castTo<TangibleObject*>();
 	
-	if (prototype) {
+	if (!prototype) {
 		error("could not create loot object: " + directTemplateObject);
 		return NULL;
 	}

@@ -43,29 +43,9 @@
 
 
 --Children folder includes
-includeFile("tangible/furniture/all/serverobjects.lua")
-includeFile("tangible/furniture/base/serverobjects.lua")
-includeFile("tangible/furniture/cheap/serverobjects.lua")
-includeFile("tangible/furniture/city/serverobjects.lua")
-includeFile("tangible/furniture/decorative/serverobjects.lua")
-includeFile("tangible/furniture/elegant/serverobjects.lua")
-includeFile("tangible/furniture/imperial/serverobjects.lua")
-includeFile("tangible/furniture/jedi/serverobjects.lua")
-includeFile("tangible/furniture/modern/serverobjects.lua")
-includeFile("tangible/furniture/plain/serverobjects.lua")
-includeFile("tangible/furniture/space/serverobjects.lua")
-includeFile("tangible/furniture/tatooine/serverobjects.lua")
-includeFile("tangible/furniture/technical/serverobjects.lua")
-includeFile("tangible/furniture/gcw/serverobjects.lua")
-includeFile("tangible/furniture/lifeday/serverobjects.lua")
-includeFile("tangible/furniture/nym_themepark/serverobjects.lua")
-includeFile("tangible/furniture/terminal/serverobjects.lua")
-includeFile("tangible/furniture/ep3_rewards/serverobjects.lua")
-includeFile("tangible/furniture/house_cleanup/serverobjects.lua")
-includeFile("tangible/furniture/wod_themepark/serverobjects.lua")
-includeFile("tangible/furniture/rustic/serverobjects.lua")
+--Children folder includes
 
 
 -- Server Objects
-includeFile("tangible/furniture/furniture_base.lua")
-includeFile("tangible/furniture/furniture_tatooine_cantina_seat_01.lua")
+includeFile("tangible/furniture/rustic/coffee_table_rustic_s01.lua")
+includeFile("tangible/furniture/rustic/end_table_rustic_s01.lua")
