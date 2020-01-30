@@ -44,12 +44,12 @@
 ForceLightningSingle2Command = {
 	name = "forcelightningsingle2",
 
-	 minDamage = 550,
-	 maxDamage = 860,
+	 minDamage = 650,
+	 maxDamage = 960,
 	-- damageMultiplier = 4,
 	-- speedMultiplier = .5,
 	 speed = 2,
-	 forceCost = 30,
+	 forceCost = 35,
 	-- forceCostMultiplier = 3.0,
 	visMod = 25,
 	accuracySkillMod = "forcelightning_accuracy",
@@ -60,7 +60,7 @@ ForceLightningSingle2Command = {
 		{},
 		{},
 		{ "jedi_state_defense" },
-		30,
+		75,
 		0,
 		10
 	  )
@@ -72,7 +72,7 @@ ForceLightningSingle2Command = {
 		{ "resistance_fire", "fire_resist" },
 		HEALTH,
 		true,
-		35,
+		7,
 		75,
 		75, 
 		75,

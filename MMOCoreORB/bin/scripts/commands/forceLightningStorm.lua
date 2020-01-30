@@ -44,11 +44,11 @@
 ForceLightningStormCommand = {
 	name = "forcelightningstorm",
 
-	 minDamage = 750,
-	 maxDamage = 960,
+	 minDamage = 550,
+	 maxDamage = 860,
 	-- damageMultiplier = 4,
 	-- speedMultiplier = .5,
-	 speed = 1.5,
+	 speed = 2,
 	 forceCost = 35,
 	-- forceCostMultiplier = 3.0,
 	visMod = 25,
@@ -106,7 +106,7 @@ ForceLightningStormCommand = {
 	animation = "forcelightningcone2",
 	animType = GENERATE_INTENSITY,
 
-	combatSpam = "forceLightningStorm",
+	combatSpam = "forcelightningstorm",
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
