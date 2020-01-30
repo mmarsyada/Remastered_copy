@@ -1,4 +1,4 @@
---Copyright (C) 2007 <SWGEmu>
+--Copyright (C) 2009 <SWGEmu>
 
 --This File is part of Core3.
 
@@ -39,86 +39,19 @@
 --gives permission to release a modified version without this exception;
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
---true = 1, false = 0
 
-ForceLightningStormCommand = {
-	name = "forcelightningstorm",
-
-	 minDamage = 550,
-	 maxDamage = 860,
-	-- damageMultiplier = 4,
-	-- speedMultiplier = .5,
-	 speed = 2,
-	 forceCost = 35,
-	-- forceCostMultiplier = 3.0,
-	visMod = 25,
-	accuracySkillMod = "forcelightning_accuracy",
-	coneAngle = 45,
-	coneAction = true,
-
-	stateEffects = {
-		StateEffect(
-			STUN_EFFECT,
-			{},
-			{},
-			{ "jedi_state_defense","resistance_states" },
-			75,
-			0,
-			60
-		),
-
-		StateEffect(
-			BLIND_EFFECT,
-			{},
-			{},
-			{ "jedi_state_defense","resistance_states" },
-			75,
-			0,
-			60
-		),
-
-		StateEffect(
-			DIZZY_EFFECT,
-			{},
-			{},
-			{ "jedi_state_defense","resistance_states" },
-			75,
-			0,
-			60
-		)
-	},
+--rustic wood coffee table
+object_tangible_furniture_rustic_shared_rustic_coffee_table_rustic_s01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName ="object/tangible/furniture/rustic/shared_coffee_table_rustic_s01.iff"
+	}
 	
-		dotEffects = {
-	  DotEffect( 
-		ONFIRE, 
-		{ "resistance_fire", "fire_resist" },
-		HEALTH,
-		true,
-		35,
-		75,
-		75, 
-		75,
-		12,
-		2
-	  )
-	},
+ObjectTemplates:addClientTemplate(object_tangible_furniture_rustic_shared_rustic_coffee_table_rustic_s01, "object/tangible/furniture/rustic/shared_coffee_table_rustic_s01.iff")
 
-	animation = "forcelightningcone2",
-	animType = GENERATE_INTENSITY,
+--rustic end table
+object_tangible_furniture_rustic_shared_end_table_rustic_s01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName ="object/tangible/furniture/rustic/shared_end_table_rustic_s01.iff"
+	}
+	
+ObjectTemplates:addClientTemplate(object_tangible_furniture_rustic_shared_end_table_rustic_s01, "object/tangible/furniture/rustic/shared_end_table_rustic_s01.iff")
 
-	combatSpam = "forcelightningstorm",
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
-
-	forceAttack = true,
-	damageType = LIGHTSABER_DAMAGE,
-
-	frsLightMinDamageModifier = 2,
-	frsLightMaxDamageModifier = 3,
-	frsDarkMinDamageModifier = 2,
-	frsDarkMaxDamageModifier = 3,
-
-	range = 32
-}
-
-AddCommand(ForceLightningStormCommand)
