@@ -58,7 +58,7 @@ mokk_shaman_poi = Creature:new {
 			groups = {
 				{group = "mokk_cave_rare", chance = 10000000}
 			},
-			lootChance = 1000090
+			lootChance = 1000000
 		},
 	},
 	weapons = {"mokk_weapons"},
