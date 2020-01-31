@@ -39,21 +39,29 @@ korga_scout_poi = Creature:new {
 				{group = "ewok", chance = 1750000},
 				{group = "korga_cave_common", chance = 1750000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "wookiee_loot_common", chance = 3333333},
+				{group = "ewok", chance = 3333333},
+				{group = "jinda_cave_common", chance = 3333334}
+			},
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "korga_cave_rare", chance = 9888889},
 				{group = "rem_named_crystals", chance = 111111}
 			},
-			lootChance = 400000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"korga_pistol_weapons"},

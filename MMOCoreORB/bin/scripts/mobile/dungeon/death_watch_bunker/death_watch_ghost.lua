@@ -50,7 +50,7 @@ death_watch_ghost = Creature:new {
 				{group = "death_watch_bunker_ingredient_protective",  chance = 3333333},
 				{group = "death_watch_bunker_ingredient_binary",  chance = 3333334},
 			},
-			lootChance = 150000
+			lootChance = 250000
 		},	},
 	weapons = {"pirate_weapons_heavy"},
 	conversationTemplate = "",

@@ -53,7 +53,7 @@ death_watch_black_sun_henchman = Creature:new {
 				{group = "bounty_hunter_schemes", chance = 7000000},
 				{group = "jetpack_base", chance = 1000000}
 			},
-			lootChance = 150000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"pirate_weapons_heavy"},

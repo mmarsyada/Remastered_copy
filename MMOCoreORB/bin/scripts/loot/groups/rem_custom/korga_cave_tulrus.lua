@@ -3,8 +3,8 @@ korga_cave_tulrus = {
 	minimumLevel = 0,
 	maximumLevel = 0,	
 	lootItems = {
-		{itemTemplate = "trophey_tulrus_spine", weight = 5000000},
-		{itemTemplate = "tulrus_spike", weight = 5000000}
+		{itemTemplate = "trophey_tulrus_spine", weight = 3000000},
+		{itemTemplate = "tulrus_spike", weight = 7000000}
 	}
 }
 
