@@ -44,7 +44,7 @@ spiderclan_sentry_poi = Creature:new {
 		{
 			groups = {
 				{group = "nightsister_common", chance = 5000000},
-                                {group = "spiderclan_poi_common", chance = 5000000}
+				{group = "spiderclan_poi_common", chance = 5000000}
 			},
 			lootChance = 1000000
 		},

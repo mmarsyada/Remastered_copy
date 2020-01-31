@@ -37,20 +37,27 @@ de_battle_droid = Creature:new {
 				{group = "carbines", chance = 1000000},
 				{group = "droid_cave_common", chance = 3000000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "nyms_common", chance = 5000000},
+				{group = "droid_cave_common", chance = 5000000}
+			},
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "droid_cave", chance = 10000000},
 			},
-			lootChance = 500000
+			lootChance = 1000000
 		},
 },
 	weapons = {"battle_droid_weapons"},

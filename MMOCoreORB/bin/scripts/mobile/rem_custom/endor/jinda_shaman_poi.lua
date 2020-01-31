@@ -46,8 +46,8 @@ jinda_shaman_poi = Creature:new {
 		{
 			groups = {
 				{group = "wookiee_loot_common", chance = 3333333},
-                                {group = "ewok", chance = 3333333},
-                                {group = "jinda_cave_common", chance = 3333334}
+				{group = "ewok", chance = 3333333},
+				{group = "jinda_cave_common", chance = 3333334}
 			},
 			lootChance = 1000000
 		},
