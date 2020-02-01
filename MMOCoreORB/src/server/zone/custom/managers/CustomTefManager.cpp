@@ -376,6 +376,8 @@ auto CustomTefManager::isAttackableBy(CreatureObject* defender,
 			return false;
 		else if (defender->isPlayerCreature() && defender->getFactionStatus() == FactionStatus::ONLEAVE)
 			return false;
+		else if (defender->isPlayerCreature() && defender->getFactionStatus() == FactionStatus::COVERT && !isPvpAttackable(*defender))
+                        return false;
 
 		return true;
 	}
