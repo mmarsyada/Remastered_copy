@@ -27,7 +27,7 @@ jawa_protector_poi = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {
+	lootGroups = {
 	    {
 			groups = {
 				{group = "junk", chance = 2900000},
