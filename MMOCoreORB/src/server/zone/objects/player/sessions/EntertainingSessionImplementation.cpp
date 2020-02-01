@@ -922,10 +922,6 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 			uint32 willBuffCRC = STRING_HASHCODE("performance_enhance_music_willpower");
 			oldBuff = cast<PerformanceBuff*>(creature->getBuff(focusBuffCRC));
 
-			if (oldBuff != nullptr && oldBuff->getBuffStrength() > buffStrength)
-						return;
-
-			if (oldBuff != nullptr && (oldBuff->getBuffDuration() > buffDuration * 60) && (oldBuff->getBuffStrength() <= buffStrength))
 						return;
 
 

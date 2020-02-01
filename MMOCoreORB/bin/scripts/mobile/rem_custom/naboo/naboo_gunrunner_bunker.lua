@@ -49,7 +49,7 @@ naboo_gunrunner_bunker = Creature:new {
 			groups = {
 				{group = "pirate_bunker_rare", chance = 10000000}
 			},
-			lootChance = 500000
+			lootChance = 1000000
 			},
 		{	
 			groups = {
@@ -63,7 +63,7 @@ naboo_gunrunner_bunker = Creature:new {
 				{group = "smuggled_bantha_ivory", chance = 2000000},
 				{group = "smuggled_bantha_ivory_projectile", chance = 2000000}
 			},
-			lootChance = 500000
+			lootChance = 1000000
 
 		},
 	},

@@ -58,7 +58,7 @@ naboo_pirate_lieutenant_bunker = Creature:new {
 			groups = {
 				{group = "pirate_bunker_rare", chance = 10000000}
 			},
-			lootChance = 500000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
