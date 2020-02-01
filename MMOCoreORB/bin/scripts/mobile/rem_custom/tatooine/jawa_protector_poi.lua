@@ -27,6 +27,7 @@ jawa_protector_poi = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
+	templates = {"object/mobile/jawa_male.iff"},
 	lootGroups = {
 	    {
 			groups = {
