@@ -32,8 +32,7 @@ black_sun_smuggler_poi_3 = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "black_sun_outpost_common", chance = 2000000},
-				{group = "loot_kit_parts", chance = 1300000},
+				{group = "loot_kit_parts", chance = 3300000},
 				{group = "power_crystals", chance = 200000},
 				{group = "color_crystals", chance = 700000},
 				{group = "pistols", chance = 900000},
@@ -45,38 +44,34 @@ black_sun_smuggler_poi_3 = Creature:new {
 				{group = "printer_parts", chance = 1000000},
 				{group = "tailor_components", chance = 900000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "black_sun_outpost_common", chance = 10000000},
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 200000
-		},
-		{	
-			groups = {
-				{group = "clothing_attachments", chance = 5000000},
-				{group = "armor_attachments", chance = 5000000}
-			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "black_sun_outpost_rare", chance = 7000000},
-				{group = "black_sun_mando_armor", chance = 2900000},
-				{group = "rem_named_crystals", chance = 100000}		
+				{group = "rem_named_crystals", chance = 3000000}		
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
-				{group = "black_sun_outpost_rare", chance = 7000000},
-				{group = "black_sun_mando_armor", chance = 2900000},
-				{group = "rem_named_crystals", chance = 100000}		
+				{group = "black_sun_mando_armor", chance = 10000000},
 			},
-			lootChance = 100000
-		},		
+			lootChance = 250000
+		},
 	},
 	weapons = {"black_sun_outpost_ranged_weapons"},
 	conversationTemplate = "",

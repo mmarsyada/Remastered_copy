@@ -41,8 +41,16 @@ garyns_thief_poi = Creature:new {
 				{group = "garyn_poi_common", chance = 2000000},
 				{group = "garyn_rare", chance = 200000}
 			},
-			lootChance = 6500000,
+			lootChance = 1000000,
 		},
+		{
+			{group = "garyn_common", chance = 1000000}
+		},
+			lootChance = 1000000,
+		{
+			{group = "garyn_rare", chance = 1000000}
+		},
+			lootChance = 1000000,
 	},
 	weapons = {"pirate_weapons_light"},
 	conversationTemplate = "",

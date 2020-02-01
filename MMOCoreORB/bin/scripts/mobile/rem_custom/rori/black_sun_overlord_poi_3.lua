@@ -45,7 +45,13 @@ black_sun_overlord_poi_3 = Creature:new {
 				{group = "printer_parts", chance = 1000000},
 				{group = "tailor_components", chance = 900000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "black_sun_outpost_common", chance = 10000000},
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
@@ -54,7 +60,7 @@ black_sun_overlord_poi_3 = Creature:new {
 				{group = "clothing_attachments", chance = 2500000},
 				{group = "armor_attachments", chance = 2500000}	
 			},
-			lootChance = 9000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
@@ -65,7 +71,7 @@ black_sun_overlord_poi_3 = Creature:new {
 				{group = "death_watch_bunker_ingredient_protective",  chance = 1000000},
 				{group = "death_watch_bunker_ingredient_binary",  chance = 1000000}		
 			},
-			lootChance = 250000
+			lootChance = 5000000
 		},		
 	},
 	weapons = {"black_sun_outpost_ranged_weapons"},

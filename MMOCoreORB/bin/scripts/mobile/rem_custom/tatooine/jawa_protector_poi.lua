@@ -27,22 +27,37 @@ jawa_protector_poi = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/jawa_male.iff"},
-	lootGroups = {
+	templates = {
 	    {
 			groups = {
-				{group = "jawa_common", chance = 4000000},
+				{group = "junk", chance = 2900000},
+				{group = "jawa_common", chance = 2200000},
 				{group = "armor_all", chance = 1500000},
-				{group = "tailor_components", chance = 1000000},
-				{group = "loot_kit_parts", chance = 1050000},
-				{group = "jawa_rare", chance = 1000000},
-				{group = "rem_named_crystals", chance = 50000},
-				{group = "clothing_attachments", chance = 300000},
-				{group = "armor_attachments", chance = 300000},
+				{group = "tailor_components", chance = 1100000},
+				{group = "loot_kit_parts", chance = 1500000},
 				{group = "color_crystals", chance = 800000}
 			},
-			lootChance = 7000000
-		}				
+			lootChance = 1000000
+			},
+			{
+			groups = {
+				{group = "jawa_common", chance = 10000000},
+			},
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "clothing_attachments", chance = 5000000},
+				{group = "armor_attachments", chance = 5000000}
+			},
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "jawa_rare", chance = 10000000}
+			},
+			lootChance = 1000000
+		},				
 	},
 	weapons = {"jawa_warlord_weapons"},
 	conversationTemplate = "",

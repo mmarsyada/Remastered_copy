@@ -32,20 +32,26 @@ jabba_lieutenant_hideout = Creature:new {
 			groups = {
 				{group = "hutt_hideout_common", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "jabba_common", chance = 10000000}
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 7000000
+			lootChance = 2000000
 		},
 		{	
 			groups = {
 				{group = "hutt_hideout_rare", chance = 10000000}
 			},
-			lootChance = 1500000
+			lootChance = 1000000
 		},
 			
 	},

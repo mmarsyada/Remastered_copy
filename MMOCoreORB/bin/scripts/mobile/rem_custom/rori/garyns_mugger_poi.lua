@@ -36,13 +36,21 @@ garyns_mugger_poi = Creature:new {
 				{group = "junk", chance = 1000000},
 				{group = "misc_decoloot_schemes", chance = 1800000},
 				{group = "pistols", chance = 1000000},
-				{group = "tailor_components", chance = 1750000},
+				{group = "tailor_components", chance = 2000000},
 				{group = "loot_kit_parts", chance = 2000000},
 				{group = "garyn_poi_common", chance = 2000000},
-				{group = "garyn_rare", chance = 450000}
+				{group = "garyn_rare", chance = 200000}
 			},
-			lootChance = 8500000,
+			lootChance = 1000000,
 		},
+		{
+			{group = "garyn_common", chance = 1000000}
+		},
+			lootChance = 1000000,
+		{
+			{group = "garyn_rare", chance = 1000000}
+		},
+			lootChance = 1000000,
 	},
 	weapons = {"pirate_weapons_light"},
 	conversationTemplate = "",

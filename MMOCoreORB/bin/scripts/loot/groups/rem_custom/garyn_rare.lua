@@ -3,12 +3,12 @@ garyn_rare = {
 	minimumLevel = 0,
 	maximumLevel = 0,	
 	lootItems = {
-		{itemTemplate = "carbine_bola_schematic", weight = 1666665},
-		{itemTemplate = "twoh_sword_vibrosword_schematic", weight = 1666667},
-		{itemTemplate = "lance_shock_schematic", weight = 1666667},
-		{itemTemplate = "barrel_carbine_bola", weight = 1666667},
-		{itemTemplate = "vibro_sword_generator", weight = 1666667},
-		{itemTemplate = "shock_lance_controller", weight = 1666667},
+		{itemTemplate = "carbine_bola_schematic", weight = 1333333},
+		{itemTemplate = "twoh_sword_vibrosword_schematic", weight = 1333333},
+		{itemTemplate = "lance_shock_schematic", weight = 1333334},
+		{itemTemplate = "barrel_carbine_bola", weight = 2000000},
+		{itemTemplate = "vibro_sword_generator", weight = 2000000},
+		{itemTemplate = "shock_lance_controller", weight = 2000000},
 	}
 }
 

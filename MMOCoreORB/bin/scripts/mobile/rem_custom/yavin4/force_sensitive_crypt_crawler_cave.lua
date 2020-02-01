@@ -42,20 +42,20 @@ force_sensitive_crypt_crawler_cave = Creature:new {
 				{group = "holocron_dark", chance = 100000},
 				{group = "holocron_light", chance = 100000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "crystal_hunter_rare", chance = 10000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 			
 	},

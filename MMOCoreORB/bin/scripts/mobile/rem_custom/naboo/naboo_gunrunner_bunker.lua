@@ -30,33 +30,40 @@ naboo_gunrunner_bunker = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "pirate_bunker_common", chance = 1600000},
+				{group = "pirate_bunker_common", chance = 2000000},
 				{group = "generic_tech", chance = 2000000},
-				{group = "generic_consoles", chance = 1600000},
-				{group = "loot_kit_parts", chance = 1600000},
-				{group = "printer_parts", chance = 1600000},
-				{group = "weapons_all", chance = 1600000}
+				{group = "generic_consoles", chance = 2000000},
+				{group = "loot_kit_parts", chance = 2000000},
+				{group = "printer_parts", chance = 2000000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "pirate_bunker_rare", chance = 10000000}
 			},
-			lootChance = 100000
+			lootChance = 500000
+			},
+		{	
+			groups = {
+				{group = "pirate_bunker_common", chance = 10000000}
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
-				{group = "rem_named_crystals", chance = 10000000}
+				{group = "rem_named_crystals", chance = 6000000},
+				{group = "smuggled_bantha_ivory", chance = 2000000},
+				{group = "smuggled_bantha_ivory_projectile", chance = 2000000}
 			},
-			lootChance = 25000
+			lootChance = 500000
 
 		},
 	},

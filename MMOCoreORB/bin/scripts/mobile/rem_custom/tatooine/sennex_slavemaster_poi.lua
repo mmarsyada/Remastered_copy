@@ -54,20 +54,26 @@ sennex_slavemaster_poi = Creature:new {
 				{group = "loot_kit_parts", chance = 1000000},
 				{group = "tailor_components", chance = 900000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}	
 			},
-			lootChance = 300000
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "sennex_cave_common", chance = 10000000},
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "sennex_cave_rare", chance = 10000000},	
 			},
-			lootChance = 300000
+			lootChance = 1000000
 		},		
 	},
 	weapons = {"sennex_pistol_weapons"},

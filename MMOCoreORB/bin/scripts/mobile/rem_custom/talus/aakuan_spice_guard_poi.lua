@@ -34,17 +34,26 @@ aakuan_spice_guard_poi = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1400000},
-				{group = "aakuan_common", chance = 1300000},
-				{group = "armor_attachments", chance = 1200000},
-				{group = "clothing_attachments", chance = 1200000},
-				{group = "rifles", chance = 1533333},
-				{group = "carbines", chance = 1533333},
-				{group = "pistols", chance = 1533334},
-				{group = "aakuan_rare", chance = 300000}
+				{group = "aakuan_common", chance = 2000000},
+				{group = "rifles", chance = 2000000},
+				{group = "carbines", chance = 2000000},
+				{group = "pistols", chance = 4000000},
 			},
-		    lootChance = 3500000
-		}
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "aakuan_common", chance = 10000000}
+			},
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "armor_attachments", chance = 5000000},
+				{group = "clothing_attachments", chance = 5000000},
+			},
+		    lootChance = 1000000
+		},
 	},
 	weapons = {"aakuan_2h_weapons"},
 	conversationTemplate = "",

@@ -31,17 +31,35 @@ jawa_thief_poi = Creature:new {
 	lootGroups = {
 	    {
 			groups = {
-				{group = "jawa_common", chance = 4100000},
-				{group = "armor_all", chance = 1700000},
-				{group = "tailor_components", chance = 1400000},
-				{group = "loot_kit_parts", chance = 1700000},
-				{group = "jawa_rare", chance = 100000},
-				{group = "clothing_attachments", chance = 100000},
-				{group = "clothing_attachments", chance = 100000},
+				{group = "junk", chance = 2900000},
+				{group = "jawa_common", chance = 2200000},
+				{group = "armor_all", chance = 1500000},
+				{group = "tailor_components", chance = 1100000},
+				{group = "loot_kit_parts", chance = 1500000},
 				{group = "color_crystals", chance = 800000}
 			},
-			lootChance = 5000000
-		}					
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "jawa_common", chance = 10000000},
+			},
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "clothing_attachments", chance = 5000000},
+				{group = "armor_attachments", chance = 5000000}
+			},
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "jawa_rare", chance = 10000000}
+			},
+			lootChance = 1000000
+		},
+	
 	},
 	weapons = {"jawa_warlord_weapons"},
 	conversationTemplate = "",

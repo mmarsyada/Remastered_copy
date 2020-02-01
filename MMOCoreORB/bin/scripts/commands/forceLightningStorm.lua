@@ -44,11 +44,11 @@
 ForceLightningStormCommand = {
 	name = "forcelightningstorm",
 
-	 minDamage = 550,
-	 maxDamage = 860,
+	 minDamage = 1418,
+	 maxDamage = 918,
 	-- damageMultiplier = 4,
 	-- speedMultiplier = .5,
-	 speed = 2,
+	 speed = 1.7,
 	 forceCost = 35,
 	-- forceCostMultiplier = 3.0,
 	visMod = 25,
