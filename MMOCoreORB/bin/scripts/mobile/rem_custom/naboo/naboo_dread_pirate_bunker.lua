@@ -38,21 +38,27 @@ naboo_dread_pirate_bunker = Creature:new {
 				{group = "loot_kit_parts", chance = 2000000},
 				{group = "printer_parts", chance = 2000000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 7000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "pirate_bunker_rare", chance = 10000000}
 			},
-			lootChance = 1800000
-
+		
+			lootChance = 1000000
+		},
+		{	
+			groups = {
+				{group = "pirate_bunker_common", chance = 10000000}
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
@@ -60,7 +66,7 @@ naboo_dread_pirate_bunker = Creature:new {
 				{group = "smuggled_bantha_ivory", chance = 2000000},
 				{group = "smuggled_bantha_ivory_projectile", chance = 2000000}
 			},
-			lootChance = 500000
+			lootChance = 1000000
 
 		},
 	},

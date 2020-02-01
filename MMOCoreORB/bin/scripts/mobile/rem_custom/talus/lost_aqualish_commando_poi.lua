@@ -40,20 +40,26 @@ lost_aqualish_commando_poi = Creature:new {
 				{group = "loot_kit_parts", chance = 1000000},
 				{group = "binayre_common", chance = 400000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}	
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
+		{	
+			groups = {
+				{group = "lost_aqualish_poi_common", chance = 10000000},	
+			},
+			lootChance = 1000000
+		},		
 		{	
 			groups = {
 				{group = "lost_aqualish_poi_rare", chance = 10000000},	
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},		
 	},
 	weapons = {"aqualish_carbine_weapons"},

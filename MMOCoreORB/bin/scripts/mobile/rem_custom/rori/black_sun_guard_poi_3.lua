@@ -45,21 +45,21 @@ black_sun_guard_poi_3 = Creature:new {
 				{group = "printer_parts", chance = 1000000},
 				{group = "tailor_components", chance = 900000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}				
 			},
-			lootChance = 200000
+			lootChance = 5000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}				
 			},
-			lootChance = 200000
+			lootChance = 5000000
 		},
 		{	
 			groups = {
@@ -68,7 +68,7 @@ black_sun_guard_poi_3 = Creature:new {
 				{group = "black_sun_mando_armor", chance = 1000000},
 				{group = "rem_named_crystals", chance = 100000}		
 			},
-			lootChance = 100000
+			lootChance = 125000
 		},
 		{	
 			groups = {
@@ -77,7 +77,7 @@ black_sun_guard_poi_3 = Creature:new {
 				{group = "black_sun_mando_armor", chance = 1500000},
 				{group = "rem_named_crystals", chance = 100000}		
 			},
-			lootChance = 100000
+			lootChance = 125000
 		},		
 	},
 	weapons = {"black_sun_outpost_melee_weapons"},

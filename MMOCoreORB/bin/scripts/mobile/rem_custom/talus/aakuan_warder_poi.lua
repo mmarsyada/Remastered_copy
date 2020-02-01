@@ -33,15 +33,32 @@ aakuan_warder_poi = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "aakuan_common", chance = 2500000},
-				{group = "armor_attachments", chance = 1400000},
-				{group = "clothing_attachments", chance = 1400000},
-				{group = "rifles", chance = 1500000},
-				{group = "carbines", chance = 1500000},
-				{group = "pistols", chance = 1500000},
-				{group = "aakuan_rare", chance = 200000}
+				{group = "aakuan_common", chance = 2000000},
+				{group = "rifles", chance = 2000000},
+				{group = "carbines", chance = 2000000},
+				{group = "pistols", chance = 2000000},
+				{group = "aakuan_rare", chance = 2000000}
 			},
-		    lootChance = 4000000
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "aakuan_common", chance = 10000000}
+			},
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "armor_attachments", chance = 5000000},
+				{group = "clothing_attachments", chance = 5000000},
+			},
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "aakuan_rare", chance = 10000000}
+			},
+		    lootChance = 1000000
 		}
 	},
 	weapons = {"aakuan_warder_weapons"},

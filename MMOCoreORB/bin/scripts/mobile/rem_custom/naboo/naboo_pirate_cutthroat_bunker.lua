@@ -47,20 +47,20 @@ naboo_pirate_cutthroat_bunker = Creature:new {
 				{group = "printer_parts", chance = 1600000},
 				{group = "weapons_all", chance = 1600000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "pirate_bunker_rare", chance = 10000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"pirate_bunker_rifles"},

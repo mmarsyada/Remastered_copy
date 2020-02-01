@@ -33,27 +33,31 @@ lost_aqualish_marksman_poi = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "lost_aqualish_poi_common", chance = 3000000},
-				{group = "pistols", chance = 1800000},
-				{group = "misc_decoloot_schemes", chance = 2200000},
-				{group = "printer_parts", chance = 1600000},
-				{group = "loot_kit_parts", chance = 1000000},
-				{group = "binayre_common", chance = 400000}
+				{group = "aakuan_common", chance = 2000000},
+				{group = "rifles", chance = 2000000},
+				{group = "carbines", chance = 2000000},
+				{group = "pistols", chance = 4000000},
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}	
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
+		{	
+			groups = {
+				{group = "lost_aqualish_poi_common", chance = 10000000},	
+			},
+			lootChance = 1000000
+		},		
 		{	
 			groups = {
 				{group = "lost_aqualish_poi_rare", chance = 10000000},	
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},		
 	},
 	weapons = {"aqualish_carbine_weapons"},

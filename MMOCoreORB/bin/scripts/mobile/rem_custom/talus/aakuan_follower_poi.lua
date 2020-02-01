@@ -33,16 +33,31 @@ aakuan_follower_poi = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 3200000},
-				{group = "aakuan_common", chance = 2300000},
-				{group = "armor_attachments", chance = 800000},
-				{group = "clothing_attachments", chance = 800000},
-				{group = "rifles", chance = 900000},
-				{group = "carbines", chance = 900000},
-				{group = "pistols", chance = 900000},
-				{group = "aakuan_rare", chance = 200000}
+				{group = "aakuan_common", chance = 2500000},
+				{group = "rifles", chance = 2500000},
+				{group = "carbines", chance = 2500000},
+				{group = "pistols", chance = 2500000},
 			},
-		    lootChance = 3000000
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "aakuan_common", chance = 10000000}
+			},
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "armor_attachments", chance = 5000000},
+				{group = "clothing_attachments", chance = 5000000},
+			},
+		    lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "aakuan_rare", chance = 10000000}
+			},
+		    lootChance = 1000000
 		}
 	},
 	weapons = {"melee_weapons"},

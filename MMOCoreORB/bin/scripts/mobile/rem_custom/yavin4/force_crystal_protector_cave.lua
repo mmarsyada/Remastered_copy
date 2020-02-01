@@ -42,20 +42,20 @@ force_crystal_protector_cave = Creature:new {
 				{group = "holocron_dark", chance = 700000},
 				{group = "holocron_light", chance = 700000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 6000000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "crystal_hunter_rare", chance = 10000000}
 			},
-			lootChance = 1800000
+			lootChance = 1000000
 		},
 			
 	},

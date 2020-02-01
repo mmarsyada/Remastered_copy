@@ -37,20 +37,20 @@ mokk_clan_leader_poi = Creature:new {
 				{group = "printer_parts", chance = 1750000},
 				{group = "mokk_cave_common", chance = 1750000}
 			},
-			lootChance = 8000000
+			lootChance = 900000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 100000
+			lootChance = 2500000
 		},
 		{
 			groups = {
 				{group = "mokk_cave_rare", chance = 10000000}
 			},
-			lootChance = 200000
+			lootChance = 2500000
 		},
 	},
 	weapons = {"mokk_weapons"},
