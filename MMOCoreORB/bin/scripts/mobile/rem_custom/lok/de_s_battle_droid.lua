@@ -38,7 +38,7 @@ de_s_battle_droid = Creature:new {
 				{group = "av_21_scheme", chance = 2000000},
 				{group = "droid_cave", chance = 7000000}
 			},
-			lootChance = 400000
+			lootChance = 1000000
 		},
 		{
 			groups = {

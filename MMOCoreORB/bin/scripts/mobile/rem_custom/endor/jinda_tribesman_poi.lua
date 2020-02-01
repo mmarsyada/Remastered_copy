@@ -41,20 +41,28 @@ jinda_tribesman_poi = Creature:new {
 				{group = "ewok", chance = 1750000},
 				{group = "jinda_cave_common", chance = 1750000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "wookiee_loot_common", chance = 3333333},
+				{group = "ewok", chance = 3333333},
+				{group = "jinda_cave_common", chance = 3333334}
+			},
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "jinda_cave_rare", chance = 10000000}
 			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"jinda_pistol_weapons"},

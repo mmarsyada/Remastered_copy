@@ -36,21 +36,21 @@ fanatic_of_lord_nyax_poi = Creature:new {
 				{group = "color_crystals", chance = 2000000},
 				{group = "printer_parts", chance = 1500000}
 			},
-			lootChance = 80000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
    		            	{group = "clothing_attachments", chance = 5000000}
 			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "power_crystals", chance = 5500000},
 				{group = "nyax_minions", chance = 4500000}
 			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"nyax_fanatic_weapons"},

@@ -36,14 +36,14 @@ minion_of_lord_nyax_poi = Creature:new {
 				{group = "color_crystals", chance = 2000000},
 				{group = "printer_parts", chance = 1500000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
    		            	{group = "clothing_attachments", chance = 5000000}
 			},
-			lootChance = 50000
+			lootChance = 1000000
 		},
 		{
 			groups = {
@@ -51,7 +51,7 @@ minion_of_lord_nyax_poi = Creature:new {
 				{group = "nyax_minions", chance = 4000000},
 				{group = "theme_park_loot_rebel_pirate_holocron", chance = 1000000}
 			},
-			lootChance = 50000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"nyax_fanatic_weapons"},

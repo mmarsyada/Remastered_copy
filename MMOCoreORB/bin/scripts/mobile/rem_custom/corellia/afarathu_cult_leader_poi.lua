@@ -49,20 +49,26 @@ afarathu_cult_leader_poi = Creature:new {
 				{group = "printer_parts", chance = 1600000},
 				{group = "color_crystals", chance = 1600000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "afarathu_cave_common", chance = 10000000}
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 5000000
+			lootChance = 1500000
 		},
 		{	
 			groups = {
 				{group = "afarathu_cave_rare", chance = 10000000}
 			},
-			lootChance = 2500000
+			lootChance = 1000000
 		},
 			
 	},

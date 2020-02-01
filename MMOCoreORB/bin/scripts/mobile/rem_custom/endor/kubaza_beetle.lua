@@ -33,7 +33,7 @@ kubaza_beetle = Creature:new {
 			groups = {
 				{group = "korga_cave_kubaza_beetle", chance = 10000000},
 			},
-			lootChance = 500000
+			lootChance = 2500000
 		}
 	},
 	weapons = {},

@@ -45,14 +45,20 @@ drall_patriot_chief_poi = Creature:new {
 				{group = "cu_nge_carbines", chance = 100000},
 				{group = "cu_nge_rifles", chance = 100000}
 			},
-			lootChance = 10000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "drall_patriot_poi_common", chance = 10000000}
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 1200000
+			lootChance = 1500000
 		},
 		{	
 			groups = {

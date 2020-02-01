@@ -50,7 +50,7 @@ death_watch_wraith = Creature:new {
 			groups = {
 				{group = "mandalorian_schemes", chance = 10000000}
 			},
-			lootChance = 100000
+			lootChance = 250000
 		},	
 	},
 	weapons = {"pirate_weapons_heavy"},

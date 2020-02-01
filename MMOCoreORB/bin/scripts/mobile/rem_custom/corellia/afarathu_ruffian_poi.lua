@@ -61,20 +61,26 @@ afarathu_ruffian_poi = Creature:new {
 				{group = "printer_parts", chance = 1600000},
 				{group = "color_crystals", chance = 1600000}
 			},
-			lootChance = 5000000
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "afarathu_cave_common", chance = 10000000}
+			},
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 50000
+			lootChance = 1000000
 		},
 		{	
 			groups = {
 				{group = "afarathu_cave_rare", chance = 10000000}
 			},
-			lootChance = 30000
+			lootChance = 1000000
 		},
 			
 	},

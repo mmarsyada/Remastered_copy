@@ -3,11 +3,11 @@ korga_cave_rare = {
 	minimumLevel = 0,
 	maximumLevel = 0,	
 	lootItems = {
-		{itemTemplate = "twoh_sword_tulrus_schematic", weight = 2000000},
-		{itemTemplate = "carbine_x1_schematic", weight = 2000000},
-		{itemTemplate = "muzzle_carbine_x1", weight = 2000000},
-		{itemTemplate = "pistol_urg8_schematic", weight = 2000000},
-		{itemTemplate = "muzzle_pistol_urg8", weight = 2000000}
+		{itemTemplate = "twoh_sword_tulrus_schematic", weight = 1333333},
+		{itemTemplate = "carbine_x1_schematic", weight = 1333333},
+		{itemTemplate = "muzzle_carbine_x1", weight = 3000000},
+		{itemTemplate = "pistol_urg8_schematic", weight = 1333334},
+		{itemTemplate = "muzzle_pistol_urg8", weight = 3000000}
 	}
 }
 
