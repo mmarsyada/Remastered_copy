@@ -54,14 +54,14 @@ korga_dark_shaman_poi = Creature:new {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 400000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "korga_cave_rare", chance = 9888889},
 				{group = "rem_named_crystals", chance = 111111}
 			},
-			lootChance = 600000
+			lootChance = 1000000
 		},
 	},
 	weapons = {},

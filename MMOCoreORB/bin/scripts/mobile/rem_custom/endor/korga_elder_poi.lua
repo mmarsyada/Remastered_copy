@@ -54,14 +54,14 @@ korga_elder_poi = Creature:new {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000}
 			},
-			lootChance = 200000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "korga_cave_rare", chance = 9888889},
 				{group = "rem_named_crystals", chance = 111111}
 			},
-			lootChance = 500000
+			lootChance = 1000000
 		},
 	},
 	weapons = {},
