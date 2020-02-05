@@ -436,7 +436,7 @@ void PlayerObjectImplementation::notifySceneReady() {
 	}
 
 	//Join the faction chat rooms
-/*	switch (creature->getFaction())
+	switch (creature->getFaction())
 	{
 		case Factions::FACTIONIMPERIAL:
 			{
@@ -463,7 +463,6 @@ void PlayerObjectImplementation::notifySceneReady() {
 		default:
 			break;
 	}
-	*/
 
 	//Re-join chat rooms player was a member of before disconnecting.
 	for (int i = chatRooms.size() - 1; i >= 0; i--) {
