@@ -7,10 +7,11 @@ object_building_player_yt1300_house = object_building_player_shared_yt1300_house
 	length = 1,
 	width = 1,
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_buff_mind", 100},
-		{"private_med_battle_fatigue", 15},
-		{"private_safe_logout", 1}
+		{"private_med_wound_mind", 100},
+                {"private_medical_rating", 125},
+		{"private_buff_mind", 125},
+                {"private_safe_logout", 1},
+		{"private_med_battle_fatigue", 75}
 	},
 	childObjects = {
 		{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = -4.21371, z = 5.2302, y = -1.99222, ox = 0, oy = 1, oz = 0, ow = -1.899e-07, cellid = 5, containmentType = -1},

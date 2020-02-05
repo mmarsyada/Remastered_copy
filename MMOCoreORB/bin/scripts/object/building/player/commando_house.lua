@@ -7,10 +7,11 @@ object_building_player_commando_house = object_building_player_shared_commando_h
 	width = 1,
 	publicStructure = 0,
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_buff_mind", 100},
-		{"private_med_battle_fatigue", 15},
-		{"private_safe_logout", 1}
+		{"private_med_wound_mind", 100},
+                {"private_medical_rating", 125},
+		{"private_buff_mind", 125},
+                {"private_safe_logout", 1},
+		{"private_med_battle_fatigue", 75}
 	},
 	childObjects = {
                         {templateFile = "object/tangible/sign/player/house_address.iff", x = 3.325, z = 2.5, y = 6.125, ox = 0, oy = 1, oz = 0, ow = 0 , cellid = -1, containmentType = -1}, --Default House Sign

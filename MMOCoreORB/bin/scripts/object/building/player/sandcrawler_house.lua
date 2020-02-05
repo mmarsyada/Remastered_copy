@@ -7,10 +7,11 @@ object_building_player_sandcrawler_house = object_building_player_shared_sandcra
 	length = 1,
 	width = 1,
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_buff_mind", 100},
-		{"private_med_battle_fatigue", 15},
-		{"private_safe_logout", 1}
+		{"private_med_wound_mind", 100},
+                {"private_medical_rating", 125},
+		{"private_buff_mind", 125},
+                {"private_safe_logout", 1},
+		{"private_med_battle_fatigue", 75}
 	},
 	childObjects = {
 		{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = -4.25791, z = 9.29876, y = -13.4098, ow = -0.707107, ox = 0, oz = 0, oy = -0.707107, cellid = 2, containmentType = -1},
