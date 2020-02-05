@@ -172,10 +172,7 @@ auto CustomTefManager::isPermaOvert(const String& skill) const -> bool {
 	return permaOvertSkills.contains(skill);
 }
 
-auto CustomTefManager::checkForTefs(CreatureObject* attacker,
-									CreatureObject* defender,
-									bool* shouldGcwTef,
-									bool* shouldBhTef) -> void {
+auto CustomTefManager::checkForTefs(CreatureObject* attacker, CreatureObject* defender, bool* shouldGcwTef, bool* shouldBhTef) -> void {
 	if (attacker == nullptr || defender == nullptr) {
 		return;
 	}
@@ -214,8 +211,7 @@ auto CustomTefManager::checkForTefs(CreatureObject* attacker,
 	}
 }
 
-auto CustomTefManager::checkForTef(CreatureObject* healer,
-								   CreatureObject* target) -> void {
+auto CustomTefManager::checkForTef(CreatureObject* healer, CreatureObject* target) -> void {
 	if (!healer->isPlayerCreature() || healer == target)
 		return;
 
@@ -248,8 +244,7 @@ auto CustomTefManager::checkForTef(CreatureObject* healer,
 	}
 }
 
-auto CustomTefManager::isAggressiveTo(CreatureObject* defender,
-									  CreatureObject* attacker) -> bool {
+auto CustomTefManager::isAggressiveTo(CreatureObject* defender, CreatureObject* attacker) -> bool {
 	PlayerObject* const defPlayer= defender->getPlayerObject();
 	PlayerObject* const atkPlayer= attacker->getPlayerObject();
 
@@ -291,9 +286,7 @@ auto CustomTefManager::isAggressiveTo(CreatureObject* defender,
 	return false;
 }
 
-auto CustomTefManager::isAttackableBy(CreatureObject* defender,
-									  TangibleObject* attacker,
-									  bool bypassDeadCheck) -> bool {
+auto CustomTefManager::isAttackableBy(CreatureObject* defender, TangibleObject* attacker, bool bypassDeadCheck) -> bool {
 	if (defender == nullptr || attacker == nullptr) {
 		return false;
 	}
@@ -327,9 +320,7 @@ auto CustomTefManager::isAttackableBy(CreatureObject* defender,
 	return true;
 }
 
-auto CustomTefManager::isAttackableBy(CreatureObject* defender,
-									  CreatureObject* attacker,
-									  bool bypassDeadCheck) -> bool {
+auto CustomTefManager::isAttackableBy(CreatureObject* defender, CreatureObject* attacker, bool bypassDeadCheck) -> bool {
 	if (defender == nullptr || attacker == nullptr) {
 		return false;
 	}
@@ -418,8 +409,9 @@ auto CustomTefManager::isAttackableBy(CreatureObject* defender,
 	return false;
 }
 
-auto CustomTefManager::isAttackableByInstallation(InstallationObject* defender,
-												  CreatureObject* attacker) -> bool {
+auto CustomTefManager::isAttackableByInstallation(InstallationObject* defender,  CreatureObject* attacker) -> bool {
+	if(attacker->isNeutral() && !defender->isNeutral())
+		return false;
 	if (!(defender->getPvpStatusBitmask() & CreatureFlag::ATTACKABLE)) {
 		return false;
 	}
