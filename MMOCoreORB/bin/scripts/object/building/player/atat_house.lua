@@ -7,10 +7,11 @@ object_building_player_atat_house = object_building_player_shared_atat_house:new
 	width = 1,
 	publicStructure = 0,
 	skillMods = {
-		{"private_medical_rating", 100},
-		{"private_buff_mind", 100},
-		{"private_med_battle_fatigue", 15},
-		{"private_safe_logout", 1}
+		{"private_med_wound_mind", 100},
+                {"private_medical_rating", 125},
+		{"private_buff_mind", 125},
+                {"private_safe_logout", 1},
+		{"private_med_battle_fatigue", 75}
 	},
 	childObjects = {
 			{templateFile = "object/tangible/sign/player/house_address.iff", x = -5.10426, z = 6, y = 15.7585, ox = 0, oy = -0.707107, oz = 0, ow = -0.707107, cellid = -1, containmentType = -1},
