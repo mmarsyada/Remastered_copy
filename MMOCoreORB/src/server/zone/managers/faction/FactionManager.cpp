@@ -201,9 +201,9 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 		CreatureObject* killerCreature = cast<CreatureObject*>(killer);
 
 		const CustomPvpManager* const pvpManager = CustomPvpManager::instance();
-		/*pvpManager->broadcastPvpKill(*pvpNotificationChat,
+		pvpManager->broadcastPvpKill(*pvpNotificationChat,
 									 *killerCreature,
-									 *destructedObject);*/
+									 *destructedObject);
 
 		// Faction gain
 		ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();

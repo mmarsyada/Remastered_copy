@@ -433,7 +433,7 @@ auto CustomTefManager::isAttackableByInstallation(InstallationObject* defender,
 	if (attacker->isPet()) {
 		ManagedReference<CreatureObject*> owner = attacker->getLinkedCreature().get();
 
-		if (owner == nullptr)
+		if (!owner)
 			return false;
 
 		return defender->isAttackableBy(owner);
@@ -448,7 +448,7 @@ auto CustomTefManager::isAttackableByInstallation(InstallationObject* defender,
 
 	SharedInstallationObjectTemplate* instTemplate = cast<SharedInstallationObjectTemplate*>(defender->getObjectTemplate());
 
-	if (instTemplate != nullptr) {
+	if (instTemplate) {
 		String factionString = instTemplate->getFactionString();
 
 		if (!factionString.isEmpty()) {
