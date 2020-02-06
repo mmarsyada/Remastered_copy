@@ -59,7 +59,7 @@ ForceLightningSingle2Command = {
 		STUN_EFFECT,
 		{},
 		{},
-		{ "jedi_state_defense" },
+		{ "jedi_state_defense", "stun_defense" },
 		75,
 		0,
 		10
