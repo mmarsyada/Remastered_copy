@@ -1788,10 +1788,16 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 					xpAmount *= gcwBonus;
 
 				//Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
-				if (xpType != "jedi_general")
+				if (xpType != "jedi_general") {
 					combatXp += xpAmount;
-				else
-					xpAmount *= 0.25f;
+				} else {
+					ManagedReference<PlayerObject*> ghost = attacker->getPlayerObject();
+					int jedipointcount = ghost->getSpentJediSkillPoints();
+					if (jedipointcount >= 245)
+						xpAmount *= 2.f;
+					else
+						xpAmount *= 0.25f;
+				}
 
 				//Award individual expType
 				awardExperience(attacker, xpType, xpAmount);
