@@ -710,8 +710,8 @@ includeFile("military/rebel/talus_rebel_installation.lua")
 includeFile("military/rebel/dantooine_abandoned_rebel_base.lua")
 
 --Custom Dungeon
---includeFile("caves/yavin4_temple_exar_kun.lua")
---includeFile("caves/lok_kimogila_cave.lua")
+includeFile("caves/yavin4_temple_exar_kun.lua")
+includeFile("caves/lok_kimogila_cave.lua")
 
 --Custom Event
 includeFile("events/rem_custom/rem_world_boss.lua")
