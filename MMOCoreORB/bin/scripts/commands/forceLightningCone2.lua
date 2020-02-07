@@ -59,7 +59,7 @@ ForceLightningCone2Command = {
 		StateEffect(
 			DIZZY_EFFECT,
 			{},
-			{},
+			{ "dizzy_defense" },
 			{ "jedi_state_defense" },
 			30,
 			0,
