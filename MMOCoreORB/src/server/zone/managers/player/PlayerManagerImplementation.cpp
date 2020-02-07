@@ -1802,12 +1802,14 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 				//Award individual expType
 				awardExperience(attacker, xpType, xpAmount);
 
+				//Award Combat XP for Jedi, so Jedi can train Spec-Ops Skills
+
 				if (xpType == "jedi_general") {
 					awardExperience(attacker, "combat_general", xpAmount *= 0.1f, true, 0.1f);
 				}
 			}
 
-			combatXp = awardExperience(attacker, "combat_general", combatXp, true, 0.1f);
+			combatXp = awardExperience(attacker, "combat_general", combatXp, true, 1.0f);
 
 			//Check if the group leader is a squad leader
 			if (!group)
