@@ -22,6 +22,10 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
+		if (creature->isPlayerCreature() && (creature->hasSkill("force_discipline_enhancements_novice") || creature->hasSkill("force_discipline_powers_novice") || creature->hasSkill("force_discipline_light_saber_novice") || creature->hasSkill("force_discipline_healing_novice") || creature->hasSkill("force_discipline_defender_novice"))) {
+			creature->sendSystemMessage("A Jedi is above the usage of such mundane skills");
+			return GENERALERROR;
+		}
 
 		Reference<TangibleObject*> targetObject = server->getZoneServer()->getObject(target).castTo<TangibleObject*>();
 
