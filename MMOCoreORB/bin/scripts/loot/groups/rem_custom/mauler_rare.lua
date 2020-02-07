@@ -3,12 +3,8 @@ mauler_rare = {
 	minimumLevel = 0,
 	maximumLevel = 0,	
 	lootItems = {
-		{itemTemplate = "pistol_dh18a_schematic", weight = 1666665},
-		{itemTemplate = "carbine_proton_schematic", weight = 1666667},
-		{itemTemplate = "rifle_proton_schematic", weight = 1666667},
-		{itemTemplate = "barrel_pistol_dh18a", weight = 1666667},
-		{itemTemplate = "coil_carbine_proton", weight = 1666667},
-		{itemTemplate = "coil_rifle_proton", weight = 1666667},
+		{itemTemplate = "pistol_dh18a_schematic", weight = 5000000},
+		{itemTemplate = "barrel_pistol_dh18a", weight = 5000000}
 	}
 }
 
