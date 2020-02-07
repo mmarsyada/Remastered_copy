@@ -1592,7 +1592,7 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 		int xpLoss = (int)(jediXpCap * -0.10);
 		int curExp = ghost->getExperience("jedi_general");
 
-		int negXpCap = -10000000; // Cap on negative jedi experience
+		int negXpCap = -2000000; // Cap on negative jedi experience
 
 		if ((curExp + xpLoss) < negXpCap)
 			xpLoss = negXpCap - curExp;
@@ -1788,10 +1788,16 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 					xpAmount *= gcwBonus;
 
 				//Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
-				if (xpType != "jedi_general")
+				if (xpType != "jedi_general") {
 					combatXp += xpAmount;
-				else
-					xpAmount *= 0.25f;
+				} else {
+					ManagedReference<PlayerObject*> ghost = attacker->getPlayerObject();
+					int jedipointcount = ghost->getSpentJediSkillPoints();
+					if (jedipointcount >= 245)
+						xpAmount *= 2.f;
+					else
+						xpAmount *= 0.25f;
+				}
 
 				//Award individual expType
 				awardExperience(attacker, xpType, xpAmount);
