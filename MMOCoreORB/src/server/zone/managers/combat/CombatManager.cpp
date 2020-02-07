@@ -824,15 +824,11 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 
 	debug() << "Base target defense is " << targetDefense;
 
-	// defense hardcap
-	if (targetDefense > 125)
-		targetDefense = 125;
+	if (targetDefense > 135)
+		targetDefense = 135; //Strong hold bonus
 
 	if (attacker->isPlayerCreature())
 		targetDefense += defender->getSkillMod("private_defense");
-
-	if (targetDefense > 135)
-		targetDefense = 135; //Strong hold bonus
 
 	// SL bonuses go on top of hardcap
 	for (int i = 0; i < defenseAccMods->size(); ++i) {
@@ -1024,8 +1020,6 @@ int CombatManager::getSpeedModifier(CreatureObject* attacker, WeaponObject* weap
 	return speedMods;
 }
 
-
-
 int CombatManager::getArmorObjectReduction(ArmorObject* armor, int damageType) const {
 	float resist = 0;
 
@@ -1058,8 +1052,6 @@ int CombatManager::getArmorObjectReduction(ArmorObject* armor, int damageType) c
 		break;
 	case SharedWeaponObjectTemplate::LIGHTSABER:
 		resist = armor->getLightSaber();
-		if (resist > 20)
-			resist = 20;
 		break;
 	}
 
@@ -1248,10 +1240,9 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 	if (psg != nullptr && !psg->isVulnerable(damageType)) {
 		float armorReduction =  getArmorObjectReduction(psg, damageType);
-		float dmgAbsorbed = damage;
-
 		damage *= getArmorPiercing(psg, armorPiercing);
 
+		float dmgAbsorbed = damage;
         if (armorReduction > 0) damage *= 1.f - (armorReduction / 100.f);
 
 		dmgAbsorbed -= damage;
@@ -1260,7 +1251,12 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 		Locker plocker(psg);
 
-		psg->inflictDamage(psg, 0, damage * 0.2, true, true);
+		float psgPvpMod = 1;
+		if (attacker->isPlayerCreature())
+			psgPvpMod *= 3;
+
+		psg->inflictDamage(psg, 0, damage * 0.01 * psgPvpMod, true, true);
+
 
 	}
 
@@ -1372,7 +1368,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	}
 
 	if (lairObserver && data.isForceAttack())
-		damage *= 3; //Damage boost for powers
+		damage *= 5; //Damage boost for powers
 
 	if (lairObserver && lairObserver->getSpawnNumber() > 2)
 		damage *= 3.5;
