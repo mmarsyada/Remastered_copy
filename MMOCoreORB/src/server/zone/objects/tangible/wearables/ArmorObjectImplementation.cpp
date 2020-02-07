@@ -72,10 +72,6 @@ void ArmorObjectImplementation::notifyLoadFromDatabase() {
 		stun = 0;
 	else if (stun > 40)
 		     stun = 40;
-
-	if (lightSaber > 20)
-		lightSaber = 20;
-
 }
 
 void ArmorObjectImplementation::fillAttributeList(AttributeListMessage* alm, CreatureObject* object) {
