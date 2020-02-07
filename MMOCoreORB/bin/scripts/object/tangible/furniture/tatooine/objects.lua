@@ -1273,3 +1273,11 @@ object_tangible_furniture_tatooine_shared_uber_altar = SharedTangibleObjectTempl
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_tatooine_shared_uber_altar, "object/tangible/furniture/tatooine/shared_uber_altar.iff")
+
+
+--Uber Large Fruit Stand
+
+object_tangible_furniture_tatooine_shared_uber_large_fruit_stand = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/tatooine/shared_uber_large_fruit_stand.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_furniture_tatooine_shared_uber_large_fruit_stand, "object/tangible/furniture/tatooine/shared_uber_large_fruit_stand.iff")

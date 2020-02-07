@@ -81,3 +81,6 @@ includeFile("tangible/furniture/tatooine/uber_must_generator.lua")
 includeFile("tangible/furniture/tatooine/uber_must_mining_console_s01.lua")
 includeFile("tangible/furniture/tatooine/uber_must_mining_console_s02.lua")
 includeFile("tangible/furniture/tatooine/uber_altar.lua")
+includeFile("tangible/furniture/tatooine/uber_large_fruit_stand.lua");
+
+
