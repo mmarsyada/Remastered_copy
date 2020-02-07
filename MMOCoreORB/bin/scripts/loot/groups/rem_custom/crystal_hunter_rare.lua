@@ -3,12 +3,12 @@ crystal_hunter_rare = {
 	minimumLevel = 0,
 	maximumLevel = 0,	
 	lootItems = {
-		{itemTemplate = "nge_jedi_house_scheme", weight = 1666667},	
-		{itemTemplate = "nge_sith_house_scheme", weight = 1666667},	
-		{itemTemplate = "sith_speeder_schematic", weight = 1666665},
-		{itemTemplate = "naktra_rifle_schematic", weight = 1666667},
-		{itemTemplate = "naktra_rifle_barrel", weight = 1666667},
-		{itemTemplate = "naktra_knife_schematic", weight = 1666667}
+		{itemTemplate = "nge_jedi_house_scheme", weight = 1000000},	
+		{itemTemplate = "nge_sith_house_scheme", weight = 1000000},	
+		{itemTemplate = "sith_speeder_schematic", weight = 1000000},
+		{itemTemplate = "naktra_rifle_schematic", weight = 1000000},
+		{itemTemplate = "naktra_rifle_barrel", weight = 3000000},
+		{itemTemplate = "naktra_knife_schematic", weight = 3000000}
 	}
 }
 
