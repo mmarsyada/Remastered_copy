@@ -60,7 +60,7 @@ force_crystal_hunter_cave = Creature:new {
 			groups = {
 				{group = "crystal_hunter_rare", chance = 10000000}
 			},
-			lootChance = 1000000
+			lootChance = 750000
 		},
 			
 	},

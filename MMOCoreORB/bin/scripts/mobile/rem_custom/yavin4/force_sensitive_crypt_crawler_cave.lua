@@ -61,7 +61,7 @@ force_sensitive_crypt_crawler_cave = Creature:new {
 			groups = {
 				{group = "crystal_hunter_rare", chance = 10000000}
 			},
-			lootChance = 1000000
+			lootChance = 750000
 		},
 			
 	},
