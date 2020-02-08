@@ -60,7 +60,7 @@ untrained_wielder_of_the_dark_side_cave = Creature:new {
 			groups = {
 				{group = "crystal_hunter_rare", chance = 10000000}
 			},
-			lootChance = 500001000000
+			lootChance = 750000
 		},
 			
 	},
