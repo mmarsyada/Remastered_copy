@@ -4,8 +4,8 @@ barrel_pistol_dd6 = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/loot/dungeon/rem_custom/barrel_pistol_dd6.iff",
 	craftingValues = {
-		{"mindamage",75,175,0},
-		{"maxdamage",75,225,0},
+		{"mindamage",5,35,0},
+		{"maxdamage",5,35,0},
 		{"attackspeed",-0.2,-1.2,1},
 		{"woundchance",25,50,0},
 		{"hitpoints",50,150,0},
