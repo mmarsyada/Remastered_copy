@@ -4,8 +4,8 @@ naktra_rifle_barrel = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/loot/dungeon/rem_custom/rifle_naktra_barrel.iff",
 	craftingValues = {
-		{"mindamage",25,105,0},
-		{"maxdamage",25,175,0},
+		{"mindamage",5,55,0},
+		{"maxdamage",5,55,0},
 		{"attackspeed",-0.1,-0.5,1},
 		{"woundchance",22,75,0},
 		{"hitpoints",50,150,0},

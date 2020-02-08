@@ -4,8 +4,8 @@ xris_blade = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/loot/dungeon/rem_custom/xris_blade.iff",
 	craftingValues = {
-		{"mindamage", 15,85,0},
-		{"maxdamage", 15,105,0},
+		{"mindamage", 5,35,0},
+		{"maxdamage", 5,35,0},
 		{"attackspeed",-0.1,-0.3,1},
 		{"woundchance",3,15,1},
 		{"hitpoints",20,100,0},

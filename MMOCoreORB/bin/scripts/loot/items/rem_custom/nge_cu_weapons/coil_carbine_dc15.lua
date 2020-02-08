@@ -4,8 +4,8 @@ coil_carbine_dc15 = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/loot/dungeon/rem_custom/coil_carbine_dc15.iff",
 	craftingValues = {
-		{"mindamage",45,125,0},
-		{"maxdamage",75,225,0},
+		{"mindamage",5,35,0},
+		{"maxdamage",5,35,0},
 		{"attackspeed",-0.1,-0.3,1},
 		{"woundchance",22,55,0},
 		{"hitpoints",50,150,0},

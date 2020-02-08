@@ -4,8 +4,8 @@ massassi_carbine_barrel = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/loot/dungeon/rem_custom/carbine_massassi_barrel.iff",
 	craftingValues = {
-		{"mindamage",15,105,0},
-		{"maxdamage",15,155,0},
+		{"mindamage",5,35,0},
+		{"maxdamage",5,35,0},
 		{"attackspeed",-0.1,-0.5,1},
 		{"woundchance",22,75,0},
 		{"hitpoints",50,150,0},
