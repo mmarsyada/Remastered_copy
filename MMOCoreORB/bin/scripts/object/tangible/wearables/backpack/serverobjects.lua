@@ -68,6 +68,10 @@ includeFile("tangible/wearables/backpack/nym_themepark_backpack.lua")
 includeFile("tangible/wearables/backpack/wearable_backpack_armored.lua")
 includeFile("tangible/wearables/backpack/wearable_backpack_recon.lua")
 includeFile("tangible/wearables/backpack/back_gmf_wings.lua")
+includeFile("tangible/wearables/backpack/back_love_day_10_blue_wings.lua")
+includeFile("tangible/wearables/backpack/back_love_day_10_golden_wings.lua")
+includeFile("tangible/wearables/backpack/back_love_day_10_pink_wings.lua")
+includeFile("tangible/wearables/backpack/back_love_day_11_hue_wings.lua")
 
 --Rem Custom
 includeFile("tangible/wearables/backpack/backpack_s01_elite.lua")

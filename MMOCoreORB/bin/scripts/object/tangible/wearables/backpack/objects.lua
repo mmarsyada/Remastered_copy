@@ -657,3 +657,25 @@ object_tangible_wearables_backpack_shared_backpack_tauntaun_skull = SharedTangib
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_backpack_tauntaun_skull, "object/tangible/wearables/backpack/shared_backpack_tauntaun_skull.iff")
+
+--Love Day wings
+object_tangible_wearables_backpack_shared_back_love_day_10_blue_wings = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/backpack/shared_back_love_day_10_blue_wings.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_back_love_day_10_blue_wings, "object/tangible/wearables/backpack/shared_back_love_day_10_blue_wings.iff")
+
+object_tangible_wearables_backpack_shared_back_love_day_10_golden_wings = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/backpack/shared_back_love_day_10_golden_wings.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_back_love_day_10_golden_wings, "object/tangible/wearables/backpack/shared_back_love_day_10_golden_wings.iff")
+
+object_tangible_wearables_backpack_shared_back_love_day_10_pink_wings = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/backpack/shared_back_love_day_10_pink_wings.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_back_love_day_10_pink_wings, "object/tangible/wearables/backpack/shared_back_love_day_10_pink_wings.iff")
+
+object_tangible_wearables_backpack_shared_back_love_day_11_hue_wings = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/backpack/shared_back_love_day_11_hue_wings.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_back_love_day_11_hue_wings, "object/tangible/wearables/backpack/shared_back_love_day_11_hue_wings.iff")
+-- end love day wings
