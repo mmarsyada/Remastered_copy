@@ -62,6 +62,8 @@ int ForceHealQueueCommand::runCommand(CreatureObject* creature, CreatureObject* 
 	} else if (playerObject->getJediState() == 8) {
 		forceHeal = creature->getSkillMod("force_healing_dark");
 	}
+	forceHeal = playerObject->numSpecificSkills(creature, "force_discipline_healing_");
+	forceHeal *= 2.5;
 
 	// Attribute Wound Healing
 	for (int i = 0; i < 3; i++) {
