@@ -889,7 +889,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0){
 		int numSkills = ghost->numSpecificSkills(defender, "force_discipline_defender_");
 		if (numSkills == 18)
-			damage *= 1.f - (jediToughness / 250.f);
+			damage *= 1.f - (jediToughness / 500.f);
 	}
 
 
