@@ -42,12 +42,12 @@ public:
 		player->playEffect("clienteffect/pl_force_armor_hit.cef", "");
 		int numSkills = ghost->numSpecificSkills(player, "force_discipline_enhancements_");
 		int fCost = param;
-		printf("Cost before FRS:%i\n", fCost);
+		//printf("Cost before FRS:%i\n", fCost);
 
 		fCost = param * getFrsModifiedExtraForceCost(player, 0.3);
-		printf("Cost after FRS:%i\n", fCost);
+		//printf("Cost after FRS:%i\n", fCost);
 		fCost *= 1.f - (numSkills * .054);
-		printf("Cost after enhancer:%i\n", fCost);
+		//printf("Cost after enhancer:%i\n", fCost);
 		if (fCost < 1)
 			fCost = 1;
 
