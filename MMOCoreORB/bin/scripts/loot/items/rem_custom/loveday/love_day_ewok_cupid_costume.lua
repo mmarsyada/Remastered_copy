@@ -1,7 +1,7 @@
 love_day_ewok_cupid_costume = {
 	minimumLevel = 0,
 	maximumLevel = -1,
-	customObjectName = "",
+	customObjectName = "An Ewok Cupid Costume",
 	directObjectTemplate = "object/tangible/holiday/love_day/love_day_ewok_cupid_costume.iff",
 	craftingValues = {},
 	customizationStringNames = {},
