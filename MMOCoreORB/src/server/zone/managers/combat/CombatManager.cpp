@@ -867,6 +867,8 @@ int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender)
 
 float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int attackType, int damType, float damage) const {
 	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
+	ManagedReference<PlayerObject*> ghost = defender->getPlayerObject();
+
 
 	const auto defenseToughMods = weapon->getDefenderToughnessModifiers();
 
@@ -881,10 +883,14 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if ( attackType == SharedWeaponObjectTemplate::RANGEDATTACK && defender->isInCover()){
 		damage *= 1.f - ( 25.f / 100.f);
 	}
-
 	int jediToughness = defender->getSkillMod("jedi_toughness");
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
+	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0){
+		int numSkills = ghost->numSpecificSkills(defender, "force_discipline_defender_");
+		if (numSkills == 18)
+			damage *= 1.f - (jediToughness / 500.f);
+	}
 
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){

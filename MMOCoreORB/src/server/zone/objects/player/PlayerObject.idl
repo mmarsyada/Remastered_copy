@@ -1918,6 +1918,9 @@ class PlayerObject extends IntangibleObject {
 	@dirty
 	public native int getSpentJediSkillPoints();
 
+	@dirty
+	public native int numSpecificSkills(CreatureObject creature, final string reqSkillName);
+
 	@read
 	public native boolean hasSchematic(DraftSchematic schematic) {
 		return schematicList.contains(schematic);

@@ -157,8 +157,6 @@ uint32 DamageOverTimeList::addDot(CreatureObject* victim,
 		objectID = Long::hashCode(CreatureState::DISEASED);
 	} else if (dotType == CommandEffect::FORCECHOKE) {
 		objectID = 0;
-	}  else if (dotType == CreatureState::ONFIRE) {
-		objectID = Long::hashCode(CreatureState::ONFIRE);
 	}
 
 	DamageOverTime newDot(attacker, dotType, pool, strength, duration, secondaryStrength);

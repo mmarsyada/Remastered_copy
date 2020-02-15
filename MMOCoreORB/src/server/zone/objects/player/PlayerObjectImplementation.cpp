@@ -2684,6 +2684,20 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 	return jediSkillPoints;
 }
 
+int PlayerObjectImplementation::numSpecificSkills(CreatureObject* creature, const String& reqSkillName) {
+	const SkillList* skillList =  creature->getSkillList();
+	int numSkills = 0;
+//	printf("Looking for skill:%s\n", reqSkillName.toCharArray());
+	for(int i = 0; i < skillList->size(); ++i) {
+		const Skill* skill = skillList->get(i);
+		String current_skill = skill->getSkillName();
+//		printf("Current skill:%s\n", current_skill.toCharArray());
+		if (skill->getSkillName().indexOf(reqSkillName) != -1)
+			numSkills++;
+	}
+	return numSkills;
+}
+
 bool PlayerObjectImplementation::canActivateQuest(int questID) {
 	ManagedReference<CreatureObject*> creature = dynamic_cast<CreatureObject*>(parent.get().get());
 
