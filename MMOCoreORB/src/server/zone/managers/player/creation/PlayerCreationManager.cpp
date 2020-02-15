@@ -28,6 +28,7 @@
 #include "templates/customization/CustomizationIdManager.h"
 #include "server/zone/managers/skill/imagedesign/ImageDesignManager.h"
 #include "server/zone/managers/jedi/JediManager.h"
+#include <string>
 
 PlayerCreationManager::PlayerCreationManager() :
 		Logger("PlayerCreationManager") {
@@ -329,9 +330,20 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 	TemplateManager* templateManager = TemplateManager::instance();
 
 	auto client = callback->getClient();
+	int accountid = client->getAccountID();
+	StringBuffer query;
+	query << "select hasjedi from accounts where account_id = " << accountid;
+	UniqueReference<ResultSet*> res(ServerDatabase::instance()->executeQuery(query));
+	uint32 hasjedi = 0;
+	if (res != nullptr && res->next())
+		hasjedi = res->getUnsignedInt(0);
+	int maxchars = 4;
+	if (hasjedi == 1)
+		maxchars = 5;
+	std::string createerror = std::string("You are limited to ") + std::to_string(maxchars) + " characters per galaxy.";
 
-	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 4) {
-		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 4 characters per galaxy.", 0x0);
+	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= maxchars) {
+		ErrorMessage* errMsg = new ErrorMessage("Create Error", createerror, 0x0);
 		client->sendMessage(errMsg);
 
 		return false;

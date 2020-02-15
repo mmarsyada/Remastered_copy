@@ -648,3 +648,7 @@ includeFile("groups/rem_custom/components/acklay_bone_elite.lua")
 includeFile("groups/rem_custom/components/elite_npc_drops.lua")
 includeFile("groups/rem_custom/components/mk3Engine.lua")
 includeFile("groups/rem_custom/components/janta_cave_components.lua")
+
+--Love Day
+includeFile("groups/rem_custom/love_day.lua")
+

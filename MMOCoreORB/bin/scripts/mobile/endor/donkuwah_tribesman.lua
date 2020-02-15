@@ -38,6 +38,12 @@ donkuwah_tribesman = Creature:new {
 				{group = "donkuwah_loot", chance = 2000000}
 			},
 			lootChance = 1260000
+		},
+		{
+			groups = {
+				{group = "love_day", chance = 10000000}
+			},
+			lootChance = 1500000
 		}
 	},
 	weapons = {"donkuwah_weapons"},
