@@ -107,7 +107,17 @@ object_tangible_wearables_armor_ubese_armor_ubese_shirt = object_tangible_wearab
 	heat = 15,
 	cold = 15,
 	acid = 15,
-        lightSaber = 0,
+	lightSaber = 0,
+	numberExperimentalProperties = {1, 1, 1, 1},
+	experimentalProperties = {"XX", "XX", "XX", "XX"},
+	experimentalWeights = {1, 1, 1, 1},
+ 	experimentalGroupTitles = {"null", "null", "null", "null"},
+	experimentalSubGroupTitles = {"null", "null", "sockets", "hitpoints"},
+	experimentalMin = {0, 0, 0, 1000},
+	experimentalMax = {0, 0, 0, 1000},
+	experimentalPrecision = {0, 0, 0, 0},
+	experimentalCombineType = {0, 0, 4, 4},
+
 
 }
 
