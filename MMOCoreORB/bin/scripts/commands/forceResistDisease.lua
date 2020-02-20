@@ -44,7 +44,7 @@
 ForceResistDiseaseCommand = {
 	name = "forceresistdisease",
 	forceCost = 250,
-	duration = 1800,
+	duration = 3600,
 	--animationCRC = hashCode()
 	clientEffect = "clienteffect/pl_force_resist_disease_self.cef",
 	frsLightBuffModifier = 0.35,
