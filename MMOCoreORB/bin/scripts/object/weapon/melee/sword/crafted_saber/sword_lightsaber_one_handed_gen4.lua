@@ -97,7 +97,7 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gen4 = objec
 	damageModifiers = { },
 
 
-		-- The values below are the default values.  To be used for blue frog objects primarily
+	-- The values below are the default values.  To be used for blue frog objects primarily
 	healthAttackCost = 60,
 	actionAttackCost = 95,
 	mindAttackCost = 45,
@@ -120,7 +120,7 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gen4 = objec
 	woundsRatio = 37,
 
 	defenderToughnessModifiers = { "lightsaber_toughness" },
-
+	
 	noTrade = 1,
 	
 	childObjects = {
@@ -137,8 +137,5 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gen4 = objec
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 1, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
 }
-
-ObjectTemplates:addTemplate(object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_gen4, "object/weapon/melee/polearm/crafted_saber/sword_lightsaber_polearm_gen4.iff")
-
 
 ObjectTemplates:addTemplate(object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gen4, "object/weapon/melee/sword/crafted_saber/sword_lightsaber_one_handed_gen4.iff")

@@ -590,6 +590,7 @@ includeFile("groups/rem_custom/schematics/backpack_schems.lua")
 includeFile("groups/rem_custom/schematics/bunker_schems.lua")
 includeFile("groups/rem_custom/schematics/tatt_bunker_schems.lua")
 includeFile("groups/rem_custom/schematics/vehicle_schems.lua")
+includeFile("groups/rem_custom/schematics/elite_weapon_schems.lua")
 
 -- named crystals
 includeFile("groups/rem_custom/crystals/named_crystals.lua")

@@ -47,7 +47,7 @@ chissSpecialist = Creature:new {
 				{group = "mk3Engine", chance = 1000000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "clothing_attachments", chance = 1000000},
-				{group = "death_watch_bunker_rareschems", chance = 500000}
+				{group = "elite_weapon_schems", chance = 500000}
 			},
 			lootChance = 7500000
 		},

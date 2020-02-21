@@ -148,6 +148,21 @@ includeFile("tangible/loot/loot_schematic/throwpillow_schematic.lua")
 includeFile("tangible/loot/loot_schematic/tumble_blender_schematic.lua")
 includeFile("tangible/loot/loot_schematic/utensils_schematic.lua")
 
+--Elite Weapons
+includeFile("tangible/loot/loot_schematic/elite_weapons/carbine_dc15_elite_schematic.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/carb_geo_elite_schematic.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/massassi_carbine_elite_schematic.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/1h_sword_eventide_elite_schematic.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/carb_proton_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/nyen_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/pest_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/xris_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/pistol_dd6_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/pistol_intim_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/pistol_ion_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/rifle_dc15_elite.lua")
+includeFile("tangible/loot/loot_schematic/elite_weapons/rifle_proton_elite.lua")
+
 --NGE Houses
 includeFile("tangible/loot/loot_schematic/atat_house_loot_schem.lua")
 includeFile("tangible/loot/loot_schematic/bespin_house_loot_schem.lua")

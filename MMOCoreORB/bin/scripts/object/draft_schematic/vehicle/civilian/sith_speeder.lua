@@ -20,12 +20,12 @@ object_draft_schematic_vehicle_civilian_sith_speeder = object_draft_schematic_ve
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n"},
-	ingredientTitleNames = {"vehicle_body", "stabilizor_subframe", "avionic_subassembly", "repulsor_assembly", "cockpit_fitout", "structural_frame"},
-	ingredientSlotType = {0, 0, 0, 0, 0, 0},
-	resourceTypes = {"metal_nonferrous", "petrochem_inert_polymer", "copper", "mineral", "fiberplast", "metal_ferrous"},
-	resourceQuantities = {1600, 400, 600, 800, 200, 6400},
-	contribution = {100, 100, 100, 100, 100, 100},
+	ingredientTemplateNames = {"craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n"},
+	ingredientTitleNames = {"vehicle_body", "stabilizor_subframe", "avionic_subassembly", "repulsor_assembly", "cockpit_fitout", "structural_frame", "power_plant_mk3"},
+	ingredientSlotType = {0, 0, 0, 0, 0, 0, 1},
+	resourceTypes = {"metal_nonferrous", "petrochem_inert_polymer", "copper", "mineral", "fiberplast", "metal_ferrous", "object/tangible/component/vehicle/shared_veh_power_plant_mk3.iff"},
+	resourceQuantities = {1600, 400, 600, 800, 200, 6400, 1},
+	contribution = {100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/vehicle_deed/vehicle_deed_sith_speeder.iff",
 

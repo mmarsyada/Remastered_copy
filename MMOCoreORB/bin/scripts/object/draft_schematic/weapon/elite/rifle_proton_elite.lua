@@ -62,11 +62,11 @@ object_draft_schematic_weapon_rifle_proton_elite = object_draft_schematic_weapon
    customizationDefaults = {},
 
    ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "enhanced_cooling_mechanism", "powerhandler", "thermal_control_unit", "barrel", "stock", "coil_rifle_proton"},
-   ingredientSlotType = {0, 0, 0, 0, 1, 0, 1, 3, 1},
-   resourceTypes = {"steel_ditanium", "iron_polonium", "metal", "crystalline_gallinorian", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "ore_carbonate_alantium", "object/tangible/component/weapon/shared_blaster_rifle_barrel.iff", "object/tangible/component/weapon/shared_stock.iff", "object/tangible/component/weapon/shared_coil_rifle_proton.iff"},
-   resourceQuantities = {150, 85, 20, 15, 10, 30, 1, 1, 1},
-   contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
+   ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "enhanced_cooling_mechanism", "powerhandler", "thermal_control_unit", "barrel", "stock", "coil_rifle_proton", "powerhandler"},
+   ingredientSlotType = {0, 0, 0, 0, 1, 0, 1, 3, 1, 1},
+   resourceTypes = {"steel_ditanium", "iron_polonium", "metal", "crystalline_gallinorian", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "ore_carbonate_alantium", "object/tangible/component/weapon/shared_blaster_rifle_barrel.iff", "object/tangible/component/weapon/shared_stock.iff", "object/tangible/component/weapon/shared_coil_rifle_proton.iff", "object/tangible/component/weapon/shared_blaster_power_handler.iff"},
+   resourceQuantities = {150, 85, 20, 15, 10, 30, 1, 1, 1, 5},
+   contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100, 50},
 
 
    targetTemplate = "object/weapon/ranged/rifle/rifle_proton.iff",

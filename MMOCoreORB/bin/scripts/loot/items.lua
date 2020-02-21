@@ -1536,6 +1536,7 @@ includeFile("items/loot_schematic/stuffed_fish_schematic.lua")
 --NGE/CU Vehicles
 includeFile("items/rem_custom/nge_cu_vehicles/a1_deluxe_floater_schematic.lua")
 includeFile("items/rem_custom/nge_cu_vehicles/air2_swoop_speeder_schematic.lua")
+includeFile("items/rem_custom/nge_cu_vehicles/wardroid_schem.lua")
 includeFile("items/rem_custom/nge_cu_vehicles/flare_s_swoop_schematic.lua")
 includeFile("items/rem_custom/nge_cu_vehicles/geonosian_speeder_schematic.lua")
 includeFile("items/rem_custom/nge_cu_vehicles/hoverlifter_speeder_schematic.lua")
@@ -1921,6 +1922,22 @@ includeFile("items/rem_custom/pirate_bunker/bantha_ivory_rare.lua")
 includeFile("items/rem_custom/pirate_bunker/bantha_ivory_projectile.lua")
 includeFile("items/rem_custom/pirate_bunker/bantha_ivory_projectile_rare.lua")
 includeFile("items/rem_custom/pirate_bunker/backpack_s09_schematic.lua")
+
+--Elite Weapon Schems
+
+includeFile("items/rem_custom/elite_weapon_schems/carb_dc15_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/carb_geo_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/carb_kun_mass_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/carb_proton_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/junti_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/nyen_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/pest_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/pistol_dd6_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/pistol_intim_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/pistol_ion_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/rifle_dc15_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/rifle_proton_elite.lua")
+includeFile("items/rem_custom/elite_weapon_schems/xris_elite.lua")
 
 --Kimo Cave
 includeFile("items/rem_custom/kimo_cave/kimo_claw.lua")
@@ -2545,11 +2562,6 @@ includeFile("items/rem_custom/backpack_schems/recon_backpack.lua")
 includeFile("items/rem_custom/backpack_schems/sandtrooper_backpack.lua")
 includeFile("items/rem_custom/backpack_schems/snowtrooper_backpack.lua")
 
---Vehicles
-includeFile("items/rem_custom/vehicle_schems/wardroid_schem.lua")
-includeFile("items/rem_custom/vehicle_schems/koro2_schem.lua")
-includeFile("items/rem_custom/vehicle_schems/sith_schem.lua")
-
 -- Elite Creature Subs
 includeFile("items/creature/krayt_dragon_tissue_elite.lua")
 includeFile("items/geonosian_lab/acklay_bones_elite.lua")
@@ -2714,6 +2726,10 @@ includeFile("items/rem_custom/paintings/mustPaint.lua")
 --pets
 includeFile("items/rem_custom/pets/be_mutranc_schematic.lua")
 includeFile("items/rem_custom/pets/be_varactyl_schematic.lua")
+includeFile("items/rem_custom/pets/be_peko_peko_mount_schematic.lua")
+includeFile("items/rem_custom/pets/be_mutated_narglatch_schematic.lua")
+includeFile("items/rem_custom/pets/be_skeletal_tauntaun_schematic.lua")
+includeFile("items/rem_custom/pets/be_nexu_schematic.lua")
 
 -- named crystals
 includeFile("items/rem_custom/named_crystals/force_crystal_mauls_vengence.lua")

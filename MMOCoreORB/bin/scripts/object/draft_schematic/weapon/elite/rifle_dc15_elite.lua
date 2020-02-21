@@ -21,12 +21,12 @@ object_draft_schematic_weapon_rifle_dc15_elite = object_draft_schematic_weapon_s
    customizationDefaults = {},
 
    ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_item_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "barrel", "coil_rifle_dc15", "scope", "stock"},
+   ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "coil_rifle_dc15", "scope", "stock", "powerhandler"},
    ingredientSlotType = {0, 0, 0, 1, 1, 1, 3, 3},
-   resourceTypes = {"iron_kammris", "aluminum_linksteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/component/weapon/shared_blaster_rifle_barrel.iff", "object/tangible/component/weapon/shared_coil_rifle_dc15.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {130, 70, 28, 10, 1, 1, 1, 1},
-   contribution = {100, 100, 100, 100, 100, 100, 100, 100},
-   ingredientAppearance = {"", "", "", "", "", "coil", "scope", "stock"},
+   resourceTypes = {"iron_kammris", "aluminum_linksteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/component/weapon/shared_blaster_rifle_barrel.iff", "object/tangible/component/weapon/shared_coil_rifle_dc15.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff", "object/tangible/component/weapon/shared_blaster_power_handler.iff"},
+   resourceQuantities = {130, 70, 28, 10, 1, 1, 1, 5},
+   contribution = {100, 100, 100, 100, 100, 100, 100, 50},
+   ingredientAppearance = {"", "", "", "", "coil", "scope", "stock", ""},
 
    targetTemplate = "object/weapon/ranged/rifle/ep3/rifle_dc15.iff",
 

@@ -2,11 +2,6 @@
 includeFile("../custom_scripts/loot/groups/dathomir_bunker/tfa_paintings.lua")
 includeFile("../custom_scripts/loot/groups/dathomir_bunker/weapon_components.lua")
 
---Janta Cave 
---includeFile("../custom_scripts/loot/groups/schematics/janta_rare.lua")
---includeFile("../custom_scripts/loot/groups/components/janta_kath_hound.lua")
---includeFile("../custom_scripts/loot/groups/schematics/janta_furniture_schems.lua")
-
 --includeFile("../custom_scripts/loot/groups/sm_exotic_houses.lua")
 includeFile("../custom_scripts/loot/groups/components/weapon_components_elite.lua")
 includeFile("../custom_scripts/loot/groups/components/weapon_components_elite_2.lua")
@@ -21,12 +16,11 @@ includeFile("../custom_scripts/loot/groups/schematics/misc_loot_schems1.lua")
 includeFile("../custom_scripts/loot/groups/schematics/misc_loot_schems2.lua")
 includeFile("../custom_scripts/loot/groups/schematics/misc_loot_schems3.lua")
 includeFile("../custom_scripts/loot/groups/schematics/misc_loot_schems4.lua")
-includeFile("../custom_scripts/loot/groups/schematics/be_pet_schems.lua")
+--includeFile("../custom_scripts/loot/groups/schematics/be_pet_schems.lua")
 includeFile("../custom_scripts/loot/groups/schematics/loot_schems.lua")
 includeFile("../custom_scripts/loot/groups/schematics/backpack_schems.lua")
 includeFile("../custom_scripts/loot/groups/schematics/bunker_schems.lua")
 includeFile("../custom_scripts/loot/groups/schematics/tatt_bunker_schems.lua")
-includeFile("../custom_scripts/loot/groups/schematics/vehicle_schems.lua")
 --includeFile("../custom_scripts/loot/groups/schematics/loot_schems.lua")
 
 --Paintings

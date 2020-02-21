@@ -5,8 +5,12 @@ be_pet_schems = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		{itemTemplate = "be_mutranc_schematic", weight = 5000000},
-		{itemTemplate = "be_varactyl_schematic", weight = 5000000},
+		{itemTemplate = "be_mutranc_schematic", weight = 2000000},
+		{itemTemplate = "be_varactyl_schematic", weight = 2000000},
+		{itemTemplate = "be_peko_peko_mount_schematic", weight = 1500000},
+		{itemTemplate = "be_nexu_schematic", weight = 1500000},
+		{itemTemplate = "be_mutated_narglatch_schematic", weight = 1500000},
+		{itemTemplate = "be_skeletal_tauntaun_schematic", weight = 1500000}
 	}
 }
 

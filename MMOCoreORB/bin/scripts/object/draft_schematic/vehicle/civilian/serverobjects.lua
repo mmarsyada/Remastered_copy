@@ -60,12 +60,7 @@ includeFile("draft_schematic/vehicle/civilian/speeder_bike_swoop.lua")
 --Children folder includes
 includeFile("draft_schematic/vehicle/civilian/panning_droid.lua")
 includeFile("draft_schematic/vehicle/civilian/basilisk_war_droid.lua")
-includeFile("draft_schematic/vehicle/civilian/koro2_speeder_schematic.lua")
-includeFile("draft_schematic/vehicle/civilian/sith_speeder_schematic.lua")
 includeFile("draft_schematic/vehicle/civilian/flare_s_swoop_crafted.lua")
-includeFile("draft_schematic/vehicle/civilian/xj6_air_speeder_schematic.lua")
-includeFile("draft_schematic/vehicle/civilian/barc_speeder_rebel_schematic.lua")
-includeFile("draft_schematic/vehicle/civilian/barc_speeder_imperial_schematic.lua")
 
 --NGE/CU Vehicles
 includeFile("draft_schematic/vehicle/civilian/barc_speeder.lua")

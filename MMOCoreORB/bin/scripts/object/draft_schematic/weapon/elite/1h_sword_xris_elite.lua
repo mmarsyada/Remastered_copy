@@ -20,12 +20,12 @@ object_draft_schematic_weapon_1h_sword_xris_elite = object_draft_schematic_weapo
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_item_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"sword_core_jacket", "cutting_edge", "grip", "knife_shaft", "xris_blade", "vibration_generator"},
-   ingredientSlotType = {0, 0, 0, 0, 1, 1},
-   resourceTypes = {"iron", "steel", "metal", "copper", "object/tangible/loot/dungeon/rem_custom/shared_xris_blade.iff",  "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {60, 10, 12, 12, 1, 1},
-   contribution = {100, 100, 100, 100, 100, 100},
+   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_item_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
+   ingredientTitleNames = {"sword_core_jacket", "cutting_edge", "grip", "knife_shaft", "xris_blade", "vibration_generator", "reinforcement_core"},
+   ingredientSlotType = {0, 0, 0, 0, 1, 1, 1},
+   resourceTypes = {"iron", "steel", "metal", "copper", "object/tangible/loot/dungeon/rem_custom/shared_xris_blade.iff",  "object/tangible/component/weapon/shared_vibro_unit.iff", "object/tangible/component/weapon/shared_reinforcement_core.iff"},
+   resourceQuantities = {60, 10, 12, 12, 1, 1, 1},
+   contribution = {100, 100, 100, 100, 100, 100, 100},
 
 
    targetTemplate = "object/weapon/melee/sword/sword_acid.iff",

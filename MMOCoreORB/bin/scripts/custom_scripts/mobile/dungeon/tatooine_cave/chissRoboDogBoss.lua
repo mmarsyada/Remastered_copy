@@ -27,29 +27,31 @@ chissRoboDogBoss = Creature:new {
 	scale = 7,
 
 	templates = {"object/mobile/guardian_mark_ii_crafted.iff"},
-	lootGroups = {
+lootGroups = {
 		{
 			groups = {
 				{group = "tatt_bunker_schems", chance = 5000000},
-				{group = "vehicle_schems", chance = 5000000}
+				{group = "vehicle_schems", chance = 2500000},
+				{group = "elite_weapon_schems", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
-				{group = "rem_named_crystals", chance = 5000000},
-				{group = "named_crystals", chance = 5000000}
+				{group = "tatt_bunker_schems", chance = 5000000},
+				{group = "vehicle_schems", chance = 2500000},
+				{group = "elite_weapon_schems", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
 				{group = "weapon_components_elite", chance = 1500000},
 				{group = "weapon_components_elite_2", chance = 1500000},
 				{group = "named_crystals", chance = 2000000},
-				{group = "weapon_components_elite", chance = 5000000}
+				{group = "elite_weapon_schems", chance = 5000000}
 			},
-			lootChance = 10000000
+			lootChance = 7500000
 		},
 		{
 			groups = {

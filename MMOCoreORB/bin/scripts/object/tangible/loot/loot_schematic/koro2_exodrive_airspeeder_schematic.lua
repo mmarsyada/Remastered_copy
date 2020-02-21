@@ -3,7 +3,7 @@ object_tangible_loot_loot_schematic_koro2_exodrive_airspeeder_schematic = object
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_artisan_master",
-	targetDraftSchematic = "object/draft_schematic/vehicle/civilian/koro2_exodrive_airspeeder.iff",
+	targetDraftSchematic = "object/draft_schematic/vehicle/civilian/koro2_speeder_schematic.iff",
 	targetUseCount = 1,
 }
 

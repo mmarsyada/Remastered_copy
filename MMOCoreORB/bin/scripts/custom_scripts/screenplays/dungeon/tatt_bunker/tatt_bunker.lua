@@ -204,7 +204,7 @@ function TattBunkerScreenPlay:notifyArmorBossDamageReceived(pBoss)
 
             self:playEffect(pBoss, 2)    
    
-            spatialChat(pBoss, "Fools! You should stick to ganking newbs from TLA, SHDWS, or SqTTN! I am not as easy!!")           
+            spatialChat(pBoss, "Fools! You should stick to ganking newbs and old folk! I am not as easy!!")           
             writeData("TattBunkerScreenPlay:armorBossState:" .. miniBossID, 2)
             miniBossState = 2
                         
@@ -322,7 +322,7 @@ function TattBunkerScreenPlay:notifyJediBossDamageReceived(pBoss)
 
         if (miniBossState == 1 and CreatureObject(pBoss):getHAM(i) <= CreatureObject(pBoss):getMaxHAM(i) * 0.95) then
                    
-            spatialChat(pBoss, "Run Away! Your presence, is insulting! You should all be playing on Basilisk!")  
+            spatialChat(pBoss, "Run Away! Your presence, is insulting! You should all be playing on Basilisk! Or Maybe Role Playing On Tarkin!!")  
             CreatureObject(pBoss):playEffect("clienteffect/frs_light_serenity.cef", "")         
             writeData("TattBunkerScreenPlay:jediBossState:" .. miniBossID, 2)
             miniBossState = 2

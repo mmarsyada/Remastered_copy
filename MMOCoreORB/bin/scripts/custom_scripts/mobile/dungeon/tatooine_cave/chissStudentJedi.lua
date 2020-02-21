@@ -36,7 +36,7 @@ chissStudentJedi = Creature:new {
 				{group = "weapon_components_elite", chance = 1500000},
 				{group = "weapon_components_elite_2", chance = 1500000},
 				{group = "named_crystals", chance = 2000000},
-				{group = "weapon_components_elite", chance = 5000000}
+				{group = "elite_weapon_schems", chance = 5000000}
 			},
 			lootChance = 7500000
 		}

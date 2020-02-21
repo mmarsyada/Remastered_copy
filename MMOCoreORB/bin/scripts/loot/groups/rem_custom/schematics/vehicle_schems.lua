@@ -6,8 +6,8 @@ vehicle_schems = {
 	maximumLevel = 0,
 	lootItems = {
 		{itemTemplate = "wardroid_schem", weight = 3500000},
-		{itemTemplate = "koro2_schem", weight = 3500000},
-		{itemTemplate = "sith_schem", weight = 3000000}
+		{itemTemplate = "koro2_exodrive_airspeeder_schematic", weight = 3500000},
+		{itemTemplate = "sith_speeder_schematic", weight = 3000000}
 	}
 }
 

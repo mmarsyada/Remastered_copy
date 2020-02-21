@@ -40,6 +40,84 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
+--Elite DC15 Carbine
+object_tangible_loot_loot_schematic_shared_carbine_dc15_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_dc15_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_dc15_elite_schematic, "object/tangible/loot/loot_schematic/shared_carbine_dc15_elite_schematic.iff")
+
+--Elite Geo Carb
+object_tangible_loot_loot_schematic_shared_carbine_geo_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_geo_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_geo_elite_schematic, "object/tangible/loot/loot_schematic/shared_carbine_geo_elite_schematic.iff")
+
+--Elite Mass Carb
+object_tangible_loot_loot_schematic_shared_massassi_carbine_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_massassi_carbine_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_massassi_carbine_elite_schematic, "object/tangible/loot/loot_schematic/shared_massassi_carbine_elite_schematic.iff")
+
+--Elite Proton Carb
+object_tangible_loot_loot_schematic_shared_carbine_proton_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_proton_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_proton_elite_schematic, "object/tangible/loot/loot_schematic/shared_carbine_proton_elite_schematic.iff")
+
+--Elite Junti Mace
+object_tangible_loot_loot_schematic_shared_1h_sword_eventide_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_1h_sword_eventide_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_1h_sword_eventide_elite_schematic, "object/tangible/loot/loot_schematic/shared_1h_sword_eventide_elite_schematic.iff")
+
+--Elite 1H Nyen
+object_tangible_loot_loot_schematic_shared_1h_sword_nyenthioris_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_1h_sword_nyenthioris_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_1h_sword_nyenthioris_elite_schematic, "object/tangible/loot/loot_schematic/shared_1h_sword_nyenthioris_elite_schematic.iff")
+
+--Elite Pest Lance
+object_tangible_loot_loot_schematic_shared_lance_pestilence_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_lance_pestilence_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_lance_pestilence_elite_schematic, "object/tangible/loot/loot_schematic/shared_lance_pestilence_elite_schematic.iff")
+
+--Elite Xris Sword
+object_tangible_loot_loot_schematic_shared_1h_sword_xris_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_1h_sword_xris_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_1h_sword_xris_elite_schematic, "object/tangible/loot/loot_schematic/shared_1h_sword_xris_elite_schematic.iff")
+
+--Elite DD6 Pistol
+object_tangible_loot_loot_schematic_shared_pistol_dd6_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_pistol_dd6_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_pistol_dd6_elite_schematic, "object/tangible/loot/loot_schematic/shared_pistol_dd6_elite_schematic.iff")
+
+--Elite Intim Pistol
+object_tangible_loot_loot_schematic_shared_pistol_intimidator_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_pistol_intimidator_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_pistol_intimidator_elite_schematic, "object/tangible/loot/loot_schematic/shared_pistol_intimidator_elite_schematic.iff")
+
+--Elite ION Pistol
+object_tangible_loot_loot_schematic_shared_pistol_ion_relic_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_pistol_ion_relic_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_pistol_ion_relic_elite_schematic, "object/tangible/loot/loot_schematic/shared_pistol_ion_relic_elite_schematic.iff")
+
+--Elite DC15 Rifle
+object_tangible_loot_loot_schematic_shared_rifle_dc15_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_rifle_dc15_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_rifle_dc15_elite_schematic, "object/tangible/loot/loot_schematic/shared_rifle_dc15_elite_schematic.iff")
+
+--Elite Proton Rifle
+object_tangible_loot_loot_schematic_shared_rifle_proton_elite_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_rifle_proton_elite_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_rifle_proton_elite_schematic, "object/tangible/loot/loot_schematic/shared_rifle_proton_elite_schematic.iff")
+
 
 object_tangible_loot_loot_schematic_shared_agitator_motor_schematic = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_agitator_motor_schematic.iff"
@@ -8451,3 +8529,4 @@ object_tangible_loot_loot_schematic_shared_ghost_flash_speeder_schematic = Share
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_ghost_flash_speeder_schematic.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_ghost_flash_speeder_schematic, "object/tangible/loot/loot_schematic/shared_ghost_flash_speeder_schematic.iff")
+

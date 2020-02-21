@@ -41,6 +41,7 @@
 --this exception also makes it possible to release a modified version 
 
 --1H 
+includeFile("draft_schematic/weapon/elite/1h_sword_nyenthioris_elite.lua")
 includeFile("draft_schematic/weapon/elite/1h_sword_xris_elite.lua")
 includeFile("draft_schematic/weapon/elite/sword_junti_mace_elite.lua")
 

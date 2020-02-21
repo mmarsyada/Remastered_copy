@@ -20,15 +20,15 @@ object_draft_schematic_weapon_1h_sword_nyenthioris_elite = object_draft_schemati
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_item_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"sword_core_jacket", "cutting_edge", "grip", "nyenthioris_blade", "reinforcement_core"},
-   ingredientSlotType = {0, 0, 0, 1, 1},
-   resourceTypes = {"aluminum_perovskitic", "metal", "copper_platinite", "object/tangible/component/weapon/shared_nyenthioris_blade.iff", "object/tangible/component/weapon/shared_reinforcement_core.iff"},
-   resourceQuantities = {60, 12, 12, 1, 1},
-   contribution = {100, 100, 100, 100, 100},
+   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_item_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
+   ingredientTitleNames = {"sword_core_jacket", "cutting_edge", "grip", "nyenthioris_blade", "reinforcement_core", "vibration_generator"},
+   ingredientSlotType = {0, 0, 0, 1, 1, 1},
+   resourceTypes = {"aluminum_perovskitic", "metal", "copper_platinite", "object/tangible/loot/dungeon/rem_custom/shared_nyenthioris_blade.iff", "object/tangible/component/weapon/shared_reinforcement_core.iff","object/tangible/component/weapon/shared_vibro_unit.iff"},
+   resourceQuantities = {60, 12, 12, 1, 1, 1},
+   contribution = {100, 100, 100, 100, 100, 100},
 
 
-   targetTemplate = "object/weapon/melee/sword/sword_wookiee.iff",
+   targetTemplate = "object/weapon/melee/sword/ep3/sword_wookiee.iff",
 
    additionalTemplates = {
              }

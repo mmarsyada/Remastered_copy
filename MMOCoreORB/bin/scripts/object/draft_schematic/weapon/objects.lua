@@ -40,6 +40,12 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
+--Nyen Sword
+object_draft_schematic_weapon_shared_1h_sword_nyenthioris_elite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_1h_sword_nyenthioris_elite.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_1h_sword_nyenthioris_elite, "object/draft_schematic/weapon/shared_1h_sword_nyenthioris_elite.iff")
+
 --Elite Xris Acid Sword
 object_draft_schematic_weapon_shared_1h_sword_xris_elite = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/weapon/shared_1h_sword_xris_elite.iff"

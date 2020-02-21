@@ -2002,6 +2002,7 @@ schematics = {
 	{path="object/draft_schematic/furniture/rem_custom/floor_schematic_08.iff"},
 
 	--Weapons
+	{path="object/draft_schematic/weapon/1h_sword_nyenthioris_elite.iff"},
 	{path="object/draft_schematic/weapon/1h_sword_xris_elite.iff"},
 	{path="object/draft_schematic/weapon/sword_junti_mace_elite.iff"},
 
