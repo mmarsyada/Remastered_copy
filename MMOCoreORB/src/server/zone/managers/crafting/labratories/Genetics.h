@@ -117,11 +117,9 @@ public:
 	 * Normlaize a vlaue for resist cals
 	 */
 	static float normalize(float a,bool special, bool override) {
-		printf("Resist value is:%f\n", a);
 		if(a < 0)
 			return -100;
 		if (special) {
-			printf("This is a special resist\n");
 			return a;
 		}
 /*		if (override) {
@@ -139,7 +137,6 @@ public:
 		bool any = false;
 		switch(type) {
 			case SharedWeaponObjectTemplate::ACID:
-				printf("Acid resists:\n");
 				any = hasASpecial(a,b,c,d,e,type) || hasVulnerability(a->getAcid(),b->getAcid(),c->getAcid(), d->getAcid(), e->getAcid());
 				av = normalize(a->getAcid(),a->isSpecialResist(type),any);
 				bv = normalize(b->getAcid(),b->isSpecialResist(type),any);
@@ -148,7 +145,6 @@ public:
 				ev = normalize(e->getAcid(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::BLAST:
-				printf("Blast resists:\n");
 				any = hasASpecial(a,b,c,d,e,type) || hasVulnerability(a->getBlast(),b->getBlast(),c->getBlast(), d->getBlast(), e->getBlast());
 				av = normalize(a->getBlast(),a->isSpecialResist(type),any);
 				bv = normalize(b->getBlast(),b->isSpecialResist(type),any);
@@ -157,7 +153,6 @@ public:
 				ev = normalize(e->getBlast(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::COLD:
-				printf("Cold resists:\n");
 				any = hasASpecial(a,b,c,d,e,type)|| hasVulnerability(a->getCold(),b->getCold(),c->getCold(), d->getCold(), e->getCold());
 				av = normalize(a->getCold(),a->isSpecialResist(type),any);
 				bv = normalize(b->getCold(),b->isSpecialResist(type),any);
@@ -166,7 +161,6 @@ public:
 				ev = normalize(e->getCold(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::ELECTRICITY:
-				printf("Elec resists:\n");
 				any = hasASpecial(a,b,c,d,e,type)|| hasVulnerability(a->getElectric(),b->getElectric(),c->getElectric(), d->getElectric(), e->getElectric());
 				av = normalize(a->getElectric(),a->isSpecialResist(type),any);
 				bv = normalize(b->getElectric(),b->isSpecialResist(type),any);
@@ -175,7 +169,6 @@ public:
 				ev = normalize(e->getElectric(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::ENERGY:
-				printf("Energy resists:\n");
 				any = hasASpecial(a,b,c,d,e,type)|| hasVulnerability(a->getEnergy(),b->getEnergy(),c->getEnergy(), d->getEnergy(), e->getEnergy());
 				av = normalize(a->getEnergy(),a->isSpecialResist(type),any);
 				bv = normalize(b->getEnergy(),b->isSpecialResist(type),any);
@@ -184,7 +177,6 @@ public:
 				ev = normalize(e->getEnergy(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::HEAT:
-				printf("Heat resists:\n");
 				any = hasASpecial(a,b,c,d,e,type)|| hasVulnerability(a->getHeat(),b->getHeat(),c->getHeat(), d->getHeat(), e->getHeat());
 				av = normalize(a->getHeat(),a->isSpecialResist(type),any);
 				bv = normalize(b->getHeat(),b->isSpecialResist(type),any);
@@ -193,7 +185,6 @@ public:
 				ev = normalize(e->getHeat(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::KINETIC:
-				printf("Kinetic resists:\n");
 				any = hasASpecial(a,b,c,d,e,type)|| hasVulnerability(a->getKinetic(),b->getKinetic(),c->getKinetic(), d->getKinetic(), e->getKinetic());
 				av = normalize(a->getKinetic(),a->isSpecialResist(type),any);
 				bv = normalize(b->getKinetic(),b->isSpecialResist(type),any);
@@ -210,7 +201,6 @@ public:
 				ev = normalize(e->getSaber(),e->isSpecialResist(type),any);
 				break;
 			case SharedWeaponObjectTemplate::STUN:
-				printf("Stun resists:\n");
 				any = hasASpecial(a,b,c,d,e,type)|| hasVulnerability(a->getStun(),b->getStun(),c->getStun(), d->getStun(), e->getStun());
 				av = normalize(a->getStun(),a->isSpecialResist(type),any);
 				bv = normalize(b->getStun(),b->isSpecialResist(type),any);
