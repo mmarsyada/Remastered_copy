@@ -564,9 +564,38 @@ int CreatureManagerImplementation::notifyDestruction(TangibleObject* destructor,
 
 				if (!destructedObject->getFactionString().isEmpty() && !destructedObject->isEventMob()) {
 					int level = destructedObject->getLevel();
+					
+					if(player->isGrouped()){
+						MissionManager* missionManager = player->getZoneServer()->getMissionManager();
+							if (missionManager != NULL){
+							Vector3 distance = player->getPosition(); //calculating distance to lair based off of destroyers's position
+							ManagedReference<GroupObject*> group = player->getGroup();
+							Vector<ManagedReference<CreatureObject*> > players;
 
-					if(!player->isGrouped())
-						factionManager->awardFactionStanding(player, destructedObject->getFactionString(), level);
+							int playerCount = 1;
+								if (group != nullptr) {
+									playerCount = group->getNumberOfPlayerMembers();
+									for (int i = 0; i < group->getGroupSize(); i++) {
+										Reference<CreatureObject*> groupMember = group->getGroupMember(i);
+										if (groupMember != nullptr && groupMember->isPlayerCreature() ) {
+											if (groupMember->isInRange(destructedObject, 80.0f)) {
+												players.add(groupMember);
+											}
+										}
+									}
+								int groupSize = players.size();
+								if (groupSize < 1)
+										groupSize = 1;
+								int dividedReward = level;
+								if (groupSize > 9)
+									groupSize = 9;
+								dividedReward /= 1 + (groupSize/10);
+								for (int j=0; j < players.size(); j++)
+									factionManager->awardFactionStanding(players.elementAt(j), destructedObject->getFactionString(), level);
+								}
+							}
+					}
+
 					else
 						factionManager->awardFactionStanding(copyThreatMap.getHighestDamagePlayer(), destructedObject->getFactionString(), level);
 				}

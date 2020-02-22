@@ -122,9 +122,10 @@ public:
 		if (special) {
 			return a;
 		}
-		if (override) {
+/*		if (override) {
+			printf("We hit override!\n");
 			return 0;
-		}
+		}*/
 		return a;
 	}
 
