@@ -959,6 +959,9 @@ int CombatManager::calculateDamageRange(TangibleObject* attacker, CreatureObject
 				damageMitigation = i;
 				break;
 			}
+			//Jedi PvE Melee and Ranged Mit 3
+			if (!attacker->isPlayerCreature() && defenderGhost->isJedi())
+				damageMitigation = 3;
 		}
 
 		if (damageMitigation > 0)
