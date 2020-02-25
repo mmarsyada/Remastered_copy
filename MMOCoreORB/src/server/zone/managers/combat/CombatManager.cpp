@@ -357,12 +357,12 @@ int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* 
 
 int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* weapon, CreatureObject* defender, const CreatureAttackData& data, bool* shouldGcwTef, bool* shouldBhTef) const {
 //ensures no exploited sabers
-	if (attacker->isPlayerCreature() && weapon->isJediWeapon() && weapon->getForceCost() <= 4) {
+/*	if (attacker->isPlayerCreature() && weapon->isJediWeapon() && weapon->getForceCost() <= 4) {
   		Locker locker(weapon);
  		weapon->setForceCost(5);
   		info(attacker->getFirstName() + " was found using a bugged weapon!!", true);
         attacker->sendSystemMessage("Your weapon FC was found to be to low, it has been updated automatically to FC5");
-	}
+	}*/
 
 	if (defender->isEntertaining())
 		defender->stopEntertaining();
@@ -1163,13 +1163,14 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 	if (!data.isForceAttack()) {
 		damageType = weapon->getDamageType();
 		armorPiercing = weapon->getArmorPiercing();
+		if (defender->isPlayerCreature() && damageType == 8 && armorPiercing > 1)
+			armorPiercing = 1;
 
 		if (weapon->isBroken())
 			armorPiercing = 0;
 	} else {
 		damageType = data.getDamageType();
 	}
-
 	if (defender->isAiAgent()) {
 		float armorReduction = getArmorNpcReduction(cast<AiAgent*>(defender), damageType);
 
@@ -1835,8 +1836,10 @@ void CombatManager::doDodge(TangibleObject* attacker, WeaponObject* weapon, Crea
 bool CombatManager::applySpecialAttackCost(CreatureObject* attacker, WeaponObject* weapon, const CreatureAttackData& data) const {
 	if (attacker->isAiAgent() || data.isForceAttack())
 		return true;
-
-	float force = weapon->getForceCost() * data.getForceCostMultiplier();
+	float forcecost = weapon->getForceCost();
+	if (forcecost < 5)
+		forcecost = 5;
+	float force = forcecost * data.getForceCostMultiplier();
 
 	if (force > 0) { // Need Force check first otherwise it can be spammed.
 		ManagedReference<PlayerObject*> playerObject = attacker->getPlayerObject();
