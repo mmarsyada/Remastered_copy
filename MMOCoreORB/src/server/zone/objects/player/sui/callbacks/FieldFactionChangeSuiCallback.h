@@ -25,10 +25,10 @@ public:
 
 		String arg1 = args->get(0).toString();
 
-		if (arg1.toLowerCase() != "yes") {
+		/*if (arg1.toLowerCase() != "yes") {
 			player->sendSystemMessage("@gcw:abort_field_change"); // You cancel your factional change.
 			return;
-		}
+		}*/
 
 		if (player->getFutureFactionStatus() != -1)
 			return;
