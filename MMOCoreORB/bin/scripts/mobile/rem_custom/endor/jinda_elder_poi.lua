@@ -62,7 +62,7 @@ jinda_elder_poi = Creature:new {
 			groups = {
 				{group = "jinda_cave_rare", chance = 10000000}
 			},
-			lootChance = 100000
+			lootChance = 1000000
 		},
 	},
 	weapons = {"jinda_rifle_weapons"},
