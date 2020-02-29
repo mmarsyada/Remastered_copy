@@ -578,7 +578,7 @@ int CreatureManagerImplementation::notifyDestruction(TangibleObject* destructor,
 									for (int i = 0; i < group->getGroupSize(); i++) {
 										Reference<CreatureObject*> groupMember = group->getGroupMember(i);
 										if (groupMember != nullptr && groupMember->isPlayerCreature() ) {
-											if (groupMember->isInRange(destructedObject, 80.0f)) {
+											if (groupMember->isInRange(destructedObject, 128.0f) && copyThreatMap.hasAggro(groupMember)) {
 												players.add(groupMember);
 											}
 										}
@@ -587,11 +587,14 @@ int CreatureManagerImplementation::notifyDestruction(TangibleObject* destructor,
 								if (groupSize < 1)
 										groupSize = 1;
 								int dividedReward = level;
-								if (groupSize > 9)
-									groupSize = 9;
-								dividedReward /= 1 + (groupSize/10);
+								float divisor = 1;
+								if (groupSize > 4)
+									groupSize = 4;
+								if (groupSize > 1)
+									divisor = 1-(groupSize*0.125f);
+								dividedReward *= divisor;
 								for (int j=0; j < players.size(); j++)
-									factionManager->awardFactionStanding(players.elementAt(j), destructedObject->getFactionString(), level);
+									factionManager->awardFactionStanding(players.elementAt(j), destructedObject->getFactionString(), dividedReward);
 								}
 							}
 					}

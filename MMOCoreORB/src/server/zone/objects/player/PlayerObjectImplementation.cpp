@@ -2907,7 +2907,7 @@ void PlayerObjectImplementation::doFieldFactionChange(int newStatus) {
 	if (hasSuiBoxWindowType(SuiWindowType::FIELD_FACTION_CHANGE))
 		closeSuiWindowType(SuiWindowType::FIELD_FACTION_CHANGE);
 
-	ManagedReference<SuiInputBox*> inputbox = new SuiInputBox(parent, SuiWindowType::FIELD_FACTION_CHANGE);
+	ManagedReference<SuiMessageBox*> inputbox = new SuiMessageBox(parent, SuiWindowType::FIELD_FACTION_CHANGE);
 	inputbox->setCallback(new FieldFactionChangeSuiCallback(server->getZoneServer(), newStatus));
 	inputbox->setPromptTitle("@gcw:gcw_status_change"); // GCW STATUS CHANGE CONFIRMATION
 	inputbox->setUsingObject(asPlayerObject());
