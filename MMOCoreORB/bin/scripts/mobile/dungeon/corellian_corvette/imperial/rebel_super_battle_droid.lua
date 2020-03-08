@@ -30,7 +30,25 @@ rebel_super_battle_droid = Creature:new {
 		"object/mobile/super_battle_droid.iff",
 	},
 	lootGroups = {
-		
+		{
+			groups = {
+				{group = "lifedayLegends", chance = 1000000},
+				{group = "power_crystals", chance = 2000000},
+				{group = "melee_weapons", chance = 1500000},
+				{group = "weapon_components", chance = 2500000},
+				{group = "death_watch_bunker_rareschems", chance = 1000000},
+				{group = "rem_named_crystals", chance = 1000000},
+				{group = "named_crystals", chance = 1000000},
+			},
+			lootChance = 6000000
+		},
+		{
+			groups = {
+				{group = "armor_attachments", chance = 5000000},
+				{group = "clothing_attachments", chance = 5000000}
+			},
+			lootChance = 4000000
+    		},
 	},
 	conversationTemplate = "",
 	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
