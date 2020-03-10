@@ -24,7 +24,7 @@ object_draft_schematic_weapon_lance_kaminoan = object_draft_schematic_weapon_sha
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "axe_head", "kaminoan_staff_rod", "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 0, 1, 1},
    resourceTypes = {"steel_quadranium", "iron", "metal", "steel", "object/tangible/loot/dungeon/rem_custom/shared_kaminoan_staff_rod.iff",   "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {85, 24, 12, 8, 1, 1},
+   resourceQuantities = {85, 24, 12, 8, 1, 2},
    contribution = {100, 100, 100, 100, 100, 100},
 
 

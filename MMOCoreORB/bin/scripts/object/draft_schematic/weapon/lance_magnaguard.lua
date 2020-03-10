@@ -24,7 +24,7 @@ object_draft_schematic_weapon_lance_magnaguard = object_draft_schematic_weapon_s
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "axe_head", "magnaguard_capacitor", "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 0, 1, 1},
    resourceTypes = {"aluminum_perovskitic", "iron", "metal", "copper", "object/tangible/loot/dungeon/rem_custom/shared_magnaguard_capacitor.iff",   "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {85, 24, 12, 8, 1, 1},
+   resourceQuantities = {85, 24, 12, 8, 1, 2},
    contribution = {100, 100, 100, 100, 100, 100},
 
 

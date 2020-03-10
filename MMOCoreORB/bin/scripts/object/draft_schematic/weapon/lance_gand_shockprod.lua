@@ -24,7 +24,7 @@ object_draft_schematic_weapon_lance_gand_shockprod = object_draft_schematic_weap
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "shock_prodder",  "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 1, 1},
    resourceTypes = {"steel_duralloy", "iron", "metal","object/tangible/loot/dungeon/rem_custom/shared_shock_prodder.iff",    "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {85, 24, 20, 1, 1},
+   resourceQuantities = {85, 24, 20, 1, 2},
    contribution = {100, 100, 100, 100, 100},
 
 
