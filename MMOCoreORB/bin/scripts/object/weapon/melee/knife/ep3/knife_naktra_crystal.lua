@@ -30,7 +30,7 @@ object_weapon_melee_knife_ep3_knife_naktra_crystal = object_weapon_melee_knife_e
 	damageType = COLD,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = NONE,
+	armorPiercing = LIGHT,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -84,8 +84,8 @@ object_weapon_melee_knife_ep3_knife_naktra_crystal = object_weapon_melee_knife_e
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 29, 73, 5.9, 11, 750, -15, -15, 3, -15, 4, 58, 31, 10},
-	experimentalMax = {0, 0, 71, 157, 4, 21, 1500, -5, -5, 3, -5, 4, 30, 15, 4},
+	experimentalMin = {0, 0, 29, 73, 5.9, 11, 750, -10, -10, 3, -10, 4, 58, 31, 10},
+	experimentalMax = {0, 0, 61, 177, 4, 21, 1500, 0, 0, 3, 0, 4, 30, 15, 4},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
