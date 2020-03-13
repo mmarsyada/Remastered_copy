@@ -24,7 +24,7 @@ object_draft_schematic_weapon_pistol_intimidator = object_draft_schematic_weapon
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "intimidator_barrel", "scope"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3},
    resourceTypes = {"steel", "aluminum", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_pistol_intimidator_barrel.iff", "object/tangible/component/weapon/shared_scope_weapon.iff"},
-   resourceQuantities = {85, 40, 28, 2, 1, 1},
+   resourceQuantities = {85, 40, 28, 4, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100},
 
 

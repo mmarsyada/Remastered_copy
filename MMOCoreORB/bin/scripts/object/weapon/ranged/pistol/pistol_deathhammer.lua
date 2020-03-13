@@ -83,8 +83,8 @@ object_weapon_ranged_pistol_pistol_deathhammer = object_weapon_ranged_pistol_sha
 	experimentalWeights = {1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "expRange", "null", "null", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 42, 79, 4.6, 8, 15, 750, 18, -90, 16, 14, 26, 46, 17},
-	experimentalMax = {0, 0, 78, 117, 3.2, 16, 60, 1500, 33, -90, 16, 30, 14, 25, 9},
+	experimentalMin = {0, 0, 21, 98, 4.6, 8, 15, 750, 18, -52, 16, 14, 26, 46, 17},
+	experimentalMax = {0, 0, 39, 182, 3.2, 16, 60, 1500, 33, -30, 16, 30, 14, 25, 9},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

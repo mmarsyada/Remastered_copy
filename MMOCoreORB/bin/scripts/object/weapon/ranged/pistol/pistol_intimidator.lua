@@ -127,8 +127,8 @@ object_weapon_ranged_pistol_pistol_intimidator = object_weapon_ranged_pistol_sha
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 85, 105, 4.6, 4, 12, 750, 0, -60, 35, 35, 10, 22, 10},
-	experimentalMax = {0, 0, 125, 195, 3.2, 5, 30, 1500, 0, -60, 35, 65, 7, 15, 7},
+	experimentalMin = {0, 0, 85, 105, 4.6, 4, 12, 750, 0, -52, 35, 35, 10, 22, 10},
+	experimentalMax = {0, 0, 125, 195, 3.2, 5, 30, 1500, 0, -30, 35, 65, 7, 15, 7},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
