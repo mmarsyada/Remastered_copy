@@ -4,7 +4,7 @@ kimo_tissue_uncommon = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/rem_custom/statted/kimo_tissue.iff",
 	craftingValues = {
-		{"maxdamage",40,70,0},
+		{"maxdamage",100,125,0},
 		{"attackspeed",0,-1.2,1},
 		{"useCount",1,13,0},
 	},
