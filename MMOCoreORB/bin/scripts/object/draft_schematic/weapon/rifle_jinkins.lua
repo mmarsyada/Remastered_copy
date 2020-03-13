@@ -24,7 +24,7 @@ object_draft_schematic_weapon_rifle_jinkins = object_draft_schematic_weapon_shar
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "feed_unit", "powerpack_rifle_jinkins", "scope", "stock"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 3},
    resourceTypes = {"steel_duralloy", "copper_polysteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_projectile_feed_mechanism.iff", "object/tangible/loot/dungeon/rem_custom/shared_powerpack_rifle_jinkins.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {130, 70, 28, 1, 1, 1, 1},
+   resourceQuantities = {130, 70, 28, 2, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
 

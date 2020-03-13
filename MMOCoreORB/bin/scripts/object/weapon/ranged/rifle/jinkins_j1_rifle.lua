@@ -29,7 +29,7 @@ object_weapon_ranged_rifle_jinkins_j1_rifle = object_weapon_ranged_rifle_shared_
 	damageType = KINETIC,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = MEDIUM,
+	armorPiercing = HEAVY,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -82,8 +82,8 @@ object_weapon_ranged_rifle_jinkins_j1_rifle = object_weapon_ranged_rifle_shared_
 	experimentalWeights = {1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 65, 145, 7.8, 8, 30, 750, -20, -80, 25, 14, 13, 28, 46},
-	experimentalMax = {0, 0, 95, 245, 5.2, 25, 65, 1500, -20, -80, 25, 26, 7, 18, 26},
+	experimentalMin = {0, 0, 80, 200, 7.8, 8, 30, 750, -50, -20, 50, 10, 13, 28, 46},
+	experimentalMax = {0, 0, 115, 375, 5.2, 25, 65, 1500, -30, -20, 50, 10, 7, 18, 26},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

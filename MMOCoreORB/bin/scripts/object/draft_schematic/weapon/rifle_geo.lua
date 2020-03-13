@@ -24,7 +24,7 @@ object_draft_schematic_weapon_rifle_geo = object_draft_schematic_weapon_shared_r
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "muzzle_rifle_geo", "scope", "power_supply"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 1},
    resourceTypes = {"aluminum_linksteel", "steel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_muzzle_rifle_geo.iff",   "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_geonosian_power_cube_base.iff"},
-   resourceQuantities = {130, 70, 28, 5, 1, 1,  1},
+   resourceQuantities = {130, 70, 28, 6, 1, 1,  1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
 

@@ -24,7 +24,7 @@ object_draft_schematic_weapon_rifle_bwdl19 = object_draft_schematic_weapon_share
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "trigger_rifle_bwdl19","scope", "stock"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 3},
    resourceTypes = {"iron_kammris", "steel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_trigger_rifle_bwdl19.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {130, 70, 28, 5, 1, 1, 1},
+   resourceQuantities = {130, 70, 28, 9, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
 

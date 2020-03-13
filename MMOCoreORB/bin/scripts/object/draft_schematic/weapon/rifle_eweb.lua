@@ -24,7 +24,7 @@ object_draft_schematic_weapon_rifle_eweb = object_draft_schematic_weapon_shared_
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "feed_unit", "muzzle_rifle_eweb", "scope", "stock"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 3},
    resourceTypes = {"steel_ditanium", "aluminum_linksteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_projectile_feed_mechanism.iff", "object/tangible/loot/dungeon/rem_custom/shared_muzzle_rifle_eweb.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {130, 70, 28, 1, 1, 1, 1},
+   resourceQuantities = {130, 70, 28, 2, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
 
