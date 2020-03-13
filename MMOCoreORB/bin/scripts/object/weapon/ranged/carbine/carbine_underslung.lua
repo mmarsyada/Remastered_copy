@@ -83,8 +83,8 @@ object_weapon_ranged_carbine_carbine_underslung = object_weapon_ranged_carbine_s
 	experimentalWeights = {1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 7, 130, 6, 8, 30, 750, -45, -40, 50, 0, 33, 52, 26},
-	experimentalMax = {0, 0, 13, 240, 4.1, 16, 65, 1500, -45, -40, 50, 10, 18, 28, 14},
+	experimentalMin = {0, 0, 63, 110, 6, 8, 30, 750, -45, -15, 50, 0, 33, 52, 26},
+	experimentalMax = {0, 0, 90, 200, 4.1, 16, 65, 1500, -45, 0, 50, 10, 18, 28, 14},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

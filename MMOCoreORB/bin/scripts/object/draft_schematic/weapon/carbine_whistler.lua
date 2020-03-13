@@ -24,7 +24,7 @@ object_draft_schematic_weapon_carbine_whistler = object_draft_schematic_weapon_s
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "muzzle_carbine_whistler", "scope", "stock"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 3},
    resourceTypes = {"steel_duralloy", "copper_polysteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_muzzle_carbine_whistler.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {100, 45, 28, 4, 1, 1, 1},
+   resourceQuantities = {100, 45, 28, 5, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
 
