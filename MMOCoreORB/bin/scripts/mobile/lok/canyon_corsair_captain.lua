@@ -37,7 +37,7 @@ canyon_corsair_captain = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 3650000},
+				{group = "junk", chance = 3850000},
 				{group = "tailor_components", chance = 1000000},
 				{group = "color_crystals", chance = 400000},
 				{group = "power_crystals", chance = 400000},
@@ -47,9 +47,21 @@ canyon_corsair_captain = Creature:new {
 				{group = "clothing_attachments", chance = 450000},
 				{group = "armor_attachments", chance = 450000},
 				{group = "canyon_corsair_common", chance = 1350000},
-				{group = "wearables_uncommon", chance = 300000},
-				{group = "corsairs_rare", chance = 200000}
-			}
+				{group = "wearables_uncommon", chance = 300000}
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "canyon_corsair_common", chance = 10000000}
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "corsairs_rare", chance = 10000000}
+			},
+			lootChance = 1000000
 		}
 	},
 	weapons = {"canyon_corsair_weapons"},

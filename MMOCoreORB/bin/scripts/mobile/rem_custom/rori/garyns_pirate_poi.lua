@@ -44,11 +44,11 @@ garyns_pirate_poi = Creature:new {
 			lootChance = 1000000,
 		},
 		{
-			{group = "garyn_common", chance = 1000000}
+			{group = "garyn_common", chance = 10000000}
 		},
 			lootChance = 1000000,
 		{
-			{group = "garyn_rare", chance = 1000000}
+			{group = "garyn_rare", chance = 10000000}
 		},
 			lootChance = 1000000,
 	},
