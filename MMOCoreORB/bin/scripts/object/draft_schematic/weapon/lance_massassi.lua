@@ -24,7 +24,7 @@ object_draft_schematic_weapon_lance_massassi = object_draft_schematic_weapon_sha
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "double_massassi_blade",  "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 1, 1},
    resourceTypes = {"aluminum_perovskitic", "iron", "metal","object/tangible/loot/dungeon/rem_custom/shared_double_massassi_blade.iff",    "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {85, 24, 20, 1, 1},
+   resourceQuantities = {85, 24, 20, 1, 2},
    contribution = {100, 100, 100, 100, 100},
 
 

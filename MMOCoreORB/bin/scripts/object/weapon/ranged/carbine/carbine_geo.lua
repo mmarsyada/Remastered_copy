@@ -123,8 +123,8 @@ object_weapon_ranged_carbine_carbine_geo = object_weapon_ranged_carbine_shared_c
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 65, 105, 6, 10, 30, 750, -20, -60, 22, -5, 33, 52, 25},
-	experimentalMax = {0, 0, 95, 150, 4.1, 20, 65, 1500, -20, -60, 22, 5, 18, 28, 13},
+	experimentalMin = {0, 0, 65, 95, 6, 10, 30, 750, -20, -15, 22, -5, 33, 52, 25},
+	experimentalMax = {0, 0, 95, 170, 4.1, 20, 65, 1500, -20, 0, 22, 5, 18, 28, 13},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

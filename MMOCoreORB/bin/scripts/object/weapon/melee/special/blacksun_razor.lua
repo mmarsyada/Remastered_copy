@@ -30,7 +30,7 @@ object_weapon_melee_special_blacksun_razor = object_weapon_melee_special_shared_
 	damageType = HEAT,
 	
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = NONE,
+	armorPiercing = LIGHT,
 	
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -84,8 +84,8 @@ object_weapon_melee_special_blacksun_razor = object_weapon_melee_special_shared_
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 9, 50, 3.6, 14, 750, 5, 5, 1, 5, 5, 36, 54, 36},
-	experimentalMax = {0, 0, 17, 114, 2.5, 26, 1500, 15, 15, 1, 15, 5, 18, 30, 18},
+	experimentalMin = {0, 0, 9, 60, 3.6, 14, 750, 5, 5, 1, 5, 5, 36, 54, 36},
+	experimentalMax = {0, 0, 17, 134, 2.5, 26, 1500, 15, 15, 1, 15, 5, 18, 30, 18},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

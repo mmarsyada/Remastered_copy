@@ -24,7 +24,7 @@ object_draft_schematic_weapon_pistol_flechette = object_draft_schematic_weapon_s
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "barrel_pistol_flechette", "scope"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3},
    resourceTypes = {"iron_kammris", "metal_nonferrous", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_barrel_pistol_flechette.iff", "object/tangible/component/weapon/shared_scope_weapon.iff"},
-   resourceQuantities = {85, 40, 28, 4, 1, 1},
+   resourceQuantities = {85, 40, 28, 2, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100},
 
 

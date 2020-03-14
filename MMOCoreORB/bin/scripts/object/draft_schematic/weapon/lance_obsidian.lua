@@ -24,7 +24,7 @@ object_draft_schematic_weapon_lance_obsidian = object_draft_schematic_weapon_sha
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "axe_head", "obsidian_blade",  "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 0, 1, 1},
    resourceTypes = {"steel_ditanium", "iron", "metal", "steel", "object/tangible/loot/dungeon/rem_custom/shared_obsidian_blade.iff",    "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {85, 24, 12, 8, 1, 1},
+   resourceQuantities = {85, 24, 12, 8, 1, 2},
    contribution = {100, 100, 100, 100, 100, 100},
 
 

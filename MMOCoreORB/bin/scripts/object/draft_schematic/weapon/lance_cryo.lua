@@ -24,7 +24,7 @@ object_draft_schematic_weapon_lance_cryo = object_draft_schematic_weapon_shared_
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "cryo_lance_compressor", "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 1, 1},
    resourceTypes = {"steel_ditanium", "steel", "metal","object/tangible/loot/dungeon/rem_custom/shared_cryo_lance_compressor.iff",    "object/tangible/component/weapon/shared_vibro_unit.iff"},
-   resourceQuantities = {85, 24, 20, 1, 1},
+   resourceQuantities = {85, 24, 20, 1, 2},
    contribution = {100, 100, 100, 100, 100},
 
 

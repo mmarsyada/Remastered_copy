@@ -24,7 +24,7 @@ object_draft_schematic_weapon_rifle_trando = object_draft_schematic_weapon_share
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "feed_unit", "muzzle_rifle_trando", "scope", "stock"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 3},
    resourceTypes = {"aluminum_phrik", "copper_platinite", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_projectile_feed_mechanism.iff", "object/tangible/loot/dungeon/rem_custom/shared_muzzle_rifle_trando.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {130, 70, 28, 1, 1, 1, 1},
+   resourceQuantities = {130, 70, 28, 2, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
 

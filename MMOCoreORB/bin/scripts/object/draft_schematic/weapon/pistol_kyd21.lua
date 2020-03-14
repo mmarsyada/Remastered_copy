@@ -24,7 +24,7 @@ object_draft_schematic_weapon_pistol_kyd21 = object_draft_schematic_weapon_share
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "coil_pistol_kyd21", "scope"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3},
    resourceTypes = {"steel_duralloy", "aluminum_linksteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_coil_pistol_kyd21.iff", "object/tangible/component/weapon/shared_scope_weapon.iff"},
-   resourceQuantities = {85, 40, 28, 1, 1, 1},
+   resourceQuantities = {85, 40, 28, 2, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100},
 
 

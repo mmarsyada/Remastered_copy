@@ -125,8 +125,8 @@ object_weapon_melee_polearm_lance_kashyyk = object_weapon_melee_polearm_shared_l
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 50, 175, 6.5, 23, 750, -45, -40, 3, -45, 7, 78, 65, 29},
-	experimentalMax = {0, 0, 115, 305, 4.5, 43, 1500, -20, -20, 3, -20, 7, 45, 35, 15},
+	experimentalMin = {0, 0, 50, 175, 6.5, 23, 750, -30, -30, 3, -30, 7, 78, 65, 29},
+	experimentalMax = {0, 0, 115, 305, 4.5, 43, 1500, -10, -10, 3, -10, 7, 45, 35, 15},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

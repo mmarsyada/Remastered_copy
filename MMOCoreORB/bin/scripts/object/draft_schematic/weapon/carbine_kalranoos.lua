@@ -24,7 +24,7 @@ object_draft_schematic_weapon_carbine_kalranoos = object_draft_schematic_weapon_
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "muzzle_carbine_kalranoos", "scope", "power_supply"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 1},
    resourceTypes = {"steel_quadranium", "aluminum_linksteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/loot/dungeon/rem_custom/shared_muzzle_carbine_kalranoos.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_geonosian_power_cube_base.iff"},
-   resourceQuantities = {100, 45, 28, 3, 1, 1, 1},
+   resourceQuantities = {100, 45, 28, 5, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
 
    targetTemplate = "object/weapon/ranged/carbine/carbine_geo.iff",

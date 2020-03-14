@@ -29,7 +29,7 @@ object_weapon_melee_2h_sword_som_2h_sword_tulrus = object_weapon_melee_2h_sword_
 	damageType = STUN,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = MEDIUM,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -83,8 +83,8 @@ object_weapon_melee_2h_sword_som_2h_sword_tulrus = object_weapon_melee_2h_sword_
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 6, 87, 4.6, 15, 750, -4, -4, 3, -4, 4, 27, 65, 33},
-	experimentalMax = {0, 0, 15, 183, 3.1, 27, 1500, 6, 6, 3, 6, 4, 15, 35, 18},
+	experimentalMin = {0, 0, 33, 187, 4.6, 15, 750, -10, -10, 3, -10, 4, 27, 65, 33},
+	experimentalMax = {0, 0, 78, 283, 3.1, 27, 1500, 0, 0, 3, 0, 4, 15, 35, 18},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
