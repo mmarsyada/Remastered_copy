@@ -92,7 +92,7 @@ veteranRewardAdditionalMilestones = 30 --frequency, in days, of additional miles
 
 veteranRewards = {
 		-- 30 Day Rewards
-		{templateFile = "object/tangible/veteran_reward/frn_vet_boba_toy.iff", milestone=180, oneTime=false, description="Miniature Boba Fett Replica"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_boba_toy.iff", milestone=30, oneTime=false, description="Miniature Boba Fett Replica"},
 		{templateFile = "object/tangible/tcg/series6/hologram_cloud_city.iff", milestone=30, oneTime=false, description="Cloud City Hologram"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=30, oneTime=false, description="@veteran_new:mini_stormtrooper"},
 		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_a.iff", milestone=30, oneTime=false, description="@veteran_new:techconsole_a"},
