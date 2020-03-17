@@ -40,7 +40,14 @@ neo_cobral_runner = Creature:new {
 				{group = "tailor_components", chance = 2000000},
 				{group = "loot_kit_parts", chance = 2000000},
 				{group = "cobral_rare", chance = 200000}
-			}
+			},
+			lootChance = 1500000
+		},
+		{
+			groups = {
+				{group = "cobral_rare", chance = 10000000}
+			},
+			lootChance = 1000000
 		}
 	},
 	weapons = {"pirate_weapons_medium"},
