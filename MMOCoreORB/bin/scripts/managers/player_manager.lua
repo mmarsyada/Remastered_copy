@@ -91,7 +91,29 @@ veteranRewardMilestones = {30, 60, 90, 120, 150, 180, 310, 340, 370, 400, 430, 4
 veteranRewardAdditionalMilestones = 30 --frequency, in days, of additional milestones (beyond the established ones)
 
 veteranRewards = {
-
+		-- 30 Day Rewards
+		{templateFile = "object/tangible/veteran_reward/frn_vet_boba_toy.iff", milestone=30, oneTime=false, description="Miniature Boba Fett Replica"},
+		{templateFile = "object/tangible/tcg/series6/hologram_cloud_city.iff", milestone=30, oneTime=false, description="Cloud City Hologram"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=30, oneTime=false, description="@veteran_new:mini_stormtrooper"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_a.iff", milestone=30, oneTime=false, description="@veteran_new:techconsole_a"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_b.iff", milestone=30, oneTime=false, description="@veteran_new:techconsole_b"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_c.iff", milestone=30, oneTime=false, description="@veteran_new:techconsole_c"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_d.iff", milestone=30, oneTime=false, description="@veteran_new:techconsole_d"},
+		{templateFile = "object/tangible/furniture/ep3_rewards/hologram_insignia_imperial_01.iff", milestone=30, oneTime=false, description="Imperial Insignia Hologram"},
+		{templateFile = "object/tangible/furniture/ep3_rewards/hologram_insignia_rebel_01.iff", milestone=30, oneTime=false, description="Rebel Insignia Hologram"},
+				
+		
+		-- 60 Day Rewards
+		{templateFile = "object/tangible/veteran_reward/frn_vet_holo_lambda.iff", milestone=60, oneTime=false, description="Lambda Shuttle Hologram"},
+		{templateFile = "object/tangible/furniture/all/frn_all_statuette_small_naboo_house.iff", milestone=60, oneTime=false, description="Guy Remmington's Architect Model (Small Naboo House)"},
+		{templateFile = "object/tangible/tcg/series4/consumable_t16_toy.iff", milestone=60, oneTime=false, description="T-16 Skyhopper Toy"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_jedi_temple.iff", milestone=60, oneTime=false, description="Jedi Temple"},
+		{templateFile = "object/tangible/furniture/all/event_flag_game_imp_banner.iff", milestone=60, oneTime=false, description="Imperial Banner"},
+		{templateFile = "object/tangible/furniture/all/event_flag_game_neut_banner.iff", milestone=60, oneTime=false, description="Neutral Banner"},
+		{templateFile = "object/tangible/furniture/all/event_flag_game_reb_banner.iff", milestone=60, oneTime=false, description="Rebel Banner"},
+		
+		
+		
 		-- 90 Day Rewards
 		--{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=90, oneTime=false, description="A Crate of Free Resources"},
 		{templateFile = "object/tangible/veteran_reward/data_terminal_s1.iff", milestone=90, oneTime=false, description="@veteran_new:dataterminal1"},
@@ -100,7 +122,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/veteran_reward/data_terminal_s4.iff", milestone=90, oneTime=false, description="@veteran_new:dataterminal4"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_protocol_droid_toy.iff", milestone=90, oneTime=false, description="@veteran_new:mini_protocoldroid"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_r2_toy.iff", milestone=90, oneTime=false, description="@veteran_new:mini_r2"},
-		{templateFile = "object/tangible/furniture/all/frn_all_statuette_small_naboo_house.iff", milestone=90, oneTime=false, description="Guy Remmington's Architect Model (Small Naboo House)"},
 		{templateFile = "object/tangible/furniture/decorative/event_chewbacca_toy.iff", milestone=90, oneTime=false, description="Wookiee Hero Figurine"},
 		{templateFile = "object/tangible/furniture/decorative/hologram_nebulon_frigate.iff", milestone=90, oneTime=false, description="Hologram of EF76 Nebulon-B"},
 		{templateFile = "object/tangible/tcg/series3/decorative_boba_fett_statue.iff", milestone=90, oneTime=false, description="Boba Fett Statue"},
@@ -120,19 +141,14 @@ veteranRewards = {
 		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_corner_s01.iff", milestone=180, oneTime=false, description="@veteran_new:falconcouch"},
 		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_section_s01.iff", milestone=180, oneTime=false, description="@veteran_new:falconchair"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_tie_fighter_toy.iff", milestone=180, oneTime=false, description="@veteran_new:mini_tiefighter"},
+		{templateFile = "object/tangible/tcg/series3/decorative_jango_fett_memorial_statue.iff", milestone=30, oneTime=false, description="Jango Fett Memorial Statue"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_x_wing_toy.iff", milestone=180, oneTime=false, description="@veteran_new:mini_xwing"},
-		{templateFile = "object/tangible/furniture/all/event_flag_game_imp_banner.iff", milestone=180, oneTime=false, description="Imperial Banner"},
-		{templateFile = "object/tangible/furniture/all/event_flag_game_neut_banner.iff", milestone=180, oneTime=false, description="Neutral Banner"},
-		{templateFile = "object/tangible/furniture/all/event_flag_game_reb_banner.iff", milestone=180, oneTime=false, description="Rebel Banner"},
 		{templateFile = "object/tangible/event_perk/frn_hologram_data_disk_s01.iff", milestone=180, oneTime=false, description="Datadisc Hologram (Style 1)"},
 		{templateFile = "object/tangible/event_perk/frn_hologram_data_disk_s02.iff", milestone=180, oneTime=false, description="Datadisc Hologram (Style 2)"},
 		{templateFile = "object/tangible/furniture/all/frn_all_statuette_cityhall_naboo.iff", milestone=180, oneTime=false, description="An Architect's Rendition of a Nabooian City Hall"},
 		{templateFile = "object/tangible/furniture/decorative/hologram_xwing.iff", milestone=180, oneTime=false, description="Xwing Hologram"},
-		{templateFile = "object/tangible/furniture/ep3_rewards/hologram_insignia_imperial_01.iff", milestone=180, oneTime=false, description="Imperial Insignia Hologram"},
-		{templateFile = "object/tangible/furniture/ep3_rewards/hologram_insignia_rebel_01.iff", milestone=180, oneTime=false, description="Rebel Insignia Hologram"},
 		{templateFile = "object/tangible/furniture/ep3_rewards/hologram_stardestroyer_01.iff", milestone=180, oneTime=false, description="Star Destroyer Hologram"},
 		{templateFile = "object/tangible/furniture/ep3_rewards/hologram_tiefighter_01.iff", milestone=180, oneTime=false, description="TIE Fighter Hologram"},
-		{templateFile = "object/tangible/tcg/series3/decorative_jango_fett_memorial_statue.iff", milestone=180, oneTime=false, description="Jango Fett Memorial Statue"},
 		{templateFile = "object/tangible/tcg/series4/decorative_han_solo_statuette.iff", milestone=180, oneTime=false, description="Han Solo Statuette"},
 		{templateFile = "object/tangible/tcg/series4/decorative_leia_r2_diorama.iff", milestone=180, oneTime=false, description="Princess Leia & R2-D2 Diorama"},
 		{templateFile = "object/tangible/tcg/series5/decorative_deathstar_hologram.iff", milestone=180, oneTime=false, description="Death Star Under Construction Hologram"},
@@ -174,7 +190,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_c.iff", milestone=360, oneTime=false, description="@veteran_new:techconsole_c"},
 		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_d.iff", milestone=360, oneTime=false, description="@veteran_new:techconsole_d"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_jabba_toy.iff", milestone=360, oneTime=false, description="@veteran_new:mini_jabba"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=360, oneTime=false, description="@veteran_new:mini_stormtrooper"},
 		{templateFile = "object/tangible/tcg/series8/diorama_bespin_city.iff", milestone=360, oneTime=false, description="The Heights of Cloud City Diorama"},
 		{templateFile = "object/tangible/event_perk/lifeday_holo_table.iff", milestone=360, oneTime=false, description="Holo-Entertainment Table"},
 		{templateFile = "object/tangible/furniture/all/frn_all_statuette_jabba_palace.iff", milestone=360, oneTime=false, description="An Architect's Rendition of Jabba's Palace"},
@@ -205,7 +220,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/hologram/hologram_ff_space_battle_2010.iff", milestone=450, oneTime=false, description="Hologram of a Space Battle"},
 		{templateFile = "object/tangible/tcg/series5/combine_object_vader_statuette.iff", milestone=450, oneTime=false, description="Kneeling Vader Statuette"},
 		{templateFile = "object/tangible/tcg/series5/decorative_mustafar_diorama.iff", milestone=450, oneTime=false, description="Mustafar Diorama"},
-		{templateFile = "object/tangible/tcg/series6/hologram_cloud_city.iff", milestone=450, oneTime=false, description="Cloud City Hologram"},
 		{templateFile = "object/tangible/tcg/series8/diorama_atat_attack.iff", milestone=450, oneTime=false, description="Raid on Echo Base Diorama"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_salacious_crumb_toy.iff", milestone=450, oneTime=false, description="Miniature Salacious Crumb Replica"},
 		{templateFile = "object/tangible/veteran_reward/mace_windu_statue.iff", milestone=450, oneTime=false, description="Mace Windu Statue"},
@@ -226,7 +240,7 @@ veteranRewards = {
 		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff", milestone=540, oneTime=false, description="Painting: Emperor's Eyes (TIE Sentinel)"},
 
 		-- 630 Day Rewards
-		{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=630, oneTime=false, description="A Crate of Free Resources"},
+		--{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=630, oneTime=false, description="A Crate of Free Resources"},
 		{templateFile = "object/tangible/veteran_reward/data_terminal_s1.iff", milestone=630, oneTime=false, description="@veteran_new:dataterminal1"},
 		{templateFile = "object/tangible/veteran_reward/data_terminal_s2.iff", milestone=630, oneTime=false, description="@veteran_new:dataterminal2"},
 		{templateFile = "object/tangible/veteran_reward/data_terminal_s3.iff", milestone=630, oneTime=false, description="@veteran_new:dataterminal3"},
@@ -237,7 +251,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/furniture/decorative/event_chewbacca_toy.iff", milestone=630, oneTime=false, description="Wookiee Hero Figurine"},
 		{templateFile = "object/tangible/furniture/decorative/hologram_nebulon_frigate.iff", milestone=630, oneTime=false, description="Hologram of EF76 Nebulon-B"},
 		{templateFile = "object/tangible/tcg/series3/decorative_boba_fett_statue.iff", milestone=630, oneTime=false, description="Boba Fett Statue"},
-		{templateFile = "object/tangible/tcg/series4/consumable_t16_toy.iff", milestone=630, oneTime=false, description="T-16 Skyhopper Toy"},
 		{templateFile = "object/tangible/tcg/series6/diorama_han_greedo.iff", milestone=630, oneTime=false, description="Han and Greedo Diorama"},
 		{templateFile = "object/tangible/tcg/series7/diorama_max_rebo.iff", milestone=630, oneTime=false, description="Max Rebo Band Diorama"},
 		{templateFile = "object/tangible/tcg/series8/decorative_palpatine_hologram.iff", milestone=630, oneTime=false, description="Emperor Palpatine Hologram"},
@@ -302,10 +315,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/loot/creature_loot/collections/opt_in_mail_08.iff", milestone=810, oneTime=false, description="Bobble-Head Death Trooper"},
 
 		-- 900 Day Rewards
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_a.iff", milestone=900, oneTime=false, description="@veteran_new:techconsole_a"},
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_b.iff", milestone=900, oneTime=false, description="@veteran_new:techconsole_b"},
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_c.iff", milestone=900, oneTime=false, description="@veteran_new:techconsole_c"},
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_d.iff", milestone=900, oneTime=false, description="@veteran_new:techconsole_d"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_jabba_toy.iff", milestone=900, oneTime=false, description="@veteran_new:mini_jabba"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=900, oneTime=false, description="@veteran_new:mini_stormtrooper"},
 		{templateFile = "object/tangible/tcg/series8/diorama_bespin_city.iff", milestone=900, oneTime=false, description="The Heights of Cloud City Diorama"},
@@ -318,7 +327,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/tcg/series3/decorative_darth_vader_obi_wan_diorama.iff", milestone=900, oneTime=false, description="Darth Vader vs. Obi-Wan Kenobi Diorama"},
 		{templateFile = "object/tangible/tcg/series6/diorama_jedi_council.iff", milestone=900, oneTime=false, description="Jedi Council Diorama"},
 		{templateFile = "object/tangible/veteran_reward/darth_maul_statue.iff", milestone=900, oneTime=false, description="Darth Maul Statue"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_holo_lambda.iff", milestone=900, oneTime=false, description="Lambda Shuttle Hologram"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_holo_starfighter.iff", milestone=900, oneTime=false, description="Jedi Starfighter Hologram"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_tusken_raider_toy.iff", milestone=900, oneTime=false, description="Miniature Tusken Raider Replica"},
 		{templateFile = "object/tangible/tcg/series4/decorative_tauntaun_ride.iff", milestone=900, oneTime=false, description="Antique Tauntaun Ride"},
@@ -343,7 +351,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/veteran_reward/frn_vet_salacious_crumb_toy.iff", milestone=990, oneTime=false, description="Miniature Salacious Crumb Replica"},
 		{templateFile = "object/tangible/veteran_reward/mace_windu_statue.iff", milestone=990, oneTime=false, description="Mace Windu Statue"},
 		{templateFile = "object/tangible/tcg/series3/decorative_emperor_palpatine_statuette.iff", milestone=990, oneTime=false, description="Emperor Palpatine Statuette"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_jedi_temple.iff", milestone=990, oneTime=false, description="Jedi Temple"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_jedi_temple_burning.iff", milestone=990, oneTime=false, description="Jedi Temple Ruins"},
 		{templateFile = "object/tangible/loot/creature_loot/collections/opt_in_mail_04.iff", milestone=990, oneTime=false, description="Battlefield Diorama"},
 
