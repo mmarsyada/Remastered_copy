@@ -418,23 +418,23 @@ void FishingManagerImplementation::success(CreatureObject* player, int fish, Sce
 				int reroll = System::random(9);
 				if (planet == "dathomir" || planet == "endor" || planet == "naboo"  || planet == "yavin4" ) {
 					if (planet == "dathomir") {
-						if (reroll == 9)
+						if (reroll > 6)
 							fish = 7;
 						else
 							fish = System::random(6);
 					} else if (planet == "yavin4") {
-						if (reroll == 9)
+						if (reroll > 6)
 							fish = 15;
 						else
 							fish = System::random(6);
 					} else if (planet == "endor") {
-						if (reroll == 9) {
+						if (reroll > 6) {
 							int newfish = System::random(1);
 							fish = newfish + 8;
 						} else
 							fish = System::random(6);
 					} else {
-						if (reroll == 9) {
+						if (reroll > 6) {
 							int newfish = System::random(4);
 							fish = newfish + 10;
 						} else
