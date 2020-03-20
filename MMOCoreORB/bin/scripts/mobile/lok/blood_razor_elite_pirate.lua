@@ -45,9 +45,21 @@ blood_razor_elite_pirate = Creature:new {
 				{group = "pistols", chance = 600000},
 				{group = "clothing_attachments", chance = 300000},
 				{group = "armor_attachments", chance = 300000},
-				{group = "bloodrazor_common", chance = 2000000},
-				{group = "razors_rare", chance = 200000}
-			}
+				{group = "bloodrazor_common", chance = 2200000}
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "bloodrazor_common", chance = 10000000}
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "razors_rare", chance = 10000000}
+			},
+			lootChance = 1000000
 		}
 	},
 	weapons = {"blood_razer_weapons"},

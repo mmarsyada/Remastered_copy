@@ -39,7 +39,7 @@ blood_razor_officer = Creature:new {
 		{
 			groups = {
 				{group = "junk", chance = 3800000},
-				{group = "tailor_components", chance = 1000000},
+				{group = "tailor_components", chance = 800000},
 				{group = "color_crystals", chance = 400000},
 				{group = "power_crystals", chance = 400000},
 				{group = "melee_unarmed", chance = 600000},
@@ -47,10 +47,21 @@ blood_razor_officer = Creature:new {
 				{group = "pistols", chance = 600000},
 				{group = "clothing_attachments", chance = 300000},
 				{group = "armor_attachments", chance = 300000},
-				{group = "bloodrazor_common", chance = 1500000},
-				{group = "wearables_uncommon", chance = 300000},
-				{group = "razors_rare", chance = 200000}
-			}
+				{group = "bloodrazor_common", chance = 2200000}
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "bloodrazor_common", chance = 10000000}
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "razors_rare", chance = 10000000}
+			},
+			lootChance = 1000000
 		}
 	},
 	weapons = {"blood_razer_weapons"},
