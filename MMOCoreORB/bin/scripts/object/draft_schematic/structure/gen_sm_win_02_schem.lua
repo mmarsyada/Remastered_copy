@@ -12,7 +12,7 @@ object_draft_schematic_structure_gen_sm_win_02_schem = object_draft_schematic_st
    assemblySkill = "structure_assembly", 
    experimentingSkill = "structure_experimentation", 
    customizationSkill = "structure_customization",
-   factoryCrateSize = 0,
+   factoryCrateSize = 10,
 
    customizationOptions = {},
    customizationStringNames = {},
