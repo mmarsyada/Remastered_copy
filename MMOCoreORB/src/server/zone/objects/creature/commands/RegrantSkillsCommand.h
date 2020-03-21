@@ -29,8 +29,15 @@ public:
 
 		Locker locker(creature);
 
+
+		ManagedReference<PlayerObject*> ghost = creature->getPlayerObject();
 		SkillManager* skillManager = SkillManager::instance();
 		const SkillList* skillList = creature->getSkillList();
+		DeltaVectorMap<String, int>* experienceList = ghost->getExperienceList();
+		//copy experience list to update later
+		DeltaVectorMap<String, int> experienceListCopy;
+		for (int i = 0; i < experienceList->size(); ++i)
+			experienceListCopy.set(experienceList->getKeyAt(i), experienceList->getValueAt(i));
 
 		if (skillList == nullptr) 
 			return GENERALERROR;
@@ -99,6 +106,13 @@ public:
 				bool skillGranted = skillManager->awardSkill(skillName, creature, true, true, true);
 				creature->sendSystemMessage("Regranting SKill: " + skillName);
 			}
+		}
+		for (int i = 0; i < experienceListCopy.size(); ++i) {
+			String xpType = experienceListCopy.getKeyAt(i);
+			int xpAmount = experienceListCopy.getValueAt(i);
+			int num = ghost->getExperience(xpType);
+			xpAmount -= num;
+			ghost->addExperience(xpType, xpAmount, true);
 		}
 
 		return SUCCESS;

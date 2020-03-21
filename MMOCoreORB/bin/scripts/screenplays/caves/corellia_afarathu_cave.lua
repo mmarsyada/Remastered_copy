@@ -72,7 +72,7 @@ function AfarathuCaveScreenPlay:spawnMobiles()
 
 	spawnMobile("corellia", "afarathu_brute_poi", 600, -85.4, -101.5, -111.2, 0, 6035630)
 	spawnMobile("corellia", "afarathu_brute_poi", 600, -92.8, -101.1, -111.9, 0, 6035630)
-	spawnMobile("corellia", "afarathu_cult_leader", 1800, -90.7, -101.1, -104.8, 0, 6035630)
+	spawnMobile("corellia", "afarathu_cult_leader_poi", 1800, -90.7, -101.1, -104.8, 0, 6035630)
 
 	--Rem Custom
 	spawnMobile("corellia", "afarathu_ruffian_poi", 600, 39.183, -45.8489, -54.5667, -35, 6035623)
