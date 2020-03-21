@@ -782,6 +782,11 @@ bool PlayerManagerImplementation::checkPlayerName(ClientCreateCharacterCallback*
 	return true;
 }
 
+int currentPermissionLevel = ghost->getAdminLevel();
+
+if (currentPermissionLevel )
+{
+
 String PlayerManagerImplementation::setFirstName(CreatureObject* creature, const String& newFirstName) {
     if (creature == nullptr)
 		return "nullptr creature specified";
@@ -879,6 +884,7 @@ String PlayerManagerImplementation::setFirstName(CreatureObject* creature, const
 
 	// Success, return empty string
 	return "";
+}
 }
 
 String PlayerManagerImplementation::setLastName(CreatureObject* creature, const String& newLastName, bool skipVerify) {
