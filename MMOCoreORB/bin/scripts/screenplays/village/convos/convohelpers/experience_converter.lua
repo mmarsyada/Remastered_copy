@@ -39,6 +39,7 @@ ExperienceConverter = ScreenPlay:new {
 			{ "scout", 8 },
 			{ "slicing", 3 },
 			{ "trapping", 25 },
+			{ "jedi_general", 15}
 		},
 		reflex = {
 			{ "bountyhunter", 5 },
@@ -64,7 +65,8 @@ ExperienceConverter = ScreenPlay:new {
 			{ "crafting_medicine_general", 5 },
 			{ "crafting_spice", 5 },
 			{ "crafting_structure_general", 35 },
-			{ "crafting_weapons_general", 5 }
+			{ "crafting_weapons_general", 5 },
+			{ "jedi_general", 12}
 		}
 	}
 }
