@@ -1174,6 +1174,7 @@ schematics = {
 	{path="object/draft_schematic/structure/installation_mining_liquid_heavy.iff"},
 	{path="object/draft_schematic/structure/installation_mining_organic_flora.iff"},
 	{path="object/draft_schematic/structure/installation_mining_liquid_vapor_heavy.iff"},
+		{path="object/draft_schematic/structure/installation_mining_liquid_vapor_elite.iff"},
 	{path="object/draft_schematic/structure/installation_mining_organic_flora_heavy.iff"},
 	{path="object/draft_schematic/structure/installation_mining_gas_heavy.iff"},
 	{path="object/draft_schematic/structure/installation_mining_ore_heavy.iff"},

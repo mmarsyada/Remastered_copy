@@ -41,28 +41,25 @@
 --this exception also makes it possible to release a modified version 
 
 
+object_tangible_deed_harvester_deed_harvester_moisture_deed_elite = object_tangible_deed_harvester_deed_shared_harvester_moisture_deed_elite:new {
+	templateType = STRUCTUREDEED,
+		customObjectName = "Deed for: ELITE Moisture Vaporator",
+	
+	placeStructureComponent = "PlaceStructureComponent",
+	generatedObjectTemplate = "object/installation/mining_liquid/mining_liquid_moisture_harvester_elite.iff",
+	
 
---Children folder includes
 
--- Server Objects
-includeFile("tangible/deed/harvester_deed/harvester_creature_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_heavy_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_elite_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_s1_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_s2_deed.lua")
+	numberExperimentalProperties = {1, 1, 3, 2, 1},
+	experimentalProperties = {"XX", "XX", "HR", "SR", "UT", "MA", "UT", "XX"},
+	experimentalWeights = {1, 1, 1, 1, 2, 1, 2, 1},
+	experimentalGroupTitles = {"null", "null", "expEffeciency", "expStorage", "null"},
+	experimentalSubGroupTitles = {"null", "null", "extractrate", "hoppersize", "hitpoints"},
+	experimentalMin = {0, 0, 22, 350000, 1000},
+	experimentalMax = {0, 0, 32, 450000, 1000},
+	experimentalPrecision = {0, 0, 0, 0, 0},
+	experimentalCombineType = {0, 0, 1, 1, 4},
+}
+
+
+ObjectTemplates:addTemplate(object_tangible_deed_harvester_deed_harvester_moisture_deed_elite, "object/tangible/deed/harvester_deed/harvester_moisture_deed_elite.iff")

@@ -63,6 +63,14 @@ object_tangible_deed_harvester_deed_shared_harvester_liquid_deed_elite = SharedT
 ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_liquid_deed_elite, "object/tangible/deed/harvester_deed/shared_harvester_liquid_deed_elite.iff")
 
 
+-- Elite moisture harv
+object_tangible_deed_harvester_deed_shared_harvester_moisture_deed_elite = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/harvester_deed/shared_harvester_moisture_deed_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_moisture_deed_elite, "object/tangible/deed/harvester_deed/shared_harvester_moisture_deed_elite.iff")
+------------
+--
 object_tangible_deed_harvester_deed_shared_harvester_flora_deed_elite = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/deed/harvester_deed/shared_harvester_flora_deed_elite.iff"
 }

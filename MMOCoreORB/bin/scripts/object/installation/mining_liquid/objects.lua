@@ -461,3 +461,11 @@ object_installation_mining_liquid_shared_mining_liquid_harvester_elite = SharedI
 }
 
 ObjectTemplates:addClientTemplate(object_installation_mining_liquid_shared_mining_liquid_harvester_elite, "object/installation/mining_liquid/shared_mining_liquid_harvester_elite.iff")
+
+--Elite Moisture 
+object_installation_mining_liquid_shared_mining_liquid_moisture_harvester_elite = SharedInstallationObjectTemplate:new {
+	clientTemplateFileName = "object/installation/mining_liquid/shared_mining_liquid_moisture_harvester_elite.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_installation_mining_liquid_shared_mining_liquid_moisture_harvester_elite, "object/installation/mining_liquid/shared_mining_liquid_moisture_harvester_elite.iff")

@@ -41,28 +41,16 @@
 --this exception also makes it possible to release a modified version 
 
 
+object_installation_mining_liquid_mining_liquid_moisture_harvester_elite = object_installation_mining_liquid_shared_mining_liquid_moisture_harvester_elite:new {
+	lotSize = 2,
+	baseMaintenanceRate = 175,
+	-- SOLAR = 1; CHEMICAL = 2; FLORA = 3; GAS = 4; GEOTHERMAL = 5; MINERAL = 6; WATER = 7; WIND = 8; FUSION = 9;
+	installationType = 7,
+	basePowerRate = 100,
+	length = 2,
+	width = 2,
+	objectMenuComponent = "InstallationObjectMenuComponent",
+	constructionMarker = "object/installation/mining_ore/construction/construction_mining_ore_harvester_style_heavy.iff"
+}
 
---Children folder includes
-
--- Server Objects
-includeFile("tangible/deed/harvester_deed/harvester_creature_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_flora_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_gas_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_liquid_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed_heavy.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed_medium.lua")
-includeFile("tangible/deed/harvester_deed/harvester_moisture_deed_elite.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_heavy_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_elite_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_s1_deed.lua")
-includeFile("tangible/deed/harvester_deed/harvester_ore_s2_deed.lua")
+ObjectTemplates:addTemplate(object_installation_mining_liquid_mining_liquid_moisture_harvester_elite, "object/installation/mining_liquid/mining_liquid_moisture_harvester_elite.iff")
