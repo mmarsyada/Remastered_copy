@@ -3,13 +3,16 @@ nyms_pirate_poi_rare = {
 	minimumLevel = 0,
 	maximumLevel = 0,	
 	lootItems = {
-		{itemTemplate = "nym_themepark_mounted_slugthrower", weight = 666666},
-		{itemTemplate = "nym_themepark_backpack_schematic", weight = 666666},
-		{itemTemplate = "nym_themepark_rug", weight = 666666},
-		{itemTemplate = "frn_loyalty_award_plaque_gold", weight = 666666},
-		{itemTemplate = "frn_loyalty_award_plaque_silver", weight = 666666},
-		{itemTemplate = "rifle_jinkins_schematic", weight = 666670},
-		{itemTemplate = "powerpack_rifle_jinkins", weight = 6000000}
+		{itemTemplate = "rifle_jinkins_schematic", weight = 1000000},
+		{itemTemplate = "powerpack_rifle_jinkins", weight = 1000000},
+		{itemTemplate = "pistol_dh18a_schematic", weight = 1000000},
+		{itemTemplate = "carbine_proton_schematic", weight = 1000000},
+		{itemTemplate = "rifle_proton_schematic", weight = 1000000},
+		{itemTemplate = "barrel_pistol_dh18a", weight = 1000000},
+		{itemTemplate = "coil_carbine_proton", weight = 1000000},
+		{itemTemplate = "coil_rifle_proton", weight = 1000000},
+		{itemTemplate = "phrik_shard", weight = 1000000},
+		{itemTemplate = "cortosis_weave_sword_core", weight = 1000000}
 	}
 }
 

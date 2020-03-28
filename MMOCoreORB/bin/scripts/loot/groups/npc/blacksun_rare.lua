@@ -5,7 +5,8 @@ blacksun_rare = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		{itemTemplate = "blacksun_razor_knuckler_schematic", weight = 10000000}
+		{itemTemplate = "blacksun_razor_knuckler_schematic", weight = 4000000},
+		{itemTemplate = "razor_blade", weight = 6000000}
 	}
 }
 

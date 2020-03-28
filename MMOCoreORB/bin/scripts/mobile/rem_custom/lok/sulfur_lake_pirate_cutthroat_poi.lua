@@ -49,7 +49,7 @@ sulfur_lake_pirate_cutthroat_poi = Creature:new {
 			groups = {
 				{group = "nyms_pirate_poi_common", chance = 10000000},
 			},
-			lootChance = 1000000
+			lootChance = 2000000
 		},
 		{	
 			groups = {
