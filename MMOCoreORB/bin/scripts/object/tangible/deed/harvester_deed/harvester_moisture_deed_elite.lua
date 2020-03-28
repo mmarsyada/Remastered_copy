@@ -43,8 +43,12 @@
 
 object_tangible_deed_harvester_deed_harvester_moisture_deed_elite = object_tangible_deed_harvester_deed_shared_harvester_moisture_deed_elite:new {
 	templateType = STRUCTUREDEED,
+		customObjectName = "Deed for: ELITE Moisture Vaporator",
+	
 	placeStructureComponent = "PlaceStructureComponent",
 	generatedObjectTemplate = "object/installation/mining_liquid/mining_liquid_moisture_harvester_elite.iff",
+	
+
 
 	numberExperimentalProperties = {1, 1, 3, 2, 1},
 	experimentalProperties = {"XX", "XX", "HR", "SR", "UT", "MA", "UT", "XX"},
