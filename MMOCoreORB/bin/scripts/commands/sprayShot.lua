@@ -56,7 +56,7 @@ SprayShotCommand = {
 		{},
 		{ "dizzy_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		60,
+		75,
 		0,
 		30
 	  ),
@@ -74,7 +74,7 @@ SprayShotCommand = {
 		{},
 		{ "stun_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		30,
+		75,
 		0,
 		10
 	  )
@@ -84,7 +84,7 @@ SprayShotCommand = {
 	animType = GENERATE_RANGED,
 
 	combatSpam = "sprayshot",
-	weaponType = CARBINEWEAPON,
+	weaponType = CARBINEWEAPON + PISTOLWEAPON
 
 	range = -1
 }
