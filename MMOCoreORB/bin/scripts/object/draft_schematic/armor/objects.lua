@@ -3334,3 +3334,75 @@ object_draft_schematic_armor_shared_armor_rebel_endor_helmet = SharedDraftSchema
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_rebel_endor_helmet, "object/draft_schematic/armor/shared_armor_rebel_endor_helmet.iff")
+
+--Jedi Guardian Armor
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_leggings = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_leggings.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_leggings, "object/draft_schematic/armor/shared_armor_jedi_guardian_leggings.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_belt = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_belt.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_belt, "object/draft_schematic/armor/shared_armor_jedi_guardian_belt.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_bicep_l = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_bicep_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_bicep_l, "object/draft_schematic/armor/shared_armor_jedi_guardian_bicep_l.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_bicep_r = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_bicep_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_bicep_r, "object/draft_schematic/armor/shared_armor_jedi_guardian_bicep_r.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_bracer_r = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_bracer_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_bracer_r, "object/draft_schematic/armor/shared_armor_jedi_guardian_bracer_r.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_bracer_l = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_bracer_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_bracer_l, "object/draft_schematic/armor/shared_armor_jedi_guardian_bracer_l.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_boots = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_boots.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_boots, "object/draft_schematic/armor/shared_armor_jedi_guardian_boots.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_chest_plate = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_chest_plate.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_chest_plate, "object/draft_schematic/armor/shared_armor_jedi_guardian_chest_plate.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_gloves = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_gloves.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_gloves, "object/draft_schematic/armor/shared_armor_jedi_guardian_gloves.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_draft_schematic_armor_shared_armor_jedi_guardian_helmet = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/armor/shared_armor_jedi_guardian_helmet.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_armor_jedi_guardian_helmet, "object/draft_schematic/armor/shared_armor_jedi_guardian_helmet.iff")

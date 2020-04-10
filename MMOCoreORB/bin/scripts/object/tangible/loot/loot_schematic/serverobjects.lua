@@ -763,3 +763,16 @@ includeFile("tangible/loot/loot_schematic/be_scorpion_kliknik_schematic.lua")
 includeFile("tangible/loot/loot_schematic/be_tcg_peko_peko_mount_schematic.lua")
 includeFile("tangible/loot/loot_schematic/be_skeletal_tauntaun_schematic.lua")
 includeFile("tangible/loot/loot_schematic/ghost_flash_speeder_schematic.lua")
+
+--jedi guardian armor
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_belt_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_bicep_l_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_bicep_r_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_bracer_r_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_bracer_l_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_boots_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_chest_plate_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_helmet_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_gloves_schematic.lua");
+includeFile("tangible/loot/loot_schematic/armor_jedi_guardian_leggings_schematic.lua");
+

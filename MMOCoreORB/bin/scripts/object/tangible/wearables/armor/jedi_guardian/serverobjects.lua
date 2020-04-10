@@ -1,0 +1,10 @@
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_belt.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_bicep_l.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_bicep_r.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_boots.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_bracer_l.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_bracer_r.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_gloves.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_helmet.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_leggings.lua");
+includeFile("tangible/wearables/armor/jedi_guardian/armor_jedi_guardian_chest_plate.lua");

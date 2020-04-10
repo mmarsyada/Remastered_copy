@@ -374,3 +374,16 @@ includeFile("draft_schematic/armor/armor_rebel_snow_leggings.lua")
 --Rebel Endor Helmet
 includeFile("draft_schematic/armor/armor_rebel_endor_helmet.lua")
 
+--Jedi Guardian Armor
+includeFile("draft_schematic/armor/armor_jedi_guardian_leggings.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_belt.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_bicep_l.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_bicep_r.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_bracer_r.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_bracer_l.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_boots.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_chest_plate.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_gloves.lua");
+includeFile("draft_schematic/armor/armor_jedi_guardian_helmet.lua");
+
+

@@ -5947,6 +5947,76 @@ object_tangible_loot_loot_schematic_shared_lance_kaminoan_schematic = SharedTang
 }
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_lance_kaminoan_schematic, "object/tangible/loot/loot_schematic/shared_lance_kaminoan_schematic.iff")
 
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_belt_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_belt_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_belt_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_belt_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_l_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_l_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_l_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_l_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_r_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_r_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_r_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_r_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_r_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_r_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_r_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_r_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_l_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_l_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_l_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_l_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_boots_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_boots_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_boots_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_boots_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_chest_plate_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_chest_plate_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_chest_plate_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_chest_plate_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_gloves_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_gloves_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_gloves_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_gloves_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_helmet_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_helmet_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_helmet_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_helmet_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_leggings_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_leggings_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_leggings_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_leggings_schematic.iff")
+
 --Kashyyyk Bladestick Schematic
 object_tangible_loot_loot_schematic_shared_lance_kashyyyk_bladestick_schematic = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_lance_kashyyyk_bladestick_schematic.iff"
@@ -8451,3 +8521,75 @@ object_tangible_loot_loot_schematic_shared_ghost_flash_speeder_schematic = Share
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_ghost_flash_speeder_schematic.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_ghost_flash_speeder_schematic, "object/tangible/loot/loot_schematic/shared_ghost_flash_speeder_schematic.iff")
+--jedi guardian armor
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_belt_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_belt_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_belt_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_belt_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_l_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_l_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_l_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_l_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_r_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_r_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bicep_r_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bicep_r_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_r_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_r_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_r_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_r_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_l_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_l_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_bracer_l_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_bracer_l_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_boots_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_boots_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_boots_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_boots_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_chest_plate_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_chest_plate_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_chest_plate_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_chest_plate_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_gloves_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_gloves_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_gloves_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_gloves_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_helmet_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_helmet_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_helmet_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_helmet_schematic.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_leggings_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_leggings_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_armor_jedi_guardian_leggings_schematic, "object/tangible/loot/loot_schematic/shared_armor_jedi_guardian_leggings_schematic.iff")
+

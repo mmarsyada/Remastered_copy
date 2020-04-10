@@ -1,0 +1,72 @@
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_belt = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_belt.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_belt, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_belt.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bicep_l = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bicep_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bicep_l, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bicep_l.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bicep_r = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bicep_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bicep_r, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bicep_r.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_boots = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_boots.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_boots, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_boots.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bracer_l = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bracer_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bracer_l, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bracer_l.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bracer_r = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bracer_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_bracer_r, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_bracer_r.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_gloves = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_gloves.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_gloves, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_gloves.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_helmet = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_helmet.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_helmet, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_helmet.iff")
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_leggings = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_leggings.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_leggings, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_leggings.iff")
+
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_chest_plate = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/armor/armor/shared_armor_jedi_guardian_chest_plate.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_chest_plate, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_chest_plate.iff")
+
