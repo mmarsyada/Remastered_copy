@@ -109,7 +109,7 @@ public:
 	int getFactionPointsCap(int rank);
 
 	bool isHighestRank(int rank) {
-		return rank >= factionRanks.getCount() - 1 || rank >= 15;
+		return rank >= factionRanks.getCount() - 1 || rank >= 28;
 	}
 
 	bool isFaction(const String& faction);
