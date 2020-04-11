@@ -846,7 +846,7 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 }
 
 int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender) const {
-	if (defender->isIntimidated() || defender->isBerserked() || defender->isVehicleObject()) return 0;
+	if (defender->isBerserked() || defender->isVehicleObject()) return 0;
 
 	int targetDefense = defender->isPlayerCreature() ? 0 : defender->getLevel();
 	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
@@ -859,8 +859,13 @@ int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender)
 		targetDefense += defender->getSkillMod("private_" + mod);
 	}
 
-	if (targetDefense > 125)
+	if (targetDefense > 125) {
 		targetDefense = 125;
+		if (defender->isIntimidated())
+			targetDefense -= 50;
+		if (!weapon->isRangedWeapon())
+			targetDefense -= 50;
+	}
 
 	return targetDefense;
 }
@@ -894,7 +899,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){
-		damage *= 1.f - (25.f/100.f);
+		damage *= 1.f - (35.f/100.f);
 	}
 
 	return damage < 0 ? 0 : damage;
@@ -1579,7 +1584,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 
 	// PvP Damage Reduction.
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature() && !data.isForceAttack())
-		damage *= 0.25;
+		damage *= 0.30;
 
 	if (damage < 1) damage = 1;
 
@@ -1696,7 +1701,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 		// saber block is special because it's just a % chance to block based on the skillmod
 		if (def == "saber_block") {
 			if ((attacker->isPlayerCreature() && weapon->getAttackType() == SharedWeaponObjectTemplate::RANGEDATTACK) && attacker->asCreatureObject()->hasSkill("combat_bountyhunter_master") && !(weapon->isThrownWeapon() || weapon->isSpecialHeavyWeapon())){
-				if (System::random(115) < targetCreature->getSkillMod(def)){
+				if (System::random(125) < targetCreature->getSkillMod(def)){
 					return RICOCHET;
 				} else {
 					return HIT;
