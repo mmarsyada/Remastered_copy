@@ -68,7 +68,7 @@ BleedingShotCommand = {
 	  )
 	},
 	
-	weaponType = PISTOLWEAPON + CARBINEWEAPON
+	weaponType = PISTOLWEAPON + CARBINEWEAPON,
 
 	range = -1
 }
