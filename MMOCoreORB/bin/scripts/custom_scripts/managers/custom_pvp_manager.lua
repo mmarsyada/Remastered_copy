@@ -28,35 +28,35 @@ frsTargetTitles = {
 
 jediTrophyName = "%s's Lightsaber"
 jediTrophies = {
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_001.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_002.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_003.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_004.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_005.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_006.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_007.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_008.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_009.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_010.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_011.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_012.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_013.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_014.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_015.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_001.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_002.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_003.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_004.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_005.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_006.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_007.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_008.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_009.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_010.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_011.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_012.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_013.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_014.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_015.iff",
 	-- remastered_1.tre needs to be fixed for these hilts to work
-	--[["object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_016.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_017.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_018.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_019.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_020.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_021.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_022.iff",
-	"object/tangible/loot/creature/loot/collections/broken_lightsaber_hilt_023.iff"]]--
+	[["object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_016.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_017.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_018.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_019.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_020.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_021.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_022.iff",
+	"object/tangible/loot/creature_loot/collections/broken_lightsaber_hilt_023.iff"]]
 }
 
 bountyTrophyName = "%s's Helmet"
 bountyTrophies = {
-	"object/tangible/loot/creature/loot/collections/broken_mando_helmet.iff"
+	"object/tangible/loot/creature_loot/collections/broken_mando_helmet.iff"
 }
 
 playerKillMusic = "sound/music_themequest_victory_imperial.snd"

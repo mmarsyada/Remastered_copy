@@ -29,6 +29,9 @@ includeFile("tangible/loot/creature_loot/collections/broken_lightsaber_hilt_020.
 includeFile("tangible/loot/creature_loot/collections/broken_lightsaber_hilt_021.lua")
 includeFile("tangible/loot/creature_loot/collections/broken_lightsaber_hilt_022.lua")
 includeFile("tangible/loot/creature_loot/collections/broken_lightsaber_hilt_023.lua")
+includeFile("tangible/loot/creature_loot/collections/broken_mando_helmet.lua");
+
+
 
 --Imperial Rank Badges
 includeFile("tangible/loot/creature_loot/collections/col_imperial_logo_patch.lua")
