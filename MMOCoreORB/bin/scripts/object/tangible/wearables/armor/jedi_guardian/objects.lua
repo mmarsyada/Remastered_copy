@@ -66,7 +66,7 @@ ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_
 --Made with Skyyyr's Wrench Tool 
 
 object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_chest_plate = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/wearables/armor/armor/shared_armor_jedi_guardian_chest_plate.iff"
+	clientTemplateFileName = "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_chest_plate.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_jedi_guardian_shared_armor_jedi_guardian_chest_plate, "object/tangible/wearables/armor/jedi_guardian/shared_armor_jedi_guardian_chest_plate.iff")
 

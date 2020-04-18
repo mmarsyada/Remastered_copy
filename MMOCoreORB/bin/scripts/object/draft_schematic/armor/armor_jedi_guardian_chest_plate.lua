@@ -58,9 +58,9 @@ object_draft_schematic_armor_armor_jedi_guardian_chest_plate = object_draft_sche
    experimentingSkill = "armor_experimentation", 
    customizationSkill = "armor_customization", 
 
-   customizationOptions = {},
-   customizationStringNames = {},
-   customizationDefaults = {},
+   customizationOptions = {2},
+   customizationStringNames = {"/private/index_color_1"},
+   customizationDefaults = {11},
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness", "reinforcement"},
@@ -74,6 +74,8 @@ object_draft_schematic_armor_armor_jedi_guardian_chest_plate = object_draft_sche
 
    additionalTemplates = {
              }
+             
+             
 
 }
 ObjectTemplates:addTemplate(object_draft_schematic_armor_armor_jedi_guardian_chest_plate, "object/draft_schematic/armor/armor_jedi_guardian_chest_plate.iff")
