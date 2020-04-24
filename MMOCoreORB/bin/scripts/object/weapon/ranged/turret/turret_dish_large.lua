@@ -50,7 +50,7 @@ object_weapon_ranged_turret_turret_dish_large = object_weapon_ranged_turret_shar
 	armorPiercing = HEAVY,
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "rifle_accuracy" },
-	creatureAimModifiers = { "rifle_aim", "aim" },
+	--creatureAimModifiers = { "rifle_aim", "aim" },
 	-- See http://www.ocdsoft.com/files/defense.xls
 	defenderDefenseModifiers = { "ranged_defense" },
 	-- Leave blank since research says turrets didn't have
@@ -63,8 +63,8 @@ object_weapon_ranged_turret_turret_dish_large = object_weapon_ranged_turret_shar
 	pointBlankRange = 0,
 	pointBlankAccuracy = 0,
 	idealRange = 40,
-	idealAccuracy = 70,
-	maxRange = 80,
+	idealAccuracy = 60,
+	maxRange = 70,
 	maxRangeAccuracy = 0,
 	minDamage = 1000,
 	maxDamage = 2700,
