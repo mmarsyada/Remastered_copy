@@ -880,6 +880,13 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (attackType == weapon->getAttackType()) {
 		for (int i = 0; i < defenseToughMods->size(); ++i) {
 			int toughMod = defender->getSkillMod(defenseToughMods->get(i));
+			if (defender->isPlayerCreature()){
+					if (ghost->hasPvpTef()){
+						int forceArmor = defender->getSkillMod("force_armor");
+						if (forceArmor > 30 && toughMod > 40)
+							toughMod -= 15;
+					}
+			}
 			if (toughMod > 0) damage *= 1.f - (toughMod / 100.f);
 		}
 	}
