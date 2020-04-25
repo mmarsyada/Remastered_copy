@@ -1,0 +1,5 @@
+
+object_tangible_loot_creature_loot_collections_broken_mando_helmet = object_tangible_loot_creature_loot_collections_shared_broken_mando_helmet:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_collections_broken_mando_helmet, "object/tangible/loot/creature_loot/collections/broken_mando_helmet.iff")

@@ -830,3 +830,14 @@ object_tangible_loot_creature_loot_collections_shared_opt_in_mail_08 = SharedTan
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_shared_opt_in_mail_08, "object/tangible/loot/creature_loot/collections/shared_opt_in_mail_08.iff")
+
+
+
+--Made with Skyyyr's Wrench Tool 
+
+object_tangible_loot_creature_loot_collections_shared_broken_mando_helmet = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/collections/shared_broken_mando_helmet.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_shared_broken_mando_helmet, "object/tangible/loot/creature_loot/collections/shared_broken_mando_helmet.iff")
+
+
