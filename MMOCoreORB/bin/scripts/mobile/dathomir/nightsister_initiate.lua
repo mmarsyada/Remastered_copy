@@ -31,17 +31,12 @@ nightsister_initiate = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "power_crystals", chance = 500000},
-				{group = "color_crystals", chance = 1000000},
+				{group = "power_crystals", chance = 4000000},
+				{group = "color_crystals", chance = 3500000},
 				{group = "nightsister_common", chance = 1500000},
 				{group = "armor_attachments", chance = 250000},
 				{group = "clothing_attachments", chance = 250000},
-				{group = "melee_weapons", chance = 875000},
-				{group = "rifles", chance = 708333},
-				{group = "pistols", chance = 708333},
-				{group = "carbines", chance = 708334},
-				{group = "wearables_common", chance = 500000},
-				{group = "ns_clothing", chance = 3000000}
+				{group = "ns_clothing", chance = 500000}
 			},
 			lootChance = 7000000
 		}
