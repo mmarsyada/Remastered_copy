@@ -376,7 +376,7 @@ bool SkillManager::awardSkill(const String& skillName, CreatureObject* creature,
 			creature->setFactionStatus(FactionStatus::OVERT);
 		}
 
-		if (skill->getSkillName() == "force_title_jedi_rank_02") {
+		if (skill->getSkillName() == "force_title_jedi_rank_02" || "force_title_jedi_novice") {
 			if (missionManager != nullptr)
 				missionManager->addPlayerToBountyList(creature->getObjectID(), ghost->calculateBhReward());
 		} else if (skill->getSkillName().contains("force_discipline")) {
@@ -532,7 +532,7 @@ bool SkillManager::surrenderSkill(const String& skillName, CreatureObject* creat
 
 		MissionManager* missionManager = creature->getZoneServer()->getMissionManager();
 
-		if (skill->getSkillName() == "force_title_jedi_rank_02") {
+		if (skill->getSkillName() == "force_title_jedi_rank_02" || "force_title_jedi_novice") {
 			if (missionManager != nullptr)
 				missionManager->removePlayerFromBountyList(creature->getObjectID());
 		} else if (skill->getSkillName().contains("force_discipline")) {

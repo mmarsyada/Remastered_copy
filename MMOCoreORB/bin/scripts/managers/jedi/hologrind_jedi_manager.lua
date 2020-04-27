@@ -140,6 +140,7 @@ function HologrindJediManager:awardJediStatusAndSkill(pCreatureObject)
 	end
 
 	awardSkill(pCreatureObject, "force_title_jedi_novice")
+	awardSkill(pCreatureObject, "force_title_jedi_rank_01")
 	PlayerObject(pGhost):setJediState(1)
 end
 
