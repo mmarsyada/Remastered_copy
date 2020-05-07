@@ -1791,12 +1791,12 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 				if (xpType != "jedi_general") {
 					combatXp += xpAmount;
 				} else {
-					ManagedReference<PlayerObject*> ghost = attacker->getPlayerObject();
+					/*ManagedReference<PlayerObject*> ghost = attacker->getPlayerObject();
 					int jedipointcount = ghost->getSpentJediSkillPoints();
 					if (jedipointcount >= 245)
 						xpAmount *= 2.f;
-					else
-						xpAmount *= 0.25f;
+					else*/
+						xpAmount *= 1.4f;
 				}
 
 				//Award individual expType

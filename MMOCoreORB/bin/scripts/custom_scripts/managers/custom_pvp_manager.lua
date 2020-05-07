@@ -63,7 +63,7 @@ playerKillMusic = "sound/music_themequest_victory_imperial.snd"
 
 pvpXp = 1000
 pvpGroupXp = 500
-pvpXpMessage = "You have received \\#EFFF00%d GCW PVP Currency!"
+pvpXpMessage = "You have received \\#EFFF00%d GCW PVP Experience"
 
 frsGroupPenalty = 0.6 -- Must be between 0 and 1
 frsXpMessage = "You have received \\#EFFF00%d FRS Experience!"

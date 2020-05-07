@@ -859,6 +859,7 @@ int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender)
 		targetDefense += defender->getSkillMod("private_" + mod);
 	}
 
+	//Modify Intimidate in PVP to allow secondaries to pass through, so it's not a 100% reduction of Secondary defenses.
 	if (targetDefense > 125) {
 		targetDefense = 125;
 		if (defender->isIntimidated())
