@@ -44,13 +44,11 @@
 ForceLightningSingle2Command = {
 	name = "forcelightningsingle2",
 
-	 minDamage = 650,
-	 maxDamage = 960,
-	-- damageMultiplier = 4,
-	-- speedMultiplier = .5,
-	 speed = 2,
+	minDamage = 2250,
+	maxDamage = 3250,
+	speed = 4.0,
+	forceCost = 150,
 	 forceCost = 35,
-	-- forceCostMultiplier = 3.0,
 	visMod = 25,
 	accuracySkillMod = "forcelightning_accuracy",
 
@@ -65,21 +63,6 @@ ForceLightningSingle2Command = {
 		10
 	  )
 	},
-	
-		dotEffects = {
-	  DotEffect( 
-		ONFIRE, 
-		{ "resistance_fire", "fire_resist" },
-		HEALTH,
-		true,
-		7,
-		75,
-		75, 
-		75,
-		12,
-		2
-	  )
-	},
 
 	animation = "force_lightning_1_particle_level_3",
 	animType = GENERATE_INTENSITY,
@@ -89,7 +72,7 @@ ForceLightningSingle2Command = {
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
 	forceAttack = true,
-	damageType = LIGHTSABER_DAMAGE,
+	damageType = ELECTRICITY_DAMAGE,
 
 	frsLightMinDamageModifier = 5,
 	frsLightMaxDamageModifier = 10,

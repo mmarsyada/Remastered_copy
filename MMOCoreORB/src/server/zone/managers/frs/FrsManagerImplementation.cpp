@@ -821,10 +821,13 @@ void FrsManagerImplementation::adjustFrsExperience(CreatureObject* player, int a
 		ghost->addExperience("force_rank_xp", amount, true);
 
 		if (sendSystemMessage) {
+			CustomPvpManager::instance()->frsGainedMessage(*player, amount);
+			/*
 			StringIdChatParameter param("@force_rank:experience_granted"); // You have gained %DI Force Rank experience.
 			param.setDI(amount);
 
 			player->sendSystemMessage(param);
+			*/
 		}
 	} else {
 		FrsData* playerData = ghost->getFrsData();
