@@ -33,7 +33,7 @@ public:
 
 				Locker clocker(targetCreature, creature);
 
-				SkillManager::instance()->surrenderAllSkills(targetCreature,true, true);
+			skillManager->surrenderAllSkills(targetCreature,true, true);
 
 			return SUCCESS;
 		}
