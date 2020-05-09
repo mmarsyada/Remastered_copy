@@ -24,9 +24,14 @@ public:
 				return INVALIDLOCOMOTION;
 
 
-			ManagedReference<PlayerObject*> ghost = creature->getPlayerObject();
+			ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
+			CreatureObject* targetCreature = cast<CreatureObject*>( object.get());
+			ManagedReference<PlayerObject*> ghost = targetCreature->getPlayerObject();
+
+			Locker clocker(targetCreature, creature);
+
 			SkillManager* skillManager = SkillManager::instance();
-			const SkillList* skillList = creature->getSkillList();
+			const SkillList* skillList = targetCreature->getSkillList();
 			DeltaVectorMap<String, int>* experienceList = ghost->getExperienceList();
 			//copy experience list to update later
 			DeltaVectorMap<String, int> experienceListCopy;
@@ -48,59 +53,59 @@ public:
 				String skillName = skill->getSkillName();
 
 				if (!skillName.beginsWith("admin") && (skillName.contains("master"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
+					skillManager->surrenderSkill(skillName, targetCreature, true);
 				}
 			}
 			for (int i = 0; i < copyOfList.size(); i++) {
 				Skill* skill = copyOfList.get(i);
 				String skillName = skill->getSkillName();
 				if (!skillName.beginsWith("admin") && (skillName.contains("04"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
+					skillManager->surrenderSkill(skillName, targetCreature, true);
 				}
 			}
 			for (int i = 0; i < copyOfList.size(); i++) {
 				Skill* skill = copyOfList.get(i);
 				String skillName = skill->getSkillName();
 				if (!skillName.beginsWith("admin") && (skillName.contains("03"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
+					skillManager->surrenderSkill(skillName, targetCreature, true);
 				}
 			}
 			for (int i = 0; i < copyOfList.size(); i++) {
 				Skill* skill = copyOfList.get(i);
 				String skillName = skill->getSkillName();
 				if (!skillName.beginsWith("admin") && (skillName.contains("02"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
+					skillManager->surrenderSkill(skillName, targetCreature, true);
 				}
 			}
 			for (int i = 0; i < copyOfList.size(); i++) {
 				Skill* skill = copyOfList.get(i);
 				String skillName = skill->getSkillName();
 				if (!skillName.beginsWith("admin") && (skillName.contains("01"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
+					skillManager->surrenderSkill(skillName, targetCreature, true);
 				}
 			}
 			for (int i = 0; i < copyOfList.size(); i++) {
 				Skill* skill = copyOfList.get(i);
 				String skillName = skill->getSkillName();
 				if (!skillName.beginsWith("admin") && (skillName.contains("novice"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
+					skillManager->surrenderSkill(skillName, targetCreature, true);
 				}
 			}
 			for (int i = 0; i < copyOfList.size(); i++) {
 					Skill* skill = copyOfList.get(i);
 					String skillName = skill->getSkillName();
 					if (!skillName.beginsWith("admin") && (skillName.contains("force_sensitive"))) {
-						bool skillGranted = skillManager->awardSkill(skillName, creature, true, true, true);
+						bool skillGranted = skillManager->awardSkill(skillName, targetCreature, true, true, true);
 						creature->sendSystemMessage("Regranting SKill: " + skillName);
 					}
 				}
-			for (int i = 0; i < experienceListCopy.size(); ++i) {
+			/*for (int i = 0; i < experienceListCopy.size(); ++i) {
 					String xpType = experienceListCopy.getKeyAt(i);
 					int xpAmount = experienceListCopy.getValueAt(i);
 					int num = ghost->getExperience(xpType);
 					xpAmount -= num;
 					ghost->addExperience(xpType, xpAmount, true);
-			}
+			}*/
 
 
 			return SUCCESS;
