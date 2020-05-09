@@ -24,16 +24,84 @@ public:
 				return INVALIDLOCOMOTION;
 
 
-			ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
+			ManagedReference<PlayerObject*> ghost = creature->getPlayerObject();
+			SkillManager* skillManager = SkillManager::instance();
+			const SkillList* skillList = creature->getSkillList();
+			DeltaVectorMap<String, int>* experienceList = ghost->getExperienceList();
+			//copy experience list to update later
+			DeltaVectorMap<String, int> experienceListCopy;
+			for (int i = 0; i < experienceList->size(); ++i)
+				experienceListCopy.set(experienceList->getKeyAt(i), experienceList->getValueAt(i));
 
-				if (object == nullptr || !object->isCreatureObject())
-					return INVALIDTARGET;
+			if (skillList == nullptr)
+				return GENERALERROR;
 
-				CreatureObject* targetCreature = cast<CreatureObject*>( object.get());
+			String skillName = "";
+			Vector<String> listOfNames;
+			skillList->getStringList(listOfNames);
+			SkillList copyOfList;
+			copyOfList.loadFromNames(listOfNames);
 
-				Locker clocker(targetCreature, creature);
 
-				SkillManager::instance()->surrenderAllSkills(targetCreature,true, true);
+			for (int i = 0; i < copyOfList.size(); i++) {
+				Skill* skill = copyOfList.get(i);
+				String skillName = skill->getSkillName();
+
+				if (!skillName.beginsWith("admin") && (skillName.contains("master"))) {
+					skillManager->surrenderSkill(skillName, creature, true);
+				}
+			}
+			for (int i = 0; i < copyOfList.size(); i++) {
+				Skill* skill = copyOfList.get(i);
+				String skillName = skill->getSkillName();
+				if (!skillName.beginsWith("admin") && (skillName.contains("04"))) {
+					skillManager->surrenderSkill(skillName, creature, true);
+				}
+			}
+			for (int i = 0; i < copyOfList.size(); i++) {
+				Skill* skill = copyOfList.get(i);
+				String skillName = skill->getSkillName();
+				if (!skillName.beginsWith("admin") && (skillName.contains("03"))) {
+					skillManager->surrenderSkill(skillName, creature, true);
+				}
+			}
+			for (int i = 0; i < copyOfList.size(); i++) {
+				Skill* skill = copyOfList.get(i);
+				String skillName = skill->getSkillName();
+				if (!skillName.beginsWith("admin") && (skillName.contains("02"))) {
+					skillManager->surrenderSkill(skillName, creature, true);
+				}
+			}
+			for (int i = 0; i < copyOfList.size(); i++) {
+				Skill* skill = copyOfList.get(i);
+				String skillName = skill->getSkillName();
+				if (!skillName.beginsWith("admin") && (skillName.contains("01"))) {
+					skillManager->surrenderSkill(skillName, creature, true);
+				}
+			}
+			for (int i = 0; i < copyOfList.size(); i++) {
+				Skill* skill = copyOfList.get(i);
+				String skillName = skill->getSkillName();
+				if (!skillName.beginsWith("admin") && (skillName.contains("novice"))) {
+					skillManager->surrenderSkill(skillName, creature, true);
+				}
+			}
+			for (int i = 0; i < copyOfList.size(); i++) {
+					Skill* skill = copyOfList.get(i);
+					String skillName = skill->getSkillName();
+					if (!skillName.beginsWith("admin") && (skillName.contains("force_sensitive"))) {
+						bool skillGranted = skillManager->awardSkill(skillName, creature, true, true, true);
+						creature->sendSystemMessage("Regranting SKill: " + skillName);
+					}
+				}
+			for (int i = 0; i < experienceListCopy.size(); ++i) {
+					String xpType = experienceListCopy.getKeyAt(i);
+					int xpAmount = experienceListCopy.getValueAt(i);
+					int num = ghost->getExperience(xpType);
+					xpAmount -= num;
+					ghost->addExperience(xpType, xpAmount, true);
+			}
+
 
 			return SUCCESS;
 		}
@@ -41,15 +109,10 @@ public:
 		// Jedi State.s
 
 		/*ManagedReference<PlayerObject*> targetGhost = targetCreature->getPlayerObject();
-
 		if (targetGhost == nullptr)
 			return GENERALERROR;
-
 		targetGhost->setJediState(0);
-
 		return SUCCESS;*/
 };
-
-
 
 #endif //RESETJEDICOMMAND_H_
