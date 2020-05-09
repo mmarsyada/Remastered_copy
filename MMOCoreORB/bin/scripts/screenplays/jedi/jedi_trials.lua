@@ -142,7 +142,7 @@ function JediTrials:unlockJediPadawan(pPlayer, dontSendSui)
 		CreatureObject(pPlayer):sendSystemMessage("@jedi_spam:inventory_full_jedi_robe")
 	else
 		local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
-		local pItem = giveItem(pInventory, "object/tangible/wearables/robe/robe_jedi_padawan.iff", -1)
+		local pItem = giveItem(pInventory, "object/tangible/wearables/robe/robe_jedi_padawan_crafted.iff", -1)
 	end
 
 	sendMail("system", "@jedi_spam:welcome_subject", "@jedi_spam:welcome_body", CreatureObject(pPlayer):getFirstName())
@@ -163,7 +163,7 @@ function JediTrials:unlockJediKnight(pPlayer)
 	local councilType = self:getJediCouncil(pPlayer)
 
 	if (councilType == self.COUNCIL_LIGHT) then
-		knightRobe = "object/tangible/wearables/robe/robe_jedi_light_s01.iff"
+		knightRobe = "object/tangible/wearables/robe/robe_jedi_light_s01_crafted.iff"
 		unlockMusic = "sound/music_become_light_jedi.snd"
 		unlockString = "@jedi_trials:knight_trials_completed_light"
 		enclaveLoc = { -5575, 4905, "yavin4" }
@@ -171,7 +171,7 @@ function JediTrials:unlockJediKnight(pPlayer)
 		jediState = 4
 		setFactionVal = FACTIONREBEL
 	elseif (councilType == self.COUNCIL_DARK) then
-		knightRobe = "object/tangible/wearables/robe/robe_jedi_dark_s01.iff"
+		knightRobe = "object/tangible/wearables/robe/robe_jedi_dark_s01_crafted.iff"
 		unlockMusic = "sound/music_become_dark_jedi.snd"
 		unlockString = "@jedi_trials:knight_trials_completed_dark"
 		enclaveLoc = { 5079, 305, "yavin4" }

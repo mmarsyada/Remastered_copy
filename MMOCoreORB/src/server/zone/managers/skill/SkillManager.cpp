@@ -891,7 +891,7 @@ bool SkillManager::villageKnightPrereqsMet(CreatureObject* creature, const Strin
 		Skill* skill = skillList->get(i);
 
 		String skillName = skill->getSkillName();
-		if (skillName.contains("force_discipline_") &&
+		if (skillName.contains("jedi_") &&
 			(skillName.indexOf("0") != -1 || skillName.contains("novice") || skillName.contains("master") )) {
 			totalJediPoints += skill->getSkillPointsRequired();
 

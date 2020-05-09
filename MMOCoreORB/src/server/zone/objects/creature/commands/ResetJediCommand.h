@@ -24,69 +24,16 @@ public:
 				return INVALIDLOCOMOTION;
 
 
-			ManagedReference<PlayerObject*> ghost = creature->getPlayerObject();
-			SkillManager* skillManager = SkillManager::instance();
-			const SkillList* skillList = creature->getSkillList();
-			DeltaVectorMap<String, int>* experienceList = ghost->getExperienceList();
-			//copy experience list to update later
-			DeltaVectorMap<String, int> experienceListCopy;
-			for (int i = 0; i < experienceList->size(); ++i)
-				experienceListCopy.set(experienceList->getKeyAt(i), experienceList->getValueAt(i));
+			ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
 
-			if (skillList == nullptr)
-				return GENERALERROR;
+				if (object == nullptr || !object->isCreatureObject())
+					return INVALIDTARGET;
 
-			String skillName = "";
-			Vector<String> listOfNames;
-			skillList->getStringList(listOfNames);
-			SkillList copyOfList;
-			copyOfList.loadFromNames(listOfNames);
+				CreatureObject* targetCreature = cast<CreatureObject*>( object.get());
 
+				Locker clocker(targetCreature, creature);
 
-			for (int i = 0; i < copyOfList.size(); i++) {
-				Skill* skill = copyOfList.get(i);
-				String skillName = skill->getSkillName();
-
-				if (!skillName.beginsWith("admin") && (!skillName.beginsWith("force_sensitive")) && (skillName.contains("master"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
-				}
-			}
-			for (int i = 0; i < copyOfList.size(); i++) {
-				Skill* skill = copyOfList.get(i);
-				String skillName = skill->getSkillName();
-				if (!skillName.beginsWith("admin") && (!skillName.beginsWith("force_sensitive")) && (skillName.contains("04"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
-				}
-			}
-			for (int i = 0; i < copyOfList.size(); i++) {
-				Skill* skill = copyOfList.get(i);
-				String skillName = skill->getSkillName();
-				if (!skillName.beginsWith("admin") && (!skillName.beginsWith("force_sensitive")) && (skillName.contains("03"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
-				}
-			}
-			for (int i = 0; i < copyOfList.size(); i++) {
-				Skill* skill = copyOfList.get(i);
-				String skillName = skill->getSkillName();
-				if (!skillName.beginsWith("admin") && (!skillName.beginsWith("force_sensitive")) && (skillName.contains("02"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
-				}
-			}
-			for (int i = 0; i < copyOfList.size(); i++) {
-				Skill* skill = copyOfList.get(i);
-				String skillName = skill->getSkillName();
-				if (!skillName.beginsWith("admin") && (!skillName.beginsWith("force_sensitive")) && (skillName.contains("01"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
-				}
-			}
-			for (int i = 0; i < copyOfList.size(); i++) {
-				Skill* skill = copyOfList.get(i);
-				String skillName = skill->getSkillName();
-				if (!skillName.beginsWith("admin") && (!skillName.beginsWith("force_sensitive")) && (skillName.contains("novice"))) {
-					skillManager->surrenderSkill(skillName, creature, true);
-				}
-			}
-
+				SkillManager::instance()->surrenderAllSkills(targetCreature,true, true);
 
 			return SUCCESS;
 		}
@@ -102,5 +49,7 @@ public:
 
 		return SUCCESS;*/
 };
+
+
 
 #endif //RESETJEDICOMMAND_H_
