@@ -906,7 +906,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){
-		damage *= 1.f - (35.f/100.f);
+		damage *= 1.f - (30.f/100.f);
 	}
 
 	return damage < 0 ? 0 : damage;
@@ -1591,7 +1591,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 
 	// PvP Damage Reduction.
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature() && !data.isForceAttack())
-		damage *= 0.30;
+		damage *= 0.25;
 
 	if (damage < 1) damage = 1;
 

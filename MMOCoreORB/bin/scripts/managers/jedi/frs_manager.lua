@@ -1,4 +1,4 @@
-frsEnabled = 0
+frsEnabled = 1
 
 -- Object ID of Enclave buildings
 lightEnclaveID = 8525417
@@ -18,7 +18,7 @@ arenaChallengeDuration = 3600000 -- 60 mins
 arenaChallengeCooldown = 90000000 -- 25 hours
 
 -- Costs are in FRS experience
-baseMaintCost = 100
+baseMaintCost = 300
 requestDemotionCost = 2000
 voteChallengeCost = 1000
 
@@ -28,33 +28,33 @@ missedVotePenalty = 100 -- FRS XP
 
 -- { rank, skillName, requiredExperience, playerCap, robe }
 lightRankingData = {
-	{ 0, "force_rank_light_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01.iff" },
-	{ 1, "force_rank_light_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
-	{ 2, "force_rank_light_rank_02", 15000, 3, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
-	{ 3, "force_rank_light_rank_03", 25000, 3, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
-	{ 4, "force_rank_light_rank_04", 35000, 2, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
-	{ 5, "force_rank_light_rank_05", 50000, 2, "object/tangible/wearables/robe/robe_jedi_light_s03.iff" },
-	{ 6, "force_rank_light_rank_06", 70000, 2, "object/tangible/wearables/robe/robe_jedi_light_s03.iff" },
-	{ 7, "force_rank_light_rank_07", 90000, 2, "object/tangible/wearables/robe/robe_jedi_light_s03.iff" },
-	{ 8, "force_rank_light_rank_08", 130000, 2, "object/tangible/wearables/robe/robe_jedi_light_s04.iff" },
-	{ 9, "force_rank_light_rank_09", 180000, 2, "object/tangible/wearables/robe/robe_jedi_light_s04.iff" },
-	{ 10, "force_rank_light_rank_10", 250000, 2, "object/tangible/wearables/robe/robe_jedi_light_s05.iff" },
-	{ 11, "force_rank_light_master", 400000, 1, "object/tangible/wearables/robe/robe_jedi_light_s05.iff" },
+	{ 0, "force_rank_light_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01_crafted.iff" },
+	{ 1, "force_rank_light_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_light_s02_crafted.iff" },
+	{ 2, "force_rank_light_rank_02", 15000, 3, "object/tangible/wearables/robe/robe_jedi_light_s02_crafted.iff" },
+	{ 3, "force_rank_light_rank_03", 25000, 3, "object/tangible/wearables/robe/robe_jedi_light_s02_crafted.iff" },
+	{ 4, "force_rank_light_rank_04", 35000, 2, "object/tangible/wearables/robe/robe_jedi_light_s02_crafted.iff" },
+	{ 5, "force_rank_light_rank_05", 50000, 2, "object/tangible/wearables/robe/robe_jedi_light_s03_crafted.iff" },
+	{ 6, "force_rank_light_rank_06", 70000, 2, "object/tangible/wearables/robe/robe_jedi_light_s03_crafted.iff" },
+	{ 7, "force_rank_light_rank_07", 90000, 2, "object/tangible/wearables/robe/robe_jedi_light_s03_crafted.iff" },
+	{ 8, "force_rank_light_rank_08", 130000, 2, "object/tangible/wearables/robe/robe_jedi_light_s04_crafted.iff" },
+	{ 9, "force_rank_light_rank_09", 180000, 2, "object/tangible/wearables/robe/robe_jedi_light_s04_crafted.iff" },
+	{ 10, "force_rank_light_rank_10", 250000, 2, "object/tangible/wearables/robe/robe_jedi_light_s05_crafted.iff" },
+	{ 11, "force_rank_light_master", 400000, 1, "object/tangible/wearables/robe/robe_jedi_light_s05_crafted.iff" },
 }
 
 darkRankingData = {
-	{ 0, "force_rank_dark_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_dark_s01.iff" },
-	{ 1, "force_rank_dark_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
-	{ 2, "force_rank_dark_rank_02", 15000, 3, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
-	{ 3, "force_rank_dark_rank_03", 25000, 3, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
-	{ 4, "force_rank_dark_rank_04", 35000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s02.iff" },
-	{ 5, "force_rank_dark_rank_05", 50000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s03.iff" },
-	{ 6, "force_rank_dark_rank_06", 70000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s03.iff" },
-	{ 7, "force_rank_dark_rank_07", 90000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s03.iff" },
-	{ 8, "force_rank_dark_rank_08", 130000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s04.iff" },
-	{ 9, "force_rank_dark_rank_09", 180000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s04.iff" },
-	{ 10, "force_rank_dark_rank_10", 250000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s05.iff" },
-	{ 11, "force_rank_dark_master", 400000, 1, "object/tangible/wearables/robe/robe_jedi_dark_s05.iff" },
+	{ 0, "force_rank_dark_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_dark_s01_crafted.iff" },
+	{ 1, "force_rank_dark_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_dark_s02_crafted.iff" },
+	{ 2, "force_rank_dark_rank_02", 15000, 3, "object/tangible/wearables/robe/robe_jedi_dark_s02_crafted.iff" },
+	{ 3, "force_rank_dark_rank_03", 25000, 3, "object/tangible/wearables/robe/robe_jedi_dark_s02_crafted.iff" },
+	{ 4, "force_rank_dark_rank_04", 35000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s02_crafted.iff" },
+	{ 5, "force_rank_dark_rank_05", 50000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s03_crafted.iff" },
+	{ 6, "force_rank_dark_rank_06", 70000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s03_crafted.iff" },
+	{ 7, "force_rank_dark_rank_07", 90000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s03_crafted.iff" },
+	{ 8, "force_rank_dark_rank_08", 130000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s04_crafted.iff" },
+	{ 9, "force_rank_dark_rank_09", 180000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s04_crafted.iff" },
+	{ 10, "force_rank_dark_rank_10", 250000, 2, "object/tangible/wearables/robe/robe_jedi_dark_s05_crafted.iff" },
+	{ 11, "force_rank_dark_master", 400000, 1, "object/tangible/wearables/robe/robe_jedi_dark_s05_crafted.iff" },
 }
 
 enclaveRoomRequirements = {
@@ -102,29 +102,29 @@ frsExperienceValues = {
 	{ "bh_win", 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000 },
 	{ "bh_lose", 2000, 2500, 3500, 4500, 6000, 7500, 9500, 11000, 13500, 15500, 17500, 20000 },
 	{ "padawan_win", 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600, 3600 },
-	{ "padawan_lose", 1000, 1300, 2000, 2500, 3500, 4500, 5500, 6500, 8000, 9000, 10000, 12000 },
+	{ "padawan_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank0_win", 5250, 5250, 5250, 5250, 5250, 5250, 5250, 5250, 5250, 5250, 5250, 5250 },
-	{ "rank0_lose", 500, 1000, 1500, 2000, 3000, 4000, 5000, 6000, 7500, 8500, 10000, 11500 },
+	{ "rank0_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank1_win", 5700, 5700, 5700, 5700, 5700, 5700, 5700, 5700, 5700, 5700, 5700, 5700 },
-	{ "rank1_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank1_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank2_win", 6750, 6750, 6750, 6750, 6750, 6750, 6750, 6750, 6750, 6750, 6750, 6750 },
-	{ "rank2_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank2_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank3_win", 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750, 9750 },
-	{ "rank3_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank3_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank4_win", 12000, 12000, 12000, 12000, 12000, 12000, 12000, 12000, 12000, 12000, 12000, 12000 },
-	{ "rank4_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank4_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank5_win", 14250, 14250, 14250, 14250, 14250, 14250, 14250, 14250, 14250, 14250, 14250, 14250 },
-	{ "rank5_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank5_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank6_win", 16500, 16500, 16500, 16500, 16500, 16500, 16500, 16500, 16500, 16500, 16500, 16500 },
-	{ "rank6_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank6_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank7_win", 19500, 19500, 19500, 19500, 19500, 19500, 19500, 19500, 19500, 19500, 19500, 19500 },
-	{ "rank7_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank7_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500},
 	{ "rank8_win", 22500, 22500, 22500, 22500, 22500, 22500, 22500, 22500, 22500, 22500, 22500, 22500 },
-	{ "rank8_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank8_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank9_win", 25500, 25500, 25500, 25500, 25500, 25500, 25500, 25500, 25500, 25500, 25500, 25500 },
-	{ "rank9_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank9_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank10_win", 29250, 29250, 29250, 29250, 29250, 29250, 29250, 29250, 29250, 29250, 29250, 29250 },
-	{ "rank10_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank10_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 	{ "rank11_win", 32250, 32250, 32250, 32250, 32250, 32250, 32250, 32250, 32250, 32250, 32250, 32250 },
-	{ "rank11_lose", 200, 500, 1000, 1800, 2600, 3500, 4500, 5500, 7000, 8300, 9500, 11000 },
+	{ "rank11_lose", 100, 250, 500, 900, 1300, 1750, 2250, 2750, 3500, 4150, 4750, 5500 },
 }
