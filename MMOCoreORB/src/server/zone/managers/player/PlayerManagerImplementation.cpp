@@ -6407,6 +6407,12 @@ void PlayerManagerImplementation::grantJediMaster(CreatureObject* player, int co
 
         luaFrsTesting->callFunction();
 
+        luaFrsTesting = lua->createFunction("JediTrials", "grantKnightTrialsEligibility", 0);
+		*luaFrsTesting << player;
+        *luaFrsTesting << councilType;
+
+              luaFrsTesting->callFunction();
+
         SkillManager::instance()->surrenderAllSkills(player, true, true);
 
         if (councilType == 1) {
@@ -6418,6 +6424,14 @@ void PlayerManagerImplementation::grantJediMaster(CreatureObject* player, int co
             skillManager->awardSkill("jedi_dark_side_journeyman_master", player, true, true, true);
             skillManager->awardSkill("jedi_dark_side_master_master", player, true, true, true);
         }
+
+        //force knight trials to start
+
+        luaFrsTesting = lua->createFunction("JediTrials", "grantKnightTrialsEligibility", 0);
+		*luaFrsTesting << player;
+        *luaFrsTesting << councilType;
+
+        luaFrsTesting->callFunction();
     }
 
 

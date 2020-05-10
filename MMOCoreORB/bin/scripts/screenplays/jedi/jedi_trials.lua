@@ -513,3 +513,7 @@ function JediTrials:completeKnightForTesting(pPlayer, councilType)
 		SceneObject(pPlayer):switchZone("yavin4", enclaveLoc[1], enclaveLoc[2], enclaveLoc[3], 0)
 	end
 end
+
+function JediTrials:grantKnightTrialsEligibility(pPlayer, councilType)
+	writeScreenPlayData(pPlayer, "KnightTrials", "startedTrials", 1)
+end
