@@ -6432,6 +6432,7 @@ void PlayerManagerImplementation::grantJediMaster(CreatureObject* player, int co
         *luaFrsTesting << councilType;
 
         luaFrsTesting->callFunction();
+
     }
 
 

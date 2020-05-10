@@ -495,6 +495,7 @@ function JediTrials:completePadawanForTesting(pPlayer)
 	self:unlockJediPadawan(pPlayer, true)
 end
 
+
 function JediTrials:completeKnightForTesting(pPlayer, councilType)
 	writeScreenPlayData(pPlayer, "KnightTrials", "startedTrials", 1)
 	writeScreenPlayData(pPlayer, "JediTrials", "JediCouncil", councilType)
@@ -516,4 +517,4 @@ end
 
 function JediTrials:grantKnightTrialsEligibility(pPlayer, councilType)
 	writeScreenPlayData(pPlayer, "KnightTrials", "startedTrials", 1)
-end
+end 
