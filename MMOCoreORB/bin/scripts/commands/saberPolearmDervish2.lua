@@ -44,8 +44,8 @@
 SaberPolearmDervish2Command = {
         name = "saberpolearmdervish2",
 
-	damageMultiplier = 4.0,
-	speedMultiplier = 4.0,
+	damageMultiplier = 5.0,
+	speedMultiplier = 2.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
@@ -60,7 +60,7 @@ SaberPolearmDervish2Command = {
 		{}, 
 		{ "blind_defense" }, 
 		{ "jedi_state_defense", "resistance_states" },
-		75, 
+		85, 
 		0, 
 		60 
 	  ),
@@ -69,7 +69,7 @@ SaberPolearmDervish2Command = {
 		{}, 
 		{ "dizzy_defense" }, 
 		{ "jedi_state_defense", "resistance_states" }, 
-		75, 
+		85, 
 		0, 
 		30 
 	  ),
@@ -78,7 +78,7 @@ SaberPolearmDervish2Command = {
 		{}, 
 		{ "stun_defense" }, 
 		{ "jedi_state_defense", "resistance_states" }, 
-		76, 
+		85, 
 		0, 
 		60
 	  )

@@ -78,7 +78,7 @@ SaberPolearmHit3Command = {
 		{ "jedi_state_defense", "resistance_states" },
 		75, 
 		0, 
-		90 
+		60 
 	  )
 	},
 
