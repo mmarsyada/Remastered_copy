@@ -1212,7 +1212,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 				if (forceArmor > 0) {
 					//make Force Armor more effective in PvE
 					if(!attacker->isPlayerCreature())
-					  forceArmor += 20;
+					  forceArmor += 5;
 				}
 
 				dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
