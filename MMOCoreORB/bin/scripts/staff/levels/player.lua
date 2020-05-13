@@ -3,6 +3,7 @@ player = {
 	name = "player",
 	tag = "",
 	skills = {
+	"regrantSkills"
 	}
 }
 

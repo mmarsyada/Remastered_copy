@@ -891,6 +891,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 		}
 	}
 
+
 	// Take Cover Dmg Mitigation
 	if ( attackType == SharedWeaponObjectTemplate::RANGEDATTACK && defender->isInCover()){
 		damage *= 1.f - ( 25.f / 100.f);
@@ -906,7 +907,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){
-		damage *= 1.f - (30.f/100.f);
+		damage *= 1.f - (35.f/100.f);
 	}
 
 	return damage < 0 ? 0 : damage;
@@ -1206,14 +1207,20 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 	if (!data.isForceAttack()) {
 		// Force Armor
 		float rawDamage = damage;
+		float dmgAbsorbed = 0;
+				int forceArmor = defender->getSkillMod("force_armor");
+				if (forceArmor > 0) {
+					//make Force Armor more effective in PvE
+					if(!attacker->isPlayerCreature())
+					  forceArmor += 20;
+				}
 
-		int forceArmor = defender->getSkillMod("force_armor");
-		if (forceArmor > 0) {
-			float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
-			defender->notifyObservers(ObserverEventType::FORCEARMOR, attacker, dmgAbsorbed);
-			sendMitigationCombatSpam(defender, nullptr, (int)dmgAbsorbed, FORCEARMOR);
+				dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
+
+				defender->notifyObservers(ObserverEventType::FORCEARMOR, attacker, dmgAbsorbed);
+				sendMitigationCombatSpam(defender, nullptr, (int)dmgAbsorbed, FORCEARMOR);
 		}
-	} else {
+	 else {
 		float jediBuffDamage = 0;
 		float rawDamage = damage;
 

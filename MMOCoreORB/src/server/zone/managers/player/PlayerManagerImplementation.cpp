@@ -3387,8 +3387,8 @@ void PlayerManagerImplementation::updateSwimmingState(CreatureObject* player, fl
 
 		//Player is in the water.
 		player->setState(CreatureState::SWIMMING, true);
-	        player->setSpeedMultiplierMod(0.30f);
-	        player->setAccelerationMultiplierMod(0.10f);
+	     //   player->setSpeedMultiplierMod(0.30f);
+	     //   player->setAccelerationMultiplierMod(0.10f);
 		return;
 	}
 
