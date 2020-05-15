@@ -495,6 +495,7 @@ function JediTrials:completePadawanForTesting(pPlayer)
 	self:unlockJediPadawan(pPlayer, true)
 end
 
+
 function JediTrials:completeKnightForTesting(pPlayer, councilType)
 	writeScreenPlayData(pPlayer, "KnightTrials", "startedTrials", 1)
 	writeScreenPlayData(pPlayer, "JediTrials", "JediCouncil", councilType)
@@ -513,3 +514,7 @@ function JediTrials:completeKnightForTesting(pPlayer, councilType)
 		SceneObject(pPlayer):switchZone("yavin4", enclaveLoc[1], enclaveLoc[2], enclaveLoc[3], 0)
 	end
 end
+
+function JediTrials:grantKnightTrialsEligibility(pPlayer, councilType)
+	writeScreenPlayData(pPlayer, "KnightTrials", "startedTrials", 1)
+end 
