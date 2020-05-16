@@ -515,6 +515,11 @@ function JediTrials:completeKnightForTesting(pPlayer, councilType)
 	end
 end
 
-function JediTrials:grantKnightTrialsEligibility(pPlayer, councilType)
-	writeScreenPlayData(pPlayer, "KnightTrials", "startedTrials", 1)
+function JediTrials:grantKnightTrialsEligibility(pPlayer)
+	self: resetTrialData(pPlayer, "padawan")
+	self: resetTrialData(pPlayer, "knight")
+	deleteScreenPlayData(pPlayer, "KnightTrials", "completedTrials")
+	KnightTrials:resetCompletedTrialsToStart(pPlayer)
+	
+
 end 

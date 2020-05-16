@@ -6079,13 +6079,13 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 			"force_sensitive_combat_prowess_melee_speed",
 			"force_sensitive_enhanced_reflexes_ranged_defense",
 			"force_sensitive_enhanced_reflexes_melee_defense"
-		};*/
+		};
 
 	for (int i = 0; i < 6; i++) {
 		String branch = branches[i];
 		player->setScreenPlayState("VillageUnlockScreenPlay:" + branch, 2);
 		skillManager->awardSkill(branch + "_04", player, true, true, true);
-	}
+	}*/
 
 	luaFrsTesting = lua->createFunction("FsOutro", "completeVillageOutroFrog", 0);
 	*luaFrsTesting << player;
@@ -6406,12 +6406,6 @@ void PlayerManagerImplementation::grantJediMaster(CreatureObject* player, int co
         *luaFrsTesting << councilType;
 
         luaFrsTesting->callFunction();
-
-        luaFrsTesting = lua->createFunction("JediTrials", "grantKnightTrialsEligibility", 0);
-		*luaFrsTesting << player;
-        *luaFrsTesting << councilType;
-
-              luaFrsTesting->callFunction();
 
         SkillManager::instance()->surrenderAllSkills(player, true, true);
 
