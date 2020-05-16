@@ -62,7 +62,7 @@ stateEffects = {
 		{}, 
 		{ "blind_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		70, 
+		75, 
 		0, 
 		60 
 	  ),
@@ -71,7 +71,7 @@ stateEffects = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		70, 
+		75, 
 		0, 
 		30 
 	  ),
@@ -80,7 +80,7 @@ stateEffects = {
 		{}, 
 		{ "stun_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		70, 
+		75, 
 		0, 
 		60 
 	  )

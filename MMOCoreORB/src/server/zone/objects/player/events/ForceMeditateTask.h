@@ -39,7 +39,7 @@ public:
 			}
 
 			StringIdChatParameter healParams;
-			if (player->hasSkill("force_discipline_enhancements_synergy_04")){
+			if (player->hasSkill("jedi_padawan_master")){
 				//Here we are checking to see which pools have wounds, and we add them to a vector...
 				Vector<uint8> woundedPools;
 				for (uint8 i = 0; i < 9; ++i) {

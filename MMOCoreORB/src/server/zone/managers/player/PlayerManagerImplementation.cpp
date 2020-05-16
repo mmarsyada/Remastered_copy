@@ -3387,8 +3387,8 @@ void PlayerManagerImplementation::updateSwimmingState(CreatureObject* player, fl
 
 		//Player is in the water.
 		player->setState(CreatureState::SWIMMING, true);
-	        player->setSpeedMultiplierMod(0.30f);
-	        player->setAccelerationMultiplierMod(0.10f);
+	     //   player->setSpeedMultiplierMod(0.30f);
+	     //   player->setAccelerationMultiplierMod(0.10f);
 		return;
 	}
 
@@ -6057,13 +6057,13 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
                            15, 17, 19, 20, 21, 22, 24, 25, 27, 28, 29, 31, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 
                            42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 };
             
-	for (int i = 0; i < 16; i++) {
+	/*for (int i = 0; i < 16; i++) {
 		ghost->awardBadge(glowyBadgeIds[i]);
 	}
 
     SkillManager::instance()->surrenderAllSkills(player, true, false);
 
-	SkillManager::instance()->surrenderAllSkills(player, true, false);
+	SkillManager::instance()->surrenderAllSkills(player, true, false);*/
 
 	Lua* lua = DirectorManager::instance()->getLuaInstance();
 
@@ -6072,7 +6072,7 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 
 	luaFrsTesting->callFunction();
 
-	String branches[] = {
+	/*String branches[] = {
 			"force_sensitive_combat_prowess_ranged_accuracy",
 			"force_sensitive_combat_prowess_ranged_speed",
 			"force_sensitive_combat_prowess_melee_accuracy",
@@ -6085,7 +6085,7 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 		String branch = branches[i];
 		player->setScreenPlayState("VillageUnlockScreenPlay:" + branch, 2);
 		skillManager->awardSkill(branch + "_04", player, true, true, true);
-	}
+	}*/
 
 	luaFrsTesting = lua->createFunction("FsOutro", "completeVillageOutroFrog", 0);
 	*luaFrsTesting << player;
@@ -6097,10 +6097,10 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 
 	luaFrsTesting->callFunction();
 
-	skillManager->awardSkill("force_discipline_light_saber_master", player, true, true, true);
+	/*skillManager->awardSkill("force_discipline_light_saber_master", player, true, true, true);
 	skillManager->awardSkill("force_discipline_enhancements_master", player, true, true, true);
 	skillManager->awardSkill("force_discipline_healing_damage_04", player, true, true, true);
-	skillManager->awardSkill("force_discipline_healing_states_04", player, true, true, true);
+	skillManager->awardSkill("force_discipline_healing_states_04", player, true, true, true);*/
 
 	luaFrsTesting = lua->createFunction("JediTrials", "completeKnightForTesting", 0);
 	*luaFrsTesting << player;
@@ -6418,6 +6418,15 @@ void PlayerManagerImplementation::grantJediMaster(CreatureObject* player, int co
             skillManager->awardSkill("jedi_dark_side_journeyman_master", player, true, true, true);
             skillManager->awardSkill("jedi_dark_side_master_master", player, true, true, true);
         }
+
+        //force knight trials to start
+
+        luaFrsTesting = lua->createFunction("JediTrials", "grantKnightTrialsEligibility", 0);
+		*luaFrsTesting << player;
+        *luaFrsTesting << councilType;
+
+        luaFrsTesting->callFunction();
+
     }
 
 
