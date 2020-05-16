@@ -53,17 +53,6 @@ public:
 					+ "to " + targetCreature->getFirstName());
 
 		}
-		if (arguments.toString() == "knightTrials") {
-
-		Lua* lua = DirectorManager::instance()->getLuaInstance();
-
-	Reference<LuaFunction*> luaKnightTrials = lua->createFunction("JediTrials", "grantKnightTrialsEligibility", 0);
-		*luaKnightTrials << targetCreature;
-
-		luaKnightTrials->callFunction();
-
-
-		}
 
 		else {
 					StringIdChatParameter params;
