@@ -64,18 +64,18 @@ function AnchorheadRebelBaseScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "specforce_major", 360, 132.8, 52.0, -5404.3, 82, 0)
 	spawnMobile("tatooine", "specforce_sentry", 360, 131.2, 52.0, -5400.2, 145, 0)
 	spawnMobile("tatooine", "specforce_sentry", 360, 132.8, 52.0, -5407.7, 0, 0)
-	spawnMobile("tatooine", "specforce_sentry", 360, 103.5, 52.0, -5327.8, 16, 0)
-	spawnMobile("tatooine", "specforce_sentry", 360, 152.7, 52.0, -5325.5, 29, 0)
+	spawnMobile("tatooine", "rebel_commando", 360, 103.5, 52.0, -5327.8, 16, 0)
+	spawnMobile("tatooine", "rebel_commando", 360, 152.7, 52.0, -5325.5, 29, 0)
 
 	-- Cloning Center
 
-	spawnMobile("tatooine", "specforce_sentry", 360, 71.6, 52.0, -5360.7, 90, 0)
-	spawnMobile("tatooine", "specforce_sentry", 360, 71.8, 52.0, -5356.6, 90, 0)
+	spawnMobile("tatooine", "rebel_commando", 300, 71.6, 52.0, -5360.7, 90, 0)
+	spawnMobile("tatooine", "rebel_commando", 300, 71.8, 52.0, -5356.6, 90, 0)
 
 	-- Rebel Recruiter
 
-	spawnMobile("tatooine", "specforce_sentry", 360, 119.9, 52.0, -5362.1, -90, 0)
-	spawnMobile("tatooine", "specforce_sentry", 360, 123.2, 53.0, -5366.6, -90, 0)
+	spawnMobile("tatooine", "rebel_surface_marshal", 360, 119.9, 52.0, -5362.1, -90, 0)
+	spawnMobile("tatooine", "rebel_general", 360, 123.2, 53.0, -5366.6, -90, 0)
 	spawnMobile("tatooine", "specforce_sentry", 360, 70.7, 52.0, -5351.6, 45, 0)
 	spawnMobile("tatooine", "specforce_sentry", 360, 65.5, 52.0, -5349.7, 0, 0)
 

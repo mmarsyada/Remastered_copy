@@ -75,7 +75,7 @@ function RoriRebelOutpostScreenPlay:spawnMobiles()
 	spawnMobile("rori", "specforce_sniper_sentry", 360, 3684, 96, -6458, 280, 0)
 
 		--Guard Tower with rifle trainer
-	spawnMobile("rori", "rebel_major_sentry", 360, 3651, 103, -6485, 90, 0)
+	spawnMobile("rori", "rebel_surface_marshall", 360, 3651, 103, -6485, 90, 0)
 	spawnMobile("rori", "specforce_bombardier_sentry", 360, 3651, 103, -6489, 90, 0)
 	spawnMobile("rori", "specforce_captain_sentry", 360, 3645, 103, -6494, 180, 0)
 	spawnMobile("rori", "specforce_combat_medic_sentry", 360, -2.0, 2, 3.5, 90, 4505604)
@@ -94,7 +94,7 @@ function RoriRebelOutpostScreenPlay:spawnMobiles()
 	spawnMobile("rori", "specforce_combat_medic_sentry", 360, -8.5, 0.6, -7.3, 47, 4505636)
 	spawnMobile("rori", "specforce_sentry", 360, 2.2, 0.6, -2.2, 243, 4505636)
 	spawnMobile("rori", "specforce_sentry", 360, 2.1, 0.6, -6.5, 280, 4505636)
-	spawnMobile("rori", "rebel_major_sentry", 360, 7.8, 0.6, -4.4, 270, 4505637)
+	spawnMobile("rori", "rebel_general", 360, 7.8, 0.6, -4.4, 270, 4505637)
 
 		--Left Storage Shed with quest givers
 	spawnMobile("rori", "specforce_sentry", 360, 0, 0.1, -6.0, 0, 4505666)
@@ -129,8 +129,10 @@ function RoriRebelOutpostScreenPlay:spawnMobiles()
 
 	-- Building Entrance Sentries
 
-	spawnMobile("rori", "specforce_sentry", 300, 3678.5, 96.0, -6478.3, 0, 0)
-	spawnMobile("rori", "specforce_sentry", 300, 3683.1, 96.0, -6478.3, 1, 0)
+	spawnMobile("rori", "rebel_commando", 300, 3678.5, 96.0, -6478.3, 0, 0)
+	spawnMobile("rori", "rebel_commando", 300, 3683.1, 96.0, -6478.3, 1, 0)
+	spawnMobile("rori", "rebel_commando", 300, 3647, 96.0, -6481, 0, 0)
+	spawnMobile("rori", "rebel_commando", 300, 3643, 96.0, -6481, 1, 0)
 	spawnMobile("rori", "specforce_sentry", 300, 3694.9, 96.0, -6479.2, -2, 0)
 	spawnMobile("rori", "specforce_sentry", 300, 3690.9, 96.7, -6482.6, 0, 0)
 	spawnMobile("rori", "specforce_sentry", 300, 3684.9, 96.0, -6453.0, -88, 0)

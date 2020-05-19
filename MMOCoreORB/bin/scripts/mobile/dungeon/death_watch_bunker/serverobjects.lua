@@ -36,3 +36,10 @@ includeFile("dungeon/death_watch_bunker/technician.lua")
 --Rem Custom
 includeFile("dungeon/death_watch_bunker/rem_custom/black_sun_assassin_02.lua")
 includeFile("dungeon/death_watch_bunker/rem_custom/black_sun_guard_02.lua")
+
+--Black Sun World Spawns
+
+includeFile("dungeon/death_watch_bunker/black_sun_assassin_world.lua")
+includeFile("dungeon/death_watch_bunker/black_sun_guard_world.lua")
+includeFile("dungeon/death_watch_bunker/black_sun_henchman_world.lua")
+includeFile("dungeon/death_watch_bunker/black_sun_thug_world.lua")

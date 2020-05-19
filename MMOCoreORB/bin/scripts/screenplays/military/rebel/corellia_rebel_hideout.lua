@@ -26,11 +26,6 @@ function RebelHideoutScreenPlay:start()
 end
 
 function RebelHideoutScreenPlay:spawnSceneObjects()
-
-	--Terminals
-	spawnSceneObject("corellia", "object/tangible/beta/beta_terminal_wound.iff", -6506.35, 398.0, 6023.19, 1, 0, 0, 0, 0)
-	spawnSceneObject("corellia", "object/tangible/terminal/reb_travel_term.iff", -6531.77, 398.0, 6040.47, 0, 0, 0, 1, 0)
-
 	for i = 1, 6, 1 do
 		local turretData = self.turrets[i]
 		local pTurret = spawnSceneObject("corellia", turretData.template, turretData.x, turretData.z, turretData.y, 0, 0.707107, 0, 0.707107, 0)
@@ -45,23 +40,25 @@ function RebelHideoutScreenPlay:spawnSceneObjects()
 		createObserver(OBJECTDESTRUCTION, "RebelHideoutScreenPlay", "notifyTurretDestroyed", pTurret)
 	end
 
-
 end
 
 function RebelHideoutScreenPlay:notifyTurretDestroyed(pTurret, pPlayer)
-	ObjectManager.withSceneObject(pTurret, function(turret)
-		local turretData = self.turrets[readData(turret:getObjectID() .. ":rebel_hideout:turret_index")]
-		turret:destroyObjectFromWorld()
-		createEvent(1800000, "RebelHideoutScreenPlay", "respawnTurret", pTurret)
-	end)
+	local turretData = self.turrets[readData(SceneObject(pTurret):getObjectID() .. ":rebel_hideout:turret_index")]
+	SceneObject(pTurret):destroyObjectFromWorld()
+	createEvent(1800000, "RebelHideoutScreenPlay", "respawnTurret", pTurret, "")
 	CreatureObject(pPlayer):clearCombatState(1)
 	return 0
 end
 
 function RebelHideoutScreenPlay:respawnTurret(pTurret)
+	if pTurret == nil then return end
+
 	TangibleObject(pTurret):setConditionDamage(0, false)
 	local turretData = self.turrets[readData(SceneObject(pTurret):getObjectID() .. ":rebel_hideout:turret_index")]
 	local pZone = getZoneByName("corellia")
+
+	if pZone == nil then return end
+
 	SceneObject(pZone):transferObject(pTurret, -1, true)
 end
 
