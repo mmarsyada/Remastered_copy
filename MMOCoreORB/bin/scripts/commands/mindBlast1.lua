@@ -61,6 +61,16 @@ MindBlast1Command = {
 			0,
 			60
 		),
+
+		StateEffect(
+			DIZZY_EFFECT,
+			{},
+			{},
+			{ "jedi_state_defense" },
+			55,
+			0,
+			10
+		)
 	},
 
 	animation = "force_mind_blast_1_particle_level_1",
