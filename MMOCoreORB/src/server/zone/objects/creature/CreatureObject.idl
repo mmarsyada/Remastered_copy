@@ -201,14 +201,6 @@ class CreatureObject extends TangibleObject {
 
 	protected transient string alternateAppearance;
 
-	protected transient unsigned int groupTefId;
-
-	@dereferenced
-	protected transient Time groupTefTime;
-
-	@dereferenced
-	protected SynchronizedVector<unsigned int> groupTefIds;
-
 	public static final int HUMAN = 0;
 	public static final int RODIAN = 1;
 	public static final int TRANDOSHAN = 2;
@@ -228,8 +220,6 @@ class CreatureObject extends TangibleObject {
 	public static transient float DEFAULTRUNSPEED;
 
 	public static final unsigned long DEAD_TOO_LONG = 1800000; //30 minutes - How long can someone be dead and still be resuscitated in Miliseconds
-
-	public static final unsigned int INVALID_TEF_ID = 0;
 
 	/**
 	 * CreatureObject constructor, used to initialized the object
@@ -1108,6 +1098,9 @@ class CreatureObject extends TangibleObject {
 
 	@dirty
 	public native boolean isHealableBy(CreatureObject object);
+
+	@dirty
+	public native boolean isInvulnerable();
 
 	/**
 	 * Evaluates if the bounty hunter has a mission with the target.
@@ -2256,24 +2249,6 @@ class CreatureObject extends TangibleObject {
 	public void setAuctionSearchTask(AuctionSearchTask task) {
 		auctionSearch = task;
 	}
-
-	/**
-	 * Remaster Code
-	 */
-	// Group TEF
-	public native void addGroupTef(unsigned int tefId);
-
-	public native void removeGroupTef();
-
-	public native boolean hasGroupTef(unsigned int tefId);
-
-	public native unsigned int generateTefId();
-
-	public native void setTefId(unsigned int tefId, unsigned int timeOutMs);
-
-	public native unsigned int getTefId();
-
-	public native boolean hasTefTimedOut();
 
 	// Total Credits
 	@preLocked

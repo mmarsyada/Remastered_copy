@@ -55,14 +55,6 @@ int ForceHealQueueCommand::runCommand(CreatureObject* creature, CreatureObject* 
 	int totalCost = forceCost;
 	bool healPerformed = false;
 
-	int forceHeal = 0;
-	int healAmountFinal = 0;
-	if(playerObject->getJediState() == 4) {
-		forceHeal = creature->getSkillMod("force_healing_light");
-	} else if (playerObject->getJediState() == 8) {
-		forceHeal = creature->getSkillMod("force_healing_dark");
-	}
-
 	// Attribute Wound Healing
 	for (int i = 0; i < 3; i++) {
 		// Attrib Values: Health = 1, Action = 2, Mind = 4
@@ -102,24 +94,11 @@ int ForceHealQueueCommand::runCommand(CreatureObject* creature, CreatureObject* 
 				int curHam = targetCreature->getHAM(attrib);
 				int maxHam = targetCreature->getMaxHAM(attrib) - targetCreature->getWounds(attrib);
 				int amtToHeal = maxHam - curHam;
-				//info("Amount before FRS: " + String::valueOf(healAmount), true);
-				if (forceHeal > 0){
-					healAmountFinal = healAmount + (healAmount * ((forceHeal * .75) / 100.f));
-					//info("Amount after FRS: " + String::valueOf(healAmountFinal), true);
-				}
-				else{
-					healAmountFinal = healAmount;
-				}
 
-				if (healAmountFinal > 0 && amtToHeal > healAmountFinal){
-					amtToHeal = healAmountFinal;
-				}
+				if (healAmount > 0 && amtToHeal > healAmount)
+					amtToHeal = healAmount;
 
 				totalCost += amtToHeal * forceCostMultiplier;
-				//info("Force cost Prior to frs: " + String::valueOf(totalCost), true);
-				float reduction = (forceHeal * .75) / 100.f;
-				totalCost = totalCost* (1 - reduction);
-				//info("Force cost After to frs: " + String::valueOf(totalCost), true);
 
 				if (totalCost > currentForce) {
 					int forceDiff = totalCost - currentForce;
@@ -278,7 +257,6 @@ int ForceHealQueueCommand::runCommand(CreatureObject* creature, CreatureObject* 
 		}
 
 		VisibilityManager::instance()->increaseVisibility(creature, visMod);
-		checkForTef(creature, targetCreature);
 		return SUCCESS;
 	} else {
 		if (selfHeal) {

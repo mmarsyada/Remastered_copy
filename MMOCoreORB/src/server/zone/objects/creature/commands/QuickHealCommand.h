@@ -28,7 +28,7 @@ public:
 		actionHealed = 0;
 		mindHealed = 0;
 
-		mindCost = 750;
+		mindCost = 1000;
 		mindWoundCost = 10;
 
 		speed = 1;
