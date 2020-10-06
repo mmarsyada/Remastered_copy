@@ -6,7 +6,7 @@
 #include "templates/params/creature/CreatureFlag.h"
 
 // Remastered
-#include "server/zone/custom/managers/CustomTefManager.h"
+//#include "server/zone/custom/managers/CustomTefManager.h"
 
 namespace server {
 namespace zone {
@@ -36,21 +36,21 @@ public:
 
 		Locker locker(player);
 
-		if (ghost->hasPvpTef()) {
+		if (ghost->hasTef()) {
+			auto gcwCrackdownTefMs = ghost->getLastGcwCrackdownCombatActionTimestamp().miliDifference();
 			auto gcwTefMs = ghost->getLastGcwPvpCombatActionTimestamp().miliDifference();
 			auto bhTefMs = ghost->getLastBhPvpCombatActionTimestamp().miliDifference();
-			this->reschedule(llabs(gcwTefMs < bhTefMs ? gcwTefMs : bhTefMs));
+			auto rescheduleTime = gcwTefMs < bhTefMs ? gcwTefMs : bhTefMs;
+			rescheduleTime = gcwCrackdownTefMs < rescheduleTime ? gcwCrackdownTefMs : rescheduleTime;
+			this->reschedule(llabs(rescheduleTime));
 		} else {
 			ghost->updateInRangeBuildingPermissions();
+			ghost->setCrackdownTefTowards(0, false);
 			player->clearPvpStatusBit(CreatureFlag::TEF);
 		}
 
-		if (!ghost->hasBhTef()) {
-			if (CustomTefManager::instance()->enabled()) {
-				player->removeGroupTef();
-			}
+		if (!ghost->hasBhTef())
 			player->notifyObservers(ObserverEventType::BHTEFCHANGED);
-		}
 	}
 };
 
