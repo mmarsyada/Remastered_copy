@@ -510,8 +510,8 @@ void PetControlDeviceImplementation::storeObject(CreatureObject* player, bool fo
 	}
 	else {
 		if (pet->getPendingTask("store_pet") == nullptr) {
-			player->sendSystemMessage( "Storing pet in 60 seconds");
-			pet->addPendingTask("store_pet", task, 60 * 1000);
+			player->sendSystemMessage( "Storing pet in 20 seconds");
+			pet->addPendingTask("store_pet", task, 20 * 1000);
 		}
 		else {
 			AtomicTime nextExecution;
