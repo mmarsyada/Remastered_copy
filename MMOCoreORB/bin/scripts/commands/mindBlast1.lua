@@ -52,12 +52,22 @@ MindBlast1Command = {
 	accuracySkillMod = "mindblast_accuracy";
 
 	stateEffects = {
-			StateEffect(
+		StateEffect(
+			STUN_EFFECT,
+			{},
+			{},
+			{ "jedi_state_defense" },
+			55,
+			0,
+			10
+		),
+
+		StateEffect(
 			BLIND_EFFECT,
 			{},
-			{ "blind_defense" },
-			{ "jedi_state_defense","resistance_states" },
-			75,
+			{},
+			{ "jedi_state_defense" },
+			55,
 			0,
 			60
 		),
