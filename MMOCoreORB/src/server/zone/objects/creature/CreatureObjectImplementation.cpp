@@ -92,13 +92,6 @@
 
 float CreatureObjectImplementation::DEFAULTRUNSPEED = 5.376f;
 
-bool isPvpAttackable(CreatureObject& player) {
-	PlayerObject* playerObj = player.getPlayerObject();
-	return !player.isNeutral()
-		&& (player.getFactionStatus() == FactionStatus::OVERT
-		 || playerObj->hasPvpTef());
-}
-
 void CreatureObjectImplementation::initializeTransientMembers() {
 	TangibleObjectImplementation::initializeTransientMembers();
 
@@ -3118,7 +3111,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 		if(getFaction() == 0 || getFaction() == object->getFaction())
 			return false;
 
-		else if (isPlayerCreature() && getFactionStatus() == FactionStatus::COVERT && !isPvpAttackable(*object))
+		else if (isPlayerCreature() && getFactionStatus() == FactionStatus::COVERT)
 			return false;
 
 		return true;
