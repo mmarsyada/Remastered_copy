@@ -3119,7 +3119,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 			return false;
 
 		else if (isPlayerCreature() && getFactionStatus() == FactionStatus::COVERT && !isPvpAttackable(*object))
-			return true;
+			return false;
 
 		return true;
 	}
