@@ -3110,8 +3110,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 
 		if(getFaction() == 0 || getFaction() == object->getFaction())
 			return false;
-
-		else if (isPlayerCreature() && getFactionStatus() == FactionStatus::COVERT)
+		else if (isPlayerCreature() && getFactionStatus() == FactionStatus::ONLEAVE)
 			return false;
 
 		return true;
