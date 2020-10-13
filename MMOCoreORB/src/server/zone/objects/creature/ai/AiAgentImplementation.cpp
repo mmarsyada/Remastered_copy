@@ -2814,7 +2814,7 @@ bool AiAgentImplementation::isAggressiveTo(CreatureObject* target) {
 		if (ghost == nullptr && (targetFaction != getFaction()))
 			return true;
 		// this is the same thing, but ensures that if the target is a player, that they aren't on leave
-		else if (ghost != nullptr && (targetFaction != getFaction()) && target->getFactionStatus() != FactionStatus::ONLEAVE)
+		else if (ghost != nullptr && (targetFaction != getFaction()) && (target->getFactionStatus() == FactionStatus::OVERT || target->getPvpStatusBitmask() & CreatureFlag::TEF))
 			return true;
 	}
 
@@ -2825,12 +2825,12 @@ bool AiAgentImplementation::isAggressiveTo(CreatureObject* target) {
 		// for players, we are only an enemy if the standing is less than -3000, but we are
 		// forced to non-aggressive status if the standing is over 3000, otherwise use the
 		// pvpStatusBitmask to determine aggressiveness
-		if (target->isPlayerCreature() && ghost != nullptr && !(getOptionsBitmask() & CreatureFlag::IGNORE_FACTION_STANDING)) {
-			float targetsStanding = ghost->getFactionStanding(factionString);
+		if (target->isPlayerCreature() && ghost != nullptr && !(getOptionsBitmask() & CreatureFlag::IGNORE_FACTION_STANDING) && getFaction() == 0) {
+			//float targetsStanding = ghost->getFactionStanding(factionString);
 
-			if (targetsStanding <= -3000)
-				return true;
-			else if (targetsStanding >= 3000)
+			//if (targetsStanding <= -3000)
+			//	return true;
+			//else if (targetsStanding >= 3000)
 				return false;
 
 		// AI can check the enemy strings directly vs other AI (since they don't have a
