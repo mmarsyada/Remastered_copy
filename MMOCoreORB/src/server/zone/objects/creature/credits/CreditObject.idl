@@ -10,11 +10,8 @@ import server.zone.objects.creature.CreatureObject;
 
 @json
 class CreditObject extends ManagedObject {
-	public static final int CREDITCAP = 2000000000; // 2 billion, client does not support anything larger than a signed int
-
 	protected int bankCredits;
 	protected int cashCredits;
-	protected unsigned long ownerObjectID;
 
 	@preLocked
 	public native void notifyLoadFromDatabase();
@@ -25,8 +22,7 @@ class CreditObject extends ManagedObject {
 
 	public CreditObject() {
 		bankCredits = 0;
-		cashCredits = 0;
-		ownerObjectID = 0;
+                cashCredits = 0;
 	}
 
 	@preLocked
@@ -88,10 +84,6 @@ class CreditObject extends ManagedObject {
 	@rawTemplate(value = 'CreatureObject*')
 	@dirty
 	public native WeakReference getOwner();
-
-	@local
-    @read
-	public abstract native unsigned long getOwnerObjectID();
 
 	public native void setOwner(CreatureObject obj);
 

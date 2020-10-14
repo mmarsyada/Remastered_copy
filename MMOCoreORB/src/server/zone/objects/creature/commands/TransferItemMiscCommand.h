@@ -47,7 +47,7 @@ public:
 			server->getZoneServer()->getPlayerManager()->handleAbortTradeMessage(creature);
 		}
 
-		auto objectToTransfer = server->getZoneServer()->getObject(target);
+		ManagedReference<SceneObject*> objectToTransfer = server->getZoneServer()->getObject(target);
 
 		if (objectToTransfer == nullptr) {
 			creature->error("objectToTransfer nullptr in transferItemMisc command");

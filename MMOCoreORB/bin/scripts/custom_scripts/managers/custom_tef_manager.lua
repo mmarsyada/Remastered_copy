@@ -1,5 +1,5 @@
 -- Configurations
-customTefEnabled = 0
+customTefEnabled = 1
 customGroupTefEnabled = 0
 customTefPermaOvert = {
 	"force_title_jedi_rank_03",

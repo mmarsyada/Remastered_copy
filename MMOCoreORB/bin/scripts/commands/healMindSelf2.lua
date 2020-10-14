@@ -46,6 +46,7 @@ HealMindSelf2Command = {
 	healAmount = 1500,
 	forceCost = 25,
 	forceCostMultiplier = 0.05,
+	defaultTime = 6,
 	attributesToHeal = MIND_ATTRIBUTE,
 	range = 0,
 }

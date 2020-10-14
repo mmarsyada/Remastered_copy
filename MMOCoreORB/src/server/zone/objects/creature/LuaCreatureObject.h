@@ -121,8 +121,6 @@ namespace creature {
 		int getHealingThreatList(lua_State* L);
 		int getSkillMod(lua_State* L);
 		int getGender(lua_State* L);
-		int isRidingMount(lua_State* L);
-		int dismount(lua_State* L);
 		int doCombatAnimation(lua_State* L);
 		int buffSingleStat(lua_State* L);
 		int removeBuffs(lua_State* L);

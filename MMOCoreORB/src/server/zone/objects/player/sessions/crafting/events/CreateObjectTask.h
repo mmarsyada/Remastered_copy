@@ -25,7 +25,7 @@ public:
 
 		craftingTool->setCountdownTimer(0, true);
 
-		ManagedReference<TangibleObject*> prototype = craftingTool->getPrototype();
+		auto prototype = craftingTool->getPrototype();
 
 		if (prototype == nullptr || practice) {
 			craftingTool->removeAllContainerObjects();

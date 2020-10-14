@@ -345,7 +345,7 @@ CreatureObject* CreatureManagerImplementation::spawnCreatureAsEventMob(uint32 te
 	return creo;
 }
 
-CreatureObject* CreatureManagerImplementation::spawnCreature(uint32 templateCRC, uint32 objectCRC, float x, float z, float y, uint64 parentID, bool persistent, float direction) {
+CreatureObject* CreatureManagerImplementation::spawnCreature(uint32 templateCRC, uint32 objectCRC, float x, float z, float y, uint64 parentID, bool persistent) {
 	CreatureTemplate* creoTempl = creatureTemplateManager->getTemplate(templateCRC);
 
 	if (creoTempl == nullptr)
@@ -369,7 +369,7 @@ CreatureObject* CreatureManagerImplementation::spawnCreature(uint32 templateCRC,
 		error("could not spawn template " + templateToSpawn);
 	}
 
-	placeCreature(creature, x, z, y, parentID, direction);
+	placeCreature(creature, x, z, y, parentID);
 
 	return creature;
 }
@@ -410,7 +410,7 @@ CreatureObject* CreatureManagerImplementation::createCreature(uint32 templateCRC
 	return creature;
 }
 
-void CreatureManagerImplementation::placeCreature(CreatureObject* creature, float x, float z, float y, uint64 parentID, float direction) {
+void CreatureManagerImplementation::placeCreature(CreatureObject* creature, float x, float z, float y, uint64 parentID) {
 	if (creature == nullptr)
 		return;
 
@@ -428,7 +428,6 @@ void CreatureManagerImplementation::placeCreature(CreatureObject* creature, floa
 	}
 
 	creature->initializePosition(x, z, y);
-	creature->setDirection(Quaternion(Vector3(0, 1, 0), direction));
 
 	if (cellParent != nullptr) {
 		cellParent->transferObject(creature, -1);
@@ -521,8 +520,6 @@ int CreatureManagerImplementation::notifyDestruction(TangibleObject* destructor,
 	ThreatMap copyThreatMap(*threatMap);
 
 	threatMap->removeObservers();
-
-	auto destructorObjectID = destructor->getObjectID();
 
 	if (destructedObject != destructor)
 		destructor->unlock();

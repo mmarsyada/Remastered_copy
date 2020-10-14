@@ -43,7 +43,7 @@
 
 // Remastered
 #include "server/zone/custom/managers/CustomFeeManager.h"
-//#include "server/zone/custom/managers/CustomTefManager.h"
+#include "server/zone/custom/managers/CustomTefManager.h"
 #include "server/zone/custom/managers/CustomPvpManager.h"
 
 ZoneServerImplementation::ZoneServerImplementation(ConfigManager* config) :
@@ -276,6 +276,7 @@ void ZoneServerImplementation::startManagers() {
 	frsManager->initialize();
 
 	CustomFeeManager::instance()->initialize();
+	CustomTefManager::instance()->initialize();
 	CustomPvpManager::instance()->initialize();
 }
 

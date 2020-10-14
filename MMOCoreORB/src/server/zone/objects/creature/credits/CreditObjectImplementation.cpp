@@ -1,7 +1,6 @@
 #include "server/zone/objects/creature/credits/CreditObject.h"
 #include "server/zone/packets/DeltaMessage.h"
 #include "server/zone/objects/creature/CreatureObject.h"
-#include "server/zone/managers/credit/CreditManager.h"
 
 void CreditObjectImplementation::setCashCredits(int credits, bool notifyClient) {
 	if (cashCredits == credits)
@@ -29,12 +28,7 @@ WeakReference<CreatureObject*> CreditObjectImplementation::getOwner() {
 }
 
 void CreditObjectImplementation::setOwner(CreatureObject* obj) {
-	ownerObjectID = obj->getObjectID();
 	owner = obj;
-}
-
-uint64 CreditObjectImplementation::getOwnerObjectID() const {
-	return ownerObjectID;
 }
 
 void CreditObjectImplementation::setBankCredits(int credits, bool notifyClient) {

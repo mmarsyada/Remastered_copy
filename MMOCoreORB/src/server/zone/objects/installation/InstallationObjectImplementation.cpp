@@ -30,6 +30,9 @@
 #include "templates/params/creature/CreatureFlag.h"
 #include "server/zone/objects/creature/ai/AiAgent.h"
 
+// Remastered
+#include "server/zone/custom/managers/CustomTefManager.h"
+
 void InstallationObjectImplementation::loadTemplateData(SharedObjectTemplate* templateData) {
 	StructureObjectImplementation::loadTemplateData(templateData);
 
@@ -668,13 +671,6 @@ bool InstallationObjectImplementation::isAggressiveTo(CreatureObject* target) {
 	if (!isAttackableBy(target) || target->isVehicleObject())
 		return false;
 
-	if (target->isPlayerCreature()) {
-		Reference<PlayerObject*> ghost = target->getPlayerObject();
-		if (ghost != nullptr && ghost->hasCrackdownTefTowards(getFaction())) {
-			return true;
-		}
-	}
-
 	if (getFaction() != 0 && target->getFaction() != 0 && getFaction() != target->getFaction())
 		return true;
 
@@ -717,12 +713,24 @@ bool InstallationObjectImplementation::isAggressiveTo(CreatureObject* target) {
 }
 
 bool InstallationObjectImplementation::isAttackableBy(CreatureObject* object) {
+	if (CustomTefManager::instance()->enabled()) {
+		InstallationObject* installationObject = _this.getReferenceUnsafeStaticCast();
+		return CustomTefManager::instance()->isAttackableByInstallation(installationObject, object);
+	}
+
 	if (!(getPvpStatusBitmask() & CreatureFlag::ATTACKABLE)) {
 		return false;
 	}
 
 	unsigned int thisFaction = getFaction();
 	unsigned int otherFaction = object->getFaction();
+
+	if (otherFaction != 0 && thisFaction != 0) {
+		if (otherFaction == thisFaction) {
+			return false;
+		}
+
+	}
 
 	if (object->isPet()) {
 		ManagedReference<CreatureObject*> owner = object->getLinkedCreature().get();
@@ -732,27 +740,12 @@ bool InstallationObjectImplementation::isAttackableBy(CreatureObject* object) {
 
 		return isAttackableBy(owner);
 
-	} else if (object->isPlayerCreature()) {
-		if (thisFaction != 0) {
-			Reference<PlayerObject*> ghost = object->getPlayerObject();
-			if (ghost != nullptr && ghost->hasCrackdownTefTowards(thisFaction)) {
-				return true;
-			}
-			if (otherFaction != 0 && otherFaction == thisFaction) {
-				return false;
-			}
-			if (object->getFactionStatus() == 0) {
-				return false;
-			}
-
-			if ((getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFactionStatus() != FactionStatus::OVERT) {
-				return false;
-			}
+	} else if (object->isPlayerCreature() && thisFaction != 0) {
+		if (object->getFactionStatus() == 0) {
+			return false;
 		}
-	}
 
-	if (otherFaction != 0 && thisFaction != 0) {
-		if (otherFaction == thisFaction) {
+		if ((getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFactionStatus() != FactionStatus::OVERT) {
 			return false;
 		}
 	}

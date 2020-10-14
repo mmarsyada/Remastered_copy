@@ -39,7 +39,9 @@ function RecruiterConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, s
 		writeData(CreatureObject(pPlayer):getObjectID() .. ":changingFactionStatus", 1)
 		createEvent(30000, "recruiterScreenplay", "handleGoOvert", pPlayer, "")
 	elseif (screenID == "accepted_go_covert") then
-		if (CreatureObject(pPlayer):hasSkill("force_rank_light_novice") or CreatureObject(pPlayer):hasSkill("force_rank_dark_novice")) then
+		local permaOvert = CustomTefManager:enabled() and CustomTefManager:isPermaOvert(CreatureObject(pPlayer))
+							or (CreatureObject(pPlayer):hasSkill("force_rank_light_novice") or CreatureObject(pPlayer):hasSkill("force_rank_dark_novice"))
+		if permaOvert then
 			CreatureObject(pPlayer):sendSystemMessage("@faction_recruiter:jedi_cant_go_covert")
 			return
 		end
@@ -48,6 +50,11 @@ function RecruiterConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, s
 		writeData(CreatureObject(pPlayer):getObjectID() .. ":changingFactionStatus", 1)
 		createEvent(300000, "recruiterScreenplay", "handleGoCovert", pPlayer, "")
 	elseif (screenID == "accepted_go_on_leave") then
+		if (CustomTefManager:enabled()) then
+			CreatureObject(pPlayer):sendSystemMessage("You are needed in the war, we are unable to let you go on leave right now.")
+			return
+		end
+
 		if (CreatureObject(pPlayer):hasSkill("force_rank_light_novice") or CreatureObject(pPlayer):hasSkill("force_rank_dark_novice")) then
 			CreatureObject(pPlayer):sendSystemMessage("@faction_recruiter:jedi_cant_go_covert")
 			return
@@ -56,9 +63,10 @@ function RecruiterConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, s
 		CreatureObject(pPlayer):setFutureFactionStatus(0)
 		writeData(CreatureObject(pPlayer):getObjectID() .. ":changingFactionStatus", 1)
 		createEvent(300000, "recruiterScreenplay", "handleGoOnLeave", pPlayer, "")
-
 	elseif (screenID == "accepted_resign") then
-		if (CreatureObject(pPlayer):hasSkill("force_rank_light_novice") or CreatureObject(pPlayer):hasSkill("force_rank_dark_novice")) then
+		local permaOvert = CustomTefManager:enabled() and CustomTefManager:isPermaOvert(CreatureObject(pPlayer))
+							or (CreatureObject(pPlayer):hasSkill("force_rank_light_novice") or CreatureObject(pPlayer):hasSkill("force_rank_dark_novice"))
+		if permaOvert then
 			CreatureObject(pPlayer):sendSystemMessage("@faction_recruiter:jedi_cant_resign")
 			return
 		end

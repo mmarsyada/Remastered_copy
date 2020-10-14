@@ -22,6 +22,9 @@
 #include "server/zone/managers/mission/MissionManager.h"
 #include "server/zone/managers/frs/FrsManager.h"
 
+// Remastered
+#include "server/zone/custom/managers/CustomTefManager.h"
+
 SkillManager::SkillManager()
 	: Logger("SkillManager") {
 
@@ -368,6 +371,10 @@ bool SkillManager::awardSkill(const String& skillName, CreatureObject* creature,
 			JediManager::instance()->onFSTreeCompleted(creature, skill->getSkillName());
 
 		MissionManager* missionManager = creature->getZoneServer()->getMissionManager();
+
+		if (CustomTefManager::instance()->enabled() && CustomTefManager::instance()->isPermaOvert(skill->getSkillName())) {
+			creature->setFactionStatus(FactionStatus::OVERT);
+		}
 
 		if (skill->getSkillName() == "force_title_jedi_rank_02" || "force_title_jedi_novice") {
 			if (missionManager != nullptr)

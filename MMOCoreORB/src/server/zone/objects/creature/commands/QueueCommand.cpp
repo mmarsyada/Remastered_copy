@@ -13,6 +13,9 @@
 #include "server/zone/managers/combat/CombatManager.h"
 #include "server/zone/managers/frs/FrsManager.h"
 
+// Remastered
+#include "server/zone/custom/managers/CustomTefManager.h"
+
 QueueCommand::QueueCommand(const String& skillname, ZoneProcessServer* serv) : Logger() {
 	server = serv;
 
@@ -250,6 +253,11 @@ bool QueueCommand::checkForArenaDuel(CreatureObject* target) const {
 }
 
 void QueueCommand::checkForTef(CreatureObject* creature, CreatureObject* target) const {
+	if (CustomTefManager::instance()->enabled()) {
+		CustomTefManager::instance()->checkForTef(creature, target);
+		return;
+	}
+
 	if (!creature->isPlayerCreature() || creature == target)
 		return;
 
@@ -260,9 +268,9 @@ void QueueCommand::checkForTef(CreatureObject* creature, CreatureObject* target)
 	if (target->isPlayerCreature()) {
 		PlayerObject* targetGhost = target->getPlayerObject().get();
 
-		if (!CombatManager::instance()->areInDuel(creature, target)
-				&& targetGhost != nullptr && target->getFactionStatus() == FactionStatus::OVERT && targetGhost->hasPvpTef()) {
-			ghost->updateLastGcwPvpCombatActionTimestamp();
+		if (!CombatManager::instance()->areInDuel(creature, target) && targetGhost != nullptr ) {
+			if ((targetGhost->hasPvpTef() || target->getFactionStatus() == FactionStatus::OVERT) && target->getFaction() != 0 && target->getFaction() != creature->getFaction())
+				ghost->updateLastGcwPvpCombatActionTimestamp();
 		}
 	} else if (target->isPet()) {
 		ManagedReference<CreatureObject*> owner = target->getLinkedCreature().get();

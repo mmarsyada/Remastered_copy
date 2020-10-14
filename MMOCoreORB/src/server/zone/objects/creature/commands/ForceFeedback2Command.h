@@ -10,6 +10,7 @@ public:
 
 	ForceFeedback2Command(const String& name, ZoneProcessServer* server) : JediQueueCommand(name, server) {
 		buffCRC = BuffCRC::JEDI_FORCE_FEEDBACK_2;
+
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_FEEDBACK_2);
 		overrideableCRCs.add(BuffCRC::JEDI_FORCE_FEEDBACK_1);
 		singleUseEventTypes.add(ObserverEventType::FORCEFEEDBACK);

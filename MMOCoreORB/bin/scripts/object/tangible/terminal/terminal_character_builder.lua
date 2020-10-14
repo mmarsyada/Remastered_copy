@@ -784,7 +784,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				--		},
 				--	},
 				--	},
-				--[[	"Light Saber",
+					"Light Saber",
 				{
 					"Novice", "force_discipline_light_saber_novice",
 					"One Handed Light Saber",
@@ -948,7 +948,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Preternatural Defense IV", "force_discipline_defender_preternatural_defense_04"
 					},
 					"Master", "force_discipline_defender_master"
-				},]]--
+				},
 				"Marksman",
 				{
 					"Novice", "combat_marksman_novice",
@@ -1517,12 +1517,12 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Unlearn All Skills", "unlearn_all_skills",
 			"Cleanse Character", "cleanse_character",
 			"Enhance Character", "enhance_character",
-			--[["Jedi",
+			"Jedi",
 			{
 				--"Unlock Jedi Initiate", "unlock_jedi_initiate",
 				"Unlock FRS Light Side", "frs_light_side",
 				"Unlock FRS Dark Side", "frs_dark_side"
-			},]]--
+			},
 			"Fill Force Bar", "fill_force_bar",
 			"Reset Buffs", "reset_buffs",
 			"Learn Languages", "language",

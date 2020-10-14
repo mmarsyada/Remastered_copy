@@ -101,9 +101,9 @@ void GeneticComponentImplementation::updateCraftingValues(CraftingValues* values
 		armorRating = 0;
 	} else if (fortitude >= 250 && fortitude < 550) {
 		armorRating = 1;
-	} else if (fortitude >= 550 && fortitude < 750) {
+	} else if (fortitude >= 550 && fortitude < 700) {
 		armorRating = 2;
-	} else if (fortitude >= 750) {
+	} else if (fortitude >= 700) {
 		armorRating = 3;
 	} 
 
@@ -197,18 +197,18 @@ void GeneticComponentImplementation::updateCraftingValues(CraftingValues* values
 	// Strength: har,dep
 	// Quickness: dex,dep
 
-	health = (hardiness * 20)    + (dexterity * 3);
-	action = (dexterity * 20)    + (intelligence * 3);
-	mind   = (intelligence * 20) + (hardiness * 3);
+	health = (hardiness * 16)    + (dexterity * 3);
+	action = (dexterity * 16)    + (intelligence * 3);
+	mind   = (intelligence * 16) + (hardiness * 3);
 	stamina = (dexterity*15)     + (endurance * 3);
-	willPower = (intelligence * 20) + (cleverness * 3);
-	constitution = (hardiness * 20)    + (fortitude * 3);
-	focus = (intelligence * 20) + (dependency * 3);
-	strength = (hardiness * 20)    + (dependency * 3);
-	quickness = (dexterity * 20)    + (dependency * 3);
-	hit = 0.19 + (1 * ((float)cleverness/1000.0));
+	willPower = (intelligence * 16) + (cleverness * 3);
+	constitution = (hardiness * 16)    + (fortitude * 3);
+	focus = (intelligence * 16) + (dependency * 3);
+	strength = (hardiness * 16)    + (dependency * 3);
+	quickness = (dexterity * 16)    + (dependency * 3);
+	hit = 0.19 + (0.75 * ((float)cleverness/1000.0));
 	// dps of pet use to determien min and max value.
-	int dps = ceil((ceil(18.0 + (775.0 * ( ((float)power)/1000.0))))/2.5);
+	int dps = ceil((ceil(16.0 + (775.0 * ( ((float)power)/1000.0))))/3);
 	speed = 2.5-((ceil(((float)courage)/10)*10)/1000);
 	maxDam = round(((float)dps * speed) * 1.5);
 	//minDam = round(((float)dps * speed) * 0.5);
