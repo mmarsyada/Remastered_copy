@@ -491,6 +491,12 @@ auto CustomTefManager::isHealableBy(CreatureObject* target, CreatureObject* heal
 	// Only let players with the same group TEF id heal each other.
 	PlayerObject* tarPlayer = target->getPlayerObject();
 	if (tarPlayer != nullptr) {
+
+		//If healing Target has BH Tef, do not allow heal
+		if (tarPlayer->hasBhTef()) {
+			return false;
+		}
+
 		if ((healer->isNeutral() || areOpposingFactions(*healer, *target)) && tarPlayer->hasPvpTefOnly()) {
 			return false;
 		}
