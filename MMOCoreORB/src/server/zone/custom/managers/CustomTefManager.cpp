@@ -467,9 +467,9 @@ auto CustomTefManager::isHealableBy(CreatureObject* target, CreatureObject* heal
 	if (target->isAttackableBy(healer))
 		return false;
 
-	if (areSameGroup(*target, *healer)) {
-		return true;
-	}
+	//if (areSameGroup(*target, *healer)) {
+	//	return true;
+	//}
 
 	PlayerObject* healPlayer = healer->getPlayerObject();
 
@@ -495,6 +495,10 @@ auto CustomTefManager::isHealableBy(CreatureObject* target, CreatureObject* heal
 		//If healing Target has BH Tef, do not allow heal
 		if (tarPlayer->hasBhTef()) {
 			return false;
+		}
+
+		if (areSameGroup(*target, *healer)) {
+			return true;
 		}
 
 		if ((healer->isNeutral() || areOpposingFactions(*healer, *target)) && tarPlayer->hasPvpTefOnly()) {
