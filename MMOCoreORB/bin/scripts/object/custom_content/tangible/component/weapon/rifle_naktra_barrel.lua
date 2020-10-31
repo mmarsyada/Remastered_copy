@@ -1,0 +1,5 @@
+object_tangible_component_weapon_rifle_naktra_barrel = object_tangible_component_weapon_shared_rifle_naktra_barrel:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_component_weapon_rifle_naktra_barrel, "object/tangible/component/weapon/rifle_naktra_barrel.iff")
