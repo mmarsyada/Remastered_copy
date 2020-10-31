@@ -1,0 +1,5 @@
+object_tangible_component_weapon_cryo_lance_compressor= object_tangible_component_weapon_shared_cryo_lance_compressor:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_component_weapon_cryo_lance_compressor, "object/tangible/component/weapon/cryo_lance_compressor.iff")

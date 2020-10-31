@@ -75,6 +75,13 @@ includeFile("SharedGroupObjectTemplate.lua")
 includeFile("SharedGuildObjectTemplate.lua")
 includeFile("SharedJediManagerTemplate.lua")
 
+
+includeFile("custom_content/mobile/objects.lua")
+includeFile("custom_content/mobile/ep3/objects.lua")
+includeFile("custom_content/mobile/npe/objects.lua")
+includeFile("custom_content/mobile/som/objects.lua")
+--includeFile("custom_content/mobile/vehicle/objects.lua")
+
 includeFile("building/rem_custom/content/objects.lua")
 includeFile("building/rem_custom/content/aurilia/objects.lua")
 includeFile("building/rem_custom/content/aurilia/loot/objects.lua")

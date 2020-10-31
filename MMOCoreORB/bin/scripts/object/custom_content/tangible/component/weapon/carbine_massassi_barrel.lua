@@ -1,0 +1,5 @@
+object_tangible_component_weapon_carbine_massassi_barrel = object_tangible_component_weapon_shared_carbine_massassi_barrel:new {
+
+}
+
+ObjectTemplates:addTemplate(object_tangible_component_weapon_carbine_massassi_barrel, "object/tangible/component/weapon/carbine_massassi_barrel.iff")

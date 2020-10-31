@@ -1,3 +1,6 @@
+--Remastered
+includeFile("../custom_scripts/remastered/serverobjects.lua")
+
 -- Custom content
 includeFile("../custom_scripts/mobile/serverobjects.lua")
 
