@@ -53,8 +53,8 @@ CreatureAreaPoisonCommand = {
 		ATTACK_POOL,
 		true,
 		0,
-		50,
-		50, 
+		75,
+		70, 
 		120
 	  )
 	},

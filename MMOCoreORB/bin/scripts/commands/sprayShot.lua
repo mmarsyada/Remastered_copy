@@ -49,7 +49,8 @@ SprayShotCommand = {
 	healthCostMultiplier = 1,
 	actionCostMultiplier = 1,
 	mindCostMultiplier = 1,
-
+	accuracyBonus = 30,
+	
 	stateEffects = {
 	  StateEffect(
 		DIZZY_EFFECT,

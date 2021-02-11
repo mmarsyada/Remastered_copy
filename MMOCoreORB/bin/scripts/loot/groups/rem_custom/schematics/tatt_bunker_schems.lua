@@ -7,12 +7,12 @@ tatt_bunker_schems = {
 	lootItems = {
 		{itemTemplate = "carbine_dc15_schematic", weight = 1000000},
 		{itemTemplate = "carbine_proton_schematic", weight = 1000000},
-		{itemTemplate = "carbine_geo_schematic", weight = 1000000},
+		{itemTemplate = "carbine_kalranoos_schematic", weight = 1000000},
 		{itemTemplate = "mace_junti_schematic", weight = 1000000},
 		{itemTemplate = "melee_warfan_schematic", weight = 1000000},
-		{itemTemplate = "rifle_naktra_schematic", weight = 1000000},
+		{itemTemplate = "naktra_rifle_schematic", weight = 1000000},
 		{itemTemplate = "pistol_dd6_schematic", weight = 1000000},
-		{itemTemplate = "pistol_ion_schematic", weight = 1000000},
+		{itemTemplate = "pistol_ion_stunner_schematic", weight = 1000000},
 		{itemTemplate = "rifle_dc15_schematic", weight = 1000000},
 		{itemTemplate = "rifle_proton_schematic", weight = 1000000},
 	}

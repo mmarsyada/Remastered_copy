@@ -43,7 +43,6 @@
 
 
 --Children folder includes
-includeFile("draft_schematic/bio_engineer/creature/creature_mutrancor.lua")
 
 -- Server Objects
 includeFile("draft_schematic/bio_engineer/creature/creature_angler.lua")

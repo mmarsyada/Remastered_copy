@@ -204,7 +204,7 @@ function TattBunkerScreenPlay:notifyArmorBossDamageReceived(pBoss)
 
             self:playEffect(pBoss, 2)    
    
-            spatialChat(pBoss, "Fools! You should stick to ganking newbs from TLA, SHDWS, or SqTTN! I am not as easy!!")           
+            spatialChat(pBoss, "Fools! You should stick to ganking newb Jedi! I am not as easy!!")           
             writeData("TattBunkerScreenPlay:armorBossState:" .. miniBossID, 2)
             miniBossState = 2
                         
@@ -404,7 +404,7 @@ end
 
 function TattBunkerScreenPlay:spawnForceBoss()
 
-  	    local pForceBoss = spawnMobile("tatooine", "chissBossForce", 0, -34.4559, -78.6919, -363.921, 51, 610000416) 
+  	    local pForceBoss = spawnMobile("tatooine", "chissBossForce", 0, -18.5386, -78.2292, -343.98, 177, 610000416) 
 	    createObserver(OBJECTDESTRUCTION, "TattBunkerScreenPlay", "onForceBossDeath", pForceBoss) 
 	    createObserver(OBJECTDESTRUCTION, "TattBunkerScreenPlay", "onJediBossDeath", pJediBoss)
 	    spatialChat(pForceBoss, "I find your lack of intelligence.....disturbing.")
@@ -453,6 +453,7 @@ function TattBunkerScreenPlay:SpawnHutDogs()
 	spawnMobile("tatooine", "chissRoboDogMiniBoss", 0, 4.5827, -118.644, -352.851, 196, 610000420) 
 
 end
+
 function TattBunkerScreenPlay:onRoboDogMiniDeath(pBoss)
 
     if (pBoss == nil) then

@@ -47,7 +47,6 @@ ForceCureDiseaseCommand = {
 	diseaseHealIterations = 2,
 	forceCost = 0,
 	allowedTarget = FORCE_HEAL_TARGET_SELF + FORCE_HEAL_TARGET_OTHER,
-	defaultTime = 2,
 	range = 32,
 }
 

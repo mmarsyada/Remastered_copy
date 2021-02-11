@@ -45,7 +45,7 @@ SaberThrow3Command = {
         name = "saberthrow3",
 
 	damageMultiplier = 2.0,
-	speedMultiplier = 4.5,
+	speedMultiplier = 3.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,

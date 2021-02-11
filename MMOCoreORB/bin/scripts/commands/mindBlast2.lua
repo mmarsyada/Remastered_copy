@@ -44,8 +44,8 @@
 MindBlast2Command = {
 	name = "mindblast2",
 
-	minDamage = 300,
-	maxDamage = 500,
+	minDamage = 1125,
+	maxDamage = 1500,
 	speed = 4.0,
 	forceCost = 160,
 	visMod = 25,
@@ -54,15 +54,35 @@ MindBlast2Command = {
 	coneAction = true,
 
 	stateEffects = {
-			StateEffect(
-			BLIND_EFFECT,
+	  StateEffect(
+		STUN_EFFECT,
+		{},
+		{ "jedi_state_defense" },
+		{},
+		55,
+		0,
+		10
+	  ),
+
+	  StateEffect(
+		BLIND_EFFECT,
 			{},
 			{ "blind_defense" },
 			{ "jedi_state_defense","resistance_states" },
 			75,
 			0,
 			60
-		),
+	  ),
+
+	  StateEffect(
+		DIZZY_EFFECT,
+		{},
+		{ "jedi_state_defense" },
+		{},
+		55,
+		0,
+		10
+	  )
 	},
 
 	animation = "force_mind_blast_1_arc_particle_level_1",

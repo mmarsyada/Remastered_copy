@@ -40,9 +40,7 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
---====================================================================================
-object_draft_schematic_bio_engineer_creature_shared_creature_mutrancor = SharedDraftSchematicObjectTemplate:new { 
-       clientTemplateFileName = "object/draft_schematic/bio_engineer/creature/shared_creature_mutrancor.iff" }
+
 
 object_draft_schematic_bio_engineer_creature_shared_creature_angler = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/bio_engineer/creature/shared_creature_angler.iff"

@@ -9,7 +9,7 @@ weapon_components_elite_2 = {
 		{itemTemplate = "naktra_rifle_barrel", weight = 1000000},
 		{itemTemplate = "xris_blade", weight = 1000000},
 		{itemTemplate = "intimidator_pistol_barrel", weight = 2000000},
-		{itemTemplate = "eventide_mace_head ", weight = 2000000},
+		{itemTemplate = "eventide_mace_head", weight = 2000000},
 		{itemTemplate = "massassi_carbine_barrel", weight = 2000000},
 		{itemTemplate = "cryo_lance_compressor", weight = 1000000}
 	}

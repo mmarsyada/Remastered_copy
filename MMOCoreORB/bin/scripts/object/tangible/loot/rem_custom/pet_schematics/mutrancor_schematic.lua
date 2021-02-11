@@ -46,7 +46,7 @@ object_tangible_loot_loot_schematic_mutrancor_schematic = object_tangible_loot_l
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "outdoors_bio_engineer_master",
-	targetDraftSchematic = "object/draft_schematic/bio_engineer/creature/creature_mutrancor.iff",
+	targetDraftSchematic = "object/draft_schematic/bio_engineer/creature/creature_mutated_rancor.iff",
 	targetUseCount = 1,
 }
 

@@ -44,16 +44,26 @@
 MindBlast1Command = {
 	name = "mindblast1",
 
-	minDamage = 250,
-	maxDamage = 550,
+	minDamage = 750,
+	maxDamage = 1000,
 	speed = 4.0,
 	forceCost = 68,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
 
 	stateEffects = {
-			StateEffect(
-			BLIND_EFFECT,
+		StateEffect(
+			STUN_EFFECT,
+			{},
+			{},
+			{ "jedi_state_defense" },
+			55,
+			0,
+			10
+		),
+
+		StateEffect(
+BLIND_EFFECT,
 			{},
 			{ "blind_defense" },
 			{ "jedi_state_defense","resistance_states" },
@@ -61,6 +71,16 @@ MindBlast1Command = {
 			0,
 			60
 		),
+
+		StateEffect(
+			DIZZY_EFFECT,
+			{},
+			{},
+			{ "jedi_state_defense" },
+			55,
+			0,
+			10
+		)
 	},
 
 	animation = "force_mind_blast_1_particle_level_1",
